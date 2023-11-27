@@ -11,17 +11,17 @@ Le moteur 3D permet aussi de gérer la musique et les sons émis par les modèle
 Ce projet comporte un main, un éditeur 3D, des modèles, des textures, des images, des sons et des musiques par défaut afin de faciliter l'utillisation.
 
 ## Fichiers et Dossiers
-READMe.md   contient les informations sur l'organisation du projet
+READMe.md : contient les informations sur l'organisation du projet
 
-makefile    contient les liens entre les fichiers néccessaires à la compilation
+makefile : contient les liens entre les fichiers néccessaires à la compilation
 
-bin         contient les executables générés après la compilation
+bin : contient les executables générés après la compilation
 
-obj         contient les fichiers objets générés par la compilation
+obj : contient les fichiers objets générés par la compilation
 
-doc         contient toute la documentation du projet
+doc : contient toute la documentation du projet
 
-        /html/index.html    permet d'accéder à la documentation
+        /html/index.html : permet d'accéder à la documentation
 
 ## Visuals
 Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.

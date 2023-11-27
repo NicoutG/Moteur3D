@@ -1,0 +1,73 @@
+\hypertarget{Camera_8h_source}{}\doxysection{Camera.\+h}
+\label{Camera_8h_source}\index{include/Camera.h@{include/Camera.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_CAMERA}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_CAMERA}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Matrice.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Cosin.h"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }\mbox{\hyperlink{classCamera}{Camera}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 \textcolor{keyword}{private}:}
+\DoxyCodeLine{14     \mbox{\hyperlink{classMatrice}{Matrice}} pos\{3,1\}; \textcolor{comment}{//correspond à la position x y z de la caméra}}
+\DoxyCodeLine{15     \textcolor{keywordtype}{float} angle\_xy=0, angle\_xz=0, angle\_yz=0; \textcolor{comment}{//correspondent aux angles de la caméra en degrés}}
+\DoxyCodeLine{16     \mbox{\hyperlink{classMatrice}{Matrice}} base\{3,3\}; \textcolor{comment}{//correspond à la base orthonormée relative à la caméra}}
+\DoxyCodeLine{17     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} tailley, taillex; \textcolor{comment}{//correspond aux dimensions de la caméra}}
+\DoxyCodeLine{18     \textcolor{keywordtype}{float} distFoc; \textcolor{comment}{//correspond à la distance focale de la caméra}}
+\DoxyCodeLine{19     }
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a6187bc32adba2fdc362b2a8b26962d45}{calculBase}}()\&;}
+\DoxyCodeLine{24     }
+\DoxyCodeLine{25 \textcolor{keyword}{public}:}
+\DoxyCodeLine{26     \mbox{\hyperlink{classCosin}{Cosin}} cs; \textcolor{comment}{//permet d'utiliser des formules de trigonométrie précalculées}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{33     \mbox{\hyperlink{classCamera_ae65a732820423b7ecc324dff55cc92c5}{Camera}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ty, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} tx);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{39     \textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}}\& \mbox{\hyperlink{classCamera_af0e44f133e4e93c34516ad50450582dc}{getPos}}()\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{40     }
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a3c4f432c567e59175968034c812eb56b}{setPos}}(\textcolor{keywordtype}{float} x, \textcolor{keywordtype}{float} y, \textcolor{keywordtype}{float} z);}
+\DoxyCodeLine{48     }
+\DoxyCodeLine{53     \textcolor{keywordtype}{float} \mbox{\hyperlink{classCamera_aae13eab317d36d5695be80f4164a2b11}{getX}}()\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{54     }
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a6a69508383fdb7b7064e9bea4d569ee9}{setX}}(\textcolor{keywordtype}{float} x);}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{65     \textcolor{keywordtype}{float} \mbox{\hyperlink{classCamera_a6f9ae5dfaa7df3675d25aa8ce7da4e4e}{getY}}()\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{66     }
+\DoxyCodeLine{71     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a7200923e83852873639e208cb327434d}{setY}}(\textcolor{keywordtype}{float} y);}
+\DoxyCodeLine{72     }
+\DoxyCodeLine{77     \textcolor{keywordtype}{float} \mbox{\hyperlink{classCamera_aa73c4dbb64bfdd6d89105157a8b31690}{getZ}}()\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{78     }
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a19b97d8522f5948ca08f5c3405c4ebe3}{setZ}}(\textcolor{keywordtype}{float} z);}
+\DoxyCodeLine{84     }
+\DoxyCodeLine{89     \textcolor{keywordtype}{float} \mbox{\hyperlink{classCamera_a83602c7201ef5ee9b365fa804c87fc90}{getAngxy}}()\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{90     }
+\DoxyCodeLine{95     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_ab43910ed5acda19b6f37899019028bf7}{setAngxy}}(\textcolor{keywordtype}{float} angxy);}
+\DoxyCodeLine{96     }
+\DoxyCodeLine{101     \textcolor{keywordtype}{float} \mbox{\hyperlink{classCamera_af72b882ba6b8d652743d87bc93591f0a}{getAngxz}}()\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{102     }
+\DoxyCodeLine{107     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a776a1a85ef9df46d13349d66273b8f5c}{setAngxz}}(\textcolor{keywordtype}{float} angxz);}
+\DoxyCodeLine{108     }
+\DoxyCodeLine{113     \textcolor{keywordtype}{float} \mbox{\hyperlink{classCamera_ac0e9793b5ca68b936dfd08c486d2b667}{getAngyz}}()\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{114     }
+\DoxyCodeLine{119     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a146783a4a73d6f3a7d0bd2426faa5e9f}{setAngyz}}(\textcolor{keywordtype}{float} angyz);}
+\DoxyCodeLine{120     }
+\DoxyCodeLine{127     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a01e7e8a6072e6cec25b63bed8b5200b3}{setAng}}(\textcolor{keywordtype}{float} angxy, \textcolor{keywordtype}{float} angxz, \textcolor{keywordtype}{float} angyz);}
+\DoxyCodeLine{128     }
+\DoxyCodeLine{133     \textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}}\& \mbox{\hyperlink{classCamera_a7c03055d92cdebc9e2984e12cab1723c}{getBase}}()\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{134     }
+\DoxyCodeLine{139     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classCamera_a5360b47c92900190bfbf6bd71ee0aa93}{getTailley}}()\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{140     }
+\DoxyCodeLine{145     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classCamera_ab27d69e1b20e5157a7c34ed4632aac83}{getTaillex}}()\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{146     }
+\DoxyCodeLine{151     \textcolor{keywordtype}{float} \mbox{\hyperlink{classCamera_a3661d271baa644881eba10dab11b5c7d}{getDistFoc}}()\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{157     \textcolor{keywordtype}{void} \mbox{\hyperlink{classCamera_a681e6b77056ae92fcf8b4e831191d67c}{setDistFoc}}(\textcolor{keywordtype}{float} dist);}
+\DoxyCodeLine{158     }
+\DoxyCodeLine{163     \mbox{\hyperlink{classMatrice}{Matrice}} \mbox{\hyperlink{classCamera_ab7b9c685ae06e15194ec81e706034e22}{getNormale}}()\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{164     }
+\DoxyCodeLine{165 \};}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

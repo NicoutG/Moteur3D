@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moteur3D:  Fichier source de include/Camera.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Moteur3D
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Camera.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef _CAMERA</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define _CAMERA</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;Matrice.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;Cosin.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classCamera.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classCamera.html">Camera</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="classMatrice.html">Matrice</a> pos{3,1}; <span class="comment">//correspond à la position x y z de la caméra</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">float</span> angle_xy=0, angle_xz=0, angle_yz=0; <span class="comment">//correspondent aux angles de la caméra en degrés</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="classMatrice.html">Matrice</a> base{3,3}; <span class="comment">//correspond à la base orthonormée relative à la caméra</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tailley, taillex; <span class="comment">//correspond aux dimensions de la caméra</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">float</span> distFoc; <span class="comment">//correspond à la distance focale de la caméra</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#a6187bc32adba2fdc362b2a8b26962d45">calculBase</a>()&amp;;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_class" href="classCosin.html">Cosin</a> cs; <span class="comment">//permet d&#39;utiliser des formules de trigonométrie précalculées</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="classCamera.html#ae65a732820423b7ecc324dff55cc92c5">Camera</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ty, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tx);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">const</span> <a class="code hl_class" href="classMatrice.html">Matrice</a>&amp; <a class="code hl_function" href="classCamera.html#af0e44f133e4e93c34516ad50450582dc">getPos</a>()<span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#a3c4f432c567e59175968034c812eb56b">setPos</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classCamera.html#aae13eab317d36d5695be80f4164a2b11">getX</a>()<span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#a6a69508383fdb7b7064e9bea4d569ee9">setX</a>(<span class="keywordtype">float</span> x);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classCamera.html#a6f9ae5dfaa7df3675d25aa8ce7da4e4e">getY</a>()<span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#a7200923e83852873639e208cb327434d">setY</a>(<span class="keywordtype">float</span> y);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classCamera.html#aa73c4dbb64bfdd6d89105157a8b31690">getZ</a>()<span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#a19b97d8522f5948ca08f5c3405c4ebe3">setZ</a>(<span class="keywordtype">float</span> z);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classCamera.html#a83602c7201ef5ee9b365fa804c87fc90">getAngxy</a>()<span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#ab43910ed5acda19b6f37899019028bf7">setAngxy</a>(<span class="keywordtype">float</span> angxy);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classCamera.html#af72b882ba6b8d652743d87bc93591f0a">getAngxz</a>()<span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#a776a1a85ef9df46d13349d66273b8f5c">setAngxz</a>(<span class="keywordtype">float</span> angxz);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classCamera.html#ac0e9793b5ca68b936dfd08c486d2b667">getAngyz</a>()<span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#a146783a4a73d6f3a7d0bd2426faa5e9f">setAngyz</a>(<span class="keywordtype">float</span> angyz);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#a01e7e8a6072e6cec25b63bed8b5200b3">setAng</a>(<span class="keywordtype">float</span> angxy, <span class="keywordtype">float</span> angxz, <span class="keywordtype">float</span> angyz);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keyword">const</span> <a class="code hl_class" href="classMatrice.html">Matrice</a>&amp; <a class="code hl_function" href="classCamera.html#a7c03055d92cdebc9e2984e12cab1723c">getBase</a>()<span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classCamera.html#a5360b47c92900190bfbf6bd71ee0aa93">getTailley</a>()<span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classCamera.html#ab27d69e1b20e5157a7c34ed4632aac83">getTaillex</a>()<span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    </div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classCamera.html#a3661d271baa644881eba10dab11b5c7d">getDistFoc</a>()<span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classCamera.html#a681e6b77056ae92fcf8b4e831191d67c">setDistFoc</a>(<span class="keywordtype">float</span> dist);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <a class="code hl_class" href="classMatrice.html">Matrice</a> <a class="code hl_function" href="classCamera.html#ab7b9c685ae06e15194ec81e706034e22">getNormale</a>()<span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>};</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassCamera_html"><div class="ttname"><a href="classCamera.html">Camera</a></div><div class="ttdoc">classe Camera</div><div class="ttdef"><b>Definition:</b> Camera.h:12</div></div>
+<div class="ttc" id="aclassCamera_html_a01e7e8a6072e6cec25b63bed8b5200b3"><div class="ttname"><a href="classCamera.html#a01e7e8a6072e6cec25b63bed8b5200b3">Camera::setAng</a></div><div class="ttdeci">void setAng(float angxy, float angxz, float angyz)</div><div class="ttdoc">setAng : modifie les angles</div><div class="ttdef"><b>Definition:</b> Camera.cpp:103</div></div>
+<div class="ttc" id="aclassCamera_html_a146783a4a73d6f3a7d0bd2426faa5e9f"><div class="ttname"><a href="classCamera.html#a146783a4a73d6f3a7d0bd2426faa5e9f">Camera::setAngyz</a></div><div class="ttdeci">void setAngyz(float angyz)</div><div class="ttdoc">setAngyz : mutateur de angle_yz</div><div class="ttdef"><b>Definition:</b> Camera.cpp:97</div></div>
+<div class="ttc" id="aclassCamera_html_a19b97d8522f5948ca08f5c3405c4ebe3"><div class="ttname"><a href="classCamera.html#a19b97d8522f5948ca08f5c3405c4ebe3">Camera::setZ</a></div><div class="ttdeci">void setZ(float z)</div><div class="ttdoc">setZ : modifie la position z</div><div class="ttdef"><b>Definition:</b> Camera.cpp:58</div></div>
+<div class="ttc" id="aclassCamera_html_a3661d271baa644881eba10dab11b5c7d"><div class="ttname"><a href="classCamera.html#a3661d271baa644881eba10dab11b5c7d">Camera::getDistFoc</a></div><div class="ttdeci">float getDistFoc() const &amp;</div><div class="ttdoc">getDistFoc : accesseur de distFoc</div><div class="ttdef"><b>Definition:</b> Camera.cpp:134</div></div>
+<div class="ttc" id="aclassCamera_html_a3c4f432c567e59175968034c812eb56b"><div class="ttname"><a href="classCamera.html#a3c4f432c567e59175968034c812eb56b">Camera::setPos</a></div><div class="ttdeci">void setPos(float x, float y, float z)</div><div class="ttdoc">setPos : mutateur de pos</div><div class="ttdef"><b>Definition:</b> Camera.cpp:26</div></div>
+<div class="ttc" id="aclassCamera_html_a5360b47c92900190bfbf6bd71ee0aa93"><div class="ttname"><a href="classCamera.html#a5360b47c92900190bfbf6bd71ee0aa93">Camera::getTailley</a></div><div class="ttdeci">unsigned int getTailley() const &amp;</div><div class="ttdoc">getTailley : accesseur de tailley</div><div class="ttdef"><b>Definition:</b> Camera.cpp:124</div></div>
+<div class="ttc" id="aclassCamera_html_a6187bc32adba2fdc362b2a8b26962d45"><div class="ttname"><a href="classCamera.html#a6187bc32adba2fdc362b2a8b26962d45">Camera::calculBase</a></div><div class="ttdeci">void calculBase() &amp;</div><div class="ttdoc">calculBase : recalcul la base de la caméra</div><div class="ttdef"><b>Definition:</b> Camera.cpp:154</div></div>
+<div class="ttc" id="aclassCamera_html_a681e6b77056ae92fcf8b4e831191d67c"><div class="ttname"><a href="classCamera.html#a681e6b77056ae92fcf8b4e831191d67c">Camera::setDistFoc</a></div><div class="ttdeci">void setDistFoc(float dist)</div><div class="ttdoc">setDistFoc : mutateur de distFoc @rparam float dist la distance focale</div><div class="ttdef"><b>Definition:</b> Camera.cpp:139</div></div>
+<div class="ttc" id="aclassCamera_html_a6a69508383fdb7b7064e9bea4d569ee9"><div class="ttname"><a href="classCamera.html#a6a69508383fdb7b7064e9bea4d569ee9">Camera::setX</a></div><div class="ttdeci">void setX(float x)</div><div class="ttdoc">setX : modifie la position x</div><div class="ttdef"><b>Definition:</b> Camera.cpp:38</div></div>
+<div class="ttc" id="aclassCamera_html_a6f9ae5dfaa7df3675d25aa8ce7da4e4e"><div class="ttname"><a href="classCamera.html#a6f9ae5dfaa7df3675d25aa8ce7da4e4e">Camera::getY</a></div><div class="ttdeci">float getY() const &amp;</div><div class="ttdoc">getY : renvoie la position y</div><div class="ttdef"><b>Definition:</b> Camera.cpp:43</div></div>
+<div class="ttc" id="aclassCamera_html_a7200923e83852873639e208cb327434d"><div class="ttname"><a href="classCamera.html#a7200923e83852873639e208cb327434d">Camera::setY</a></div><div class="ttdeci">void setY(float y)</div><div class="ttdoc">setY : modifie la position y</div><div class="ttdef"><b>Definition:</b> Camera.cpp:48</div></div>
+<div class="ttc" id="aclassCamera_html_a776a1a85ef9df46d13349d66273b8f5c"><div class="ttname"><a href="classCamera.html#a776a1a85ef9df46d13349d66273b8f5c">Camera::setAngxz</a></div><div class="ttdeci">void setAngxz(float angxz)</div><div class="ttdoc">setAngxz : mutateur de angle_xz</div><div class="ttdef"><b>Definition:</b> Camera.cpp:79</div></div>
+<div class="ttc" id="aclassCamera_html_a7c03055d92cdebc9e2984e12cab1723c"><div class="ttname"><a href="classCamera.html#a7c03055d92cdebc9e2984e12cab1723c">Camera::getBase</a></div><div class="ttdeci">const Matrice &amp; getBase() const &amp;</div><div class="ttdoc">getBase : accesseur de base</div><div class="ttdef"><b>Definition:</b> Camera.cpp:118</div></div>
+<div class="ttc" id="aclassCamera_html_a83602c7201ef5ee9b365fa804c87fc90"><div class="ttname"><a href="classCamera.html#a83602c7201ef5ee9b365fa804c87fc90">Camera::getAngxy</a></div><div class="ttdeci">float getAngxy() const &amp;</div><div class="ttdoc">getAngxy : accesseur de angle_xy</div><div class="ttdef"><b>Definition:</b> Camera.cpp:63</div></div>
+<div class="ttc" id="aclassCamera_html_aa73c4dbb64bfdd6d89105157a8b31690"><div class="ttname"><a href="classCamera.html#aa73c4dbb64bfdd6d89105157a8b31690">Camera::getZ</a></div><div class="ttdeci">float getZ() const &amp;</div><div class="ttdoc">getZ : renvoie la position z</div><div class="ttdef"><b>Definition:</b> Camera.cpp:53</div></div>
+<div class="ttc" id="aclassCamera_html_aae13eab317d36d5695be80f4164a2b11"><div class="ttname"><a href="classCamera.html#aae13eab317d36d5695be80f4164a2b11">Camera::getX</a></div><div class="ttdeci">float getX() const &amp;</div><div class="ttdoc">getX : renvoie la position x</div><div class="ttdef"><b>Definition:</b> Camera.cpp:33</div></div>
+<div class="ttc" id="aclassCamera_html_ab27d69e1b20e5157a7c34ed4632aac83"><div class="ttname"><a href="classCamera.html#ab27d69e1b20e5157a7c34ed4632aac83">Camera::getTaillex</a></div><div class="ttdeci">unsigned int getTaillex() const &amp;</div><div class="ttdoc">getTaillex : accesseur de taillex</div><div class="ttdef"><b>Definition:</b> Camera.cpp:129</div></div>
+<div class="ttc" id="aclassCamera_html_ab43910ed5acda19b6f37899019028bf7"><div class="ttname"><a href="classCamera.html#ab43910ed5acda19b6f37899019028bf7">Camera::setAngxy</a></div><div class="ttdeci">void setAngxy(float angxy)</div><div class="ttdoc">setAngxy : mutateur de angle_xy</div><div class="ttdef"><b>Definition:</b> Camera.cpp:68</div></div>
+<div class="ttc" id="aclassCamera_html_ab7b9c685ae06e15194ec81e706034e22"><div class="ttname"><a href="classCamera.html#ab7b9c685ae06e15194ec81e706034e22">Camera::getNormale</a></div><div class="ttdeci">Matrice getNormale() const &amp;</div><div class="ttdoc">getNormale : renvoie la normale de l'ecran de la camera</div><div class="ttdef"><b>Definition:</b> Camera.cpp:145</div></div>
+<div class="ttc" id="aclassCamera_html_ac0e9793b5ca68b936dfd08c486d2b667"><div class="ttname"><a href="classCamera.html#ac0e9793b5ca68b936dfd08c486d2b667">Camera::getAngyz</a></div><div class="ttdeci">float getAngyz() const &amp;</div><div class="ttdoc">getAngyz : accesseur de angle_yz</div><div class="ttdef"><b>Definition:</b> Camera.cpp:92</div></div>
+<div class="ttc" id="aclassCamera_html_ae65a732820423b7ecc324dff55cc92c5"><div class="ttname"><a href="classCamera.html#ae65a732820423b7ecc324dff55cc92c5">Camera::Camera</a></div><div class="ttdeci">Camera(unsigned int ty, unsigned int tx)</div><div class="ttdoc">Camera : constructeur de la classe Camera.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:4</div></div>
+<div class="ttc" id="aclassCamera_html_af0e44f133e4e93c34516ad50450582dc"><div class="ttname"><a href="classCamera.html#af0e44f133e4e93c34516ad50450582dc">Camera::getPos</a></div><div class="ttdeci">const Matrice &amp; getPos() const &amp;</div><div class="ttdoc">getPos : accesseur de pos</div><div class="ttdef"><b>Definition:</b> Camera.cpp:21</div></div>
+<div class="ttc" id="aclassCamera_html_af72b882ba6b8d652743d87bc93591f0a"><div class="ttname"><a href="classCamera.html#af72b882ba6b8d652743d87bc93591f0a">Camera::getAngxz</a></div><div class="ttdeci">float getAngxz() const &amp;</div><div class="ttdoc">getAngxz : accesseur de angle_xz</div><div class="ttdef"><b>Definition:</b> Camera.cpp:74</div></div>
+<div class="ttc" id="aclassCosin_html"><div class="ttname"><a href="classCosin.html">Cosin</a></div><div class="ttdoc">classe Cosin</div><div class="ttdef"><b>Definition:</b> Cosin.h:9</div></div>
+<div class="ttc" id="aclassMatrice_html"><div class="ttname"><a href="classMatrice.html">Matrice</a></div><div class="ttdoc">classe Matrice</div><div class="ttdef"><b>Definition:</b> Matrice.h:9</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+</small></address>
+</body>
+</html>

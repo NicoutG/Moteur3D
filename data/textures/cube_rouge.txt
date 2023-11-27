@@ -1,0 +1,7 @@
+6
+rouge  0 0  1 1  0  1
+rouge  0 0  1 1  0  1
+rouge  0 0  1 1  0  1
+rouge  0 0  1 1  0  1
+rouge  0 0  1 1  0  1
+rouge  0 0  1 1  0  1

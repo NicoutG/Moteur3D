@@ -1,0 +1,69 @@
+\hypertarget{Matrice_8h_source}{}\doxysection{Matrice.\+h}
+\label{Matrice_8h_source}\index{include/Matrice.h@{include/Matrice.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_MATRICE}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_MATRICE}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{8 \textcolor{keyword}{class }\mbox{\hyperlink{classMatrice}{Matrice}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10 \textcolor{keyword}{private}:}
+\DoxyCodeLine{11     \textcolor{keywordtype}{float} ** tab; \textcolor{comment}{//correspond à la matrice}}
+\DoxyCodeLine{12     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dimy; \textcolor{comment}{//correspond à la hauteur de la matrice}}
+\DoxyCodeLine{13     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dimx; \textcolor{comment}{//correspond à la largeur de la matrice}}
+\DoxyCodeLine{14     }
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{20     \mbox{\hyperlink{classMatrice_a68c16bbff072fb3450f5318653fbea26}{Matrice}}();}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{27     \mbox{\hyperlink{classMatrice_a68c16bbff072fb3450f5318653fbea26}{Matrice}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{28     }
+\DoxyCodeLine{32     \mbox{\hyperlink{classMatrice_ae9076e71ad3223654b0d51225bc8b3c0}{\string~Matrice}}();}
+\DoxyCodeLine{33     }
+\DoxyCodeLine{37     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classMatrice_a79de8c584ab3f4c5bacb8bf103c7dfd0}{getDimy}}()\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{38     }
+\DoxyCodeLine{42     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classMatrice_a255705e4d4894c05d1115e733e64e35d}{getDimx}}()\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{43     }
+\DoxyCodeLine{50     \textcolor{keywordtype}{float} \mbox{\hyperlink{classMatrice_a21d12ebc13c7c0482df953e27b526e41}{get}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x)\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{51     }
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMatrice_ac2ae4aed822f9a0304351999d7832154}{set}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{float} val);}
+\DoxyCodeLine{59     }
+\DoxyCodeLine{66     \mbox{\hyperlink{classMatrice}{Matrice}} \mbox{\hyperlink{classMatrice_ad4a8f2c85321932836f96555afa1302a}{getCol}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x)\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{67     }
+\DoxyCodeLine{74     \mbox{\hyperlink{classMatrice}{Matrice}} \mbox{\hyperlink{classMatrice_abca58a79263ba52e313a0949e60452a6}{getLig}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y)\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{81     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMatrice_af56130e2f342a3ca1172f6a4a3fc954d}{modifDims}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} x)\&;}
+\DoxyCodeLine{82     }
+\DoxyCodeLine{88     \mbox{\hyperlink{classMatrice}{Matrice}} \mbox{\hyperlink{classMatrice_add13db5aeadf2d14719edf4ded0a2446}{operator + }}(\textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}} \& mat)\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{89     }
+\DoxyCodeLine{95     \mbox{\hyperlink{classMatrice}{Matrice}} \mbox{\hyperlink{classMatrice_a89f2da7f0de42d44bb58254d8fa0e9f4}{operator -\/ }}(\textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}} \& mat)\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{96     }
+\DoxyCodeLine{102     \mbox{\hyperlink{classMatrice}{Matrice}} \mbox{\hyperlink{classMatrice_a708b16d1120b39ab93685c76f4ffb3eb}{operator * }}(\textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}} \& mat)\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{103     }
+\DoxyCodeLine{109     \mbox{\hyperlink{classMatrice}{Matrice}} \mbox{\hyperlink{classMatrice_a708b16d1120b39ab93685c76f4ffb3eb}{operator * }}(\textcolor{keywordtype}{float} mult)\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{110     }
+\DoxyCodeLine{117     \textcolor{keyword}{friend} \mbox{\hyperlink{classMatrice}{Matrice}} \mbox{\hyperlink{classMatrice_a708b16d1120b39ab93685c76f4ffb3eb}{operator * }}(\textcolor{keywordtype}{float} mult, \textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}} \& mat);}
+\DoxyCodeLine{118     }
+\DoxyCodeLine{124     \mbox{\hyperlink{classMatrice}{Matrice}} \mbox{\hyperlink{classMatrice_a3e89dfc09f0ee2b9b81cbd908ca9fdd4}{operator / }}(\textcolor{keywordtype}{float} div)\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{125     }
+\DoxyCodeLine{130     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMatrice_a5849d2394347f1ad18f8b76f766763d9}{operator = }}(\textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}} \& mat)\&;}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{138     \textcolor{keyword}{friend} \textcolor{keywordtype}{float} \mbox{\hyperlink{classMatrice_ae4d378f038a29e13f9d1ac86a19f9609}{prodScal}}(\textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}} \& mat1, \textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}} \& mat2);}
+\DoxyCodeLine{139     }
+\DoxyCodeLine{145     \textcolor{keyword}{friend} \textcolor{keywordtype}{float} \mbox{\hyperlink{classMatrice_a7518538f5b9ba3a5f6d87370ed3f0aaf}{norme}}(\textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}} \& mat);}
+\DoxyCodeLine{146     }
+\DoxyCodeLine{153     \textcolor{keyword}{friend} \mbox{\hyperlink{classMatrice}{Matrice}} \mbox{\hyperlink{classMatrice_af42fcdacdbe966ecc8ef98231c30789e}{prodVect}}(\textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}} \& mat1, \textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}} \& mat2);}
+\DoxyCodeLine{154     }
+\DoxyCodeLine{160     \textcolor{keyword}{friend} \textcolor{keywordtype}{void} \mbox{\hyperlink{classMatrice_a2c4d0ebfee8ff5fa0784e7ea85e8bfaf}{orthonormalisation}}(\mbox{\hyperlink{classMatrice}{Matrice}} \& m1, \mbox{\hyperlink{classMatrice}{Matrice}} \& m2);}
+\DoxyCodeLine{161     }
+\DoxyCodeLine{169     \textcolor{keyword}{friend} \mbox{\hyperlink{classMatrice}{Matrice}} \mbox{\hyperlink{classMatrice_a25d4cff80862d2860317e26d6820491a}{projection}}(\textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}} \& m, \textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}} \& b1, \textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}} \& b2);}
+\DoxyCodeLine{170     }
+\DoxyCodeLine{178     \textcolor{keyword}{friend} \textcolor{keywordtype}{float} \mbox{\hyperlink{classMatrice_a2b5e9da2b4aa75efb9f82a11c37c07dd}{distance}}(\textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}} \& m, \textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}} \& b1, \textcolor{keyword}{const} \mbox{\hyperlink{classMatrice}{Matrice}} \& b2);}
+\DoxyCodeLine{179     }
+\DoxyCodeLine{183     \textcolor{keywordtype}{void} \mbox{\hyperlink{classMatrice_a385339121f0be59691d33472c5b0e200}{afficher}}()\textcolor{keyword}{const} \&;}
+\DoxyCodeLine{184     }
+\DoxyCodeLine{185 \};}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

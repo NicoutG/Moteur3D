@@ -1,0 +1,7 @@
+6
+marron  0 0  1 1  0  1
+mur_briques  0 0  0.06 0.06  0  1
+mur_briques  0 0  0.06 0.06  0  1
+mur_briques  0 0  0.06 0.06  0  1
+mur_briques  0 0  0.06 0.06  0  1
+plancher  0 0  0.051 0.051  90  1

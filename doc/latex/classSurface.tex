@@ -1,0 +1,541 @@
+\hypertarget{classSurface}{}\doxysection{Référence de la classe Surface}
+\label{classSurface}\index{Surface@{Surface}}
+
+
+{\ttfamily \#include $<$Surface.\+h$>$}
+
+
+
+Graphe de collaboration de Surface\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSurface__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSurface_a5ab48e05e81347396b61cb109029b0a1}{Surface}} (unsigned int p1, unsigned int p2, unsigned int p3)
+\item 
+\mbox{\hyperlink{classSurface_aacdb12495b0e70e3e9e76fd1a4295336}{Surface}} (unsigned int $\ast$tab, unsigned int nb)
+\item 
+\mbox{\Hypertarget{classSurface_a89de75c95cb550d432f3ea4ed1429db0}\label{classSurface_a89de75c95cb550d432f3ea4ed1429db0}} 
+{\bfseries $\sim$\+Surface} ()
+\item 
+unsigned int \mbox{\hyperlink{classSurface_a81ee5c1ad4c5e16acbe55b45fabe70d1}{get\+Nb\+Points}} () const \&
+\item 
+\mbox{\hyperlink{classImage}{Image}} $\ast$ \mbox{\hyperlink{classSurface_a0ccb45b65125c36727f8c10ebb9fde0f}{get\+Image}} () const \&
+\item 
+void \mbox{\hyperlink{classSurface_a956e3bed43a1865c9e8937b0f40d63af}{set\+Image}} (\mbox{\hyperlink{classImage}{Image}} $\ast$img) \&
+\item 
+void \mbox{\hyperlink{classSurface_a6965ae090d1505a2fb3a966015ca3da1}{set\+Position}} (float x, float y) \&
+\item 
+float \mbox{\hyperlink{classSurface_a8afa22a70f0faa970411b9bada588427}{get\+Posx}} () const \&
+\item 
+float \mbox{\hyperlink{classSurface_ab9ba85f8689a2b35ca9e59bd0f70149f}{get\+Posy}} () const \&
+\item 
+void \mbox{\hyperlink{classSurface_accfd5d1bdac539a80aefdbe077bcc977}{set\+Taille}} (float tx, float ty) \&
+\item 
+float \mbox{\hyperlink{classSurface_a8cc60b3556d6437bf6b11049e7c84465}{get\+Taillex}} () const \&
+\item 
+float \mbox{\hyperlink{classSurface_adcdb8529d01f18efa560dc7423e30311}{get\+Tailley}} () const \&
+\item 
+void \mbox{\hyperlink{classSurface_a3b086b1192f9db8fced32f1d4b11e3b9}{set\+Angle}} (float ang) \&
+\item 
+float \mbox{\hyperlink{classSurface_aa5bef53aea6d5a5045cd860d53b37ce9}{get\+Angle}} () const \&
+\item 
+void \mbox{\hyperlink{classSurface_a4dcb24b107d8e5f6a27f3b5c65a7dbe1}{add\+Point}} (unsigned int nb, unsigned int p) \&
+\item 
+unsigned int \mbox{\hyperlink{classSurface_ada9abbd8bf3df72ea417d5989f95194d}{del\+Point}} (unsigned int p) \&
+\item 
+void \mbox{\hyperlink{classSurface_a70ecaf8b21408c34c8b495bf3b11692a}{set\+Points}} (unsigned int $\ast$tab, unsigned int nb) \&
+\item 
+bool \mbox{\hyperlink{classSurface_a9c22522d304e82afb6fb0c7d2e4f08a0}{point\+In}} (unsigned int p) const \&
+\item 
+unsigned int \mbox{\hyperlink{classSurface_a8b45e374558cc7e4f8bb8a27fa132065}{get}} (unsigned int nb) const \&
+\item 
+void \mbox{\hyperlink{classSurface_a0099508b0c497078d2d0da452265a33d}{set}} (unsigned int nb, unsigned int p) \&
+\item 
+const \mbox{\hyperlink{classMatrice}{Matrice}} \& \mbox{\hyperlink{classSurface_a4b0307fc4efab9dfaa175f0d5bbd8b04}{get\+Normale}} () const \&
+\item 
+void \mbox{\hyperlink{classSurface_aa9aa3b073ab5b4ff5226b60ae44140e6}{set\+Normale}} (const \mbox{\hyperlink{classMatrice}{Matrice}} \&mat) \&
+\item 
+void \mbox{\hyperlink{classSurface_aab5c62cc7860d9a6a7bb7696e69b1e26}{add\+Triangle}} (unsigned int p1, unsigned int p2, unsigned int p3) \&
+\item 
+\mbox{\Hypertarget{classSurface_ab84195c4117eec9bb382e952b8ab9354}\label{classSurface_ab84195c4117eec9bb382e952b8ab9354}} 
+void {\bfseries del\+Triangles} () \&
+\item 
+\mbox{\hyperlink{structTriangle}{Triangle}} $\ast$ \mbox{\hyperlink{classSurface_a48865468ad162ffaa39e8418dc56f99e}{get\+Triangle}} (unsigned int t) \&
+\item 
+unsigned int \mbox{\hyperlink{classSurface_a87c027dff284bb6fff698250474d22d4}{get\+Nb\+Triangles}} () const \&
+\item 
+float \mbox{\hyperlink{classSurface_aeef4bc3a549c7d2eb32a3ee794964093}{get\+Opacite}} () const \&
+\item 
+void \mbox{\hyperlink{classSurface_a0fbfc23f090c66d35e0c903bf24a0f52}{set\+Opacite}} (float opac) \&
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSurface_a46221b2f743ffdd40bb39a4778086bb6}\label{classSurface_a46221b2f743ffdd40bb39a4778086bb6}} 
+\mbox{\hyperlink{structPoint}{Point}} {\bfseries centre}
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSurface_ab0cba3d009a239597771feb75cd865a8}\label{classSurface_ab0cba3d009a239597771feb75cd865a8}} 
+unsigned int {\bfseries nb\+Points}
+\item 
+\mbox{\Hypertarget{classSurface_a8dc4cadda7fd2338e4dab6c0865235cb}\label{classSurface_a8dc4cadda7fd2338e4dab6c0865235cb}} 
+\mbox{\hyperlink{classCouleur}{Couleur}} {\bfseries couleur}
+\item 
+\mbox{\Hypertarget{classSurface_a349ba154d7ab829afeb343282982aabb}\label{classSurface_a349ba154d7ab829afeb343282982aabb}} 
+\mbox{\hyperlink{classMatrice}{Matrice}} {\bfseries normale} \{3,1\}
+\item 
+\mbox{\Hypertarget{classSurface_ace429265de224b47f09deafe99a2bb56}\label{classSurface_ace429265de224b47f09deafe99a2bb56}} 
+unsigned int $\ast$ {\bfseries points}
+\item 
+\mbox{\Hypertarget{classSurface_a0144b3535a6cc13c841fe88d26ef4a9b}\label{classSurface_a0144b3535a6cc13c841fe88d26ef4a9b}} 
+\mbox{\hyperlink{classImage}{Image}} $\ast$ {\bfseries image}
+\item 
+\mbox{\Hypertarget{classSurface_a92289f8b08aad4fff7c1f13ff03247f4}\label{classSurface_a92289f8b08aad4fff7c1f13ff03247f4}} 
+float {\bfseries posy}
+\item 
+\mbox{\Hypertarget{classSurface_a111a43c179824568fd424daf1cee1f91}\label{classSurface_a111a43c179824568fd424daf1cee1f91}} 
+float {\bfseries posx}
+\item 
+\mbox{\Hypertarget{classSurface_addcf46aee708f3f9af4f12d6333467f9}\label{classSurface_addcf46aee708f3f9af4f12d6333467f9}} 
+float {\bfseries tailley}
+\item 
+\mbox{\Hypertarget{classSurface_a06d8903b02c2700a2c89161209bce147}\label{classSurface_a06d8903b02c2700a2c89161209bce147}} 
+float {\bfseries taillex}
+\item 
+\mbox{\Hypertarget{classSurface_a9c2ec5ce3f92543eee859b9b4dfff156}\label{classSurface_a9c2ec5ce3f92543eee859b9b4dfff156}} 
+float {\bfseries angle}
+\item 
+\mbox{\Hypertarget{classSurface_a968608f9d246f25903ece0fae0b3edcb}\label{classSurface_a968608f9d246f25903ece0fae0b3edcb}} 
+unsigned int {\bfseries nb\+Triangles}
+\item 
+\mbox{\Hypertarget{classSurface_a92a96c3eb4f03d42f3841378073c914d}\label{classSurface_a92a96c3eb4f03d42f3841378073c914d}} 
+\mbox{\hyperlink{structTriangle}{Triangle}} $\ast$$\ast$ {\bfseries triangles}
+\item 
+\mbox{\Hypertarget{classSurface_aa77d1b7023e947aacf95c1d690547b03}\label{classSurface_aa77d1b7023e947aacf95c1d690547b03}} 
+float {\bfseries opacite}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+classe \mbox{\hyperlink{classSurface}{Surface}} 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{classSurface_a5ab48e05e81347396b61cb109029b0a1}\label{classSurface_a5ab48e05e81347396b61cb109029b0a1}} 
+\index{Surface@{Surface}!Surface@{Surface}}
+\index{Surface@{Surface}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{Surface()}{Surface()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Surface\+::\+Surface (\begin{DoxyParamCaption}\item[{unsigned int}]{p1,  }\item[{unsigned int}]{p2,  }\item[{unsigned int}]{p3 }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSurface}{Surface}} \+: constructeur de la classe \mbox{\hyperlink{classSurface}{Surface}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int p1 l\textquotesingle{}indice du premier point \\
+\hline
+{\em unsigned} & int p2 l\textquotesingle{}indice du deuxième point \\
+\hline
+{\em unsigned} & int p3 l\textquotesingle{}indice du troisième point \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSurface_aacdb12495b0e70e3e9e76fd1a4295336}\label{classSurface_aacdb12495b0e70e3e9e76fd1a4295336}} 
+\index{Surface@{Surface}!Surface@{Surface}}
+\index{Surface@{Surface}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{Surface()}{Surface()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Surface\+::\+Surface (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{tab,  }\item[{unsigned int}]{nb }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classSurface}{Surface}} \+: constructeur de la classe \mbox{\hyperlink{classSurface}{Surface}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int $\ast$ tab le tableau d\textquotesingle{}indices de points (à ne pas effacer) \\
+\hline
+{\em unsigned} & int nb la taille du tableau \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classSurface_a4dcb24b107d8e5f6a27f3b5c65a7dbe1}\label{classSurface_a4dcb24b107d8e5f6a27f3b5c65a7dbe1}} 
+\index{Surface@{Surface}!addPoint@{addPoint}}
+\index{addPoint@{addPoint}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{addPoint()}{addPoint()}}
+{\footnotesize\ttfamily void Surface\+::add\+Point (\begin{DoxyParamCaption}\item[{unsigned int}]{nb,  }\item[{unsigned int}]{p }\end{DoxyParamCaption}) \&}
+
+
+
+add\+Point \+: ajoute le point à la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int nb l\textquotesingle{}indice au quel ajouter le point \\
+\hline
+{\em unsigned} & int p l\textquotesingle{}indice du point du modèle à ajouter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSurface_aab5c62cc7860d9a6a7bb7696e69b1e26}\label{classSurface_aab5c62cc7860d9a6a7bb7696e69b1e26}} 
+\index{Surface@{Surface}!addTriangle@{addTriangle}}
+\index{addTriangle@{addTriangle}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{addTriangle()}{addTriangle()}}
+{\footnotesize\ttfamily void Surface\+::add\+Triangle (\begin{DoxyParamCaption}\item[{unsigned int}]{p1,  }\item[{unsigned int}]{p2,  }\item[{unsigned int}]{p3 }\end{DoxyParamCaption}) \&}
+
+
+
+add\+Triangle \+: ajoute un triangle à la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int p1 l\textquotesingle{}indice du premier point du triangle \\
+\hline
+{\em unsigned} & int p2 l\textquotesingle{}indice du deuxième point du triangle \\
+\hline
+{\em unsigned} & int p3 l\textquotesingle{}indice du troisième point du triangle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSurface_ada9abbd8bf3df72ea417d5989f95194d}\label{classSurface_ada9abbd8bf3df72ea417d5989f95194d}} 
+\index{Surface@{Surface}!delPoint@{delPoint}}
+\index{delPoint@{delPoint}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{delPoint()}{delPoint()}}
+{\footnotesize\ttfamily unsigned int Surface\+::del\+Point (\begin{DoxyParamCaption}\item[{unsigned int}]{p }\end{DoxyParamCaption}) \&}
+
+
+
+del\+Point \+: supprime un point de la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int p l\textquotesingle{}indice du point du modèle à supprimer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+unsigned int l\textquotesingle{}indice du point supprimé 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSurface_a8b45e374558cc7e4f8bb8a27fa132065}\label{classSurface_a8b45e374558cc7e4f8bb8a27fa132065}} 
+\index{Surface@{Surface}!get@{get}}
+\index{get@{get}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily unsigned int Surface\+::get (\begin{DoxyParamCaption}\item[{unsigned int}]{nb }\end{DoxyParamCaption}) const \&}
+
+
+
+get \+: accesseur de points 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int nb l\textquotesingle{}indice du point dans la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+unsigned int l\textquotesingle{}indice du point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSurface_aa5bef53aea6d5a5045cd860d53b37ce9}\label{classSurface_aa5bef53aea6d5a5045cd860d53b37ce9}} 
+\index{Surface@{Surface}!getAngle@{getAngle}}
+\index{getAngle@{getAngle}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{getAngle()}{getAngle()}}
+{\footnotesize\ttfamily float Surface\+::get\+Angle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Angle \+: accesseur de angle 
+
+\begin{DoxyReturn}{Renvoie}
+float l\textquotesingle{}angle de l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSurface_a0ccb45b65125c36727f8c10ebb9fde0f}\label{classSurface_a0ccb45b65125c36727f8c10ebb9fde0f}} 
+\index{Surface@{Surface}!getImage@{getImage}}
+\index{getImage@{getImage}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{getImage()}{getImage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImage}{Image}} $\ast$ Surface\+::get\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Image \+: accesseur de image 
+
+\begin{DoxyReturn}{Renvoie}
+Image$\ast$ l\textquotesingle{}image de la surface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSurface_a81ee5c1ad4c5e16acbe55b45fabe70d1}\label{classSurface_a81ee5c1ad4c5e16acbe55b45fabe70d1}} 
+\index{Surface@{Surface}!getNbPoints@{getNbPoints}}
+\index{getNbPoints@{getNbPoints}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{getNbPoints()}{getNbPoints()}}
+{\footnotesize\ttfamily unsigned int Surface\+::get\+Nb\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Nb\+Points \+: accesseur de nb\+Points 
+
+\begin{DoxyReturn}{Renvoie}
+unsigned int le nombre de points 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSurface_a87c027dff284bb6fff698250474d22d4}\label{classSurface_a87c027dff284bb6fff698250474d22d4}} 
+\index{Surface@{Surface}!getNbTriangles@{getNbTriangles}}
+\index{getNbTriangles@{getNbTriangles}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{getNbTriangles()}{getNbTriangles()}}
+{\footnotesize\ttfamily unsigned int Surface\+::get\+Nb\+Triangles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Nb\+Triangles \+: renvoie le nombre de triangles de la surface 
+
+\begin{DoxyReturn}{Renvoie}
+unsigned int le nombre de triangles de la surface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSurface_a4b0307fc4efab9dfaa175f0d5bbd8b04}\label{classSurface_a4b0307fc4efab9dfaa175f0d5bbd8b04}} 
+\index{Surface@{Surface}!getNormale@{getNormale}}
+\index{getNormale@{getNormale}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{getNormale()}{getNormale()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classMatrice}{Matrice}} \& Surface\+::get\+Normale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Normale \+: accesseur de normale 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{classMatrice}{Matrice}}\& la normale de la surface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSurface_aeef4bc3a549c7d2eb32a3ee794964093}\label{classSurface_aeef4bc3a549c7d2eb32a3ee794964093}} 
+\index{Surface@{Surface}!getOpacite@{getOpacite}}
+\index{getOpacite@{getOpacite}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{getOpacite()}{getOpacite()}}
+{\footnotesize\ttfamily float Surface\+::get\+Opacite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Opacite \+: accesseur de opacite 
+
+\begin{DoxyReturn}{Renvoie}
+float opacit\& de la surface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSurface_a8afa22a70f0faa970411b9bada588427}\label{classSurface_a8afa22a70f0faa970411b9bada588427}} 
+\index{Surface@{Surface}!getPosx@{getPosx}}
+\index{getPosx@{getPosx}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{getPosx()}{getPosx()}}
+{\footnotesize\ttfamily float Surface\+::get\+Posx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Posx \+: accesseur de posx 
+
+\begin{DoxyReturn}{Renvoie}
+float la position horizontale 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSurface_ab9ba85f8689a2b35ca9e59bd0f70149f}\label{classSurface_ab9ba85f8689a2b35ca9e59bd0f70149f}} 
+\index{Surface@{Surface}!getPosy@{getPosy}}
+\index{getPosy@{getPosy}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{getPosy()}{getPosy()}}
+{\footnotesize\ttfamily float Surface\+::get\+Posy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Posy \+: accesseur de posy 
+
+\begin{DoxyReturn}{Renvoie}
+float la position verticale 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSurface_a8cc60b3556d6437bf6b11049e7c84465}\label{classSurface_a8cc60b3556d6437bf6b11049e7c84465}} 
+\index{Surface@{Surface}!getTaillex@{getTaillex}}
+\index{getTaillex@{getTaillex}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{getTaillex()}{getTaillex()}}
+{\footnotesize\ttfamily float Surface\+::get\+Taillex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Taillex \+: accesseur de taillex 
+
+\begin{DoxyReturn}{Renvoie}
+float l\textquotesingle{}étirement horizontale de l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSurface_adcdb8529d01f18efa560dc7423e30311}\label{classSurface_adcdb8529d01f18efa560dc7423e30311}} 
+\index{Surface@{Surface}!getTailley@{getTailley}}
+\index{getTailley@{getTailley}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{getTailley()}{getTailley()}}
+{\footnotesize\ttfamily float Surface\+::get\+Tailley (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Tailley \+: accesseur de tailley 
+
+\begin{DoxyReturn}{Renvoie}
+float l\textquotesingle{}étirement verticale de l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSurface_a48865468ad162ffaa39e8418dc56f99e}\label{classSurface_a48865468ad162ffaa39e8418dc56f99e}} 
+\index{Surface@{Surface}!getTriangle@{getTriangle}}
+\index{getTriangle@{getTriangle}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{getTriangle()}{getTriangle()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTriangle}{Triangle}} $\ast$ Surface\+::get\+Triangle (\begin{DoxyParamCaption}\item[{unsigned int}]{t }\end{DoxyParamCaption}) \&}
+
+
+
+get\+Triangle \+: renvoie un triangle de la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int t l\textquotesingle{}indice du triangle de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Triangle$\ast$ un triangle de la surface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSurface_a9c22522d304e82afb6fb0c7d2e4f08a0}\label{classSurface_a9c22522d304e82afb6fb0c7d2e4f08a0}} 
+\index{Surface@{Surface}!pointIn@{pointIn}}
+\index{pointIn@{pointIn}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{pointIn()}{pointIn()}}
+{\footnotesize\ttfamily bool Surface\+::point\+In (\begin{DoxyParamCaption}\item[{unsigned int}]{p }\end{DoxyParamCaption}) const \&}
+
+
+
+point\+In \+: retourne si le point se trouve dans la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int p l\textquotesingle{}indice du point du modèle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si le point se trouve dans la surface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSurface_a0099508b0c497078d2d0da452265a33d}\label{classSurface_a0099508b0c497078d2d0da452265a33d}} 
+\index{Surface@{Surface}!set@{set}}
+\index{set@{set}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Surface\+::set (\begin{DoxyParamCaption}\item[{unsigned int}]{nb,  }\item[{unsigned int}]{p }\end{DoxyParamCaption}) \&}
+
+
+
+set \+: mutateur de points 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int nb l\textquotesingle{}indice du point dans la surface \\
+\hline
+{\em unsigned} & int p l\textquotesingle{}indice du point du modèle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSurface_a3b086b1192f9db8fced32f1d4b11e3b9}\label{classSurface_a3b086b1192f9db8fced32f1d4b11e3b9}} 
+\index{Surface@{Surface}!setAngle@{setAngle}}
+\index{setAngle@{setAngle}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{setAngle()}{setAngle()}}
+{\footnotesize\ttfamily void Surface\+::set\+Angle (\begin{DoxyParamCaption}\item[{float}]{ang }\end{DoxyParamCaption}) \&}
+
+
+
+set\+Angle \+: mutateur de angle 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & ang l\textquotesingle{}angle de l\textquotesingle{}image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSurface_a956e3bed43a1865c9e8937b0f40d63af}\label{classSurface_a956e3bed43a1865c9e8937b0f40d63af}} 
+\index{Surface@{Surface}!setImage@{setImage}}
+\index{setImage@{setImage}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{setImage()}{setImage()}}
+{\footnotesize\ttfamily void Surface\+::set\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classImage}{Image}} $\ast$}]{img }\end{DoxyParamCaption}) \&}
+
+
+
+set\+Image \+: mutateur de image 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classImage}{Image}}} & $\ast$ img l\textquotesingle{}image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSurface_aa9aa3b073ab5b4ff5226b60ae44140e6}\label{classSurface_aa9aa3b073ab5b4ff5226b60ae44140e6}} 
+\index{Surface@{Surface}!setNormale@{setNormale}}
+\index{setNormale@{setNormale}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{setNormale()}{setNormale()}}
+{\footnotesize\ttfamily void Surface\+::set\+Normale (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{mat }\end{DoxyParamCaption}) \&}
+
+
+
+set\+Normale \+: mutateur de normale 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Matrice\&} & la normale de la surface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSurface_a0fbfc23f090c66d35e0c903bf24a0f52}\label{classSurface_a0fbfc23f090c66d35e0c903bf24a0f52}} 
+\index{Surface@{Surface}!setOpacite@{setOpacite}}
+\index{setOpacite@{setOpacite}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{setOpacite()}{setOpacite()}}
+{\footnotesize\ttfamily void Surface\+::set\+Opacite (\begin{DoxyParamCaption}\item[{float}]{opac }\end{DoxyParamCaption}) \&}
+
+
+
+set\+Opacite \+: mutateur de opacite 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & opac l\textquotesingle{}opacité de la surface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSurface_a70ecaf8b21408c34c8b495bf3b11692a}\label{classSurface_a70ecaf8b21408c34c8b495bf3b11692a}} 
+\index{Surface@{Surface}!setPoints@{setPoints}}
+\index{setPoints@{setPoints}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{setPoints()}{setPoints()}}
+{\footnotesize\ttfamily void Surface\+::set\+Points (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{tab,  }\item[{unsigned int}]{nb }\end{DoxyParamCaption}) \&}
+
+
+
+set\+Points \+: redefinie les points de la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int $\ast$ tab le tableau d\textquotesingle{}indices de points (à ne pas effacer) \\
+\hline
+{\em unsigned} & int nb la taille du tableau \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSurface_a6965ae090d1505a2fb3a966015ca3da1}\label{classSurface_a6965ae090d1505a2fb3a966015ca3da1}} 
+\index{Surface@{Surface}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Surface\+::set\+Position (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption}) \&}
+
+
+
+set\+Position \+: mutateur de posx et posy 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & x la position horizontale \\
+\hline
+{\em float} & y la position verticale \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSurface_accfd5d1bdac539a80aefdbe077bcc977}\label{classSurface_accfd5d1bdac539a80aefdbe077bcc977}} 
+\index{Surface@{Surface}!setTaille@{setTaille}}
+\index{setTaille@{setTaille}!Surface@{Surface}}
+\doxysubsubsection{\texorpdfstring{setTaille()}{setTaille()}}
+{\footnotesize\ttfamily void Surface\+::set\+Taille (\begin{DoxyParamCaption}\item[{float}]{tx,  }\item[{float}]{ty }\end{DoxyParamCaption}) \&}
+
+
+
+set\+Taille \+: mutateur de taillex et tailley 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & tx l\textquotesingle{}étirement horizontale de l\textquotesingle{}image \\
+\hline
+{\em float} & ty l\textquotesingle{}étirement verticale de l\textquotesingle{}image \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+include/Surface.\+h\item 
+src/Surface.\+cpp\end{DoxyCompactItemize}

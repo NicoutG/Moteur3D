@@ -1,0 +1,6 @@
+255 255 255 
+cube rubiks_cube  100 -15 0  0 0 0  1 1 0.8
+cube NULL  170 30 10  34 57 0  1.2 1 1
+cylindre cylindre_or  250 15 -50  0 0 0  1 1 1
+boule boule_verte  200 0 25  0 0 0  1 1 1
+salle couloir  0 0 0  0 0 0  20 1 1

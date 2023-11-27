@@ -1,0 +1,7 @@
+6
+rouge  0 0  1 1  0  1
+bleu  0 0  1 1  0  1
+blanc  0 0  1 1  0  1
+vert  0 0  1 1  0  1
+jaune  0 0  1 1  0  1
+orange 0 0  1 1  0  1

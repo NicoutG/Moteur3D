@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moteur3D:  Fichier source de include/Moteur3D.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Moteur3D
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Moteur3D.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef _MOTEUR3D</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define _MOTEUR3D</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;Modele.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;Camera.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;Image.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structPoint2D.html">   12</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structPoint2D.html">Point2D</a></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_class" href="classMatrice.html">Matrice</a> pos2D{2,1};</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_class" href="classMatrice.html">Matrice</a> posCam{3,1};</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">bool</span> devant;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>};</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structSurfaceAff.html">   23</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structSurfaceAff.html">SurfaceAff</a></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>{</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_class" href="classModele.html">Modele</a> * modele;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> surface;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keywordtype">bool</span> transparent;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">float</span> distance;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structCouche.html">   35</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structCouche.html">Couche</a></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <a class="code hl_class" href="classCouleur.html">Couleur</a> couleur; </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">float</span> distance;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>};</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="structCouchesTransparentes.html">   45</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structCouchesTransparentes.html">CouchesTransparentes</a></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_struct" href="structCouche.html">Couche</a> ** couches=NULL;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nb=0;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> capacite=0;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classMoteur3D.html">   56</a></span><span class="keyword">class </span><a class="code hl_class" href="classMoteur3D.html">Moteur3D</a></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nbModeles; <span class="comment">//correspond au nombre de modèles présent dans le moteur 3D</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <a class="code hl_class" href="classModele.html">Modele</a> ** modeles; <span class="comment">//correspond au modèles présent dans le moteur 3D</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> nbAff; <span class="comment">//correspond au nombre de surfaces à afficher</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> capaciteAff; <span class="comment">//correspond à la capacité de aff</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <a class="code hl_struct" href="structSurfaceAff.html">SurfaceAff</a> ** aff; <span class="comment">//les surfaces à afficher</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <a class="code hl_struct" href="structPoint2D.html">Point2D</a> * points; <span class="comment">//correspond aux points du modèle à afficher</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <a class="code hl_class" href="classCouleur.html">Couleur</a> couleurFond; <span class="comment">//correspond à la couleur du fond du moteur 3D</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <a class="code hl_class" href="classImage.html">Image</a> image; <span class="comment">//correspond à l&#39;image du moteur</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">float</span> ** distances; <span class="comment">//correspond à la distance au carré des points de l&#39;image</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <a class="code hl_struct" href="structCouchesTransparentes.html">CouchesTransparentes</a> ** transparences; <span class="comment">//correspond aux différentes couches de transparence</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">float</span> distAffichage; <span class="comment">//correspond au coefficient de la distance d&#39;affichage proportionnelle à la taille des modèles, leur distMax et leur distance d&#39;affichage</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_class" href="classCamera.html">Camera</a> * cam; <span class="comment">//correspond à la camera</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    Mix_Music * musique; <span class="comment">//correspond à la musique du moteur</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#a3ac487cfdb487fa09a8c8b35b74787ac">creationTableau</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x)&amp;;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#a3db6f290c99cf4248a21dcd5229e5224">initialiserTableau</a>()&amp;;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#a2dd66df86ec0a5ea567de062606c99f1">gestionModeles</a>()&amp;;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#ade78331ab0113480039df3f2542adda4">addAff</a>(<a class="code hl_class" href="classModele.html">Modele</a> * mod, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s)&amp;;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#a9dc6e606aae569139878151107c4a475">afficherSurfaces</a>()&amp;;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#abe2d22883b3d787a2c37d227aaaab17e">majPoints</a>(<span class="keyword">const</span> <a class="code hl_class" href="classModele.html">Modele</a> * modele)&amp;;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#abe2d22883b3d787a2c37d227aaaab17e">majPoints</a>(<span class="keyword">const</span> <a class="code hl_class" href="classModele.html">Modele</a> * modele, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s)&amp;;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#afd56b0ed95d1bfd31390757cfbcbeabc">afficherSurface</a>(<a class="code hl_class" href="classModele.html">Modele</a> * modele, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s)&amp;;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#a3e8793e70851ea342bef6ce56fa2d2cf">traitementTriangle</a>(<span class="keyword">const</span> <a class="code hl_class" href="classModele.html">Modele</a> * modele, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s, <a class="code hl_struct" href="structPoint2D.html">Point2D</a> * p1, <a class="code hl_struct" href="structPoint2D.html">Point2D</a> * p2, <a class="code hl_struct" href="structPoint2D.html">Point2D</a> * p3, <span class="keywordtype">float</span> ang, <span class="keywordtype">float</span> distMin)&amp;;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#aadb767d2fcfdef1fe1a4b9ed618a4970">afficherTriangle</a>(<span class="keyword">const</span> <a class="code hl_class" href="classModele.html">Modele</a> * modele, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s, <a class="code hl_struct" href="structPoint2D.html">Point2D</a> * p1, <a class="code hl_struct" href="structPoint2D.html">Point2D</a> * p2, <a class="code hl_struct" href="structPoint2D.html">Point2D</a> * p3, <span class="keywordtype">float</span> ang, <span class="keywordtype">float</span> distMin)&amp;;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#ae49e953bc9f28622b9ed510947e4a762">addTransparent</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y, <span class="keyword">const</span> <a class="code hl_class" href="classCouleur.html">Couleur</a> &amp; coul, <span class="keywordtype">float</span> dist)&amp;;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#a9811f7b4f9aa2284d377d1884a10b864">appliquerTransparence</a>()&amp;;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    </div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <a class="code hl_function" href="classMoteur3D.html#aebf643226e4132fa8c69cdd756d50b66">Moteur3D</a>();</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <a class="code hl_function" href="classMoteur3D.html#aebf643226e4132fa8c69cdd756d50b66">Moteur3D</a>(<span class="keyword">const</span> std::string &amp; moteur);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <a class="code hl_function" href="classMoteur3D.html#abdfbe6046117a06223639e5f4f6c5aa7">~Moteur3D</a>();</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classMoteur3D.html#a67b35ede814f89e48314906a7e2766fc">charger</a>(<span class="keyword">const</span> std::string &amp; moteur)&amp;;</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classMoteur3D.html#ac5837d9a2ca839d0c02aa5aa7283acca">enregistrer</a>(<span class="keyword">const</span> std::string &amp; moteur)<span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>    <span class="keyword">const</span> <a class="code hl_class" href="classCouleur.html">Couleur</a>&amp; <a class="code hl_function" href="classMoteur3D.html#ad154add5f13c861b5182f1c03d35a223">getCouleurFond</a>()<span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#ad706e0b388e6b55f38f91ea76c2083ad">setCouleurFond</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> r, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> g, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> b);</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classMoteur3D.html#a733b7db59690468f60d8f463ae135d6d">getDistAffichage</a>()<span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#ade0f48668002af791445d66ffc278c0c">setDistAffichage</a>(<span class="keywordtype">float</span> dist);</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classMoteur3D.html#a606be8348b057137328c4e899666feaf">getNbModeles</a>()<span class="keyword">const</span> &amp;;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#a9123f7d1f47806d07e011015fe8340ee">addModele</a>(<a class="code hl_class" href="classModele.html">Modele</a> * modele)&amp;;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#a9123f7d1f47806d07e011015fe8340ee">addModele</a>(<span class="keyword">const</span> std::string &amp; modele, <span class="keyword">const</span> std::string &amp; texture)&amp;;</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#a9123f7d1f47806d07e011015fe8340ee">addModele</a>(<span class="keyword">const</span> std::string &amp; modele, <span class="keyword">const</span> std::string &amp; texture, <span class="keyword">const</span> <a class="code hl_class" href="classMatrice.html">Matrice</a> &amp; pos)&amp;;</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#aa0b3154308dc8557b52195140f9fefae">delModele</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m)&amp;;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>    <a class="code hl_class" href="classModele.html">Modele</a>* <a class="code hl_function" href="classMoteur3D.html#afe5fb6148fcb4dbe89d4f12b925b3db7">getModele</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m)&amp;;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span> </div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <a class="code hl_class" href="classImage.html">Image</a>* <a class="code hl_function" href="classMoteur3D.html#a3fcabda210d2260b880ddb93a6c0f79f">getImage</a>(<a class="code hl_class" href="classCamera.html">Camera</a> &amp; camera,<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tailley, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> taillex)&amp;;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    <a class="code hl_class" href="classImage.html">Image</a>* <a class="code hl_function" href="classMoteur3D.html#a3fcabda210d2260b880ddb93a6c0f79f">getImage</a>()&amp;;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="keywordtype">float</span>**&amp; <a class="code hl_function" href="classMoteur3D.html#ac88cd9921c87619bedf94414c7e96e5c">getDistances</a>()&amp;;</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>    <a class="code hl_struct" href="structPoint2D.html">Point2D</a>* <a class="code hl_function" href="classMoteur3D.html#a0db0f81d1a9fe5a1561de7bcdb891e93">getPoints2D</a>(<span class="keyword">const</span> <a class="code hl_class" href="classModele.html">Modele</a> * modele)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>    <a class="code hl_struct" href="structPoint2D.html">Point2D</a>* <a class="code hl_function" href="classMoteur3D.html#a0db0f81d1a9fe5a1561de7bcdb891e93">getPoints2D</a>(<span class="keyword">const</span> <a class="code hl_class" href="classModele.html">Modele</a> * modele, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> s)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <a class="code hl_class" href="classMatrice.html">Matrice</a> <a class="code hl_function" href="classMoteur3D.html#aa302e6fdd37533ef547b731ad6de5ff7">getPosCam</a>(<span class="keyword">const</span> <a class="code hl_class" href="classMatrice.html">Matrice</a> &amp; pos)<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    <a class="code hl_class" href="classCamera.html">Camera</a>* <a class="code hl_function" href="classMoteur3D.html#a153fd0ba8bb1bb601dafa9d821059861">getCam</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span> </div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classMoteur3D.html#a0740397ec39fb3f0160723a19e7c1d41">getNbAff</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span> </div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#afab005e9ea27bd90e9fdd93714d5ec75">pauseSons</a>();</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#a551bc2f704e0731b9f0901dd54f7b30b">reprendreSons</a>();</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span> </div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#a0d6b011c1b56be94cde6808e06db3272">arreterSons</a>();</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span> </div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classMoteur3D.html#ae0b320f0c0c474d00b523f333e90d75c">chargerMusique</a>(<span class="keyword">const</span> std::string &amp; nom);</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="classMoteur3D.html#a7a63eb67557507e95851ad01b3861667">jouerMusique</a>(<span class="keywordtype">int</span> repet=-1);</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#a400237fdd582ea1ad4bac6fcae1ce027">pauseMusique</a>();</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span> </div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classMoteur3D.html#a5f527dc3fb153c4c8b8eca18929d0bf1">isPauseMusique</a>();</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#ab618300493c67b015655d7ba4c728cd9">reprendreMusique</a>();</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span> </div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#aba54781660f82b368aa086dedb7c74da">arreterMusique</a>();</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#a912dadab2e9f862037ce8e2fb0c8a61b">recommencerMusique</a>();</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span> </div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classMoteur3D.html#a64ebfbbd9168ea8dab530164cf9b6c00">setVolume</a>(<span class="keywordtype">float</span> volume);</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
+<div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classMoteur3D.html#aa8ad49b438ccf0c833a11942fedbb3d7">getVolume</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span> </div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>};</div>
+<div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span> </div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassCamera_html"><div class="ttname"><a href="classCamera.html">Camera</a></div><div class="ttdoc">classe Camera</div><div class="ttdef"><b>Definition:</b> Camera.h:12</div></div>
+<div class="ttc" id="aclassCouleur_html"><div class="ttname"><a href="classCouleur.html">Couleur</a></div><div class="ttdoc">classe Couleur</div><div class="ttdef"><b>Definition:</b> Couleur.h:9</div></div>
+<div class="ttc" id="aclassImage_html"><div class="ttname"><a href="classImage.html">Image</a></div><div class="ttdoc">classe Image</div><div class="ttdef"><b>Definition:</b> Image.h:12</div></div>
+<div class="ttc" id="aclassMatrice_html"><div class="ttname"><a href="classMatrice.html">Matrice</a></div><div class="ttdoc">classe Matrice</div><div class="ttdef"><b>Definition:</b> Matrice.h:9</div></div>
+<div class="ttc" id="aclassModele_html"><div class="ttname"><a href="classModele.html">Modele</a></div><div class="ttdoc">classe Modele</div><div class="ttdef"><b>Definition:</b> Modele.h:26</div></div>
+<div class="ttc" id="aclassMoteur3D_html"><div class="ttname"><a href="classMoteur3D.html">Moteur3D</a></div><div class="ttdoc">classe Moteur3D</div><div class="ttdef"><b>Definition:</b> Moteur3D.h:57</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a0740397ec39fb3f0160723a19e7c1d41"><div class="ttname"><a href="classMoteur3D.html#a0740397ec39fb3f0160723a19e7c1d41">Moteur3D::getNbAff</a></div><div class="ttdeci">unsigned int getNbAff() const</div><div class="ttdoc">getNbAff: accesseur de nbAff</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:276</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a0d6b011c1b56be94cde6808e06db3272"><div class="ttname"><a href="classMoteur3D.html#a0d6b011c1b56be94cde6808e06db3272">Moteur3D::arreterSons</a></div><div class="ttdeci">void arreterSons()</div><div class="ttdoc">arreterSons : arrête tout les sons du moteur de jeu</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:291</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a0db0f81d1a9fe5a1561de7bcdb891e93"><div class="ttname"><a href="classMoteur3D.html#a0db0f81d1a9fe5a1561de7bcdb891e93">Moteur3D::getPoints2D</a></div><div class="ttdeci">Point2D * getPoints2D(const Modele *modele) const</div><div class="ttdoc">getPoints2D : renvoie les les coordonnées relatives au moteur des points du modele</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:230</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a153fd0ba8bb1bb601dafa9d821059861"><div class="ttname"><a href="classMoteur3D.html#a153fd0ba8bb1bb601dafa9d821059861">Moteur3D::getCam</a></div><div class="ttdeci">Camera * getCam() const</div><div class="ttdoc">getCam : accesseur de cam</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:271</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a2dd66df86ec0a5ea567de062606c99f1"><div class="ttname"><a href="classMoteur3D.html#a2dd66df86ec0a5ea567de062606c99f1">Moteur3D::gestionModeles</a></div><div class="ttdeci">void gestionModeles() &amp;</div><div class="ttdoc">gestionModeles : optimise les modèles trop éloignés de la camera et charge les modèles proche de la c...</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:416</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a3ac487cfdb487fa09a8c8b35b74787ac"><div class="ttname"><a href="classMoteur3D.html#a3ac487cfdb487fa09a8c8b35b74787ac">Moteur3D::creationTableau</a></div><div class="ttdeci">void creationTableau(unsigned int y, unsigned int x) &amp;</div><div class="ttdoc">creationTableau : redimensionne distances et image si neccessaire</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:367</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a3db6f290c99cf4248a21dcd5229e5224"><div class="ttname"><a href="classMoteur3D.html#a3db6f290c99cf4248a21dcd5229e5224">Moteur3D::initialiserTableau</a></div><div class="ttdeci">void initialiserTableau() &amp;</div><div class="ttdoc">initialiserTableau : remplie distances avec -1 et image avec couleurFond</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:399</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a3e8793e70851ea342bef6ce56fa2d2cf"><div class="ttname"><a href="classMoteur3D.html#a3e8793e70851ea342bef6ce56fa2d2cf">Moteur3D::traitementTriangle</a></div><div class="ttdeci">void traitementTriangle(const Modele *modele, unsigned int s, Point2D *p1, Point2D *p2, Point2D *p3, float ang, float distMin) &amp;</div><div class="ttdoc">traitementTriangle : projete les points du triangle devant la caméra</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:515</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a3fcabda210d2260b880ddb93a6c0f79f"><div class="ttname"><a href="classMoteur3D.html#a3fcabda210d2260b880ddb93a6c0f79f">Moteur3D::getImage</a></div><div class="ttdeci">Image * getImage(Camera &amp;camera, unsigned int tailley, unsigned int taillex) &amp;</div><div class="ttdoc">getImage : renvoie l'image des modèles vue par la caméra</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:210</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a400237fdd582ea1ad4bac6fcae1ce027"><div class="ttname"><a href="classMoteur3D.html#a400237fdd582ea1ad4bac6fcae1ce027">Moteur3D::pauseMusique</a></div><div class="ttdeci">void pauseMusique()</div><div class="ttdoc">pauseMusique : met en pause la musique du moteur de jeu</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:324</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a551bc2f704e0731b9f0901dd54f7b30b"><div class="ttname"><a href="classMoteur3D.html#a551bc2f704e0731b9f0901dd54f7b30b">Moteur3D::reprendreSons</a></div><div class="ttdeci">void reprendreSons()</div><div class="ttdoc">reprendreSons : retire la pause de tout les sons du moteur de jeu</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:286</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a5f527dc3fb153c4c8b8eca18929d0bf1"><div class="ttname"><a href="classMoteur3D.html#a5f527dc3fb153c4c8b8eca18929d0bf1">Moteur3D::isPauseMusique</a></div><div class="ttdeci">int isPauseMusique()</div><div class="ttdoc">isPauseMusique : renvoie si le musique est en pause</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:329</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a606be8348b057137328c4e899666feaf"><div class="ttname"><a href="classMoteur3D.html#a606be8348b057137328c4e899666feaf">Moteur3D::getNbModeles</a></div><div class="ttdeci">unsigned int getNbModeles() const &amp;</div><div class="ttdoc">getNbModeles : accesseur de nbModeles</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:145</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a64ebfbbd9168ea8dab530164cf9b6c00"><div class="ttname"><a href="classMoteur3D.html#a64ebfbbd9168ea8dab530164cf9b6c00">Moteur3D::setVolume</a></div><div class="ttdeci">void setVolume(float volume)</div><div class="ttdoc">setVolume : mutateur du volume de la musique du moteur de jeu</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:351</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a67b35ede814f89e48314906a7e2766fc"><div class="ttname"><a href="classMoteur3D.html#a67b35ede814f89e48314906a7e2766fc">Moteur3D::charger</a></div><div class="ttdeci">bool charger(const std::string &amp;moteur) &amp;</div><div class="ttdoc">charger : charge les informations sur le moteur3D et les modèles</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:71</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a733b7db59690468f60d8f463ae135d6d"><div class="ttname"><a href="classMoteur3D.html#a733b7db59690468f60d8f463ae135d6d">Moteur3D::getDistAffichage</a></div><div class="ttdeci">float getDistAffichage() const &amp;</div><div class="ttdoc">getDistAffichage : accesseur de distAffichage</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:135</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a7a63eb67557507e95851ad01b3861667"><div class="ttname"><a href="classMoteur3D.html#a7a63eb67557507e95851ad01b3861667">Moteur3D::jouerMusique</a></div><div class="ttdeci">bool jouerMusique(int repet=-1)</div><div class="ttdoc">jouerMusique : joue la musique chargé dans le moteur de jeu</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:313</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a9123f7d1f47806d07e011015fe8340ee"><div class="ttname"><a href="classMoteur3D.html#a9123f7d1f47806d07e011015fe8340ee">Moteur3D::addModele</a></div><div class="ttdeci">void addModele(Modele *modele) &amp;</div><div class="ttdoc">addModele : ajoute un modèle au moteur 3D</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:150</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a912dadab2e9f862037ce8e2fb0c8a61b"><div class="ttname"><a href="classMoteur3D.html#a912dadab2e9f862037ce8e2fb0c8a61b">Moteur3D::recommencerMusique</a></div><div class="ttdeci">void recommencerMusique()</div><div class="ttdoc">recommencerMusique : recommence la musique depuis le début</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:346</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a9811f7b4f9aa2284d377d1884a10b864"><div class="ttname"><a href="classMoteur3D.html#a9811f7b4f9aa2284d377d1884a10b864">Moteur3D::appliquerTransparence</a></div><div class="ttdeci">void appliquerTransparence() &amp;</div><div class="ttdoc">appliquerTransparence : applique les couches transparentes sur l'image</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:812</div></div>
+<div class="ttc" id="aclassMoteur3D_html_a9dc6e606aae569139878151107c4a475"><div class="ttname"><a href="classMoteur3D.html#a9dc6e606aae569139878151107c4a475">Moteur3D::afficherSurfaces</a></div><div class="ttdeci">void afficherSurfaces() &amp;</div><div class="ttdoc">afficherSurfaces : Fait apparaitre les surfaces sur l'image</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:473</div></div>
+<div class="ttc" id="aclassMoteur3D_html_aa0b3154308dc8557b52195140f9fefae"><div class="ttname"><a href="classMoteur3D.html#aa0b3154308dc8557b52195140f9fefae">Moteur3D::delModele</a></div><div class="ttdeci">void delModele(unsigned int m) &amp;</div><div class="ttdoc">delModele : supprime un modèle du moteur 3D</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:183</div></div>
+<div class="ttc" id="aclassMoteur3D_html_aa302e6fdd37533ef547b731ad6de5ff7"><div class="ttname"><a href="classMoteur3D.html#aa302e6fdd37533ef547b731ad6de5ff7">Moteur3D::getPosCam</a></div><div class="ttdeci">Matrice getPosCam(const Matrice &amp;pos) const</div><div class="ttdoc">getPosCam : renvoie les coordonnées en fonction de la caméra</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:265</div></div>
+<div class="ttc" id="aclassMoteur3D_html_aa8ad49b438ccf0c833a11942fedbb3d7"><div class="ttname"><a href="classMoteur3D.html#aa8ad49b438ccf0c833a11942fedbb3d7">Moteur3D::getVolume</a></div><div class="ttdeci">float getVolume() const</div><div class="ttdoc">getVolume : accesseur du volume de la musique du moteur de jeu</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:362</div></div>
+<div class="ttc" id="aclassMoteur3D_html_aadb767d2fcfdef1fe1a4b9ed618a4970"><div class="ttname"><a href="classMoteur3D.html#aadb767d2fcfdef1fe1a4b9ed618a4970">Moteur3D::afficherTriangle</a></div><div class="ttdeci">void afficherTriangle(const Modele *modele, unsigned int s, Point2D *p1, Point2D *p2, Point2D *p3, float ang, float distMin) &amp;</div><div class="ttdoc">afficherTriangle : Fait apparaitre les triangles sur l'image</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:584</div></div>
+<div class="ttc" id="aclassMoteur3D_html_ab618300493c67b015655d7ba4c728cd9"><div class="ttname"><a href="classMoteur3D.html#ab618300493c67b015655d7ba4c728cd9">Moteur3D::reprendreMusique</a></div><div class="ttdeci">void reprendreMusique()</div><div class="ttdoc">reprendreMusique : retire la pause de la musique du moteur de jeu</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:336</div></div>
+<div class="ttc" id="aclassMoteur3D_html_aba54781660f82b368aa086dedb7c74da"><div class="ttname"><a href="classMoteur3D.html#aba54781660f82b368aa086dedb7c74da">Moteur3D::arreterMusique</a></div><div class="ttdeci">void arreterMusique()</div><div class="ttdoc">arreterMusique : arrête la musique du moteur de jeu</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:341</div></div>
+<div class="ttc" id="aclassMoteur3D_html_abdfbe6046117a06223639e5f4f6c5aa7"><div class="ttname"><a href="classMoteur3D.html#abdfbe6046117a06223639e5f4f6c5aa7">Moteur3D::~Moteur3D</a></div><div class="ttdeci">~Moteur3D()</div><div class="ttdoc">~Moteur3D : destructeur de la classe Moteur3D</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:35</div></div>
+<div class="ttc" id="aclassMoteur3D_html_abe2d22883b3d787a2c37d227aaaab17e"><div class="ttname"><a href="classMoteur3D.html#abe2d22883b3d787a2c37d227aaaab17e">Moteur3D::majPoints</a></div><div class="ttdeci">void majPoints(const Modele *modele) &amp;</div><div class="ttdoc">majPoints : calcul la position sur l'image des points du modèle</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:485</div></div>
+<div class="ttc" id="aclassMoteur3D_html_ac5837d9a2ca839d0c02aa5aa7283acca"><div class="ttname"><a href="classMoteur3D.html#ac5837d9a2ca839d0c02aa5aa7283acca">Moteur3D::enregistrer</a></div><div class="ttdeci">bool enregistrer(const std::string &amp;moteur) const &amp;</div><div class="ttdoc">enregistrer : enregistre les informations sur le moteur3D et les modèles</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:105</div></div>
+<div class="ttc" id="aclassMoteur3D_html_ac88cd9921c87619bedf94414c7e96e5c"><div class="ttname"><a href="classMoteur3D.html#ac88cd9921c87619bedf94414c7e96e5c">Moteur3D::getDistances</a></div><div class="ttdeci">float **&amp; getDistances() &amp;</div><div class="ttdoc">getDistances : accesseur de distances</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:225</div></div>
+<div class="ttc" id="aclassMoteur3D_html_ad154add5f13c861b5182f1c03d35a223"><div class="ttname"><a href="classMoteur3D.html#ad154add5f13c861b5182f1c03d35a223">Moteur3D::getCouleurFond</a></div><div class="ttdeci">const Couleur &amp; getCouleurFond() const &amp;</div><div class="ttdoc">getCouleurFond : accesseur de couleurFond</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:125</div></div>
+<div class="ttc" id="aclassMoteur3D_html_ad706e0b388e6b55f38f91ea76c2083ad"><div class="ttname"><a href="classMoteur3D.html#ad706e0b388e6b55f38f91ea76c2083ad">Moteur3D::setCouleurFond</a></div><div class="ttdeci">void setCouleurFond(unsigned char r, unsigned char g, unsigned char b)</div><div class="ttdoc">setCouleurFond : mutateur de couleurFond</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:130</div></div>
+<div class="ttc" id="aclassMoteur3D_html_ade0f48668002af791445d66ffc278c0c"><div class="ttname"><a href="classMoteur3D.html#ade0f48668002af791445d66ffc278c0c">Moteur3D::setDistAffichage</a></div><div class="ttdeci">void setDistAffichage(float dist)</div><div class="ttdoc">setDistAffichage : mutateur de distAffichage</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:140</div></div>
+<div class="ttc" id="aclassMoteur3D_html_ade78331ab0113480039df3f2542adda4"><div class="ttname"><a href="classMoteur3D.html#ade78331ab0113480039df3f2542adda4">Moteur3D::addAff</a></div><div class="ttdeci">void addAff(Modele *mod, unsigned int s) &amp;</div><div class="ttdoc">addAff : ajoute un modèle à l'affichage</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:448</div></div>
+<div class="ttc" id="aclassMoteur3D_html_ae0b320f0c0c474d00b523f333e90d75c"><div class="ttname"><a href="classMoteur3D.html#ae0b320f0c0c474d00b523f333e90d75c">Moteur3D::chargerMusique</a></div><div class="ttdeci">bool chargerMusique(const std::string &amp;nom)</div><div class="ttdoc">chargerMusique : charge une musique dans le moteur de jeu (mp3 par défaut)</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:296</div></div>
+<div class="ttc" id="aclassMoteur3D_html_ae49e953bc9f28622b9ed510947e4a762"><div class="ttname"><a href="classMoteur3D.html#ae49e953bc9f28622b9ed510947e4a762">Moteur3D::addTransparent</a></div><div class="ttdeci">void addTransparent(unsigned int x, unsigned int y, const Couleur &amp;coul, float dist) &amp;</div><div class="ttdoc">addTransparent : ajoute une couche transparente au pixel</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:781</div></div>
+<div class="ttc" id="aclassMoteur3D_html_aebf643226e4132fa8c69cdd756d50b66"><div class="ttname"><a href="classMoteur3D.html#aebf643226e4132fa8c69cdd756d50b66">Moteur3D::Moteur3D</a></div><div class="ttdeci">Moteur3D()</div><div class="ttdoc">Moteur3D : constructeur de la classe Moteur3D.</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:6</div></div>
+<div class="ttc" id="aclassMoteur3D_html_afab005e9ea27bd90e9fdd93714d5ec75"><div class="ttname"><a href="classMoteur3D.html#afab005e9ea27bd90e9fdd93714d5ec75">Moteur3D::pauseSons</a></div><div class="ttdeci">void pauseSons()</div><div class="ttdoc">pauseSons : met en pause tout les sons du moteur de jeu</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:281</div></div>
+<div class="ttc" id="aclassMoteur3D_html_afd56b0ed95d1bfd31390757cfbcbeabc"><div class="ttname"><a href="classMoteur3D.html#afd56b0ed95d1bfd31390757cfbcbeabc">Moteur3D::afficherSurface</a></div><div class="ttdeci">void afficherSurface(Modele *modele, unsigned int s) &amp;</div><div class="ttdoc">afficherSurface : Fait apparaitre les surfaces sur l'image</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:500</div></div>
+<div class="ttc" id="aclassMoteur3D_html_afe5fb6148fcb4dbe89d4f12b925b3db7"><div class="ttname"><a href="classMoteur3D.html#afe5fb6148fcb4dbe89d4f12b925b3db7">Moteur3D::getModele</a></div><div class="ttdeci">Modele * getModele(unsigned int m) &amp;</div><div class="ttdoc">getModele : renvoie le modèle</div><div class="ttdef"><b>Definition:</b> Moteur3D.cpp:204</div></div>
+<div class="ttc" id="astructCouche_html"><div class="ttname"><a href="structCouche.html">Couche</a></div><div class="ttdoc">structure Couche</div><div class="ttdef"><b>Definition:</b> Moteur3D.h:36</div></div>
+<div class="ttc" id="astructCouchesTransparentes_html"><div class="ttname"><a href="structCouchesTransparentes.html">CouchesTransparentes</a></div><div class="ttdoc">structure CouchesTransparentes</div><div class="ttdef"><b>Definition:</b> Moteur3D.h:46</div></div>
+<div class="ttc" id="astructPoint2D_html"><div class="ttname"><a href="structPoint2D.html">Point2D</a></div><div class="ttdoc">structure Point2D</div><div class="ttdef"><b>Definition:</b> Moteur3D.h:13</div></div>
+<div class="ttc" id="astructSurfaceAff_html"><div class="ttname"><a href="structSurfaceAff.html">SurfaceAff</a></div><div class="ttdoc">structure SurfaceAff</div><div class="ttdef"><b>Definition:</b> Moteur3D.h:24</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

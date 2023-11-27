@@ -1,0 +1,34 @@
+\hypertarget{Affichage__SDL_8h_source}{}\doxysection{Affichage\+\_\+\+SDL.\+h}
+\label{Affichage__SDL_8h_source}\index{include/Affichage\_SDL.h@{include/Affichage\_SDL.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_AFFICHAGE\_SDL}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_AFFICHAGE\_SDL}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Image.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classAffichage__SDL}{Affichage\_SDL}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ SDL\_Window\ *\ window;\ \textcolor{comment}{//correspond\ à\ la\ fenètre\ SDL}}
+\DoxyCodeLine{00015\ \ \ \ \ SDL\_Renderer\ *\ renderer;\ \textcolor{comment}{//correspond\ au\ renderer}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ tailley,\ taillex;\ \textcolor{comment}{//correspondent\ aux\ dimensions\ de\ la\ fenètre}}
+\DoxyCodeLine{00017\ \ \ \ \ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classAffichage__SDL}{Affichage\_SDL}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ty,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ tx);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classAffichage__SDL_a2aa3ed2059855e12b5b68e0d5436b460}{\string~Affichage\_SDL}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAffichage__SDL_a6d721fcc66cde22050179f3606821655}{effacer}}();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAffichage__SDL_a45b9a1ba3e73ada187b4552859c9a8d7}{afficher}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAffichage__SDL_a97b88347834aaec4355182b0fd7d6893}{ajouter}}(\mbox{\hyperlink{classImage}{Image}}\ \textcolor{keyword}{const}\ *\ img,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ posy,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ posx,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ hauteur,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ largeur);}
+\DoxyCodeLine{00051\ \ \ \ \ }
+\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

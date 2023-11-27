@@ -1,0 +1,273 @@
+\hypertarget{classImage}{}\doxysection{Référence de la classe Image}
+\label{classImage}\index{Image@{Image}}
+
+
+{\ttfamily \#include $<$Image.\+h$>$}
+
+
+
+Graphe de collaboration de Image\+:
+% FIG 0
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classImage_a58edd1c45b4faeb5f789b0d036d02313}\label{classImage_a58edd1c45b4faeb5f789b0d036d02313}} 
+{\bfseries Image} ()
+\item 
+\mbox{\hyperlink{classImage_a2575361f3b352d4cbd7870bc94ba7fe4}{Image}} (unsigned int ty, unsigned int tx)
+\item 
+\mbox{\Hypertarget{classImage_a0294f63700543e11c0f0da85601c7ae5}\label{classImage_a0294f63700543e11c0f0da85601c7ae5}} 
+{\bfseries $\sim$\+Image} ()
+\item 
+\mbox{\hyperlink{classCouleur}{Couleur}} \mbox{\hyperlink{classImage_a9aa4d2fd5ad902f75263942556b56b07}{get\+Couleur}} (unsigned int y, unsigned int x) const \&
+\item 
+void \mbox{\hyperlink{classImage_aef08a1c58f9decf81fd0589fd6ac87fb}{set\+Couleur\+RGB}} (unsigned int y, unsigned int x, const \mbox{\hyperlink{classCouleur}{Couleur}} \&couleur)
+\item 
+void \mbox{\hyperlink{classImage_ac15892f275d2e0adef39ae627f5f184d}{set\+Couleur\+RGBA}} (unsigned int y, unsigned int x, const \mbox{\hyperlink{classCouleur}{Couleur}} \&couleur)
+\item 
+void \mbox{\hyperlink{classImage_a4c6b6444937dd6af118c91c2c47a6dd6}{set\+CouleurA}} (unsigned int y, unsigned int x, unsigned char a)
+\item 
+unsigned int \mbox{\hyperlink{classImage_ab0db64ac65f36f46fd7e75871375e62e}{get\+Tailley}} () const \&
+\item 
+unsigned int \mbox{\hyperlink{classImage_af1e3e7e94be468132d560c205f52d01f}{get\+Taillex}} () const \&
+\item 
+void \mbox{\hyperlink{classImage_a31850fd9dff2c5a7e48b92c8f271c98b}{set\+Image}} (unsigned int ty, unsigned int tx)
+\item 
+void \mbox{\hyperlink{classImage_a39fd299ce13a96d07a934353e278ce60}{effacer}} (const \mbox{\hyperlink{classCouleur}{Couleur}} \&couleur)
+\item 
+void \mbox{\hyperlink{classImage_a7c25c20ababe51ea1611ed2f25934d88}{colorier}} (const \mbox{\hyperlink{classCouleur}{Couleur}} \&couleur)
+\item 
+bool \mbox{\hyperlink{classImage_a8948d08d90ecb89a1c616aca22411f62}{charger}} (const std\+::string \&nom)
+\item 
+bool \mbox{\hyperlink{classImage_a2bda20c124cb5f03da0ed85d2fece46e}{enregistrer}} (const std\+::string \&nom) const \&
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classImage_a8035074fed7e74d9b25b87e3e20d625a}\label{classImage_a8035074fed7e74d9b25b87e3e20d625a}} 
+unsigned int {\bfseries tailley}
+\item 
+\mbox{\Hypertarget{classImage_a1197be04156dda6826dbec16ddb82725}\label{classImage_a1197be04156dda6826dbec16ddb82725}} 
+unsigned int {\bfseries taillex}
+\item 
+\mbox{\Hypertarget{classImage_a132cfeb3a1b6a8d2b24ca3340cb97510}\label{classImage_a132cfeb3a1b6a8d2b24ca3340cb97510}} 
+\mbox{\hyperlink{classCouleur}{Couleur}} $\ast$$\ast$ {\bfseries couleurs}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+classe \mbox{\hyperlink{classImage}{Image}} 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{classImage_a2575361f3b352d4cbd7870bc94ba7fe4}\label{classImage_a2575361f3b352d4cbd7870bc94ba7fe4}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{unsigned int}]{ty,  }\item[{unsigned int}]{tx }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classImage}{Image}} \+: constructeur de la classe \mbox{\hyperlink{classImage}{Image}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int ty la hauteur de l\textquotesingle{}image \\
+\hline
+{\em unsigned} & int tx la largeur de l\textquotesingle{}image \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classImage_a8948d08d90ecb89a1c616aca22411f62}\label{classImage_a8948d08d90ecb89a1c616aca22411f62}} 
+\index{Image@{Image}!charger@{charger}}
+\index{charger@{charger}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{charger()}{charger()}}
+{\footnotesize\ttfamily bool Image\+::charger (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nom }\end{DoxyParamCaption})}
+
+
+
+charger \+: charge une image (png par défaut) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & nom le chemin vers l\textquotesingle{}image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si le chargement à bien fonctionné 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImage_a7c25c20ababe51ea1611ed2f25934d88}\label{classImage_a7c25c20ababe51ea1611ed2f25934d88}} 
+\index{Image@{Image}!colorier@{colorier}}
+\index{colorier@{colorier}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{colorier()}{colorier()}}
+{\footnotesize\ttfamily void Image\+::colorier (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCouleur}{Couleur}} \&}]{couleur }\end{DoxyParamCaption})}
+
+
+
+colorier \+: colorie l\textquotesingle{}image avec la couleur en conservant la luminosité de chaque pixels 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classCouleur}{Couleur}}} & couleur la couleur de coloriage \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classImage_a39fd299ce13a96d07a934353e278ce60}\label{classImage_a39fd299ce13a96d07a934353e278ce60}} 
+\index{Image@{Image}!effacer@{effacer}}
+\index{effacer@{effacer}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{effacer()}{effacer()}}
+{\footnotesize\ttfamily void Image\+::effacer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCouleur}{Couleur}} \&}]{couleur }\end{DoxyParamCaption})}
+
+
+
+effacer \+: remplie l\textquotesingle{}image avec la couleur 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classCouleur}{Couleur}}} & couleur la couleur de remplissage \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classImage_a2bda20c124cb5f03da0ed85d2fece46e}\label{classImage_a2bda20c124cb5f03da0ed85d2fece46e}} 
+\index{Image@{Image}!enregistrer@{enregistrer}}
+\index{enregistrer@{enregistrer}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{enregistrer()}{enregistrer()}}
+{\footnotesize\ttfamily bool Image\+::enregistrer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nom }\end{DoxyParamCaption}) const \&}
+
+
+
+enregister \+: enregistre une image au format bmp 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & nom le chemin vers l\textquotesingle{}image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si l\textquotesingle{}enregistrement à bien fonctionné 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImage_a9aa4d2fd5ad902f75263942556b56b07}\label{classImage_a9aa4d2fd5ad902f75263942556b56b07}} 
+\index{Image@{Image}!getCouleur@{getCouleur}}
+\index{getCouleur@{getCouleur}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{getCouleur()}{getCouleur()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCouleur}{Couleur}} Image\+::get\+Couleur (\begin{DoxyParamCaption}\item[{unsigned int}]{y,  }\item[{unsigned int}]{x }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Couleur \+: accesseur de couleurs 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int y la hauteur de la couleur \\
+\hline
+{\em unsigned} & int x la largeur de la couleur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{classCouleur}{Couleur}} la couleur de l\textquotesingle{}image aux coordonnées y,x 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImage_af1e3e7e94be468132d560c205f52d01f}\label{classImage_af1e3e7e94be468132d560c205f52d01f}} 
+\index{Image@{Image}!getTaillex@{getTaillex}}
+\index{getTaillex@{getTaillex}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{getTaillex()}{getTaillex()}}
+{\footnotesize\ttfamily unsigned int Image\+::get\+Taillex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Taillex \+: accesseur de taillex 
+
+\begin{DoxyReturn}{Renvoie}
+unsigned int la largeur de l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImage_ab0db64ac65f36f46fd7e75871375e62e}\label{classImage_ab0db64ac65f36f46fd7e75871375e62e}} 
+\index{Image@{Image}!getTailley@{getTailley}}
+\index{getTailley@{getTailley}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{getTailley()}{getTailley()}}
+{\footnotesize\ttfamily unsigned int Image\+::get\+Tailley (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Tailley \+: accesseur de tailley 
+
+\begin{DoxyReturn}{Renvoie}
+unsigned int la hauteur de l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classImage_a4c6b6444937dd6af118c91c2c47a6dd6}\label{classImage_a4c6b6444937dd6af118c91c2c47a6dd6}} 
+\index{Image@{Image}!setCouleurA@{setCouleurA}}
+\index{setCouleurA@{setCouleurA}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{setCouleurA()}{setCouleurA()}}
+{\footnotesize\ttfamily void Image\+::set\+CouleurA (\begin{DoxyParamCaption}\item[{unsigned int}]{y,  }\item[{unsigned int}]{x,  }\item[{unsigned char}]{a }\end{DoxyParamCaption})}
+
+
+
+set\+CouleurA \+: modifie seulement la transparence du pixel 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int y la hauteur de la couleur \\
+\hline
+{\em unsigned} & int x la largeur de la couleur \\
+\hline
+{\em unsigned} & char a la transparence \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classImage_aef08a1c58f9decf81fd0589fd6ac87fb}\label{classImage_aef08a1c58f9decf81fd0589fd6ac87fb}} 
+\index{Image@{Image}!setCouleurRGB@{setCouleurRGB}}
+\index{setCouleurRGB@{setCouleurRGB}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{setCouleurRGB()}{setCouleurRGB()}}
+{\footnotesize\ttfamily void Image\+::set\+Couleur\+RGB (\begin{DoxyParamCaption}\item[{unsigned int}]{y,  }\item[{unsigned int}]{x,  }\item[{const \mbox{\hyperlink{classCouleur}{Couleur}} \&}]{couleur }\end{DoxyParamCaption})}
+
+
+
+set\+Couleur\+RGB \+: modifie seulement la couleur du pixel 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int y la hauteur de la couleur \\
+\hline
+{\em unsigned} & int x la largeur de la couleur \\
+\hline
+{\em \mbox{\hyperlink{classCouleur}{Couleur}}} & couleur la couleur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classImage_ac15892f275d2e0adef39ae627f5f184d}\label{classImage_ac15892f275d2e0adef39ae627f5f184d}} 
+\index{Image@{Image}!setCouleurRGBA@{setCouleurRGBA}}
+\index{setCouleurRGBA@{setCouleurRGBA}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{setCouleurRGBA()}{setCouleurRGBA()}}
+{\footnotesize\ttfamily void Image\+::set\+Couleur\+RGBA (\begin{DoxyParamCaption}\item[{unsigned int}]{y,  }\item[{unsigned int}]{x,  }\item[{const \mbox{\hyperlink{classCouleur}{Couleur}} \&}]{couleur }\end{DoxyParamCaption})}
+
+
+
+set\+Couleur\+RGBA \+: modifie la couleur du pixel et sa transparence 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int y la hauteur de la couleur \\
+\hline
+{\em unsigned} & int x la largeur de la couleur \\
+\hline
+{\em \mbox{\hyperlink{classCouleur}{Couleur}}} & couleur la couleur \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classImage_a31850fd9dff2c5a7e48b92c8f271c98b}\label{classImage_a31850fd9dff2c5a7e48b92c8f271c98b}} 
+\index{Image@{Image}!setImage@{setImage}}
+\index{setImage@{setImage}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{setImage()}{setImage()}}
+{\footnotesize\ttfamily void Image\+::set\+Image (\begin{DoxyParamCaption}\item[{unsigned int}]{ty,  }\item[{unsigned int}]{tx }\end{DoxyParamCaption})}
+
+
+
+set\+Image \+: permet de créer une nouvelle image 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int ty la hauteur de l\textquotesingle{}image \\
+\hline
+{\em unsigned} & int tx la largeur de l\textquotesingle{}image \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+include/Image.\+h\item 
+src/Image.\+cpp\end{DoxyCompactItemize}

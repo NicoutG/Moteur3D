@@ -1,0 +1,753 @@
+\hypertarget{classMoteur3D}{}\doxysection{Référence de la classe Moteur3D}
+\label{classMoteur3D}\index{Moteur3D@{Moteur3D}}
+
+
+{\ttfamily \#include $<$Moteur3\+D.\+h$>$}
+
+
+
+Graphe de collaboration de Moteur3D\+:
+% FIG 0
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMoteur3D_aebf643226e4132fa8c69cdd756d50b66}\label{classMoteur3D_aebf643226e4132fa8c69cdd756d50b66}} 
+{\bfseries Moteur3D} ()
+\item 
+\mbox{\hyperlink{classMoteur3D_a8af16bb91fe963333654662ba285eeea}{Moteur3D}} (const std\+::string \&moteur)
+\item 
+\mbox{\Hypertarget{classMoteur3D_abdfbe6046117a06223639e5f4f6c5aa7}\label{classMoteur3D_abdfbe6046117a06223639e5f4f6c5aa7}} 
+{\bfseries $\sim$\+Moteur3D} ()
+\item 
+bool \mbox{\hyperlink{classMoteur3D_a67b35ede814f89e48314906a7e2766fc}{charger}} (const std\+::string \&moteur) \&
+\item 
+bool \mbox{\hyperlink{classMoteur3D_ac5837d9a2ca839d0c02aa5aa7283acca}{enregistrer}} (const std\+::string \&moteur) const \&
+\item 
+const \mbox{\hyperlink{classCouleur}{Couleur}} \& \mbox{\hyperlink{classMoteur3D_ad154add5f13c861b5182f1c03d35a223}{get\+Couleur\+Fond}} () const \&
+\item 
+void \mbox{\hyperlink{classMoteur3D_ad706e0b388e6b55f38f91ea76c2083ad}{set\+Couleur\+Fond}} (unsigned char r, unsigned char g, unsigned char b)
+\item 
+float \mbox{\hyperlink{classMoteur3D_a733b7db59690468f60d8f463ae135d6d}{get\+Dist\+Affichage}} () const \&
+\item 
+void \mbox{\hyperlink{classMoteur3D_ade0f48668002af791445d66ffc278c0c}{set\+Dist\+Affichage}} (float dist)
+\item 
+unsigned int \mbox{\hyperlink{classMoteur3D_a606be8348b057137328c4e899666feaf}{get\+Nb\+Modeles}} () const \&
+\item 
+void \mbox{\hyperlink{classMoteur3D_a9123f7d1f47806d07e011015fe8340ee}{add\+Modele}} (\mbox{\hyperlink{classModele}{Modele}} $\ast$modele) \&
+\item 
+void \mbox{\hyperlink{classMoteur3D_acf4af8199f90ab0145c597439b2feea5}{add\+Modele}} (const std\+::string \&modele, const std\+::string \&texture) \&
+\item 
+void \mbox{\hyperlink{classMoteur3D_a76d868fd82715d77095dba45323f4f30}{add\+Modele}} (const std\+::string \&modele, const std\+::string \&texture, const \mbox{\hyperlink{classMatrice}{Matrice}} \&pos) \&
+\item 
+void \mbox{\hyperlink{classMoteur3D_aa0b3154308dc8557b52195140f9fefae}{del\+Modele}} (unsigned int m) \&
+\item 
+\mbox{\hyperlink{classModele}{Modele}} $\ast$ \mbox{\hyperlink{classMoteur3D_afe5fb6148fcb4dbe89d4f12b925b3db7}{get\+Modele}} (unsigned int m) \&
+\item 
+\mbox{\hyperlink{classImage}{Image}} $\ast$ \mbox{\hyperlink{classMoteur3D_a3fcabda210d2260b880ddb93a6c0f79f}{get\+Image}} (\mbox{\hyperlink{classCamera}{Camera}} \&camera, unsigned int tailley, unsigned int taillex) \&
+\item 
+\mbox{\hyperlink{classImage}{Image}} $\ast$ \mbox{\hyperlink{classMoteur3D_a72544237be6e3ba3d1d9d58a2337ca53}{get\+Image}} () \&
+\item 
+float $\ast$$\ast$\& \mbox{\hyperlink{classMoteur3D_ac88cd9921c87619bedf94414c7e96e5c}{get\+Distances}} () \&
+\item 
+\mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$ \mbox{\hyperlink{classMoteur3D_a0db0f81d1a9fe5a1561de7bcdb891e93}{get\+Points2D}} (const \mbox{\hyperlink{classModele}{Modele}} $\ast$modele) const
+\item 
+\mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$ \mbox{\hyperlink{classMoteur3D_a82fbf48dd3f2b00e35958ccb1dae77fd}{get\+Points2D}} (const \mbox{\hyperlink{classModele}{Modele}} $\ast$modele, unsigned int s) const
+\item 
+\mbox{\hyperlink{classMatrice}{Matrice}} \mbox{\hyperlink{classMoteur3D_aa302e6fdd37533ef547b731ad6de5ff7}{get\+Pos\+Cam}} (const \mbox{\hyperlink{classMatrice}{Matrice}} \&pos) const
+\item 
+\mbox{\hyperlink{classCamera}{Camera}} $\ast$ \mbox{\hyperlink{classMoteur3D_a153fd0ba8bb1bb601dafa9d821059861}{get\+Cam}} () const
+\item 
+unsigned int \mbox{\hyperlink{classMoteur3D_a0740397ec39fb3f0160723a19e7c1d41}{get\+Nb\+Aff}} () const
+\item 
+\mbox{\Hypertarget{classMoteur3D_afab005e9ea27bd90e9fdd93714d5ec75}\label{classMoteur3D_afab005e9ea27bd90e9fdd93714d5ec75}} 
+void {\bfseries pause\+Sons} ()
+\item 
+\mbox{\Hypertarget{classMoteur3D_a551bc2f704e0731b9f0901dd54f7b30b}\label{classMoteur3D_a551bc2f704e0731b9f0901dd54f7b30b}} 
+void {\bfseries reprendre\+Sons} ()
+\item 
+\mbox{\Hypertarget{classMoteur3D_a0d6b011c1b56be94cde6808e06db3272}\label{classMoteur3D_a0d6b011c1b56be94cde6808e06db3272}} 
+void {\bfseries arreter\+Sons} ()
+\item 
+bool \mbox{\hyperlink{classMoteur3D_ae0b320f0c0c474d00b523f333e90d75c}{charger\+Musique}} (const std\+::string \&nom)
+\item 
+bool \mbox{\hyperlink{classMoteur3D_a7a63eb67557507e95851ad01b3861667}{jouer\+Musique}} (int repet=-\/1)
+\item 
+\mbox{\Hypertarget{classMoteur3D_a400237fdd582ea1ad4bac6fcae1ce027}\label{classMoteur3D_a400237fdd582ea1ad4bac6fcae1ce027}} 
+void {\bfseries pause\+Musique} ()
+\item 
+int \mbox{\hyperlink{classMoteur3D_a5f527dc3fb153c4c8b8eca18929d0bf1}{is\+Pause\+Musique}} ()
+\item 
+\mbox{\Hypertarget{classMoteur3D_ab618300493c67b015655d7ba4c728cd9}\label{classMoteur3D_ab618300493c67b015655d7ba4c728cd9}} 
+void {\bfseries reprendre\+Musique} ()
+\item 
+\mbox{\Hypertarget{classMoteur3D_aba54781660f82b368aa086dedb7c74da}\label{classMoteur3D_aba54781660f82b368aa086dedb7c74da}} 
+void {\bfseries arreter\+Musique} ()
+\item 
+\mbox{\Hypertarget{classMoteur3D_a912dadab2e9f862037ce8e2fb0c8a61b}\label{classMoteur3D_a912dadab2e9f862037ce8e2fb0c8a61b}} 
+void {\bfseries recommencer\+Musique} ()
+\item 
+void \mbox{\hyperlink{classMoteur3D_a64ebfbbd9168ea8dab530164cf9b6c00}{set\+Volume}} (float volume)
+\item 
+float \mbox{\hyperlink{classMoteur3D_aa8ad49b438ccf0c833a11942fedbb3d7}{get\+Volume}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMoteur3D_a3ac487cfdb487fa09a8c8b35b74787ac}{creation\+Tableau}} (unsigned int y, unsigned int x) \&
+\item 
+\mbox{\Hypertarget{classMoteur3D_a3db6f290c99cf4248a21dcd5229e5224}\label{classMoteur3D_a3db6f290c99cf4248a21dcd5229e5224}} 
+void {\bfseries initialiser\+Tableau} () \&
+\item 
+\mbox{\Hypertarget{classMoteur3D_a2dd66df86ec0a5ea567de062606c99f1}\label{classMoteur3D_a2dd66df86ec0a5ea567de062606c99f1}} 
+void {\bfseries gestion\+Modeles} () \&
+\item 
+void \mbox{\hyperlink{classMoteur3D_ade78331ab0113480039df3f2542adda4}{add\+Aff}} (\mbox{\hyperlink{classModele}{Modele}} $\ast$mod, unsigned int s) \&
+\item 
+\mbox{\Hypertarget{classMoteur3D_a9dc6e606aae569139878151107c4a475}\label{classMoteur3D_a9dc6e606aae569139878151107c4a475}} 
+void {\bfseries afficher\+Surfaces} () \&
+\item 
+void \mbox{\hyperlink{classMoteur3D_abe2d22883b3d787a2c37d227aaaab17e}{maj\+Points}} (const \mbox{\hyperlink{classModele}{Modele}} $\ast$modele) \&
+\item 
+void \mbox{\hyperlink{classMoteur3D_a5f5938a9b38be49d5f87683a1cada957}{maj\+Points}} (const \mbox{\hyperlink{classModele}{Modele}} $\ast$modele, unsigned int s) \&
+\item 
+void \mbox{\hyperlink{classMoteur3D_afd56b0ed95d1bfd31390757cfbcbeabc}{afficher\+Surface}} (\mbox{\hyperlink{classModele}{Modele}} $\ast$modele, unsigned int s) \&
+\item 
+void \mbox{\hyperlink{classMoteur3D_a3e8793e70851ea342bef6ce56fa2d2cf}{traitement\+Triangle}} (const \mbox{\hyperlink{classModele}{Modele}} $\ast$modele, unsigned int s, \mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$p1, \mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$p2, \mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$p3, float ang, float dist\+Min) \&
+\item 
+void \mbox{\hyperlink{classMoteur3D_aadb767d2fcfdef1fe1a4b9ed618a4970}{afficher\+Triangle}} (const \mbox{\hyperlink{classModele}{Modele}} $\ast$modele, unsigned int s, \mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$p1, \mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$p2, \mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$p3, float ang, float dist\+Min) \&
+\item 
+void \mbox{\hyperlink{classMoteur3D_ae49e953bc9f28622b9ed510947e4a762}{add\+Transparent}} (unsigned int x, unsigned int y, const \mbox{\hyperlink{classCouleur}{Couleur}} \&coul, float dist) \&
+\item 
+\mbox{\Hypertarget{classMoteur3D_a9811f7b4f9aa2284d377d1884a10b864}\label{classMoteur3D_a9811f7b4f9aa2284d377d1884a10b864}} 
+void {\bfseries appliquer\+Transparence} () \&
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMoteur3D_a7fd5c4619d1b4b6c98a4af4acb6b6cf0}\label{classMoteur3D_a7fd5c4619d1b4b6c98a4af4acb6b6cf0}} 
+unsigned int {\bfseries nb\+Modeles}
+\item 
+\mbox{\Hypertarget{classMoteur3D_aeef50c936c6296e34f01061bd064fd72}\label{classMoteur3D_aeef50c936c6296e34f01061bd064fd72}} 
+\mbox{\hyperlink{classModele}{Modele}} $\ast$$\ast$ {\bfseries modeles}
+\item 
+\mbox{\Hypertarget{classMoteur3D_a65272c70452ab1668492001ffe89202d}\label{classMoteur3D_a65272c70452ab1668492001ffe89202d}} 
+unsigned int {\bfseries nb\+Aff}
+\item 
+\mbox{\Hypertarget{classMoteur3D_a1dea33a986bee0e874e77753239f7ed1}\label{classMoteur3D_a1dea33a986bee0e874e77753239f7ed1}} 
+unsigned int {\bfseries capacite\+Aff}
+\item 
+\mbox{\Hypertarget{classMoteur3D_a6d73ed84e469e6ec25b118d43ee69ca8}\label{classMoteur3D_a6d73ed84e469e6ec25b118d43ee69ca8}} 
+\mbox{\hyperlink{structSurfaceAff}{Surface\+Aff}} $\ast$$\ast$ {\bfseries aff}
+\item 
+\mbox{\Hypertarget{classMoteur3D_ac62b6c7c4968ae5b66e2d91ea655318a}\label{classMoteur3D_ac62b6c7c4968ae5b66e2d91ea655318a}} 
+\mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$ {\bfseries points}
+\item 
+\mbox{\Hypertarget{classMoteur3D_aa5b25c995c9733653a2ecdee6be81eec}\label{classMoteur3D_aa5b25c995c9733653a2ecdee6be81eec}} 
+\mbox{\hyperlink{classCouleur}{Couleur}} {\bfseries couleur\+Fond}
+\item 
+\mbox{\Hypertarget{classMoteur3D_a9f7e1d0baea528b647ee985cf5676bf8}\label{classMoteur3D_a9f7e1d0baea528b647ee985cf5676bf8}} 
+\mbox{\hyperlink{classImage}{Image}} {\bfseries image}
+\item 
+\mbox{\Hypertarget{classMoteur3D_a3fc56e71453ae56af3661259066103bb}\label{classMoteur3D_a3fc56e71453ae56af3661259066103bb}} 
+float $\ast$$\ast$ {\bfseries distances}
+\item 
+\mbox{\Hypertarget{classMoteur3D_a70e117151215828793179eae3d6ffaae}\label{classMoteur3D_a70e117151215828793179eae3d6ffaae}} 
+\mbox{\hyperlink{structCouchesTransparentes}{Couches\+Transparentes}} $\ast$$\ast$ {\bfseries transparences}
+\item 
+\mbox{\Hypertarget{classMoteur3D_a05d3b8f3f0ed18388c3d628a77ac9a9c}\label{classMoteur3D_a05d3b8f3f0ed18388c3d628a77ac9a9c}} 
+float {\bfseries dist\+Affichage}
+\item 
+\mbox{\Hypertarget{classMoteur3D_a056fcf5a2c60f6e8597421ba80a2b0c2}\label{classMoteur3D_a056fcf5a2c60f6e8597421ba80a2b0c2}} 
+\mbox{\hyperlink{classCamera}{Camera}} $\ast$ {\bfseries cam}
+\item 
+\mbox{\Hypertarget{classMoteur3D_a1aacfad4d75f39a9e008d8af22f7ee78}\label{classMoteur3D_a1aacfad4d75f39a9e008d8af22f7ee78}} 
+Mix\+\_\+\+Music $\ast$ {\bfseries musique}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+classe \mbox{\hyperlink{classMoteur3D}{Moteur3D}} 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{classMoteur3D_a8af16bb91fe963333654662ba285eeea}\label{classMoteur3D_a8af16bb91fe963333654662ba285eeea}} 
+\index{Moteur3D@{Moteur3D}!Moteur3D@{Moteur3D}}
+\index{Moteur3D@{Moteur3D}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{Moteur3D()}{Moteur3D()}}
+{\footnotesize\ttfamily Moteur3\+D\+::\+Moteur3D (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{moteur }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classMoteur3D}{Moteur3D}} \+: constructeur de la classe \mbox{\hyperlink{classMoteur3D}{Moteur3D}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & moteur le fichier texte qui contient les informations sur le moteur3D et les modèles \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classMoteur3D_ade78331ab0113480039df3f2542adda4}\label{classMoteur3D_ade78331ab0113480039df3f2542adda4}} 
+\index{Moteur3D@{Moteur3D}!addAff@{addAff}}
+\index{addAff@{addAff}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{addAff()}{addAff()}}
+{\footnotesize\ttfamily void Moteur3\+D\+::add\+Aff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classModele}{Modele}} $\ast$}]{mod,  }\item[{unsigned int}]{s }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+add\+Aff \+: ajoute un modèle à l\textquotesingle{}affichage 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Modele$\ast$} & mod le pointeur vers le modèle \\
+\hline
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMoteur3D_acf4af8199f90ab0145c597439b2feea5}\label{classMoteur3D_acf4af8199f90ab0145c597439b2feea5}} 
+\index{Moteur3D@{Moteur3D}!addModele@{addModele}}
+\index{addModele@{addModele}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{addModele()}{addModele()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void Moteur3\+D\+::add\+Modele (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{modele,  }\item[{const std\+::string \&}]{texture }\end{DoxyParamCaption}) \&}
+
+
+
+add\+Modele \+: ajoute un modèle au moteur 3D 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & modele nom du fichier texte qui contient le modèle 3D \\
+\hline
+{\em string} & texture nom du fichier qui contient les couleurs du modèle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMoteur3D_a76d868fd82715d77095dba45323f4f30}\label{classMoteur3D_a76d868fd82715d77095dba45323f4f30}} 
+\index{Moteur3D@{Moteur3D}!addModele@{addModele}}
+\index{addModele@{addModele}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{addModele()}{addModele()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void Moteur3\+D\+::add\+Modele (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{modele,  }\item[{const std\+::string \&}]{texture,  }\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{pos }\end{DoxyParamCaption}) \&}
+
+
+
+add\+Modele \+: ajoute un modèle au moteur 3D 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & modele nom du fichier texte qui contient le modèle 3D \\
+\hline
+{\em string} & texture nom du fichier qui contient les couleurs du modèle \\
+\hline
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & pos la position du modèle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMoteur3D_a9123f7d1f47806d07e011015fe8340ee}\label{classMoteur3D_a9123f7d1f47806d07e011015fe8340ee}} 
+\index{Moteur3D@{Moteur3D}!addModele@{addModele}}
+\index{addModele@{addModele}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{addModele()}{addModele()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void Moteur3\+D\+::add\+Modele (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classModele}{Modele}} $\ast$}]{modele }\end{DoxyParamCaption}) \&}
+
+
+
+add\+Modele \+: ajoute un modèle au moteur 3D 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classModele}{Modele}}} & $\ast$ modele l\textquotesingle{}adrese du modèle à ajouter \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMoteur3D_ae49e953bc9f28622b9ed510947e4a762}\label{classMoteur3D_ae49e953bc9f28622b9ed510947e4a762}} 
+\index{Moteur3D@{Moteur3D}!addTransparent@{addTransparent}}
+\index{addTransparent@{addTransparent}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{addTransparent()}{addTransparent()}}
+{\footnotesize\ttfamily void Moteur3\+D\+::add\+Transparent (\begin{DoxyParamCaption}\item[{unsigned int}]{x,  }\item[{unsigned int}]{y,  }\item[{const \mbox{\hyperlink{classCouleur}{Couleur}} \&}]{coul,  }\item[{float}]{dist }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+add\+Transparent \+: ajoute une couche transparente au pixel 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int x la coordonnée x du pixel \\
+\hline
+{\em unsigned} & int y la coordonnée y du pixel \\
+\hline
+{\em \mbox{\hyperlink{classCouleur}{Couleur}}} & coul la couleur de la couche transparente \\
+\hline
+{\em float} & dist la distance de la couche transparente \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMoteur3D_afd56b0ed95d1bfd31390757cfbcbeabc}\label{classMoteur3D_afd56b0ed95d1bfd31390757cfbcbeabc}} 
+\index{Moteur3D@{Moteur3D}!afficherSurface@{afficherSurface}}
+\index{afficherSurface@{afficherSurface}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{afficherSurface()}{afficherSurface()}}
+{\footnotesize\ttfamily void Moteur3\+D\+::afficher\+Surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classModele}{Modele}} $\ast$}]{modele,  }\item[{unsigned int}]{s }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+afficher\+Surface \+: Fait apparaitre les surfaces sur l\textquotesingle{}image 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Modele$\ast$} & modele le pointeur vers le modèle à faire apparaitre sur l\textquotesingle{}image \\
+\hline
+{\em unsigned} & int s l\textquotesingle{}indice de la surface du modèle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMoteur3D_aadb767d2fcfdef1fe1a4b9ed618a4970}\label{classMoteur3D_aadb767d2fcfdef1fe1a4b9ed618a4970}} 
+\index{Moteur3D@{Moteur3D}!afficherTriangle@{afficherTriangle}}
+\index{afficherTriangle@{afficherTriangle}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{afficherTriangle()}{afficherTriangle()}}
+{\footnotesize\ttfamily void Moteur3\+D\+::afficher\+Triangle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModele}{Modele}} $\ast$}]{modele,  }\item[{unsigned int}]{s,  }\item[{\mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$}]{p1,  }\item[{\mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$}]{p2,  }\item[{\mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$}]{p3,  }\item[{float}]{ang,  }\item[{float}]{dist\+Min }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+afficher\+Triangle \+: Fait apparaitre les triangles sur l\textquotesingle{}image 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Modele$\ast$} & modele le pointeur vers le modèle à faire apparaitre sur l\textquotesingle{}image \\
+\hline
+{\em unsigned} & int s l\textquotesingle{}indice de la surface du modèle \\
+\hline
+{\em \mbox{\hyperlink{structPoint2D}{Point2D}}} & $\ast$ p1 pointeur vers le point 1 \\
+\hline
+{\em \mbox{\hyperlink{structPoint2D}{Point2D}}} & $\ast$ p2 pointeur vers le point 2 \\
+\hline
+{\em \mbox{\hyperlink{structPoint2D}{Point2D}}} & $\ast$ p3 pointeur vers le point 3 \\
+\hline
+{\em float} & ang l\textquotesingle{}angle de la surface par rapport à la caméra \\
+\hline
+{\em float} & dist\+Min la distance entre la caméra et le plan de la surface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMoteur3D_a67b35ede814f89e48314906a7e2766fc}\label{classMoteur3D_a67b35ede814f89e48314906a7e2766fc}} 
+\index{Moteur3D@{Moteur3D}!charger@{charger}}
+\index{charger@{charger}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{charger()}{charger()}}
+{\footnotesize\ttfamily bool Moteur3\+D\+::charger (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{moteur }\end{DoxyParamCaption}) \&}
+
+
+
+charger \+: charge les informations sur le moteur3D et les modèles 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & moteur le fichier texte qui contient les informations sur le moteur3D et les modèles \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si le chargement a bien fonctionné 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_ae0b320f0c0c474d00b523f333e90d75c}\label{classMoteur3D_ae0b320f0c0c474d00b523f333e90d75c}} 
+\index{Moteur3D@{Moteur3D}!chargerMusique@{chargerMusique}}
+\index{chargerMusique@{chargerMusique}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{chargerMusique()}{chargerMusique()}}
+{\footnotesize\ttfamily bool Moteur3\+D\+::charger\+Musique (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nom }\end{DoxyParamCaption})}
+
+
+
+charger\+Musique \+: charge une musique dans le moteur de jeu (mp3 par défaut) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & nom le nom du fichier à charger \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si le chargement a bien fonctionné 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_a3ac487cfdb487fa09a8c8b35b74787ac}\label{classMoteur3D_a3ac487cfdb487fa09a8c8b35b74787ac}} 
+\index{Moteur3D@{Moteur3D}!creationTableau@{creationTableau}}
+\index{creationTableau@{creationTableau}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{creationTableau()}{creationTableau()}}
+{\footnotesize\ttfamily void Moteur3\+D\+::creation\+Tableau (\begin{DoxyParamCaption}\item[{unsigned int}]{y,  }\item[{unsigned int}]{x }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+creation\+Tableau \+: redimensionne distances et image si neccessaire 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int y la taille verticale de l\textquotesingle{}image demandée \\
+\hline
+{\em unsigned} & int x la taille horizontale de l\textquotesingle{}image demandée \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMoteur3D_aa0b3154308dc8557b52195140f9fefae}\label{classMoteur3D_aa0b3154308dc8557b52195140f9fefae}} 
+\index{Moteur3D@{Moteur3D}!delModele@{delModele}}
+\index{delModele@{delModele}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{delModele()}{delModele()}}
+{\footnotesize\ttfamily void Moteur3\+D\+::del\+Modele (\begin{DoxyParamCaption}\item[{unsigned int}]{m }\end{DoxyParamCaption}) \&}
+
+
+
+del\+Modele \+: supprime un modèle du moteur 3D 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int m l\textquotesingle{}indice du modèle à supprimer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMoteur3D_ac5837d9a2ca839d0c02aa5aa7283acca}\label{classMoteur3D_ac5837d9a2ca839d0c02aa5aa7283acca}} 
+\index{Moteur3D@{Moteur3D}!enregistrer@{enregistrer}}
+\index{enregistrer@{enregistrer}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{enregistrer()}{enregistrer()}}
+{\footnotesize\ttfamily bool Moteur3\+D\+::enregistrer (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{moteur }\end{DoxyParamCaption}) const \&}
+
+
+
+enregistrer \+: enregistre les informations sur le moteur3D et les modèles 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & moteur le fichier texte qui contient les informations sur le moteur3D et les modèles \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si l\textquotesingle{}enregistrement a bien fonctionné 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_a153fd0ba8bb1bb601dafa9d821059861}\label{classMoteur3D_a153fd0ba8bb1bb601dafa9d821059861}} 
+\index{Moteur3D@{Moteur3D}!getCam@{getCam}}
+\index{getCam@{getCam}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{getCam()}{getCam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCamera}{Camera}} $\ast$ Moteur3\+D\+::get\+Cam (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Cam \+: accesseur de cam 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{classCamera}{Camera}} $\ast$ la camera du moteur 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_ad154add5f13c861b5182f1c03d35a223}\label{classMoteur3D_ad154add5f13c861b5182f1c03d35a223}} 
+\index{Moteur3D@{Moteur3D}!getCouleurFond@{getCouleurFond}}
+\index{getCouleurFond@{getCouleurFond}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{getCouleurFond()}{getCouleurFond()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classCouleur}{Couleur}} \& Moteur3\+D\+::get\+Couleur\+Fond (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Couleur\+Fond \+: accesseur de couleur\+Fond 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{classCouleur}{Couleur}}\& couleur\+Fond la couleur du fond 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_a733b7db59690468f60d8f463ae135d6d}\label{classMoteur3D_a733b7db59690468f60d8f463ae135d6d}} 
+\index{Moteur3D@{Moteur3D}!getDistAffichage@{getDistAffichage}}
+\index{getDistAffichage@{getDistAffichage}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{getDistAffichage()}{getDistAffichage()}}
+{\footnotesize\ttfamily float Moteur3\+D\+::get\+Dist\+Affichage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Dist\+Affichage \+: accesseur de dist\+Affichage 
+
+\begin{DoxyReturn}{Renvoie}
+float dist\+Affichage la distance d\textquotesingle{}affichage 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_ac88cd9921c87619bedf94414c7e96e5c}\label{classMoteur3D_ac88cd9921c87619bedf94414c7e96e5c}} 
+\index{Moteur3D@{Moteur3D}!getDistances@{getDistances}}
+\index{getDistances@{getDistances}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{getDistances()}{getDistances()}}
+{\footnotesize\ttfamily float $\ast$$\ast$\& Moteur3\+D\+::get\+Distances (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&}
+
+
+
+get\+Distances \+: accesseur de distances 
+
+\begin{DoxyReturn}{Renvoie}
+float$\ast$$\ast$\& distances le tableau des distances au carré des points de l\textquotesingle{}images 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_a72544237be6e3ba3d1d9d58a2337ca53}\label{classMoteur3D_a72544237be6e3ba3d1d9d58a2337ca53}} 
+\index{Moteur3D@{Moteur3D}!getImage@{getImage}}
+\index{getImage@{getImage}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{getImage()}{getImage()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImage}{Image}} $\ast$ Moteur3\+D\+::get\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&}
+
+
+
+get\+Image \+: accesseur de image 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{classImage}{Image}} l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_a3fcabda210d2260b880ddb93a6c0f79f}\label{classMoteur3D_a3fcabda210d2260b880ddb93a6c0f79f}} 
+\index{Moteur3D@{Moteur3D}!getImage@{getImage}}
+\index{getImage@{getImage}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{getImage()}{getImage()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImage}{Image}} $\ast$ Moteur3\+D\+::get\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classCamera}{Camera}} \&}]{camera,  }\item[{unsigned int}]{tailley,  }\item[{unsigned int}]{taillex }\end{DoxyParamCaption}) \&}
+
+
+
+get\+Image \+: renvoie l\textquotesingle{}image des modèles vue par la caméra 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classCamera}{Camera}}} & camera la caméra \\
+\hline
+{\em unsigned} & int tailley la taille verticale de l\textquotesingle{}image \\
+\hline
+{\em unsigned} & int taillex la taille horizontale de l\textquotesingle{}image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{classImage}{Image}} l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_afe5fb6148fcb4dbe89d4f12b925b3db7}\label{classMoteur3D_afe5fb6148fcb4dbe89d4f12b925b3db7}} 
+\index{Moteur3D@{Moteur3D}!getModele@{getModele}}
+\index{getModele@{getModele}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{getModele()}{getModele()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classModele}{Modele}} $\ast$ Moteur3\+D\+::get\+Modele (\begin{DoxyParamCaption}\item[{unsigned int}]{m }\end{DoxyParamCaption}) \&}
+
+
+
+get\+Modele \+: renvoie le modèle 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int m l\textquotesingle{}indice du modèle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Modele$\ast$ le pointeur vers le modèle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_a0740397ec39fb3f0160723a19e7c1d41}\label{classMoteur3D_a0740397ec39fb3f0160723a19e7c1d41}} 
+\index{Moteur3D@{Moteur3D}!getNbAff@{getNbAff}}
+\index{getNbAff@{getNbAff}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{getNbAff()}{getNbAff()}}
+{\footnotesize\ttfamily unsigned int Moteur3\+D\+::get\+Nb\+Aff (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Nb\+Aff\+: accesseur de nb\+Aff 
+
+\begin{DoxyReturn}{Renvoie}
+unsigned int le nombre de surfaces afficher 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_a606be8348b057137328c4e899666feaf}\label{classMoteur3D_a606be8348b057137328c4e899666feaf}} 
+\index{Moteur3D@{Moteur3D}!getNbModeles@{getNbModeles}}
+\index{getNbModeles@{getNbModeles}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{getNbModeles()}{getNbModeles()}}
+{\footnotesize\ttfamily unsigned int Moteur3\+D\+::get\+Nb\+Modeles (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Nb\+Modeles \+: accesseur de nb\+Modeles 
+
+\begin{DoxyReturn}{Renvoie}
+unsigned int nb\+Modeles le nombre de modèles du moteur 3D 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_a0db0f81d1a9fe5a1561de7bcdb891e93}\label{classMoteur3D_a0db0f81d1a9fe5a1561de7bcdb891e93}} 
+\index{Moteur3D@{Moteur3D}!getPoints2D@{getPoints2D}}
+\index{getPoints2D@{getPoints2D}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{getPoints2D()}{getPoints2D()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$ Moteur3\+D\+::get\+Points2D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModele}{Modele}} $\ast$}]{modele }\end{DoxyParamCaption}) const}
+
+
+
+get\+Points2D \+: renvoie les les coordonnées relatives au moteur des points du modele 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classModele}{Modele}}} & $\ast$ modele le modele dont on veut calculer les positions des points \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$ les coordonnées relatives au moteur des points du modele 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_a82fbf48dd3f2b00e35958ccb1dae77fd}\label{classMoteur3D_a82fbf48dd3f2b00e35958ccb1dae77fd}} 
+\index{Moteur3D@{Moteur3D}!getPoints2D@{getPoints2D}}
+\index{getPoints2D@{getPoints2D}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{getPoints2D()}{getPoints2D()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$ Moteur3\+D\+::get\+Points2D (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModele}{Modele}} $\ast$}]{modele,  }\item[{unsigned int}]{s }\end{DoxyParamCaption}) const}
+
+
+
+get\+Points2D \+: renvoie les coordonnées relatives au moteur des points du modele (calcul seulement les points de la surface) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classModele}{Modele}}} & $\ast$ modele le modele dont on veut calculer les positions des points \\
+\hline
+{\em unsigned} & int s l\textquotesingle{}indice de la surface du modèle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$ les coordonnées relatives au moteur des points du modele (calcul seulement les points de la surface) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_aa302e6fdd37533ef547b731ad6de5ff7}\label{classMoteur3D_aa302e6fdd37533ef547b731ad6de5ff7}} 
+\index{Moteur3D@{Moteur3D}!getPosCam@{getPosCam}}
+\index{getPosCam@{getPosCam}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{getPosCam()}{getPosCam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrice}{Matrice}} Moteur3\+D\+::get\+Pos\+Cam (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+get\+Pos\+Cam \+: renvoie les coordonnées en fonction de la caméra 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & pos les coordonnées de l\textquotesingle{}objet \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{classMatrice}{Matrice}} les coordonnées de l\textquotesingle{}objet relativement à la caméra 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_aa8ad49b438ccf0c833a11942fedbb3d7}\label{classMoteur3D_aa8ad49b438ccf0c833a11942fedbb3d7}} 
+\index{Moteur3D@{Moteur3D}!getVolume@{getVolume}}
+\index{getVolume@{getVolume}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
+{\footnotesize\ttfamily float Moteur3\+D\+::get\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Volume \+: accesseur du volume de la musique du moteur de jeu 
+
+\begin{DoxyReturn}{Renvoie}
+float la valeur du volume de la musique du moteur de jeu (0 à 100) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_a5f527dc3fb153c4c8b8eca18929d0bf1}\label{classMoteur3D_a5f527dc3fb153c4c8b8eca18929d0bf1}} 
+\index{Moteur3D@{Moteur3D}!isPauseMusique@{isPauseMusique}}
+\index{isPauseMusique@{isPauseMusique}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{isPauseMusique()}{isPauseMusique()}}
+{\footnotesize\ttfamily int Moteur3\+D\+::is\+Pause\+Musique (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+is\+Pause\+Musique \+: renvoie si le musique est en pause 
+
+\begin{DoxyReturn}{Renvoie}
+int renvoie 2 si la musique n\textquotesingle{}est joué, 1 si la musique est en pause, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_a7a63eb67557507e95851ad01b3861667}\label{classMoteur3D_a7a63eb67557507e95851ad01b3861667}} 
+\index{Moteur3D@{Moteur3D}!jouerMusique@{jouerMusique}}
+\index{jouerMusique@{jouerMusique}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{jouerMusique()}{jouerMusique()}}
+{\footnotesize\ttfamily bool Moteur3\+D\+::jouer\+Musique (\begin{DoxyParamCaption}\item[{int}]{repet = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+jouer\+Musique \+: joue la musique chargé dans le moteur de jeu 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em int} & repet le nombre de répétitions de la musique supplémentaires (-\/1 pour une boucle infini) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si la musique a bien été joué 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classMoteur3D_abe2d22883b3d787a2c37d227aaaab17e}\label{classMoteur3D_abe2d22883b3d787a2c37d227aaaab17e}} 
+\index{Moteur3D@{Moteur3D}!majPoints@{majPoints}}
+\index{majPoints@{majPoints}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{majPoints()}{majPoints()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Moteur3\+D\+::maj\+Points (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModele}{Modele}} $\ast$}]{modele }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+maj\+Points \+: calcul la position sur l\textquotesingle{}image des points du modèle 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Modele$\ast$} & modele le pointeur vers le modèle à faire apparaitre sur l\textquotesingle{}image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMoteur3D_a5f5938a9b38be49d5f87683a1cada957}\label{classMoteur3D_a5f5938a9b38be49d5f87683a1cada957}} 
+\index{Moteur3D@{Moteur3D}!majPoints@{majPoints}}
+\index{majPoints@{majPoints}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{majPoints()}{majPoints()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Moteur3\+D\+::maj\+Points (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModele}{Modele}} $\ast$}]{modele,  }\item[{unsigned int}]{s }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+maj\+Points \+: calcul la position sur l\textquotesingle{}image des points d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Modele$\ast$} & modele le pointeur vers le modèle à faire apparaitre sur l\textquotesingle{}image \\
+\hline
+{\em unsigned} & int s l\textquotesingle{}indice de la surface du modèle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMoteur3D_ad706e0b388e6b55f38f91ea76c2083ad}\label{classMoteur3D_ad706e0b388e6b55f38f91ea76c2083ad}} 
+\index{Moteur3D@{Moteur3D}!setCouleurFond@{setCouleurFond}}
+\index{setCouleurFond@{setCouleurFond}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{setCouleurFond()}{setCouleurFond()}}
+{\footnotesize\ttfamily void Moteur3\+D\+::set\+Couleur\+Fond (\begin{DoxyParamCaption}\item[{unsigned char}]{r,  }\item[{unsigned char}]{g,  }\item[{unsigned char}]{b }\end{DoxyParamCaption})}
+
+
+
+set\+Couleur\+Fond \+: mutateur de couleur\+Fond 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int r la couleur rouge \\
+\hline
+{\em unsigned} & int g la couleur verte \\
+\hline
+{\em unsigned} & int b la couleur bleue \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMoteur3D_ade0f48668002af791445d66ffc278c0c}\label{classMoteur3D_ade0f48668002af791445d66ffc278c0c}} 
+\index{Moteur3D@{Moteur3D}!setDistAffichage@{setDistAffichage}}
+\index{setDistAffichage@{setDistAffichage}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{setDistAffichage()}{setDistAffichage()}}
+{\footnotesize\ttfamily void Moteur3\+D\+::set\+Dist\+Affichage (\begin{DoxyParamCaption}\item[{float}]{dist }\end{DoxyParamCaption})}
+
+
+
+set\+Dist\+Affichage \+: mutateur de dist\+Affichage 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & dist la distance d\textquotesingle{}affichage \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMoteur3D_a64ebfbbd9168ea8dab530164cf9b6c00}\label{classMoteur3D_a64ebfbbd9168ea8dab530164cf9b6c00}} 
+\index{Moteur3D@{Moteur3D}!setVolume@{setVolume}}
+\index{setVolume@{setVolume}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{setVolume()}{setVolume()}}
+{\footnotesize\ttfamily void Moteur3\+D\+::set\+Volume (\begin{DoxyParamCaption}\item[{float}]{volume }\end{DoxyParamCaption})}
+
+
+
+set\+Volume \+: mutateur du volume de la musique du moteur de jeu 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & volume la nouvelle valeur du volume (0 à 100) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMoteur3D_a3e8793e70851ea342bef6ce56fa2d2cf}\label{classMoteur3D_a3e8793e70851ea342bef6ce56fa2d2cf}} 
+\index{Moteur3D@{Moteur3D}!traitementTriangle@{traitementTriangle}}
+\index{traitementTriangle@{traitementTriangle}!Moteur3D@{Moteur3D}}
+\doxysubsubsection{\texorpdfstring{traitementTriangle()}{traitementTriangle()}}
+{\footnotesize\ttfamily void Moteur3\+D\+::traitement\+Triangle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModele}{Modele}} $\ast$}]{modele,  }\item[{unsigned int}]{s,  }\item[{\mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$}]{p1,  }\item[{\mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$}]{p2,  }\item[{\mbox{\hyperlink{structPoint2D}{Point2D}} $\ast$}]{p3,  }\item[{float}]{ang,  }\item[{float}]{dist\+Min }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+traitement\+Triangle \+: projete les points du triangle devant la caméra 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Modele$\ast$} & modele le pointeur vers le modèle à faire apparaitre sur l\textquotesingle{}image \\
+\hline
+{\em unsigned} & int s l\textquotesingle{}indice de la surface du modèle \\
+\hline
+{\em \mbox{\hyperlink{structPoint2D}{Point2D}}} & $\ast$ p1 pointeur vers le point 1 \\
+\hline
+{\em \mbox{\hyperlink{structPoint2D}{Point2D}}} & $\ast$ p2 pointeur vers le point 2 \\
+\hline
+{\em \mbox{\hyperlink{structPoint2D}{Point2D}}} & $\ast$ p3 pointeur vers le point 3 \\
+\hline
+{\em float} & ang l\textquotesingle{}angle de la surface par rapport à la caméra \\
+\hline
+{\em float} & dist\+Min la distance entre la caméra et le plan de la surface \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+include/Moteur3\+D.\+h\item 
+src/Moteur3\+D.\+cpp\end{DoxyCompactItemize}

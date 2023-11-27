@@ -1,0 +1,413 @@
+\hypertarget{classCamera}{}\doxysection{Référence de la classe Camera}
+\label{classCamera}\index{Camera@{Camera}}
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+
+
+Graphe de collaboration de Camera\+:
+% FIG 0
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCamera_ae65a732820423b7ecc324dff55cc92c5}{Camera}} (unsigned int ty, unsigned int tx)
+\item 
+const \mbox{\hyperlink{classMatrice}{Matrice}} \& \mbox{\hyperlink{classCamera_af0e44f133e4e93c34516ad50450582dc}{get\+Pos}} () const \&
+\item 
+void \mbox{\hyperlink{classCamera_a3c4f432c567e59175968034c812eb56b}{set\+Pos}} (float x, float y, float z)
+\item 
+float \mbox{\hyperlink{classCamera_aae13eab317d36d5695be80f4164a2b11}{getX}} () const \&
+\item 
+void \mbox{\hyperlink{classCamera_a6a69508383fdb7b7064e9bea4d569ee9}{setX}} (float x)
+\item 
+float \mbox{\hyperlink{classCamera_a6f9ae5dfaa7df3675d25aa8ce7da4e4e}{getY}} () const \&
+\item 
+void \mbox{\hyperlink{classCamera_a7200923e83852873639e208cb327434d}{setY}} (float y)
+\item 
+float \mbox{\hyperlink{classCamera_aa73c4dbb64bfdd6d89105157a8b31690}{getZ}} () const \&
+\item 
+void \mbox{\hyperlink{classCamera_a19b97d8522f5948ca08f5c3405c4ebe3}{setZ}} (float z)
+\item 
+float \mbox{\hyperlink{classCamera_a83602c7201ef5ee9b365fa804c87fc90}{get\+Angxy}} () const \&
+\item 
+void \mbox{\hyperlink{classCamera_ab43910ed5acda19b6f37899019028bf7}{set\+Angxy}} (float angxy)
+\item 
+float \mbox{\hyperlink{classCamera_af72b882ba6b8d652743d87bc93591f0a}{get\+Angxz}} () const \&
+\item 
+void \mbox{\hyperlink{classCamera_a776a1a85ef9df46d13349d66273b8f5c}{set\+Angxz}} (float angxz)
+\item 
+float \mbox{\hyperlink{classCamera_ac0e9793b5ca68b936dfd08c486d2b667}{get\+Angyz}} () const \&
+\item 
+void \mbox{\hyperlink{classCamera_a146783a4a73d6f3a7d0bd2426faa5e9f}{set\+Angyz}} (float angyz)
+\item 
+void \mbox{\hyperlink{classCamera_a01e7e8a6072e6cec25b63bed8b5200b3}{set\+Ang}} (float angxy, float angxz, float angyz)
+\item 
+const \mbox{\hyperlink{classMatrice}{Matrice}} \& \mbox{\hyperlink{classCamera_a7c03055d92cdebc9e2984e12cab1723c}{get\+Base}} () const \&
+\item 
+unsigned int \mbox{\hyperlink{classCamera_a5360b47c92900190bfbf6bd71ee0aa93}{get\+Tailley}} () const \&
+\item 
+unsigned int \mbox{\hyperlink{classCamera_ab27d69e1b20e5157a7c34ed4632aac83}{get\+Taillex}} () const \&
+\item 
+float \mbox{\hyperlink{classCamera_a3661d271baa644881eba10dab11b5c7d}{get\+Dist\+Foc}} () const \&
+\item 
+\mbox{\Hypertarget{classCamera_a681e6b77056ae92fcf8b4e831191d67c}\label{classCamera_a681e6b77056ae92fcf8b4e831191d67c}} 
+void {\bfseries set\+Dist\+Foc} (float dist)
+\item 
+\mbox{\hyperlink{classMatrice}{Matrice}} \mbox{\hyperlink{classCamera_ab7b9c685ae06e15194ec81e706034e22}{get\+Normale}} () const \&
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCamera_abc148c8f084cf0b85e509b5e165a9160}\label{classCamera_abc148c8f084cf0b85e509b5e165a9160}} 
+\mbox{\hyperlink{classCosin}{Cosin}} {\bfseries cs}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCamera_a6187bc32adba2fdc362b2a8b26962d45}\label{classCamera_a6187bc32adba2fdc362b2a8b26962d45}} 
+void {\bfseries calcul\+Base} () \&
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCamera_a1e49633659fc726bff3841c5576f13f5}\label{classCamera_a1e49633659fc726bff3841c5576f13f5}} 
+\mbox{\hyperlink{classMatrice}{Matrice}} {\bfseries pos} \{3,1\}
+\item 
+\mbox{\Hypertarget{classCamera_a388abcf6f2edcc8da91ab3cb2ae01b77}\label{classCamera_a388abcf6f2edcc8da91ab3cb2ae01b77}} 
+float {\bfseries angle\+\_\+xy} =0
+\item 
+\mbox{\Hypertarget{classCamera_aa2854a7db60443e9b1ca4a208f8636cd}\label{classCamera_aa2854a7db60443e9b1ca4a208f8636cd}} 
+float {\bfseries angle\+\_\+xz} =0
+\item 
+\mbox{\Hypertarget{classCamera_a2539f542869bff756f41af3461ad2e74}\label{classCamera_a2539f542869bff756f41af3461ad2e74}} 
+float {\bfseries angle\+\_\+yz} =0
+\item 
+\mbox{\Hypertarget{classCamera_a6b49756d7d5fc475bca6293f731cedfc}\label{classCamera_a6b49756d7d5fc475bca6293f731cedfc}} 
+\mbox{\hyperlink{classMatrice}{Matrice}} {\bfseries base} \{3,3\}
+\item 
+\mbox{\Hypertarget{classCamera_ad3e7333b972eb03bb17304ca3771671b}\label{classCamera_ad3e7333b972eb03bb17304ca3771671b}} 
+unsigned int {\bfseries tailley}
+\item 
+\mbox{\Hypertarget{classCamera_ab5532dcff968a82ac4ea9738571eb900}\label{classCamera_ab5532dcff968a82ac4ea9738571eb900}} 
+unsigned int {\bfseries taillex}
+\item 
+\mbox{\Hypertarget{classCamera_a526ceb2a68d22928db35c1c9d7bf1760}\label{classCamera_a526ceb2a68d22928db35c1c9d7bf1760}} 
+float {\bfseries dist\+Foc}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+classe \mbox{\hyperlink{classCamera}{Camera}} 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{classCamera_ae65a732820423b7ecc324dff55cc92c5}\label{classCamera_ae65a732820423b7ecc324dff55cc92c5}} 
+\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{unsigned int}]{ty,  }\item[{unsigned int}]{tx }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classCamera}{Camera}} \+: constructeur de la classe \mbox{\hyperlink{classCamera}{Camera}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int ty la hauteur de la caméra \\
+\hline
+{\em unsigned} & int tx la largeur de la caméra \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classCamera_a83602c7201ef5ee9b365fa804c87fc90}\label{classCamera_a83602c7201ef5ee9b365fa804c87fc90}} 
+\index{Camera@{Camera}!getAngxy@{getAngxy}}
+\index{getAngxy@{getAngxy}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getAngxy()}{getAngxy()}}
+{\footnotesize\ttfamily float Camera\+::get\+Angxy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Angxy \+: accesseur de angle\+\_\+xy 
+
+\begin{DoxyReturn}{Renvoie}
+float l\textquotesingle{}angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCamera_af72b882ba6b8d652743d87bc93591f0a}\label{classCamera_af72b882ba6b8d652743d87bc93591f0a}} 
+\index{Camera@{Camera}!getAngxz@{getAngxz}}
+\index{getAngxz@{getAngxz}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getAngxz()}{getAngxz()}}
+{\footnotesize\ttfamily float Camera\+::get\+Angxz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Angxz \+: accesseur de angle\+\_\+xz 
+
+\begin{DoxyReturn}{Renvoie}
+float l\textquotesingle{}angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCamera_ac0e9793b5ca68b936dfd08c486d2b667}\label{classCamera_ac0e9793b5ca68b936dfd08c486d2b667}} 
+\index{Camera@{Camera}!getAngyz@{getAngyz}}
+\index{getAngyz@{getAngyz}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getAngyz()}{getAngyz()}}
+{\footnotesize\ttfamily float Camera\+::get\+Angyz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Angyz \+: accesseur de angle\+\_\+yz 
+
+\begin{DoxyReturn}{Renvoie}
+float l\textquotesingle{}angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCamera_a7c03055d92cdebc9e2984e12cab1723c}\label{classCamera_a7c03055d92cdebc9e2984e12cab1723c}} 
+\index{Camera@{Camera}!getBase@{getBase}}
+\index{getBase@{getBase}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getBase()}{getBase()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classMatrice}{Matrice}} \& Camera\+::get\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Base \+: accesseur de base 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{classMatrice}{Matrice}}\& la base 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCamera_a3661d271baa644881eba10dab11b5c7d}\label{classCamera_a3661d271baa644881eba10dab11b5c7d}} 
+\index{Camera@{Camera}!getDistFoc@{getDistFoc}}
+\index{getDistFoc@{getDistFoc}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getDistFoc()}{getDistFoc()}}
+{\footnotesize\ttfamily float Camera\+::get\+Dist\+Foc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Dist\+Foc \+: accesseur de dist\+Foc 
+
+\begin{DoxyReturn}{Renvoie}
+float la distance focale 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCamera_ab7b9c685ae06e15194ec81e706034e22}\label{classCamera_ab7b9c685ae06e15194ec81e706034e22}} 
+\index{Camera@{Camera}!getNormale@{getNormale}}
+\index{getNormale@{getNormale}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getNormale()}{getNormale()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrice}{Matrice}} Camera\+::get\+Normale (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Normale \+: renvoie la normale de l\textquotesingle{}ecran de la camera 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{classMatrice}{Matrice}} la normale de l\textquotesingle{}ecran de la camera 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCamera_af0e44f133e4e93c34516ad50450582dc}\label{classCamera_af0e44f133e4e93c34516ad50450582dc}} 
+\index{Camera@{Camera}!getPos@{getPos}}
+\index{getPos@{getPos}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getPos()}{getPos()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classMatrice}{Matrice}} \& Camera\+::get\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Pos \+: accesseur de pos 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{classMatrice}{Matrice}}\& la position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCamera_ab27d69e1b20e5157a7c34ed4632aac83}\label{classCamera_ab27d69e1b20e5157a7c34ed4632aac83}} 
+\index{Camera@{Camera}!getTaillex@{getTaillex}}
+\index{getTaillex@{getTaillex}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getTaillex()}{getTaillex()}}
+{\footnotesize\ttfamily unsigned int Camera\+::get\+Taillex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Taillex \+: accesseur de taillex 
+
+\begin{DoxyReturn}{Renvoie}
+unsigned int la taille horizontale de l\textquotesingle{}écran 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCamera_a5360b47c92900190bfbf6bd71ee0aa93}\label{classCamera_a5360b47c92900190bfbf6bd71ee0aa93}} 
+\index{Camera@{Camera}!getTailley@{getTailley}}
+\index{getTailley@{getTailley}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getTailley()}{getTailley()}}
+{\footnotesize\ttfamily unsigned int Camera\+::get\+Tailley (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Tailley \+: accesseur de tailley 
+
+\begin{DoxyReturn}{Renvoie}
+unsigned int la taille verticale de l\textquotesingle{}écran 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCamera_aae13eab317d36d5695be80f4164a2b11}\label{classCamera_aae13eab317d36d5695be80f4164a2b11}} 
+\index{Camera@{Camera}!getX@{getX}}
+\index{getX@{getX}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily float Camera\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+getX \+: renvoie la position x 
+
+\begin{DoxyReturn}{Renvoie}
+float la position x 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCamera_a6f9ae5dfaa7df3675d25aa8ce7da4e4e}\label{classCamera_a6f9ae5dfaa7df3675d25aa8ce7da4e4e}} 
+\index{Camera@{Camera}!getY@{getY}}
+\index{getY@{getY}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily float Camera\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+getY \+: renvoie la position y 
+
+\begin{DoxyReturn}{Renvoie}
+float la position y 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCamera_aa73c4dbb64bfdd6d89105157a8b31690}\label{classCamera_aa73c4dbb64bfdd6d89105157a8b31690}} 
+\index{Camera@{Camera}!getZ@{getZ}}
+\index{getZ@{getZ}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{getZ()}{getZ()}}
+{\footnotesize\ttfamily float Camera\+::getZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+getZ \+: renvoie la position z 
+
+\begin{DoxyReturn}{Renvoie}
+float la position z 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classCamera_a01e7e8a6072e6cec25b63bed8b5200b3}\label{classCamera_a01e7e8a6072e6cec25b63bed8b5200b3}} 
+\index{Camera@{Camera}!setAng@{setAng}}
+\index{setAng@{setAng}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setAng()}{setAng()}}
+{\footnotesize\ttfamily void Camera\+::set\+Ang (\begin{DoxyParamCaption}\item[{float}]{angxy,  }\item[{float}]{angxz,  }\item[{float}]{angyz }\end{DoxyParamCaption})}
+
+
+
+set\+Ang \+: modifie les angles 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & angxy l\textquotesingle{}angle xy \\
+\hline
+{\em float} & angxz l\textquotesingle{}angle xz \\
+\hline
+{\em float} & angyz l\textquotesingle{}angle yz \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCamera_ab43910ed5acda19b6f37899019028bf7}\label{classCamera_ab43910ed5acda19b6f37899019028bf7}} 
+\index{Camera@{Camera}!setAngxy@{setAngxy}}
+\index{setAngxy@{setAngxy}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setAngxy()}{setAngxy()}}
+{\footnotesize\ttfamily void Camera\+::set\+Angxy (\begin{DoxyParamCaption}\item[{float}]{angxy }\end{DoxyParamCaption})}
+
+
+
+set\+Angxy \+: mutateur de angle\+\_\+xy 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & angxy l\textquotesingle{}angle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCamera_a776a1a85ef9df46d13349d66273b8f5c}\label{classCamera_a776a1a85ef9df46d13349d66273b8f5c}} 
+\index{Camera@{Camera}!setAngxz@{setAngxz}}
+\index{setAngxz@{setAngxz}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setAngxz()}{setAngxz()}}
+{\footnotesize\ttfamily void Camera\+::set\+Angxz (\begin{DoxyParamCaption}\item[{float}]{angxz }\end{DoxyParamCaption})}
+
+
+
+set\+Angxz \+: mutateur de angle\+\_\+xz 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & angxz l\textquotesingle{}angle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCamera_a146783a4a73d6f3a7d0bd2426faa5e9f}\label{classCamera_a146783a4a73d6f3a7d0bd2426faa5e9f}} 
+\index{Camera@{Camera}!setAngyz@{setAngyz}}
+\index{setAngyz@{setAngyz}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setAngyz()}{setAngyz()}}
+{\footnotesize\ttfamily void Camera\+::set\+Angyz (\begin{DoxyParamCaption}\item[{float}]{angyz }\end{DoxyParamCaption})}
+
+
+
+set\+Angyz \+: mutateur de angle\+\_\+yz 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & angyz l\textquotesingle{}angle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCamera_a3c4f432c567e59175968034c812eb56b}\label{classCamera_a3c4f432c567e59175968034c812eb56b}} 
+\index{Camera@{Camera}!setPos@{setPos}}
+\index{setPos@{setPos}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setPos()}{setPos()}}
+{\footnotesize\ttfamily void Camera\+::set\+Pos (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+set\+Pos \+: mutateur de pos 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & x la position x \\
+\hline
+{\em float} & y la position y \\
+\hline
+{\em float} & z la position z \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCamera_a6a69508383fdb7b7064e9bea4d569ee9}\label{classCamera_a6a69508383fdb7b7064e9bea4d569ee9}} 
+\index{Camera@{Camera}!setX@{setX}}
+\index{setX@{setX}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setX()}{setX()}}
+{\footnotesize\ttfamily void Camera\+::setX (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})}
+
+
+
+setX \+: modifie la position x 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & x la position x \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCamera_a7200923e83852873639e208cb327434d}\label{classCamera_a7200923e83852873639e208cb327434d}} 
+\index{Camera@{Camera}!setY@{setY}}
+\index{setY@{setY}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setY()}{setY()}}
+{\footnotesize\ttfamily void Camera\+::setY (\begin{DoxyParamCaption}\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+setY \+: modifie la position y 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & y la position y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classCamera_a19b97d8522f5948ca08f5c3405c4ebe3}\label{classCamera_a19b97d8522f5948ca08f5c3405c4ebe3}} 
+\index{Camera@{Camera}!setZ@{setZ}}
+\index{setZ@{setZ}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{setZ()}{setZ()}}
+{\footnotesize\ttfamily void Camera\+::setZ (\begin{DoxyParamCaption}\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+setZ \+: modifie la position z 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & z la position z \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+include/Camera.\+h\item 
+src/Camera.\+cpp\end{DoxyCompactItemize}

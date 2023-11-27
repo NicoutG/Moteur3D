@@ -1,0 +1,31 @@
+digraph "SurfaceAff"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="SurfaceAff",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="structure SurfaceAff"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" modele" ];
+  Node2 [label="Modele",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classModele.html",tooltip="classe Modele"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" surfaces" ];
+  Node3 [label="Surface",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classSurface.html",tooltip="classe Surface"];
+  Node4 -> Node3 [dir="back",color="darkorchid3",style="dashed",label=" couleur" ];
+  Node4 [label="Couleur",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classCouleur.html",tooltip="classe Couleur"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",style="dashed",label=" normale" ];
+  Node5 [label="Matrice",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classMatrice.html",tooltip="classe Matrice"];
+  Node6 -> Node3 [dir="back",color="darkorchid3",style="dashed",label=" image" ];
+  Node6 [label="Image",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classImage.html",tooltip="classe Image"];
+  Node4 -> Node6 [dir="back",color="darkorchid3",style="dashed",label=" couleurs" ];
+  Node7 -> Node3 [dir="back",color="darkorchid3",style="dashed",label=" triangles" ];
+  Node7 [label="Triangle",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structTriangle.html",tooltip="structure Triangle"];
+  Node8 -> Node3 [dir="back",color="darkorchid3",style="dashed",label=" centre" ];
+  Node8 [label="Point",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structPoint.html",tooltip="structure Point"];
+  Node5 -> Node8 [dir="back",color="darkorchid3",style="dashed",label=" pos\nposRe" ];
+  Node8 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" points" ];
+  Node9 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" images" ];
+  Node9 [label="ImageText",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structImageText.html",tooltip="structure ImageText"];
+  Node6 -> Node9 [dir="back",color="darkorchid3",style="dashed",label=" img" ];
+  Node5 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" base\npos" ];
+  Node10 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" cs" ];
+  Node10 [label="Cosin",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classCosin.html",tooltip="classe Cosin"];
+}

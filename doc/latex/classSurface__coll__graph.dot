@@ -1,0 +1,20 @@
+digraph "Surface"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="Surface",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="classe Surface"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" couleur" ];
+  Node2 [label="Couleur",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classCouleur.html",tooltip="classe Couleur"];
+  Node3 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" normale" ];
+  Node3 [label="Matrice",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classMatrice.html",tooltip="classe Matrice"];
+  Node4 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" image" ];
+  Node4 [label="Image",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classImage.html",tooltip="classe Image"];
+  Node2 -> Node4 [dir="back",color="darkorchid3",style="dashed",label=" couleurs" ];
+  Node5 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" triangles" ];
+  Node5 [label="Triangle",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structTriangle.html",tooltip="structure Triangle"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" centre" ];
+  Node6 [label="Point",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structPoint.html",tooltip="structure Point"];
+  Node3 -> Node6 [dir="back",color="darkorchid3",style="dashed",label=" pos\nposRe" ];
+}

@@ -1,5 +1,5 @@
 <map id="Camera" name="Camera">
-<area shape="rect" id="node1" title="classe Camera" alt="" coords="48,109,121,136"/>
-<area shape="rect" id="node2" href="$classMatrice.html" title="classe Matrice" alt="" coords="5,5,76,32"/>
-<area shape="rect" id="node3" href="$classCosin.html" title="classe Cosin" alt="" coords="101,5,159,32"/>
+<area shape="rect" id="node1" title="classe Camera" alt="" coords="48,108,121,133"/>
+<area shape="rect" id="node2" href="$classMatrice.html" title="classe Matrice" alt="" coords="5,5,76,31"/>
+<area shape="rect" id="node3" href="$classCosin.html" title="classe Cosin" alt="" coords="101,5,159,31"/>
 </map>

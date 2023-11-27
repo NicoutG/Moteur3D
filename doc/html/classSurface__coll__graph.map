@@ -1,0 +1,8 @@
+<map id="Surface" name="Surface">
+<area shape="rect" id="node1" title="classe Surface" alt="" coords="154,196,225,221"/>
+<area shape="rect" id="node2" href="$classCouleur.html" title="classe Couleur" alt="" coords="27,5,99,31"/>
+<area shape="rect" id="node4" href="$classImage.html" title="classe Image" alt="" coords="78,108,141,133"/>
+<area shape="rect" id="node3" href="$classMatrice.html" title="classe Matrice" alt="" coords="170,5,241,31"/>
+<area shape="rect" id="node6" href="$structPoint.html" title="structure Point" alt="" coords="273,108,328,133"/>
+<area shape="rect" id="node5" href="$structTriangle.html" title="structure Triangle" alt="" coords="352,108,425,133"/>
+</map>

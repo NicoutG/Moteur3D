@@ -1,0 +1,18 @@
+<map id="Editeur3D" name="Editeur3D">
+<area shape="rect" id="node1" title="classe Editeur3D" alt="" coords="323,613,409,639"/>
+<area shape="rect" id="node2" href="$classCamera.html" title="classe Camera" alt="" coords="139,359,212,384"/>
+<area shape="rect" id="node5" href="$classMoteur3D.html" title="classe Moteur3D" alt="" coords="428,525,515,551"/>
+<area shape="rect" id="node3" href="$classMatrice.html" title="classe Matrice" alt="" coords="137,5,208,31"/>
+<area shape="rect" id="node6" href="$classModele.html" title="classe Modele" alt="" coords="341,309,412,335"/>
+<area shape="rect" id="node7" href="$classSurface.html" title="classe Surface" alt="" coords="321,211,392,236"/>
+<area shape="rect" id="node11" href="$structPoint.html" title="structure Point" alt="" coords="317,108,372,133"/>
+<area shape="rect" id="node14" href="$structPoint2D.html" title="structure Point2D" alt="" coords="5,159,79,185"/>
+<area shape="rect" id="node4" href="$classCosin.html" title="classe Cosin" alt="" coords="417,211,475,236"/>
+<area shape="rect" id="node13" href="$structSurfaceAff.html" title="structure SurfaceAff" alt="" coords="365,408,455,433"/>
+<area shape="rect" id="node8" href="$classCouleur.html" title="classe Couleur" alt="" coords="661,5,733,31"/>
+<area shape="rect" id="node9" href="$classImage.html" title="classe Image" alt="" coords="623,108,685,133"/>
+<area shape="rect" id="node16" href="$structCouche.html" title="structure Couche" alt="" coords="827,108,897,133"/>
+<area shape="rect" id="node12" href="$structImageText.html" title="structure ImageText" alt="" coords="505,211,595,236"/>
+<area shape="rect" id="node10" href="$structTriangle.html" title="structure Triangle" alt="" coords="396,108,469,133"/>
+<area shape="rect" id="node15" href="$structCouchesTransparentes.html" title="structure CouchesTransparentes" alt="" coords="829,260,997,285"/>
+</map>

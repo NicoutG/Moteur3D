@@ -1,0 +1,1414 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Moteur3D: Référence de la classe Moteur3D</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Moteur3D
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pri-methods">Fonctions membres privées</a> &#124;
+<a href="#pri-attribs">Attributs privés</a> &#124;
+<a href="classMoteur3D-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle"><div class="title">Référence de la classe Moteur3D</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Moteur3D_8h_source.html">Moteur3D.h</a>&gt;</code></p>
+<div class="dynheader">
+Graphe de collaboration de Moteur3D:</div>
+<div class="dyncontent">
+<div class="center"><img src="classMoteur3D__coll__graph.png" border="0" usemap="#aMoteur3D_coll__map" alt="Collaboration graph"/></div>
+<map name="aMoteur3D_coll__map" id="aMoteur3D_coll__map">
+<area shape="rect" title="classe Moteur3D" alt="" coords="409,485,495,511"/>
+<area shape="rect" href="classModele.html" title="classe Modele" alt="" coords="510,309,581,335"/>
+<area shape="rect" href="structSurfaceAff.html" title="structure SurfaceAff" alt="" coords="407,397,497,423"/>
+<area shape="rect" href="classSurface.html" title="classe Surface" alt="" coords="478,211,549,236"/>
+<area shape="rect" href="classCouleur.html" title="classe Couleur" alt="" coords="204,5,276,31"/>
+<area shape="rect" href="classImage.html" title="classe Image" alt="" coords="243,108,306,133"/>
+<area shape="rect" href="structCouche.html" title="structure Couche" alt="" coords="85,108,155,133"/>
+<area shape="rect" href="classMatrice.html" title="classe Matrice" alt="" coords="686,5,757,31"/>
+<area shape="rect" href="structPoint.html" title="structure Point" alt="" coords="694,108,749,133"/>
+<area shape="rect" href="structPoint2D.html" title="structure Point2D" alt="" coords="863,159,937,185"/>
+<area shape="rect" href="classCamera.html" title="classe Camera" alt="" coords="717,309,790,335"/>
+<area shape="rect" href="structImageText.html" title="structure ImageText" alt="" coords="357,211,448,236"/>
+<area shape="rect" href="structTriangle.html" title="structure Triangle" alt="" coords="330,108,403,133"/>
+<area shape="rect" href="classCosin.html" title="classe Cosin" alt="" coords="724,211,783,236"/>
+<area shape="rect" href="structCouchesTransparentes.html" title="structure CouchesTransparentes" alt="" coords="5,260,173,285"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">légende</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:aebf643226e4132fa8c69cdd756d50b66"><td class="memItemLeft" align="right" valign="top"><a id="aebf643226e4132fa8c69cdd756d50b66" name="aebf643226e4132fa8c69cdd756d50b66"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Moteur3D</b> ()</td></tr>
+<tr class="separator:aebf643226e4132fa8c69cdd756d50b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8af16bb91fe963333654662ba285eeea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a8af16bb91fe963333654662ba285eeea">Moteur3D</a> (const std::string &amp;moteur)</td></tr>
+<tr class="separator:a8af16bb91fe963333654662ba285eeea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdfbe6046117a06223639e5f4f6c5aa7"><td class="memItemLeft" align="right" valign="top"><a id="abdfbe6046117a06223639e5f4f6c5aa7" name="abdfbe6046117a06223639e5f4f6c5aa7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~Moteur3D</b> ()</td></tr>
+<tr class="separator:abdfbe6046117a06223639e5f4f6c5aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67b35ede814f89e48314906a7e2766fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a67b35ede814f89e48314906a7e2766fc">charger</a> (const std::string &amp;moteur) &amp;</td></tr>
+<tr class="separator:a67b35ede814f89e48314906a7e2766fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5837d9a2ca839d0c02aa5aa7283acca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#ac5837d9a2ca839d0c02aa5aa7283acca">enregistrer</a> (const std::string &amp;moteur) const &amp;</td></tr>
+<tr class="separator:ac5837d9a2ca839d0c02aa5aa7283acca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad154add5f13c861b5182f1c03d35a223"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classCouleur.html">Couleur</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#ad154add5f13c861b5182f1c03d35a223">getCouleurFond</a> () const &amp;</td></tr>
+<tr class="separator:ad154add5f13c861b5182f1c03d35a223"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad706e0b388e6b55f38f91ea76c2083ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#ad706e0b388e6b55f38f91ea76c2083ad">setCouleurFond</a> (unsigned char r, unsigned char g, unsigned char b)</td></tr>
+<tr class="separator:ad706e0b388e6b55f38f91ea76c2083ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a733b7db59690468f60d8f463ae135d6d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a733b7db59690468f60d8f463ae135d6d">getDistAffichage</a> () const &amp;</td></tr>
+<tr class="separator:a733b7db59690468f60d8f463ae135d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade0f48668002af791445d66ffc278c0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#ade0f48668002af791445d66ffc278c0c">setDistAffichage</a> (float dist)</td></tr>
+<tr class="separator:ade0f48668002af791445d66ffc278c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a606be8348b057137328c4e899666feaf"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a606be8348b057137328c4e899666feaf">getNbModeles</a> () const &amp;</td></tr>
+<tr class="separator:a606be8348b057137328c4e899666feaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9123f7d1f47806d07e011015fe8340ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a9123f7d1f47806d07e011015fe8340ee">addModele</a> (<a class="el" href="classModele.html">Modele</a> *modele) &amp;</td></tr>
+<tr class="separator:a9123f7d1f47806d07e011015fe8340ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf4af8199f90ab0145c597439b2feea5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#acf4af8199f90ab0145c597439b2feea5">addModele</a> (const std::string &amp;modele, const std::string &amp;texture) &amp;</td></tr>
+<tr class="separator:acf4af8199f90ab0145c597439b2feea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76d868fd82715d77095dba45323f4f30"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a76d868fd82715d77095dba45323f4f30">addModele</a> (const std::string &amp;modele, const std::string &amp;texture, const <a class="el" href="classMatrice.html">Matrice</a> &amp;pos) &amp;</td></tr>
+<tr class="separator:a76d868fd82715d77095dba45323f4f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0b3154308dc8557b52195140f9fefae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#aa0b3154308dc8557b52195140f9fefae">delModele</a> (unsigned int m) &amp;</td></tr>
+<tr class="separator:aa0b3154308dc8557b52195140f9fefae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe5fb6148fcb4dbe89d4f12b925b3db7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classModele.html">Modele</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#afe5fb6148fcb4dbe89d4f12b925b3db7">getModele</a> (unsigned int m) &amp;</td></tr>
+<tr class="separator:afe5fb6148fcb4dbe89d4f12b925b3db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fcabda210d2260b880ddb93a6c0f79f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a3fcabda210d2260b880ddb93a6c0f79f">getImage</a> (<a class="el" href="classCamera.html">Camera</a> &amp;camera, unsigned int tailley, unsigned int taillex) &amp;</td></tr>
+<tr class="separator:a3fcabda210d2260b880ddb93a6c0f79f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72544237be6e3ba3d1d9d58a2337ca53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classImage.html">Image</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a72544237be6e3ba3d1d9d58a2337ca53">getImage</a> () &amp;</td></tr>
+<tr class="separator:a72544237be6e3ba3d1d9d58a2337ca53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac88cd9921c87619bedf94414c7e96e5c"><td class="memItemLeft" align="right" valign="top">float **&amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#ac88cd9921c87619bedf94414c7e96e5c">getDistances</a> () &amp;</td></tr>
+<tr class="separator:ac88cd9921c87619bedf94414c7e96e5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db0f81d1a9fe5a1561de7bcdb891e93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPoint2D.html">Point2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a0db0f81d1a9fe5a1561de7bcdb891e93">getPoints2D</a> (const <a class="el" href="classModele.html">Modele</a> *modele) const</td></tr>
+<tr class="separator:a0db0f81d1a9fe5a1561de7bcdb891e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82fbf48dd3f2b00e35958ccb1dae77fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structPoint2D.html">Point2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a82fbf48dd3f2b00e35958ccb1dae77fd">getPoints2D</a> (const <a class="el" href="classModele.html">Modele</a> *modele, unsigned int s) const</td></tr>
+<tr class="separator:a82fbf48dd3f2b00e35958ccb1dae77fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa302e6fdd37533ef547b731ad6de5ff7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classMatrice.html">Matrice</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#aa302e6fdd37533ef547b731ad6de5ff7">getPosCam</a> (const <a class="el" href="classMatrice.html">Matrice</a> &amp;pos) const</td></tr>
+<tr class="separator:aa302e6fdd37533ef547b731ad6de5ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a153fd0ba8bb1bb601dafa9d821059861"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCamera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a153fd0ba8bb1bb601dafa9d821059861">getCam</a> () const</td></tr>
+<tr class="separator:a153fd0ba8bb1bb601dafa9d821059861"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0740397ec39fb3f0160723a19e7c1d41"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a0740397ec39fb3f0160723a19e7c1d41">getNbAff</a> () const</td></tr>
+<tr class="separator:a0740397ec39fb3f0160723a19e7c1d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab005e9ea27bd90e9fdd93714d5ec75"><td class="memItemLeft" align="right" valign="top"><a id="afab005e9ea27bd90e9fdd93714d5ec75" name="afab005e9ea27bd90e9fdd93714d5ec75"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>pauseSons</b> ()</td></tr>
+<tr class="separator:afab005e9ea27bd90e9fdd93714d5ec75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a551bc2f704e0731b9f0901dd54f7b30b"><td class="memItemLeft" align="right" valign="top"><a id="a551bc2f704e0731b9f0901dd54f7b30b" name="a551bc2f704e0731b9f0901dd54f7b30b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reprendreSons</b> ()</td></tr>
+<tr class="separator:a551bc2f704e0731b9f0901dd54f7b30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d6b011c1b56be94cde6808e06db3272"><td class="memItemLeft" align="right" valign="top"><a id="a0d6b011c1b56be94cde6808e06db3272" name="a0d6b011c1b56be94cde6808e06db3272"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>arreterSons</b> ()</td></tr>
+<tr class="separator:a0d6b011c1b56be94cde6808e06db3272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0b320f0c0c474d00b523f333e90d75c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#ae0b320f0c0c474d00b523f333e90d75c">chargerMusique</a> (const std::string &amp;nom)</td></tr>
+<tr class="separator:ae0b320f0c0c474d00b523f333e90d75c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a63eb67557507e95851ad01b3861667"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a7a63eb67557507e95851ad01b3861667">jouerMusique</a> (int repet=-1)</td></tr>
+<tr class="separator:a7a63eb67557507e95851ad01b3861667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a400237fdd582ea1ad4bac6fcae1ce027"><td class="memItemLeft" align="right" valign="top"><a id="a400237fdd582ea1ad4bac6fcae1ce027" name="a400237fdd582ea1ad4bac6fcae1ce027"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>pauseMusique</b> ()</td></tr>
+<tr class="separator:a400237fdd582ea1ad4bac6fcae1ce027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f527dc3fb153c4c8b8eca18929d0bf1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a5f527dc3fb153c4c8b8eca18929d0bf1">isPauseMusique</a> ()</td></tr>
+<tr class="separator:a5f527dc3fb153c4c8b8eca18929d0bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab618300493c67b015655d7ba4c728cd9"><td class="memItemLeft" align="right" valign="top"><a id="ab618300493c67b015655d7ba4c728cd9" name="ab618300493c67b015655d7ba4c728cd9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>reprendreMusique</b> ()</td></tr>
+<tr class="separator:ab618300493c67b015655d7ba4c728cd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba54781660f82b368aa086dedb7c74da"><td class="memItemLeft" align="right" valign="top"><a id="aba54781660f82b368aa086dedb7c74da" name="aba54781660f82b368aa086dedb7c74da"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>arreterMusique</b> ()</td></tr>
+<tr class="separator:aba54781660f82b368aa086dedb7c74da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a912dadab2e9f862037ce8e2fb0c8a61b"><td class="memItemLeft" align="right" valign="top"><a id="a912dadab2e9f862037ce8e2fb0c8a61b" name="a912dadab2e9f862037ce8e2fb0c8a61b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>recommencerMusique</b> ()</td></tr>
+<tr class="separator:a912dadab2e9f862037ce8e2fb0c8a61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64ebfbbd9168ea8dab530164cf9b6c00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a64ebfbbd9168ea8dab530164cf9b6c00">setVolume</a> (float volume)</td></tr>
+<tr class="separator:a64ebfbbd9168ea8dab530164cf9b6c00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8ad49b438ccf0c833a11942fedbb3d7"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#aa8ad49b438ccf0c833a11942fedbb3d7">getVolume</a> () const</td></tr>
+<tr class="separator:aa8ad49b438ccf0c833a11942fedbb3d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Fonctions membres privées</h2></td></tr>
+<tr class="memitem:a3ac487cfdb487fa09a8c8b35b74787ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a3ac487cfdb487fa09a8c8b35b74787ac">creationTableau</a> (unsigned int y, unsigned int x) &amp;</td></tr>
+<tr class="separator:a3ac487cfdb487fa09a8c8b35b74787ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3db6f290c99cf4248a21dcd5229e5224"><td class="memItemLeft" align="right" valign="top"><a id="a3db6f290c99cf4248a21dcd5229e5224" name="a3db6f290c99cf4248a21dcd5229e5224"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>initialiserTableau</b> () &amp;</td></tr>
+<tr class="separator:a3db6f290c99cf4248a21dcd5229e5224"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dd66df86ec0a5ea567de062606c99f1"><td class="memItemLeft" align="right" valign="top"><a id="a2dd66df86ec0a5ea567de062606c99f1" name="a2dd66df86ec0a5ea567de062606c99f1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>gestionModeles</b> () &amp;</td></tr>
+<tr class="separator:a2dd66df86ec0a5ea567de062606c99f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade78331ab0113480039df3f2542adda4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#ade78331ab0113480039df3f2542adda4">addAff</a> (<a class="el" href="classModele.html">Modele</a> *mod, unsigned int s) &amp;</td></tr>
+<tr class="separator:ade78331ab0113480039df3f2542adda4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc6e606aae569139878151107c4a475"><td class="memItemLeft" align="right" valign="top"><a id="a9dc6e606aae569139878151107c4a475" name="a9dc6e606aae569139878151107c4a475"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>afficherSurfaces</b> () &amp;</td></tr>
+<tr class="separator:a9dc6e606aae569139878151107c4a475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe2d22883b3d787a2c37d227aaaab17e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#abe2d22883b3d787a2c37d227aaaab17e">majPoints</a> (const <a class="el" href="classModele.html">Modele</a> *modele) &amp;</td></tr>
+<tr class="separator:abe2d22883b3d787a2c37d227aaaab17e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f5938a9b38be49d5f87683a1cada957"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a5f5938a9b38be49d5f87683a1cada957">majPoints</a> (const <a class="el" href="classModele.html">Modele</a> *modele, unsigned int s) &amp;</td></tr>
+<tr class="separator:a5f5938a9b38be49d5f87683a1cada957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd56b0ed95d1bfd31390757cfbcbeabc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#afd56b0ed95d1bfd31390757cfbcbeabc">afficherSurface</a> (<a class="el" href="classModele.html">Modele</a> *modele, unsigned int s) &amp;</td></tr>
+<tr class="separator:afd56b0ed95d1bfd31390757cfbcbeabc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8793e70851ea342bef6ce56fa2d2cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#a3e8793e70851ea342bef6ce56fa2d2cf">traitementTriangle</a> (const <a class="el" href="classModele.html">Modele</a> *modele, unsigned int s, <a class="el" href="structPoint2D.html">Point2D</a> *p1, <a class="el" href="structPoint2D.html">Point2D</a> *p2, <a class="el" href="structPoint2D.html">Point2D</a> *p3, float ang, float distMin) &amp;</td></tr>
+<tr class="separator:a3e8793e70851ea342bef6ce56fa2d2cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadb767d2fcfdef1fe1a4b9ed618a4970"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#aadb767d2fcfdef1fe1a4b9ed618a4970">afficherTriangle</a> (const <a class="el" href="classModele.html">Modele</a> *modele, unsigned int s, <a class="el" href="structPoint2D.html">Point2D</a> *p1, <a class="el" href="structPoint2D.html">Point2D</a> *p2, <a class="el" href="structPoint2D.html">Point2D</a> *p3, float ang, float distMin) &amp;</td></tr>
+<tr class="separator:aadb767d2fcfdef1fe1a4b9ed618a4970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae49e953bc9f28622b9ed510947e4a762"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMoteur3D.html#ae49e953bc9f28622b9ed510947e4a762">addTransparent</a> (unsigned int x, unsigned int y, const <a class="el" href="classCouleur.html">Couleur</a> &amp;coul, float dist) &amp;</td></tr>
+<tr class="separator:ae49e953bc9f28622b9ed510947e4a762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9811f7b4f9aa2284d377d1884a10b864"><td class="memItemLeft" align="right" valign="top"><a id="a9811f7b4f9aa2284d377d1884a10b864" name="a9811f7b4f9aa2284d377d1884a10b864"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>appliquerTransparence</b> () &amp;</td></tr>
+<tr class="separator:a9811f7b4f9aa2284d377d1884a10b864"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Attributs privés</h2></td></tr>
+<tr class="memitem:a7fd5c4619d1b4b6c98a4af4acb6b6cf0"><td class="memItemLeft" align="right" valign="top"><a id="a7fd5c4619d1b4b6c98a4af4acb6b6cf0" name="a7fd5c4619d1b4b6c98a4af4acb6b6cf0"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>nbModeles</b></td></tr>
+<tr class="separator:a7fd5c4619d1b4b6c98a4af4acb6b6cf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeef50c936c6296e34f01061bd064fd72"><td class="memItemLeft" align="right" valign="top"><a id="aeef50c936c6296e34f01061bd064fd72" name="aeef50c936c6296e34f01061bd064fd72"></a>
+<a class="el" href="classModele.html">Modele</a> **&#160;</td><td class="memItemRight" valign="bottom"><b>modeles</b></td></tr>
+<tr class="separator:aeef50c936c6296e34f01061bd064fd72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65272c70452ab1668492001ffe89202d"><td class="memItemLeft" align="right" valign="top"><a id="a65272c70452ab1668492001ffe89202d" name="a65272c70452ab1668492001ffe89202d"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>nbAff</b></td></tr>
+<tr class="separator:a65272c70452ab1668492001ffe89202d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dea33a986bee0e874e77753239f7ed1"><td class="memItemLeft" align="right" valign="top"><a id="a1dea33a986bee0e874e77753239f7ed1" name="a1dea33a986bee0e874e77753239f7ed1"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>capaciteAff</b></td></tr>
+<tr class="separator:a1dea33a986bee0e874e77753239f7ed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d73ed84e469e6ec25b118d43ee69ca8"><td class="memItemLeft" align="right" valign="top"><a id="a6d73ed84e469e6ec25b118d43ee69ca8" name="a6d73ed84e469e6ec25b118d43ee69ca8"></a>
+<a class="el" href="structSurfaceAff.html">SurfaceAff</a> **&#160;</td><td class="memItemRight" valign="bottom"><b>aff</b></td></tr>
+<tr class="separator:a6d73ed84e469e6ec25b118d43ee69ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac62b6c7c4968ae5b66e2d91ea655318a"><td class="memItemLeft" align="right" valign="top"><a id="ac62b6c7c4968ae5b66e2d91ea655318a" name="ac62b6c7c4968ae5b66e2d91ea655318a"></a>
+<a class="el" href="structPoint2D.html">Point2D</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>points</b></td></tr>
+<tr class="separator:ac62b6c7c4968ae5b66e2d91ea655318a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5b25c995c9733653a2ecdee6be81eec"><td class="memItemLeft" align="right" valign="top"><a id="aa5b25c995c9733653a2ecdee6be81eec" name="aa5b25c995c9733653a2ecdee6be81eec"></a>
+<a class="el" href="classCouleur.html">Couleur</a>&#160;</td><td class="memItemRight" valign="bottom"><b>couleurFond</b></td></tr>
+<tr class="separator:aa5b25c995c9733653a2ecdee6be81eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f7e1d0baea528b647ee985cf5676bf8"><td class="memItemLeft" align="right" valign="top"><a id="a9f7e1d0baea528b647ee985cf5676bf8" name="a9f7e1d0baea528b647ee985cf5676bf8"></a>
+<a class="el" href="classImage.html">Image</a>&#160;</td><td class="memItemRight" valign="bottom"><b>image</b></td></tr>
+<tr class="separator:a9f7e1d0baea528b647ee985cf5676bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fc56e71453ae56af3661259066103bb"><td class="memItemLeft" align="right" valign="top"><a id="a3fc56e71453ae56af3661259066103bb" name="a3fc56e71453ae56af3661259066103bb"></a>
+float **&#160;</td><td class="memItemRight" valign="bottom"><b>distances</b></td></tr>
+<tr class="separator:a3fc56e71453ae56af3661259066103bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70e117151215828793179eae3d6ffaae"><td class="memItemLeft" align="right" valign="top"><a id="a70e117151215828793179eae3d6ffaae" name="a70e117151215828793179eae3d6ffaae"></a>
+<a class="el" href="structCouchesTransparentes.html">CouchesTransparentes</a> **&#160;</td><td class="memItemRight" valign="bottom"><b>transparences</b></td></tr>
+<tr class="separator:a70e117151215828793179eae3d6ffaae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05d3b8f3f0ed18388c3d628a77ac9a9c"><td class="memItemLeft" align="right" valign="top"><a id="a05d3b8f3f0ed18388c3d628a77ac9a9c" name="a05d3b8f3f0ed18388c3d628a77ac9a9c"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>distAffichage</b></td></tr>
+<tr class="separator:a05d3b8f3f0ed18388c3d628a77ac9a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a056fcf5a2c60f6e8597421ba80a2b0c2"><td class="memItemLeft" align="right" valign="top"><a id="a056fcf5a2c60f6e8597421ba80a2b0c2" name="a056fcf5a2c60f6e8597421ba80a2b0c2"></a>
+<a class="el" href="classCamera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>cam</b></td></tr>
+<tr class="separator:a056fcf5a2c60f6e8597421ba80a2b0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aacfad4d75f39a9e008d8af22f7ee78"><td class="memItemLeft" align="right" valign="top"><a id="a1aacfad4d75f39a9e008d8af22f7ee78" name="a1aacfad4d75f39a9e008d8af22f7ee78"></a>
+Mix_Music *&#160;</td><td class="memItemRight" valign="bottom"><b>musique</b></td></tr>
+<tr class="separator:a1aacfad4d75f39a9e008d8af22f7ee78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>classe <a class="el" href="classMoteur3D.html" title="classe Moteur3D">Moteur3D</a> </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a id="a8af16bb91fe963333654662ba285eeea" name="a8af16bb91fe963333654662ba285eeea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8af16bb91fe963333654662ba285eeea">&#9670;&#160;</a></span>Moteur3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Moteur3D::Moteur3D </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>moteur</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="classMoteur3D.html" title="classe Moteur3D">Moteur3D</a> : constructeur de la classe <a class="el" href="classMoteur3D.html" title="classe Moteur3D">Moteur3D</a>. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>moteur le fichier texte qui contient les informations sur le moteur3D et les modèles </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a id="ade78331ab0113480039df3f2542adda4" name="ade78331ab0113480039df3f2542adda4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade78331ab0113480039df3f2542adda4">&#9670;&#160;</a></span>addAff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Moteur3D::addAff </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classModele.html">Modele</a> *&#160;</td>
+          <td class="paramname"><em>mod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> &amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>addAff : ajoute un modèle à l'affichage </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Modele*</td><td>mod le pointeur vers le modèle </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int s l'indice de la surface </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="acf4af8199f90ab0145c597439b2feea5" name="acf4af8199f90ab0145c597439b2feea5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf4af8199f90ab0145c597439b2feea5">&#9670;&#160;</a></span>addModele() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Moteur3D::addModele </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>modele</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>texture</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>addModele : ajoute un modèle au moteur 3D </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>modele nom du fichier texte qui contient le modèle 3D </td></tr>
+    <tr><td class="paramname">string</td><td>texture nom du fichier qui contient les couleurs du modèle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a76d868fd82715d77095dba45323f4f30" name="a76d868fd82715d77095dba45323f4f30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76d868fd82715d77095dba45323f4f30">&#9670;&#160;</a></span>addModele() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Moteur3D::addModele </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>modele</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classMatrice.html">Matrice</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>addModele : ajoute un modèle au moteur 3D </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>modele nom du fichier texte qui contient le modèle 3D </td></tr>
+    <tr><td class="paramname">string</td><td>texture nom du fichier qui contient les couleurs du modèle </td></tr>
+    <tr><td class="paramname"><a class="el" href="classMatrice.html" title="classe Matrice">Matrice</a></td><td>pos la position du modèle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9123f7d1f47806d07e011015fe8340ee" name="a9123f7d1f47806d07e011015fe8340ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9123f7d1f47806d07e011015fe8340ee">&#9670;&#160;</a></span>addModele() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Moteur3D::addModele </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classModele.html">Modele</a> *&#160;</td>
+          <td class="paramname"><em>modele</em></td><td>)</td>
+          <td> &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>addModele : ajoute un modèle au moteur 3D </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="classModele.html" title="classe Modele">Modele</a></td><td>* modele l'adrese du modèle à ajouter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae49e953bc9f28622b9ed510947e4a762" name="ae49e953bc9f28622b9ed510947e4a762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae49e953bc9f28622b9ed510947e4a762">&#9670;&#160;</a></span>addTransparent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Moteur3D::addTransparent </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCouleur.html">Couleur</a> &amp;&#160;</td>
+          <td class="paramname"><em>coul</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dist</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> &amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>addTransparent : ajoute une couche transparente au pixel </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int x la coordonnée x du pixel </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int y la coordonnée y du pixel </td></tr>
+    <tr><td class="paramname"><a class="el" href="classCouleur.html" title="classe Couleur">Couleur</a></td><td>coul la couleur de la couche transparente </td></tr>
+    <tr><td class="paramname">float</td><td>dist la distance de la couche transparente </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afd56b0ed95d1bfd31390757cfbcbeabc" name="afd56b0ed95d1bfd31390757cfbcbeabc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd56b0ed95d1bfd31390757cfbcbeabc">&#9670;&#160;</a></span>afficherSurface()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Moteur3D::afficherSurface </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classModele.html">Modele</a> *&#160;</td>
+          <td class="paramname"><em>modele</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> &amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>afficherSurface : Fait apparaitre les surfaces sur l'image </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Modele*</td><td>modele le pointeur vers le modèle à faire apparaitre sur l'image </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int s l'indice de la surface du modèle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aadb767d2fcfdef1fe1a4b9ed618a4970" name="aadb767d2fcfdef1fe1a4b9ed618a4970"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadb767d2fcfdef1fe1a4b9ed618a4970">&#9670;&#160;</a></span>afficherTriangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Moteur3D::afficherTriangle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classModele.html">Modele</a> *&#160;</td>
+          <td class="paramname"><em>modele</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPoint2D.html">Point2D</a> *&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPoint2D.html">Point2D</a> *&#160;</td>
+          <td class="paramname"><em>p2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPoint2D.html">Point2D</a> *&#160;</td>
+          <td class="paramname"><em>p3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ang</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>distMin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> &amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>afficherTriangle : Fait apparaitre les triangles sur l'image </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Modele*</td><td>modele le pointeur vers le modèle à faire apparaitre sur l'image </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int s l'indice de la surface du modèle </td></tr>
+    <tr><td class="paramname"><a class="el" href="structPoint2D.html" title="structure Point2D">Point2D</a></td><td>* p1 pointeur vers le point 1 </td></tr>
+    <tr><td class="paramname"><a class="el" href="structPoint2D.html" title="structure Point2D">Point2D</a></td><td>* p2 pointeur vers le point 2 </td></tr>
+    <tr><td class="paramname"><a class="el" href="structPoint2D.html" title="structure Point2D">Point2D</a></td><td>* p3 pointeur vers le point 3 </td></tr>
+    <tr><td class="paramname">float</td><td>ang l'angle de la surface par rapport à la caméra </td></tr>
+    <tr><td class="paramname">float</td><td>distMin la distance entre la caméra et le plan de la surface </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a67b35ede814f89e48314906a7e2766fc" name="a67b35ede814f89e48314906a7e2766fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67b35ede814f89e48314906a7e2766fc">&#9670;&#160;</a></span>charger()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Moteur3D::charger </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>moteur</em></td><td>)</td>
+          <td> &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>charger : charge les informations sur le moteur3D et les modèles </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>moteur le fichier texte qui contient les informations sur le moteur3D et les modèles </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>bool si le chargement a bien fonctionné </dd></dl>
+
+</div>
+</div>
+<a id="ae0b320f0c0c474d00b523f333e90d75c" name="ae0b320f0c0c474d00b523f333e90d75c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0b320f0c0c474d00b523f333e90d75c">&#9670;&#160;</a></span>chargerMusique()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Moteur3D::chargerMusique </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>nom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>chargerMusique : charge une musique dans le moteur de jeu (mp3 par défaut) </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>nom le nom du fichier à charger </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>bool si le chargement a bien fonctionné </dd></dl>
+
+</div>
+</div>
+<a id="a3ac487cfdb487fa09a8c8b35b74787ac" name="a3ac487cfdb487fa09a8c8b35b74787ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ac487cfdb487fa09a8c8b35b74787ac">&#9670;&#160;</a></span>creationTableau()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Moteur3D::creationTableau </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> &amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>creationTableau : redimensionne distances et image si neccessaire </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int y la taille verticale de l'image demandée </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int x la taille horizontale de l'image demandée </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa0b3154308dc8557b52195140f9fefae" name="aa0b3154308dc8557b52195140f9fefae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b3154308dc8557b52195140f9fefae">&#9670;&#160;</a></span>delModele()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Moteur3D::delModele </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td> &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>delModele : supprime un modèle du moteur 3D </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int m l'indice du modèle à supprimer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac5837d9a2ca839d0c02aa5aa7283acca" name="ac5837d9a2ca839d0c02aa5aa7283acca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5837d9a2ca839d0c02aa5aa7283acca">&#9670;&#160;</a></span>enregistrer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Moteur3D::enregistrer </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>moteur</em></td><td>)</td>
+          <td> const &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>enregistrer : enregistre les informations sur le moteur3D et les modèles </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">string</td><td>moteur le fichier texte qui contient les informations sur le moteur3D et les modèles </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>bool si l'enregistrement a bien fonctionné </dd></dl>
+
+</div>
+</div>
+<a id="a153fd0ba8bb1bb601dafa9d821059861" name="a153fd0ba8bb1bb601dafa9d821059861"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a153fd0ba8bb1bb601dafa9d821059861">&#9670;&#160;</a></span>getCam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCamera.html">Camera</a> * Moteur3D::getCam </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getCam : accesseur de cam </p>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="classCamera.html" title="classe Camera">Camera</a> * la camera du moteur </dd></dl>
+
+</div>
+</div>
+<a id="ad154add5f13c861b5182f1c03d35a223" name="ad154add5f13c861b5182f1c03d35a223"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad154add5f13c861b5182f1c03d35a223">&#9670;&#160;</a></span>getCouleurFond()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classCouleur.html">Couleur</a> &amp; Moteur3D::getCouleurFond </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getCouleurFond : accesseur de couleurFond </p>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="classCouleur.html" title="classe Couleur">Couleur</a>&amp; couleurFond la couleur du fond </dd></dl>
+
+</div>
+</div>
+<a id="a733b7db59690468f60d8f463ae135d6d" name="a733b7db59690468f60d8f463ae135d6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a733b7db59690468f60d8f463ae135d6d">&#9670;&#160;</a></span>getDistAffichage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Moteur3D::getDistAffichage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getDistAffichage : accesseur de distAffichage </p>
+<dl class="section return"><dt>Renvoie</dt><dd>float distAffichage la distance d'affichage </dd></dl>
+
+</div>
+</div>
+<a id="ac88cd9921c87619bedf94414c7e96e5c" name="ac88cd9921c87619bedf94414c7e96e5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac88cd9921c87619bedf94414c7e96e5c">&#9670;&#160;</a></span>getDistances()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float **&amp; Moteur3D::getDistances </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getDistances : accesseur de distances </p>
+<dl class="section return"><dt>Renvoie</dt><dd>float**&amp; distances le tableau des distances au carré des points de l'images </dd></dl>
+
+</div>
+</div>
+<a id="a72544237be6e3ba3d1d9d58a2337ca53" name="a72544237be6e3ba3d1d9d58a2337ca53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72544237be6e3ba3d1d9d58a2337ca53">&#9670;&#160;</a></span>getImage() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classImage.html">Image</a> * Moteur3D::getImage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getImage : accesseur de image </p>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="classImage.html" title="classe Image">Image</a> l'image </dd></dl>
+
+</div>
+</div>
+<a id="a3fcabda210d2260b880ddb93a6c0f79f" name="a3fcabda210d2260b880ddb93a6c0f79f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fcabda210d2260b880ddb93a6c0f79f">&#9670;&#160;</a></span>getImage() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classImage.html">Image</a> * Moteur3D::getImage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCamera.html">Camera</a> &amp;&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>tailley</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>taillex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getImage : renvoie l'image des modèles vue par la caméra </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="classCamera.html" title="classe Camera">Camera</a></td><td>camera la caméra </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int tailley la taille verticale de l'image </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int taillex la taille horizontale de l'image </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="classImage.html" title="classe Image">Image</a> l'image </dd></dl>
+
+</div>
+</div>
+<a id="afe5fb6148fcb4dbe89d4f12b925b3db7" name="afe5fb6148fcb4dbe89d4f12b925b3db7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe5fb6148fcb4dbe89d4f12b925b3db7">&#9670;&#160;</a></span>getModele()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classModele.html">Modele</a> * Moteur3D::getModele </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td> &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getModele : renvoie le modèle </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int m l'indice du modèle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>Modele* le pointeur vers le modèle </dd></dl>
+
+</div>
+</div>
+<a id="a0740397ec39fb3f0160723a19e7c1d41" name="a0740397ec39fb3f0160723a19e7c1d41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0740397ec39fb3f0160723a19e7c1d41">&#9670;&#160;</a></span>getNbAff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Moteur3D::getNbAff </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getNbAff: accesseur de nbAff </p>
+<dl class="section return"><dt>Renvoie</dt><dd>unsigned int le nombre de surfaces afficher </dd></dl>
+
+</div>
+</div>
+<a id="a606be8348b057137328c4e899666feaf" name="a606be8348b057137328c4e899666feaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a606be8348b057137328c4e899666feaf">&#9670;&#160;</a></span>getNbModeles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int Moteur3D::getNbModeles </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const &amp;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getNbModeles : accesseur de nbModeles </p>
+<dl class="section return"><dt>Renvoie</dt><dd>unsigned int nbModeles le nombre de modèles du moteur 3D </dd></dl>
+
+</div>
+</div>
+<a id="a0db0f81d1a9fe5a1561de7bcdb891e93" name="a0db0f81d1a9fe5a1561de7bcdb891e93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0db0f81d1a9fe5a1561de7bcdb891e93">&#9670;&#160;</a></span>getPoints2D() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structPoint2D.html">Point2D</a> * Moteur3D::getPoints2D </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classModele.html">Modele</a> *&#160;</td>
+          <td class="paramname"><em>modele</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getPoints2D : renvoie les les coordonnées relatives au moteur des points du modele </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="classModele.html" title="classe Modele">Modele</a></td><td>* modele le modele dont on veut calculer les positions des points </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="structPoint2D.html" title="structure Point2D">Point2D</a> * les coordonnées relatives au moteur des points du modele </dd></dl>
+
+</div>
+</div>
+<a id="a82fbf48dd3f2b00e35958ccb1dae77fd" name="a82fbf48dd3f2b00e35958ccb1dae77fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82fbf48dd3f2b00e35958ccb1dae77fd">&#9670;&#160;</a></span>getPoints2D() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structPoint2D.html">Point2D</a> * Moteur3D::getPoints2D </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classModele.html">Modele</a> *&#160;</td>
+          <td class="paramname"><em>modele</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getPoints2D : renvoie les coordonnées relatives au moteur des points du modele (calcul seulement les points de la surface) </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="classModele.html" title="classe Modele">Modele</a></td><td>* modele le modele dont on veut calculer les positions des points </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int s l'indice de la surface du modèle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="structPoint2D.html" title="structure Point2D">Point2D</a> * les coordonnées relatives au moteur des points du modele (calcul seulement les points de la surface) </dd></dl>
+
+</div>
+</div>
+<a id="aa302e6fdd37533ef547b731ad6de5ff7" name="aa302e6fdd37533ef547b731ad6de5ff7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa302e6fdd37533ef547b731ad6de5ff7">&#9670;&#160;</a></span>getPosCam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMatrice.html">Matrice</a> Moteur3D::getPosCam </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classMatrice.html">Matrice</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getPosCam : renvoie les coordonnées en fonction de la caméra </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="classMatrice.html" title="classe Matrice">Matrice</a></td><td>pos les coordonnées de l'objet </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="classMatrice.html" title="classe Matrice">Matrice</a> les coordonnées de l'objet relativement à la caméra </dd></dl>
+
+</div>
+</div>
+<a id="aa8ad49b438ccf0c833a11942fedbb3d7" name="aa8ad49b438ccf0c833a11942fedbb3d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8ad49b438ccf0c833a11942fedbb3d7">&#9670;&#160;</a></span>getVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Moteur3D::getVolume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>getVolume : accesseur du volume de la musique du moteur de jeu </p>
+<dl class="section return"><dt>Renvoie</dt><dd>float la valeur du volume de la musique du moteur de jeu (0 à 100) </dd></dl>
+
+</div>
+</div>
+<a id="a5f527dc3fb153c4c8b8eca18929d0bf1" name="a5f527dc3fb153c4c8b8eca18929d0bf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f527dc3fb153c4c8b8eca18929d0bf1">&#9670;&#160;</a></span>isPauseMusique()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Moteur3D::isPauseMusique </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>isPauseMusique : renvoie si le musique est en pause </p>
+<dl class="section return"><dt>Renvoie</dt><dd>int renvoie 2 si la musique n'est joué, 1 si la musique est en pause, 0 sinon </dd></dl>
+
+</div>
+</div>
+<a id="a7a63eb67557507e95851ad01b3861667" name="a7a63eb67557507e95851ad01b3861667"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a63eb67557507e95851ad01b3861667">&#9670;&#160;</a></span>jouerMusique()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Moteur3D::jouerMusique </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>repet</em> = <code>-1</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>jouerMusique : joue la musique chargé dans le moteur de jeu </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">int</td><td>repet le nombre de répétitions de la musique supplémentaires (-1 pour une boucle infini) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>bool si la musique a bien été joué </dd></dl>
+
+</div>
+</div>
+<a id="abe2d22883b3d787a2c37d227aaaab17e" name="abe2d22883b3d787a2c37d227aaaab17e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe2d22883b3d787a2c37d227aaaab17e">&#9670;&#160;</a></span>majPoints() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Moteur3D::majPoints </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classModele.html">Modele</a> *&#160;</td>
+          <td class="paramname"><em>modele</em></td><td>)</td>
+          <td> &amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>majPoints : calcul la position sur l'image des points du modèle </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Modele*</td><td>modele le pointeur vers le modèle à faire apparaitre sur l'image </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5f5938a9b38be49d5f87683a1cada957" name="a5f5938a9b38be49d5f87683a1cada957"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f5938a9b38be49d5f87683a1cada957">&#9670;&#160;</a></span>majPoints() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Moteur3D::majPoints </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classModele.html">Modele</a> *&#160;</td>
+          <td class="paramname"><em>modele</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> &amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>majPoints : calcul la position sur l'image des points d'une surface </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Modele*</td><td>modele le pointeur vers le modèle à faire apparaitre sur l'image </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int s l'indice de la surface du modèle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad706e0b388e6b55f38f91ea76c2083ad" name="ad706e0b388e6b55f38f91ea76c2083ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad706e0b388e6b55f38f91ea76c2083ad">&#9670;&#160;</a></span>setCouleurFond()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Moteur3D::setCouleurFond </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>setCouleurFond : mutateur de couleurFond </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">unsigned</td><td>int r la couleur rouge </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int g la couleur verte </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int b la couleur bleue </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ade0f48668002af791445d66ffc278c0c" name="ade0f48668002af791445d66ffc278c0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade0f48668002af791445d66ffc278c0c">&#9670;&#160;</a></span>setDistAffichage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Moteur3D::setDistAffichage </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dist</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>setDistAffichage : mutateur de distAffichage </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">float</td><td>dist la distance d'affichage </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a64ebfbbd9168ea8dab530164cf9b6c00" name="a64ebfbbd9168ea8dab530164cf9b6c00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64ebfbbd9168ea8dab530164cf9b6c00">&#9670;&#160;</a></span>setVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Moteur3D::setVolume </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>volume</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>setVolume : mutateur du volume de la musique du moteur de jeu </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">float</td><td>volume la nouvelle valeur du volume (0 à 100) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3e8793e70851ea342bef6ce56fa2d2cf" name="a3e8793e70851ea342bef6ce56fa2d2cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8793e70851ea342bef6ce56fa2d2cf">&#9670;&#160;</a></span>traitementTriangle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Moteur3D::traitementTriangle </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classModele.html">Modele</a> *&#160;</td>
+          <td class="paramname"><em>modele</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPoint2D.html">Point2D</a> *&#160;</td>
+          <td class="paramname"><em>p1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPoint2D.html">Point2D</a> *&#160;</td>
+          <td class="paramname"><em>p2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPoint2D.html">Point2D</a> *&#160;</td>
+          <td class="paramname"><em>p3</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>ang</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>distMin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> &amp;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>traitementTriangle : projete les points du triangle devant la caméra </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Modele*</td><td>modele le pointeur vers le modèle à faire apparaitre sur l'image </td></tr>
+    <tr><td class="paramname">unsigned</td><td>int s l'indice de la surface du modèle </td></tr>
+    <tr><td class="paramname"><a class="el" href="structPoint2D.html" title="structure Point2D">Point2D</a></td><td>* p1 pointeur vers le point 1 </td></tr>
+    <tr><td class="paramname"><a class="el" href="structPoint2D.html" title="structure Point2D">Point2D</a></td><td>* p2 pointeur vers le point 2 </td></tr>
+    <tr><td class="paramname"><a class="el" href="structPoint2D.html" title="structure Point2D">Point2D</a></td><td>* p3 pointeur vers le point 3 </td></tr>
+    <tr><td class="paramname">float</td><td>ang l'angle de la surface par rapport à la caméra </td></tr>
+    <tr><td class="paramname">float</td><td>distMin la distance entre la caméra et le plan de la surface </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<li>include/<a class="el" href="Moteur3D_8h_source.html">Moteur3D.h</a></li>
+<li>src/Moteur3D.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

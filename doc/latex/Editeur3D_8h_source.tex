@@ -1,0 +1,125 @@
+\hypertarget{Editeur3D_8h_source}{}\doxysection{Editeur3\+D.\+h}
+\label{Editeur3D_8h_source}\index{include/Editeur3D.h@{include/Editeur3D.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_EDITEUR3D}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_EDITEUR3D}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}../include/Camera.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../include/Moteur3D.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}../include/Affichage\_SDL.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEditeur3D}{Editeur3D}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ Lancement();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ menu=0;}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classCamera}{Camera}}\ cam\{20,38\};}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classMoteur3D}{Moteur3D}}\ moteur;}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classImage}{Image}}\ *\ image;}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classModele}{Modele}}\ *\ modele;}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classModele}{Modele}}\ *\ axe;}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classModele}{Modele}}\ *\ boussole;}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ touche;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ xs;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ ys;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{bool}\ presse;}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ point;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ surface;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pointsSurf[2];}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbp;}
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ evenement();}
+\DoxyCodeLine{00036\ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ action();}
+\DoxyCodeLine{00038\ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ placementPointsModele(\mbox{\hyperlink{structPoint2D}{Point2D}}\ *\ points,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbPoints);}
+\DoxyCodeLine{00040\ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherPoint()\textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherSurface()\textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherImage()\textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherMenuChoix()\textcolor{keyword}{const};}
+\DoxyCodeLine{00048\ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ menuChoix();}
+\DoxyCodeLine{00050\ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherAjoutPoint()\textcolor{keyword}{const};}
+\DoxyCodeLine{00052\ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ ajoutPoint();}
+\DoxyCodeLine{00054\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherSelectionPoint()\textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ selectionPoint();}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherMenuPoint()\textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ \ \ \ \ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ menuPoint();}
+\DoxyCodeLine{00062\ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherDepPoint()\textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ depPoint();}
+\DoxyCodeLine{00066\ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherAjoutSurface()\textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ ajoutSurface();}
+\DoxyCodeLine{00070\ \ \ \ \ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherSelectionSurface()\textcolor{keyword}{const};}
+\DoxyCodeLine{00072\ \ \ \ \ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ selectionSurface();}
+\DoxyCodeLine{00074\ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherMenuSurface()\textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ menuSurface();}
+\DoxyCodeLine{00078\ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherDepSurface()\textcolor{keyword}{const};}
+\DoxyCodeLine{00080\ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ depSurface();}
+\DoxyCodeLine{00082\ \ \ \ \ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherAjoutPointSurface()\textcolor{keyword}{const};}
+\DoxyCodeLine{00084\ \ \ \ \ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ ajoutPointSurface();}
+\DoxyCodeLine{00086\ \ \ \ \ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherSupPointSurface()\textcolor{keyword}{const};}
+\DoxyCodeLine{00088\ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{void}\ supPointSurface();}
+\DoxyCodeLine{00090\ \ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherMenuTextureSurface()\textcolor{keyword}{const};}
+\DoxyCodeLine{00092\ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ menuTextureSurface();}
+\DoxyCodeLine{00094\ \ \ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherModifImageSurface()\textcolor{keyword}{const};}
+\DoxyCodeLine{00096\ \ \ \ \ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ modifImageSurface();}
+\DoxyCodeLine{00098\ \ \ \ \ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherDepImageSurface()\textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{void}\ depImageSurface();}
+\DoxyCodeLine{00102\ \ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherTourneImageSurface()\textcolor{keyword}{const};}
+\DoxyCodeLine{00104\ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ tourneImageSurface();}
+\DoxyCodeLine{00106\ \ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ afficherTailleImageSurface()\textcolor{keyword}{const};}
+\DoxyCodeLine{00108\ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{void}\ tailleImageSurface();}
+\DoxyCodeLine{00110\ \ \ \ \ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ enregistrerModele();}
+\DoxyCodeLine{00112\ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{void}\ enregistrerTexture();}
+\DoxyCodeLine{00114\ \ \ \ \ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{int}\ getPoint(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00116\ \ \ \ \ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{int}\ getSurface(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00118\ \ \ \ \ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{bool}\ SurfaceIn(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \mbox{\hyperlink{structPoint2D}{Point2D}}\ *\ points);}
+\DoxyCodeLine{00120\ \ \ \ \ }
+\DoxyCodeLine{00121\ \};}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

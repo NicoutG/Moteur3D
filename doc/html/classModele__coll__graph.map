@@ -1,0 +1,11 @@
+<map id="Modele" name="Modele">
+<area shape="rect" id="node1" title="classe Modele" alt="" coords="402,299,472,324"/>
+<area shape="rect" id="node2" href="$classSurface.html" title="classe Surface" alt="" coords="222,211,292,236"/>
+<area shape="rect" id="node3" href="$classCouleur.html" title="classe Couleur" alt="" coords="58,5,130,31"/>
+<area shape="rect" id="node5" href="$classImage.html" title="classe Image" alt="" coords="23,108,86,133"/>
+<area shape="rect" id="node4" href="$classMatrice.html" title="classe Matrice" alt="" coords="408,5,479,31"/>
+<area shape="rect" id="node7" href="$structPoint.html" title="structure Point" alt="" coords="416,108,471,133"/>
+<area shape="rect" id="node8" href="$structImageText.html" title="structure ImageText" alt="" coords="46,211,137,236"/>
+<area shape="rect" id="node6" href="$structTriangle.html" title="structure Triangle" alt="" coords="319,108,392,133"/>
+<area shape="rect" id="node9" href="$classCosin.html" title="classe Cosin" alt="" coords="557,211,616,236"/>
+</map>

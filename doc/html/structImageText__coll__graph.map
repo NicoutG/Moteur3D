@@ -1,0 +1,5 @@
+<map id="ImageText" name="ImageText">
+<area shape="rect" id="node1" title="structure ImageText" alt="" coords="5,181,96,207"/>
+<area shape="rect" id="node2" href="$classImage.html" title="classe Image" alt="" coords="19,93,82,119"/>
+<area shape="rect" id="node3" href="$classCouleur.html" title="classe Couleur" alt="" coords="15,5,87,31"/>
+</map>

@@ -1,0 +1,53 @@
+digraph "Editeur3D"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  Node1 [label="Editeur3D",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip="classe Editeur3D"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" cam" ];
+  Node2 [label="Camera",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classCamera.html",tooltip="classe Camera"];
+  Node3 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" base\npos" ];
+  Node3 [label="Matrice",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classMatrice.html",tooltip="classe Matrice"];
+  Node4 -> Node2 [dir="back",color="darkorchid3",style="dashed",label=" cs" ];
+  Node4 [label="Cosin",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classCosin.html",tooltip="classe Cosin"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" moteur" ];
+  Node5 [label="Moteur3D",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classMoteur3D.html",tooltip="classe Moteur3D"];
+  Node6 -> Node5 [dir="back",color="darkorchid3",style="dashed",label=" modeles" ];
+  Node6 [label="Modele",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classModele.html",tooltip="classe Modele"];
+  Node7 -> Node6 [dir="back",color="darkorchid3",style="dashed",label=" surfaces" ];
+  Node7 [label="Surface",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classSurface.html",tooltip="classe Surface"];
+  Node8 -> Node7 [dir="back",color="darkorchid3",style="dashed",label=" couleur" ];
+  Node8 [label="Couleur",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classCouleur.html",tooltip="classe Couleur"];
+  Node3 -> Node7 [dir="back",color="darkorchid3",style="dashed",label=" normale" ];
+  Node9 -> Node7 [dir="back",color="darkorchid3",style="dashed",label=" image" ];
+  Node9 [label="Image",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$classImage.html",tooltip="classe Image"];
+  Node8 -> Node9 [dir="back",color="darkorchid3",style="dashed",label=" couleurs" ];
+  Node10 -> Node7 [dir="back",color="darkorchid3",style="dashed",label=" triangles" ];
+  Node10 [label="Triangle",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structTriangle.html",tooltip="structure Triangle"];
+  Node11 -> Node7 [dir="back",color="darkorchid3",style="dashed",label=" centre" ];
+  Node11 [label="Point",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structPoint.html",tooltip="structure Point"];
+  Node3 -> Node11 [dir="back",color="darkorchid3",style="dashed",label=" pos\nposRe" ];
+  Node11 -> Node6 [dir="back",color="darkorchid3",style="dashed",label=" points" ];
+  Node12 -> Node6 [dir="back",color="darkorchid3",style="dashed",label=" images" ];
+  Node12 [label="ImageText",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structImageText.html",tooltip="structure ImageText"];
+  Node9 -> Node12 [dir="back",color="darkorchid3",style="dashed",label=" img" ];
+  Node3 -> Node6 [dir="back",color="darkorchid3",style="dashed",label=" base\npos" ];
+  Node4 -> Node6 [dir="back",color="darkorchid3",style="dashed",label=" cs" ];
+  Node13 -> Node5 [dir="back",color="darkorchid3",style="dashed",label=" aff" ];
+  Node13 [label="SurfaceAff",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structSurfaceAff.html",tooltip="structure SurfaceAff"];
+  Node6 -> Node13 [dir="back",color="darkorchid3",style="dashed",label=" modele" ];
+  Node14 -> Node5 [dir="back",color="darkorchid3",style="dashed",label=" points" ];
+  Node14 [label="Point2D",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structPoint2D.html",tooltip="structure Point2D"];
+  Node3 -> Node14 [dir="back",color="darkorchid3",style="dashed",label=" pos2D\nposCam" ];
+  Node8 -> Node5 [dir="back",color="darkorchid3",style="dashed",label=" couleurFond" ];
+  Node9 -> Node5 [dir="back",color="darkorchid3",style="dashed",label=" image" ];
+  Node15 -> Node5 [dir="back",color="darkorchid3",style="dashed",label=" transparences" ];
+  Node15 [label="CouchesTransparentes",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structCouchesTransparentes.html",tooltip="structure CouchesTransparentes"];
+  Node16 -> Node15 [dir="back",color="darkorchid3",style="dashed",label=" couches" ];
+  Node16 [label="Couche",height=0.2,width=0.4,color="gray40", fillcolor="white", style="filled",URL="$structCouche.html",tooltip="structure Couche"];
+  Node8 -> Node16 [dir="back",color="darkorchid3",style="dashed",label=" couleur" ];
+  Node2 -> Node5 [dir="back",color="darkorchid3",style="dashed",label=" cam" ];
+  Node9 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" image" ];
+  Node6 -> Node1 [dir="back",color="darkorchid3",style="dashed",label=" axe\nboussole\nmodele" ];
+}

@@ -1,0 +1,51 @@
+\hypertarget{Image_8h_source}{}\doxysection{Image.\+h}
+\label{Image_8h_source}\index{include/Image.h@{include/Image.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_IMAGE}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_IMAGE}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Couleur.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classImage}{Image}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ tailley,\ taillex;\ \textcolor{comment}{//correspondent\ au\ dimensions\ de\ l'image}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classCouleur}{Couleur}}\ **\ couleurs;\ \textcolor{comment}{//correspond\ aux\ pixels\ de\ l'image}}
+\DoxyCodeLine{00016\ \ \ \ \ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classImage_a58edd1c45b4faeb5f789b0d036d02313}{Image}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classImage_a58edd1c45b4faeb5f789b0d036d02313}{Image}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ty,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ tx);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classImage_a0294f63700543e11c0f0da85601c7ae5}{\string~Image}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{classCouleur}{Couleur}}\ \mbox{\hyperlink{classImage_a9aa4d2fd5ad902f75263942556b56b07}{getCouleur}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ x)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImage_aef08a1c58f9decf81fd0589fd6ac87fb}{setCouleurRGB}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classCouleur}{Couleur}}\ \&\ couleur);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImage_ac15892f275d2e0adef39ae627f5f184d}{setCouleurRGBA}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classCouleur}{Couleur}}\ \&\ couleur);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImage_a4c6b6444937dd6af118c91c2c47a6dd6}{setCouleurA}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ a);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classImage_ab0db64ac65f36f46fd7e75871375e62e}{getTailley}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classImage_af1e3e7e94be468132d560c205f52d01f}{getTaillex}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImage_a31850fd9dff2c5a7e48b92c8f271c98b}{setImage}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ ty,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ tx);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImage_a39fd299ce13a96d07a934353e278ce60}{effacer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCouleur}{Couleur}}\ \&\ couleur);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classImage_a7c25c20ababe51ea1611ed2f25934d88}{colorier}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCouleur}{Couleur}}\ \&\ couleur);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classImage_a8948d08d90ecb89a1c616aca22411f62}{charger}}(\textcolor{keyword}{const}\ std::string\ \&\ nom);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classImage_a2bda20c124cb5f03da0ed85d2fece46e}{enregistrer}}(\textcolor{keyword}{const}\ std::string\ \&\ nom)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \};}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

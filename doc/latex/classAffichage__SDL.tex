@@ -1,0 +1,92 @@
+\hypertarget{classAffichage__SDL}{}\doxysection{Référence de la classe Affichage\+\_\+\+SDL}
+\label{classAffichage__SDL}\index{Affichage\_SDL@{Affichage\_SDL}}
+
+
+{\ttfamily \#include $<$Affichage\+\_\+\+SDL.\+h$>$}
+
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAffichage__SDL_ae69acb4f4c4179f2bf8ae18127dda127}{Affichage\+\_\+\+SDL}} (unsigned int ty, unsigned int tx)
+\item 
+\mbox{\Hypertarget{classAffichage__SDL_a2aa3ed2059855e12b5b68e0d5436b460}\label{classAffichage__SDL_a2aa3ed2059855e12b5b68e0d5436b460}} 
+{\bfseries $\sim$\+Affichage\+\_\+\+SDL} ()
+\item 
+\mbox{\Hypertarget{classAffichage__SDL_a6d721fcc66cde22050179f3606821655}\label{classAffichage__SDL_a6d721fcc66cde22050179f3606821655}} 
+void {\bfseries effacer} ()
+\item 
+\mbox{\Hypertarget{classAffichage__SDL_a45b9a1ba3e73ada187b4552859c9a8d7}\label{classAffichage__SDL_a45b9a1ba3e73ada187b4552859c9a8d7}} 
+void {\bfseries afficher} ()
+\item 
+void \mbox{\hyperlink{classAffichage__SDL_a97b88347834aaec4355182b0fd7d6893}{ajouter}} (\mbox{\hyperlink{classImage}{Image}} const $\ast$img, unsigned int posy, unsigned int posx, unsigned int hauteur, unsigned int largeur)
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAffichage__SDL_acc2e558f0813c73cc66ea61cac06217d}\label{classAffichage__SDL_acc2e558f0813c73cc66ea61cac06217d}} 
+SDL\+\_\+\+Window $\ast$ {\bfseries window}
+\item 
+\mbox{\Hypertarget{classAffichage__SDL_ac42a0d1dd6c9e931fa5051cc2aa37ef0}\label{classAffichage__SDL_ac42a0d1dd6c9e931fa5051cc2aa37ef0}} 
+SDL\+\_\+\+Renderer $\ast$ {\bfseries renderer}
+\item 
+\mbox{\Hypertarget{classAffichage__SDL_a94aafeb60148584cf6248d1eccbcc22e}\label{classAffichage__SDL_a94aafeb60148584cf6248d1eccbcc22e}} 
+unsigned int {\bfseries tailley}
+\item 
+\mbox{\Hypertarget{classAffichage__SDL_aa1dce1afd1259747fc7e051e61dd890d}\label{classAffichage__SDL_aa1dce1afd1259747fc7e051e61dd890d}} 
+unsigned int {\bfseries taillex}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+classe \mbox{\hyperlink{classAffichage__SDL}{Affichage\+\_\+\+SDL}} 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{classAffichage__SDL_ae69acb4f4c4179f2bf8ae18127dda127}\label{classAffichage__SDL_ae69acb4f4c4179f2bf8ae18127dda127}} 
+\index{Affichage\_SDL@{Affichage\_SDL}!Affichage\_SDL@{Affichage\_SDL}}
+\index{Affichage\_SDL@{Affichage\_SDL}!Affichage\_SDL@{Affichage\_SDL}}
+\doxysubsubsection{\texorpdfstring{Affichage\_SDL()}{Affichage\_SDL()}}
+{\footnotesize\ttfamily Affichage\+\_\+\+SDL\+::\+Affichage\+\_\+\+SDL (\begin{DoxyParamCaption}\item[{unsigned int}]{ty,  }\item[{unsigned int}]{tx }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classAffichage__SDL}{Affichage\+\_\+\+SDL}} \+: constructeur de la classe \mbox{\hyperlink{classAffichage__SDL}{Affichage\+\_\+\+SDL}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int ty la taille verticale de l\textquotesingle{}écran \\
+\hline
+{\em unsigned} & int tx la taille horizontale de l\textquotesingle{}écran \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classAffichage__SDL_a97b88347834aaec4355182b0fd7d6893}\label{classAffichage__SDL_a97b88347834aaec4355182b0fd7d6893}} 
+\index{Affichage\_SDL@{Affichage\_SDL}!ajouter@{ajouter}}
+\index{ajouter@{ajouter}!Affichage\_SDL@{Affichage\_SDL}}
+\doxysubsubsection{\texorpdfstring{ajouter()}{ajouter()}}
+{\footnotesize\ttfamily void Affichage\+\_\+\+SDL\+::ajouter (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classImage}{Image}} const $\ast$}]{img,  }\item[{unsigned int}]{posy,  }\item[{unsigned int}]{posx,  }\item[{unsigned int}]{hauteur,  }\item[{unsigned int}]{largeur }\end{DoxyParamCaption})}
+
+
+
+ajouter \+: ajoute une image au renderer 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classImage}{Image}}} & img l\textquotesingle{}image à ajouter au renderer \\
+\hline
+{\em unsigned} & int posy la coordonnée verticale du coin supérieur gauche de l\textquotesingle{}image sur le renderer \\
+\hline
+{\em unsigned} & int posy la coordonnée horizontale du coin supérieur gauche de l\textquotesingle{}image sur le renderer \\
+\hline
+{\em unsigned} & int hauteur la hauteur de l\textquotesingle{}image sur le renderer \\
+\hline
+{\em unsigned} & int largeur la largeur de l\textquotesingle{}image sur le renderer \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+include/Affichage\+\_\+\+SDL.\+h\item 
+src/Affichage\+\_\+\+SDL.\+cpp\end{DoxyCompactItemize}

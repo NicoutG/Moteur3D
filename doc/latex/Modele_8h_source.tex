@@ -1,0 +1,276 @@
+\hypertarget{Modele_8h_source}{}\doxysection{Modele.\+h}
+\label{Modele_8h_source}\index{include/Modele.h@{include/Modele.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_MODELE}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_MODELE}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Surface.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Camera.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}Cosin.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <SDL2/SDL\_mixer.h>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structImageText}{ImageText}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ std::string\ nomImg;\ \textcolor{comment}{//correspond\ au\ nom\ de\ l'image}}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classImage}{Image}}\ *\ img;\ \textcolor{comment}{//correspond\ au\ pointeur\ vers\ l'image}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{bool}\ transparent;\ \textcolor{comment}{//correspond\ à\ si\ l'image\ possède\ des\ pixels\ transparents}}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classModele}{Modele}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbSurfaces;\ \textcolor{comment}{//correspond\ au\ nombre\ de\ surfaces\ qui\ composent\ le\ modèle}}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classSurface}{Surface}}\ **\ surfaces;\ \textcolor{comment}{//correspond\ aux\ surfaces\ du\ modèle}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbPoints;\ \textcolor{comment}{//correspond\ au\ nombre\ de\ points\ qui\ composent\ le\ modèle}}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{structPoint}{Point}}\ **\ points;\ \textcolor{comment}{//correspond\ aux\ points\ du\ modèle}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nbImages;}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{structImageText}{ImageText}}\ *\ images;}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classMatrice}{Matrice}}\ pos\{3,1\};\ \textcolor{comment}{//correspond\ à\ la\ position\ du\ modèle}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{float}\ angle\_xy=0,\ angle\_xz=0,\ angle\_yz=0;\ \textcolor{comment}{//correspondent\ aux\ angles\ du\ modèle\ en\ degrés}}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classMatrice}{Matrice}}\ base\{3,3\};\ \textcolor{comment}{//correspond\ à\ la\ matrice\ de\ rotation\ du\ modèle}}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{float}\ taille;\ \textcolor{comment}{//correspond\ à\ la\ taille\ du\ modèle}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{float}\ opacite;\ \textcolor{comment}{//correspond\ à\ l'opacité\ du\ modèle}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{float}\ distMax;\ \textcolor{comment}{//correspond\ à\ la\ distance\ maximum\ entre\ les\ points\ du\ modèle}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{float}\ distAffichage;\ \textcolor{comment}{//correspond\ au\ coefficient\ de\ la\ distance\ d'affichage\ proportionnelle\ à\ la\ taille\ du\ modèle\ et\ sa\ distMax}}
+\DoxyCodeLine{00041\ \ \ \ \ std::string\ modele;\ \textcolor{comment}{//corresond\ au\ nom\ du\ fichier\ texte\ qui\ contient\ le\ modèle\ 3D}}
+\DoxyCodeLine{00042\ \ \ \ \ std::string\ texture;\ \textcolor{comment}{//corresond\ au\ nom\ du\ fichier\ qui\ contient\ les\ couleurs\ du\ modèle}}
+\DoxyCodeLine{00043\ \ \ \ \ Mix\_Chunk\ *\ son;\ \textcolor{comment}{//correspond\ au\ son\ du\ modèle}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{float}\ intensite;\ \textcolor{comment}{//correspond\ à\ l'intensité\ sonore\ du\ modèle\ (0\ à\ 100)}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ canal;\ \textcolor{comment}{//correspond\ au\ canal\ qui\ joue\ le\ son\ du\ modèle}}
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a3db82edfac522f56d2d24d08502f2ade}{calculBase}}()\&;}
+\DoxyCodeLine{00051\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a629d7440b8c178f343a311793106e9d7}{calculDistMax}}()\&;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a78ca049284e1eea1af0d3515ece3fc0d}{majPoint}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p)\&;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_ac14d21a09053a198895846cef486fbf5}{majPoints}}()\&;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_ac94ac01d61f76a05a74ac5bbd63beaca}{calculCentre}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\&;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a37f84ca800f4078f218989051ea08109}{calculCentres}}()\&;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a116a5c5285e95c0e8bc186402f658853}{majCentre}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\&;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_abf3ea17cd359a790f7dc235999c37db3}{majCentres}}()\&;}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a876abfd079494a83c2943f6118156408}{majNormales}}()\&;}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a9c3a006d23e1f49702213277ffa119c7}{majNormale}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\&;}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_aff5a87e1aa12b6c9df6d1c6412cefe0c}{calculNormale}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\&;}
+\DoxyCodeLine{00107\ \ \ \ \ }
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_ac032bff0e9a766b247b5254f495b815f}{triangulation}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\&;}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_a40e26f3b04365138943d04b050a226af}{triangulations}}()\&;}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00126\ \ \ \ \ \mbox{\hyperlink{classImage}{Image}}*\ \mbox{\hyperlink{classModele_ace2687700fec28cf44256add5ebb213d}{addImage}}(std::string\ nom)\&;}
+\DoxyCodeLine{00127\ \ \ \ \ }
+\DoxyCodeLine{00128\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00129\ \ \ \ \ \mbox{\hyperlink{classCosin}{Cosin}}\ cs;\ \textcolor{comment}{//permet\ d'utiliser\ des\ formules\ de\ trigonométrie\ précalculées}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00134\ \ \ \ \ \mbox{\hyperlink{classModele_ae9d6a289deaebe7e8eeda46693d79d23}{Modele}}();}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00141\ \ \ \ \ \mbox{\hyperlink{classModele_ae9d6a289deaebe7e8eeda46693d79d23}{Modele}}(\textcolor{keyword}{const}\ std::string\ \&\ model,\ \textcolor{keyword}{const}\ std::string\ \&\ text);}
+\DoxyCodeLine{00142\ \ \ \ \ }
+\DoxyCodeLine{00149\ \ \ \ \ \mbox{\hyperlink{classModele_ae9d6a289deaebe7e8eeda46693d79d23}{Modele}}(\textcolor{keyword}{const}\ std::string\ \&\ model,\ \textcolor{keyword}{const}\ std::string\ \&\ text,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ p);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00154\ \ \ \ \ \mbox{\hyperlink{classModele_abd9d224a9d20c50eee143913bcb0ab06}{\string~Modele}}();}
+\DoxyCodeLine{00155\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_afc8188198f47b51f9e12a574a95219af}{charger}}()\&;}
+\DoxyCodeLine{00161\ \ \ \ \ }
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_a5b22e5f2dc9bc463b787db5804a5f087}{chargerModele}}(\textcolor{keyword}{const}\ std::string\ \&\ model)\&;}
+\DoxyCodeLine{00168\ \ \ \ \ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_aded54e6478dffd2c9ec9bd0512c7622c}{chargerTexture}}(\textcolor{keyword}{const}\ std::string\ \&\ text)\&;}
+\DoxyCodeLine{00175\ \ \ \ \ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_ad3d34b02849eb53e0ab2be064efbd774}{enregistrerModele}}(\textcolor{keyword}{const}\ std::string\ \&\ model)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00188\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_a2c340ab10995ccc909241a2dfab6a086}{enregistrerTexture}}(\textcolor{keyword}{const}\ std::string\ \&\ text)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00189\ \ \ \ \ }
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a5659e4ec8c78b50b1d90943cd9ea5ec8}{optimiser}}()\&;}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_a77b762f80274679b3a311d1bdd0150bb}{verif}}()\&;}
+\DoxyCodeLine{00200\ \ \ \ \ }
+\DoxyCodeLine{00206\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classModele_ac235fd3088c8f747af3df9a0f4a18475}{addPoint}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ matRe)\&;}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_af14ec356cda594ad1613287ab1e70e21}{delPoint}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p)\&;}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00220\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structPoint}{Point}}\&\ \mbox{\hyperlink{classModele_a25b4cbe95a5dc9baeabe35ada514b648}{getPoint}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00228\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_a30e5bc8b2ceb496d20751835d082aa4c}{setPoint}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ matRe)\&;}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_a3dd67029e3d30b5f55f37fa459a8dc06}{addPointSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pi)\&;}
+\DoxyCodeLine{00238\ }
+\DoxyCodeLine{00246\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_a3dd67029e3d30b5f55f37fa459a8dc06}{addPointSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p,\textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ matRe)\&;}
+\DoxyCodeLine{00247\ }
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_af729b413274f630ccadc93d0ebdb6f89}{delPointSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p)\&;}
+\DoxyCodeLine{00255\ }
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classModele_af600493ec13c565cb0054aae7c90b2b2}{getIndicePointSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00263\ }
+\DoxyCodeLine{00270\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structPoint}{Point}}\&\ \mbox{\hyperlink{classModele_af554319a7017caf77e8d1117c6c429c3}{getPointSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00271\ }
+\DoxyCodeLine{00279\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_a76ba4e25a93f3dbfd04d0ff874a80aa7}{setPointSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ pi)\&;}
+\DoxyCodeLine{00280\ }
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_a76ba4e25a93f3dbfd04d0ff874a80aa7}{setPointSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ matRe)\&;}
+\DoxyCodeLine{00289\ }
+\DoxyCodeLine{00297\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_a6a5060424338857850cfe05fcc9a7892}{addSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p1,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p2,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ p3)\&;}
+\DoxyCodeLine{00298\ }
+\DoxyCodeLine{00305\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_a6a5060424338857850cfe05fcc9a7892}{addSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ *\ tab,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ nb)\&;}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00311\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_afda094ef5f340047bede12cf415599cb}{delSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\&;}
+\DoxyCodeLine{00312\ }
+\DoxyCodeLine{00319\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_a4ecc02915a3851b08a40e5635cc867b5}{depSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ dep)\&;}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00329\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_a4ecc02915a3851b08a40e5635cc867b5}{depSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z)\&;}
+\DoxyCodeLine{00330\ }
+\DoxyCodeLine{00336\ \ \ \ \ \mbox{\hyperlink{classImage}{Image}}*\ \mbox{\hyperlink{classModele_a9d9a36356ce4a82726ba644e50728dc4}{getImageSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00343\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_ad31f25e9c910dba023178f763fcd135e}{setImageSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ std::string\ nom)\&;}
+\DoxyCodeLine{00344\ }
+\DoxyCodeLine{00350\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_ad31f25e9c910dba023178f763fcd135e}{setImageSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \mbox{\hyperlink{classImage}{Image}}\ *\ img)\&;}
+\DoxyCodeLine{00351\ }
+\DoxyCodeLine{00357\ \ \ \ \ std::string\ \mbox{\hyperlink{classModele_a09a1e1ef08e09117965e4f087dda805b}{getNomImageSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00358\ }
+\DoxyCodeLine{00365\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a32453099f889b4af26fdc4f24195e2f2}{setPositionSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y)\&;}
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00372\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_a2b84db5dffd4443310cc09438d7accb3}{getPosxSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00373\ }
+\DoxyCodeLine{00379\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_a6e91af62cee1a93409e7c31a077c0424}{getPosySurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00380\ }
+\DoxyCodeLine{00387\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a0df624741ed966e59c6dc8c87e6a0166}{setTailleSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keywordtype}{float}\ tx,\ \textcolor{keywordtype}{float}\ ty)\&;}
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00394\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_a43497316cb880f30979baa38210ee895}{getTaillexSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00395\ }
+\DoxyCodeLine{00401\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_a203a232fb14d9495f92866da1217b4fc}{getTailleySurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00402\ }
+\DoxyCodeLine{00408\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_ad2b99b0ce221b1197e7ee6ec0330750f}{setAngleSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keywordtype}{float}\ ang)\&;}
+\DoxyCodeLine{00409\ }
+\DoxyCodeLine{00415\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_a3d22c69b3cb165cbda74c0fbab34f565}{getAngleSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00416\ }
+\DoxyCodeLine{00422\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\&\ \mbox{\hyperlink{classModele_a79bfc87916114b6cbad6936659bd9946}{getNormaleSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00423\ }
+\DoxyCodeLine{00432\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_ab4a352ece9f88703a677b7f34ace8a62}{pointInTriangle}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ p,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ t1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ t2,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ t3)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00433\ }
+\DoxyCodeLine{00440\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_ab24519bf01572e154c53a53db942d2ed}{pointInSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ p)\&;}
+\DoxyCodeLine{00441\ }
+\DoxyCodeLine{00448\ \ \ \ \ \mbox{\hyperlink{structTriangle}{Triangle}}*\ \mbox{\hyperlink{classModele_a703036dfa510efbbba88aeb6e6e0a611}{getTriangleSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ t)\&;}
+\DoxyCodeLine{00449\ }
+\DoxyCodeLine{00455\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classModele_a6ed3423d282eb312c200f21a919cc7ad}{getNbTrianglesSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00456\ }
+\DoxyCodeLine{00461\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\&\ \mbox{\hyperlink{classModele_ad55562c2b3bc77b5c8dd9327ddd7b349}{getPos}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00462\ }
+\DoxyCodeLine{00469\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_aeb6c23a98bcfec8ca3f2236fed945d41}{setPos}}(\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z);}
+\DoxyCodeLine{00470\ }
+\DoxyCodeLine{00475\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_aeb6c23a98bcfec8ca3f2236fed945d41}{setPos}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ pos);}
+\DoxyCodeLine{00476\ }
+\DoxyCodeLine{00484\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_ac46191c35c284278821d177558c80a57}{setPosRe}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCamera}{Camera}}\ \&\ cam,\textcolor{keywordtype}{float}\ x,\ \textcolor{keywordtype}{float}\ y,\ \textcolor{keywordtype}{float}\ z);}
+\DoxyCodeLine{00485\ }
+\DoxyCodeLine{00491\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_ac46191c35c284278821d177558c80a57}{setPosRe}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classCamera}{Camera}}\ \&\ cam,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ pos);}
+\DoxyCodeLine{00492\ \ \ \ \ }
+\DoxyCodeLine{00497\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_ac3a49cf913022024ca54ee476e476841}{getX}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00498\ \ \ \ \ }
+\DoxyCodeLine{00503\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a2a9960622a58e8474dc8b025f6c603c5}{setX}}(\textcolor{keywordtype}{float}\ x);}
+\DoxyCodeLine{00504\ }
+\DoxyCodeLine{00509\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_a278613687ef70e8d4ecbf77745163ac0}{getY}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00510\ \ \ \ \ }
+\DoxyCodeLine{00515\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_abe8e85310182271ea615b021a659ee61}{setY}}(\textcolor{keywordtype}{float}\ y);}
+\DoxyCodeLine{00516\ \ \ \ \ }
+\DoxyCodeLine{00521\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_a14fb5e951eabe849153af724547f36c7}{getZ}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00522\ \ \ \ \ }
+\DoxyCodeLine{00527\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a1185b7ccbe7fde46fdcec1330b3bd633}{setZ}}(\textcolor{keywordtype}{float}\ z);}
+\DoxyCodeLine{00528\ \ \ \ \ }
+\DoxyCodeLine{00533\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_a9c7922b9fd479d97b1f11f212193b98c}{getAngxy}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00534\ \ \ \ \ }
+\DoxyCodeLine{00539\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a87a41f7852173e56779196d118d82055}{setAngxy}}(\textcolor{keywordtype}{float}\ angxy);}
+\DoxyCodeLine{00540\ \ \ \ \ }
+\DoxyCodeLine{00545\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_aa9d6d36763c3645a10daa5e6c4a83097}{getAngxz}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00546\ \ \ \ \ }
+\DoxyCodeLine{00551\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_af9fa4e0c2f3e1518e251d1c9383675c4}{setAngxz}}(\textcolor{keywordtype}{float}\ angxz);}
+\DoxyCodeLine{00552\ \ \ \ \ }
+\DoxyCodeLine{00557\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_a466a793e6c869675887a0fbeaa057ccc}{getAngyz}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00558\ \ \ \ \ }
+\DoxyCodeLine{00563\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a4dbe6144bbd1997d4c81a264c1de3dde}{setAngyz}}(\textcolor{keywordtype}{float}\ angyz);}
+\DoxyCodeLine{00564\ \ \ \ \ }
+\DoxyCodeLine{00571\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a9f59966162524bea3a92bd13b3b9a3e8}{setAng}}(\textcolor{keywordtype}{float}\ angxy,\ \textcolor{keywordtype}{float}\ angxz,\ \textcolor{keywordtype}{float}\ angyz);}
+\DoxyCodeLine{00572\ \ \ \ \ }
+\DoxyCodeLine{00577\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classModele_ae4d92e3fda4139a38c99d48f66ff0951}{getNbPoints}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00578\ }
+\DoxyCodeLine{00584\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classModele_a6e5408b6c6b85cec82e8b5737cabe185}{getNbPointsSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00585\ \ \ \ \ }
+\DoxyCodeLine{00590\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classModele_a86741b44739b1919920978a014fc9660}{getNbSurfaces}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00591\ \ \ \ \ }
+\DoxyCodeLine{00596\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classModele_a9e1a2f369b324bb61f419dd07142dc57}{getNbImages}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00597\ }
+\DoxyCodeLine{00603\ \ \ \ \ \mbox{\hyperlink{classImage}{Image}}*\ \mbox{\hyperlink{classModele_aefe2c029ab53720aecce15a263329cbb}{getImage}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ i)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00604\ \ \ \ \ }
+\DoxyCodeLine{00609\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_ae41895b3c0b79fd263e0436f5be3f6b8}{getDistMax}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00610\ \ \ \ \ }
+\DoxyCodeLine{00615\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_a9072afdb7ce932839c815673ceedcf66}{getTaille}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00616\ }
+\DoxyCodeLine{00621\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_ab3c4e93e0931d3264cb53d8131607637}{setTaille}}(\textcolor{keywordtype}{float}\ t);}
+\DoxyCodeLine{00622\ }
+\DoxyCodeLine{00627\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_acd9d1c4f56c95a11e5b036ba343d005b}{getOpacite}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00628\ }
+\DoxyCodeLine{00633\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_ab26d79cab83798f93b6b71694d9aac83}{setOpacite}}(\textcolor{keywordtype}{float}\ opac);}
+\DoxyCodeLine{00634\ }
+\DoxyCodeLine{00640\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_a9bb59b7b7b252d7088608d75bd85a52f}{getOpaciteSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00641\ }
+\DoxyCodeLine{00647\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a19ce53658498cac66dcb3736d6a19ac0}{setOpaciteSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s,\ \textcolor{keywordtype}{float}\ opac);}
+\DoxyCodeLine{00648\ }
+\DoxyCodeLine{00653\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_ac8e543f0fc867c2f7d7773a20c2e8ee4}{getDistAffichage}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00654\ }
+\DoxyCodeLine{00659\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a9ec78114b10431d35f197fee5cf4ab6a}{setDistAffichage}}(\textcolor{keywordtype}{float}\ dist);}
+\DoxyCodeLine{00660\ }
+\DoxyCodeLine{00665\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\&\ \mbox{\hyperlink{classModele_aaf6b0e81a4f4b851afd2dfd682113ae1}{getBase}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00666\ }
+\DoxyCodeLine{00671\ \ \ \ \ std::string\ \mbox{\hyperlink{classModele_a582ec73113880bb00ffe5907eb1d9a35}{getModele}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00672\ }
+\DoxyCodeLine{00677\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_afbbfb0247795052733312ef5222cd753}{setModele}}(\textcolor{keyword}{const}\ std::string\ \&\ mod);}
+\DoxyCodeLine{00678\ }
+\DoxyCodeLine{00683\ \ \ \ \ std::string\ \mbox{\hyperlink{classModele_ad627ed39b47a7e421faecf49b2d7bdfe}{getTexture}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00684\ }
+\DoxyCodeLine{00689\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a2946f119477ad3b55fee67af8450ff6d}{setTexture}}(\textcolor{keyword}{const}\ std::string\ \&\ tex);}
+\DoxyCodeLine{00690\ }
+\DoxyCodeLine{00696\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_a9fda368009ce08954cefe37c2cd75500}{chargerSon}}(\textcolor{keyword}{const}\ std::string\ \&\ nom);}
+\DoxyCodeLine{00697\ }
+\DoxyCodeLine{00703\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_a761338be75c89fa79e9dd720c225634a}{jouerSon}}(\textcolor{keywordtype}{int}\ repet=0);}
+\DoxyCodeLine{00704\ }
+\DoxyCodeLine{00708\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a63c7adcd47122c30b65216e25ff9e223}{pauseSon}}();}
+\DoxyCodeLine{00709\ }
+\DoxyCodeLine{00714\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classModele_af35567537fbbf80eaebc92f622cac762}{isPauseSon}}();}
+\DoxyCodeLine{00715\ }
+\DoxyCodeLine{00719\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a58b802209814a007c9d7928e35f012f6}{reprendreSon}}();}
+\DoxyCodeLine{00720\ }
+\DoxyCodeLine{00724\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a89771b1b795fe970844d71497616e216}{arreterSon}}();}
+\DoxyCodeLine{00725\ }
+\DoxyCodeLine{00730\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classModele_a740d20e4d2630baae67c8b3aafbad34b}{getIntensite}}()\textcolor{keyword}{const};}
+\DoxyCodeLine{00731\ }
+\DoxyCodeLine{00736\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a71718d43b57de73a12c34c2dc71025c0}{setIntensite}}(\textcolor{keywordtype}{float}\ intens);}
+\DoxyCodeLine{00737\ }
+\DoxyCodeLine{00742\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a6862e4418861c9de02aeb4035ae44d2a}{majSon}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ position);}
+\DoxyCodeLine{00743\ }
+\DoxyCodeLine{00749\ \ \ \ \ \mbox{\hyperlink{classMatrice}{Matrice}}\&\ \mbox{\hyperlink{classModele_afa631be4dd2cb40681f5b2dbeeefaa36}{getCentreSurf}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00750\ \ \ \ \ }
+\DoxyCodeLine{00760\ \ \ \ \ \mbox{\hyperlink{classMatrice}{Matrice}}*\ \mbox{\hyperlink{classModele_aa2e0a43143b049fd0fb846e38e693b05}{croisSegPlan}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ s1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ s2,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ t1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ t2,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ t3)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00761\ }
+\DoxyCodeLine{00768\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classModele_a47e01836d41515e6705c0ce573588711}{collisionCube}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classModele}{Modele}}\ *\ mod1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classModele}{Modele}}\ *\ mod2);}
+\DoxyCodeLine{00769\ }
+\DoxyCodeLine{00776\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classModele_a2ec6c94fa3b3ad9cad1357389f8bdcea}{testCollisionCube}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ cube1,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classMatrice}{Matrice}}\ \&\ cube2)\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00777\ }
+\DoxyCodeLine{00783\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classMatrice}{Matrice}}*\ \mbox{\hyperlink{classModele_ae7e4eb0ca94f75d60b2cffc99dda0185}{creationCubeModele}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classModele}{Modele}}\ *\ mod);}
+\DoxyCodeLine{00784\ }
+\DoxyCodeLine{00791\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classMatrice}{Matrice}}*\ \mbox{\hyperlink{classModele_a342805c0f54fef724cf483ce4246941d}{creationCubeSurf}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classModele}{Modele}}\ *\ mod,\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s);}
+\DoxyCodeLine{00792\ }
+\DoxyCodeLine{00799\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_ab1f1cddf9911d303b9f04c3312ddc2ed}{collision}}(\mbox{\hyperlink{classModele}{Modele}}\ *\ mod1,\ \mbox{\hyperlink{classModele}{Modele}}\ *\ mod2);}
+\DoxyCodeLine{00800\ }
+\DoxyCodeLine{00809\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classModele_a0e2e191c6fd8cf269350bedcdf589294}{collisionSurf}}(\mbox{\hyperlink{classModele}{Modele}}\ *\ mod1,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s1,\ \mbox{\hyperlink{classModele}{Modele}}\ *\ mod2,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ s2);}
+\DoxyCodeLine{00810\ }
+\DoxyCodeLine{00814\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classModele_a966ee3cd093a2ab3576ed6891fed4f69}{afficher}}()\textcolor{keyword}{const}\ \&;}
+\DoxyCodeLine{00815\ }
+\DoxyCodeLine{00816\ \};}
+\DoxyCodeLine{00817\ }
+\DoxyCodeLine{00818\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

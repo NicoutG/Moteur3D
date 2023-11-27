@@ -1,0 +1,2050 @@
+\hypertarget{classModele}{}\doxysection{Référence de la classe Modele}
+\label{classModele}\index{Modele@{Modele}}
+
+
+{\ttfamily \#include $<$Modele.\+h$>$}
+
+
+
+Graphe de collaboration de Modele\+:
+% FIG 0
+\doxysubsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classModele_ae9d6a289deaebe7e8eeda46693d79d23}\label{classModele_ae9d6a289deaebe7e8eeda46693d79d23}} 
+{\bfseries Modele} ()
+\item 
+\mbox{\hyperlink{classModele_af6873f3f7f3f91e8d7d191f8f36f694d}{Modele}} (const std\+::string \&model, const std\+::string \&text)
+\item 
+\mbox{\hyperlink{classModele_acfd46d48bfc3c45bee82b8f4743f7b45}{Modele}} (const std\+::string \&model, const std\+::string \&text, const \mbox{\hyperlink{classMatrice}{Matrice}} \&p)
+\item 
+\mbox{\Hypertarget{classModele_abd9d224a9d20c50eee143913bcb0ab06}\label{classModele_abd9d224a9d20c50eee143913bcb0ab06}} 
+{\bfseries $\sim$\+Modele} ()
+\item 
+bool \mbox{\hyperlink{classModele_afc8188198f47b51f9e12a574a95219af}{charger}} () \&
+\item 
+bool \mbox{\hyperlink{classModele_a5b22e5f2dc9bc463b787db5804a5f087}{charger\+Modele}} (const std\+::string \&model) \&
+\item 
+bool \mbox{\hyperlink{classModele_aded54e6478dffd2c9ec9bd0512c7622c}{charger\+Texture}} (const std\+::string \&text) \&
+\item 
+bool \mbox{\hyperlink{classModele_ad3d34b02849eb53e0ab2be064efbd774}{enregistrer\+Modele}} (const std\+::string \&model) const \&
+\item 
+bool \mbox{\hyperlink{classModele_a2c340ab10995ccc909241a2dfab6a086}{enregistrer\+Texture}} (const std\+::string \&text) const \&
+\item 
+\mbox{\Hypertarget{classModele_a5659e4ec8c78b50b1d90943cd9ea5ec8}\label{classModele_a5659e4ec8c78b50b1d90943cd9ea5ec8}} 
+void {\bfseries optimiser} () \&
+\item 
+bool \mbox{\hyperlink{classModele_a77b762f80274679b3a311d1bdd0150bb}{verif}} () \&
+\item 
+int \mbox{\hyperlink{classModele_ac235fd3088c8f747af3df9a0f4a18475}{add\+Point}} (const \mbox{\hyperlink{classMatrice}{Matrice}} \&mat\+Re) \&
+\item 
+bool \mbox{\hyperlink{classModele_af14ec356cda594ad1613287ab1e70e21}{del\+Point}} (unsigned int p) \&
+\item 
+const \mbox{\hyperlink{structPoint}{Point}} \& \mbox{\hyperlink{classModele_a25b4cbe95a5dc9baeabe35ada514b648}{get\+Point}} (unsigned int p) const \&
+\item 
+bool \mbox{\hyperlink{classModele_a30e5bc8b2ceb496d20751835d082aa4c}{set\+Point}} (unsigned int p, const \mbox{\hyperlink{classMatrice}{Matrice}} \&mat\+Re) \&
+\item 
+bool \mbox{\hyperlink{classModele_a3dd67029e3d30b5f55f37fa459a8dc06}{add\+Point\+Surf}} (unsigned int s, unsigned int p, unsigned int pi) \&
+\item 
+bool \mbox{\hyperlink{classModele_a509cd141dd0e142dfc1cf6df31468954}{add\+Point\+Surf}} (unsigned int s, unsigned int p, const \mbox{\hyperlink{classMatrice}{Matrice}} \&mat\+Re) \&
+\item 
+bool \mbox{\hyperlink{classModele_af729b413274f630ccadc93d0ebdb6f89}{del\+Point\+Surf}} (unsigned int s, unsigned int p) \&
+\item 
+unsigned int \mbox{\hyperlink{classModele_af600493ec13c565cb0054aae7c90b2b2}{get\+Indice\+Point\+Surf}} (unsigned int s, unsigned int p) const \&
+\item 
+const \mbox{\hyperlink{structPoint}{Point}} \& \mbox{\hyperlink{classModele_af554319a7017caf77e8d1117c6c429c3}{get\+Point\+Surf}} (unsigned int s, unsigned int p) const \&
+\item 
+bool \mbox{\hyperlink{classModele_a76ba4e25a93f3dbfd04d0ff874a80aa7}{set\+Point\+Surf}} (unsigned int s, unsigned int p, unsigned int pi) \&
+\item 
+bool \mbox{\hyperlink{classModele_aed9411a33e5e57660d8b6f12b5374c97}{set\+Point\+Surf}} (unsigned int s, unsigned int p, const \mbox{\hyperlink{classMatrice}{Matrice}} \&mat\+Re) \&
+\item 
+bool \mbox{\hyperlink{classModele_a6a5060424338857850cfe05fcc9a7892}{add\+Surf}} (unsigned int p1, unsigned int p2, unsigned int p3) \&
+\item 
+bool \mbox{\hyperlink{classModele_a8169fa0d73bb8746d6d493fe30a1b5e1}{add\+Surf}} (unsigned int $\ast$tab, unsigned int nb) \&
+\item 
+void \mbox{\hyperlink{classModele_afda094ef5f340047bede12cf415599cb}{del\+Surf}} (unsigned int s) \&
+\item 
+bool \mbox{\hyperlink{classModele_a4ecc02915a3851b08a40e5635cc867b5}{dep\+Surf}} (unsigned int s, const \mbox{\hyperlink{classMatrice}{Matrice}} \&dep) \&
+\item 
+bool \mbox{\hyperlink{classModele_a2ca592afae15edf9ba9a0c7033e53732}{dep\+Surf}} (unsigned int s, float x, float y, float z) \&
+\item 
+\mbox{\hyperlink{classImage}{Image}} $\ast$ \mbox{\hyperlink{classModele_a9d9a36356ce4a82726ba644e50728dc4}{get\+Image\+Surf}} (unsigned int s) const \&
+\item 
+void \mbox{\hyperlink{classModele_ad31f25e9c910dba023178f763fcd135e}{set\+Image\+Surf}} (unsigned int s, std\+::string nom) \&
+\item 
+void \mbox{\hyperlink{classModele_a96b984f16f006079d7c2fe490729ca2f}{set\+Image\+Surf}} (unsigned int s, \mbox{\hyperlink{classImage}{Image}} $\ast$img) \&
+\item 
+std\+::string \mbox{\hyperlink{classModele_a09a1e1ef08e09117965e4f087dda805b}{get\+Nom\+Image\+Surf}} (unsigned int s) const \&
+\item 
+void \mbox{\hyperlink{classModele_a32453099f889b4af26fdc4f24195e2f2}{set\+Position\+Surf}} (unsigned int s, float x, float y) \&
+\item 
+float \mbox{\hyperlink{classModele_a2b84db5dffd4443310cc09438d7accb3}{get\+Posx\+Surf}} (unsigned int s) const \&
+\item 
+float \mbox{\hyperlink{classModele_a6e91af62cee1a93409e7c31a077c0424}{get\+Posy\+Surf}} (unsigned int s) const \&
+\item 
+void \mbox{\hyperlink{classModele_a0df624741ed966e59c6dc8c87e6a0166}{set\+Taille\+Surf}} (unsigned int s, float tx, float ty) \&
+\item 
+float \mbox{\hyperlink{classModele_a43497316cb880f30979baa38210ee895}{get\+Taillex\+Surf}} (unsigned int s) const \&
+\item 
+float \mbox{\hyperlink{classModele_a203a232fb14d9495f92866da1217b4fc}{get\+Tailley\+Surf}} (unsigned int s) const \&
+\item 
+void \mbox{\hyperlink{classModele_ad2b99b0ce221b1197e7ee6ec0330750f}{set\+Angle\+Surf}} (unsigned int s, float ang) \&
+\item 
+float \mbox{\hyperlink{classModele_a3d22c69b3cb165cbda74c0fbab34f565}{get\+Angle\+Surf}} (unsigned int s) const \&
+\item 
+const \mbox{\hyperlink{classMatrice}{Matrice}} \& \mbox{\hyperlink{classModele_a79bfc87916114b6cbad6936659bd9946}{get\+Normale\+Surf}} (unsigned int s) const \&
+\item 
+bool \mbox{\hyperlink{classModele_ab4a352ece9f88703a677b7f34ace8a62}{point\+In\+Triangle}} (const \mbox{\hyperlink{classMatrice}{Matrice}} \&p, const \mbox{\hyperlink{classMatrice}{Matrice}} \&t1, const \mbox{\hyperlink{classMatrice}{Matrice}} \&t2, const \mbox{\hyperlink{classMatrice}{Matrice}} \&t3) const \&
+\item 
+bool \mbox{\hyperlink{classModele_ab24519bf01572e154c53a53db942d2ed}{point\+In\+Surf}} (unsigned int s, const \mbox{\hyperlink{classMatrice}{Matrice}} \&p) \&
+\item 
+\mbox{\hyperlink{structTriangle}{Triangle}} $\ast$ \mbox{\hyperlink{classModele_a703036dfa510efbbba88aeb6e6e0a611}{get\+Triangle\+Surf}} (unsigned int s, unsigned int t) \&
+\item 
+unsigned int \mbox{\hyperlink{classModele_a6ed3423d282eb312c200f21a919cc7ad}{get\+Nb\+Triangles\+Surf}} (unsigned int s) const \&
+\item 
+const \mbox{\hyperlink{classMatrice}{Matrice}} \& \mbox{\hyperlink{classModele_ad55562c2b3bc77b5c8dd9327ddd7b349}{get\+Pos}} () const \&
+\item 
+void \mbox{\hyperlink{classModele_aeb6c23a98bcfec8ca3f2236fed945d41}{set\+Pos}} (float x, float y, float z)
+\item 
+void \mbox{\hyperlink{classModele_a96ac17e8c614d6223c5ca690401f6ffb}{set\+Pos}} (const \mbox{\hyperlink{classMatrice}{Matrice}} \&pos)
+\item 
+void \mbox{\hyperlink{classModele_ac46191c35c284278821d177558c80a57}{set\+Pos\+Re}} (const \mbox{\hyperlink{classCamera}{Camera}} \&cam, float x, float y, float z)
+\item 
+void \mbox{\hyperlink{classModele_a46ece48c804c095b67918d800f978e45}{set\+Pos\+Re}} (const \mbox{\hyperlink{classCamera}{Camera}} \&cam, const \mbox{\hyperlink{classMatrice}{Matrice}} \&pos)
+\item 
+float \mbox{\hyperlink{classModele_ac3a49cf913022024ca54ee476e476841}{getX}} () const \&
+\item 
+void \mbox{\hyperlink{classModele_a2a9960622a58e8474dc8b025f6c603c5}{setX}} (float x)
+\item 
+float \mbox{\hyperlink{classModele_a278613687ef70e8d4ecbf77745163ac0}{getY}} () const \&
+\item 
+void \mbox{\hyperlink{classModele_abe8e85310182271ea615b021a659ee61}{setY}} (float y)
+\item 
+float \mbox{\hyperlink{classModele_a14fb5e951eabe849153af724547f36c7}{getZ}} () const \&
+\item 
+void \mbox{\hyperlink{classModele_a1185b7ccbe7fde46fdcec1330b3bd633}{setZ}} (float z)
+\item 
+float \mbox{\hyperlink{classModele_a9c7922b9fd479d97b1f11f212193b98c}{get\+Angxy}} () const \&
+\item 
+void \mbox{\hyperlink{classModele_a87a41f7852173e56779196d118d82055}{set\+Angxy}} (float angxy)
+\item 
+float \mbox{\hyperlink{classModele_aa9d6d36763c3645a10daa5e6c4a83097}{get\+Angxz}} () const \&
+\item 
+void \mbox{\hyperlink{classModele_af9fa4e0c2f3e1518e251d1c9383675c4}{set\+Angxz}} (float angxz)
+\item 
+float \mbox{\hyperlink{classModele_a466a793e6c869675887a0fbeaa057ccc}{get\+Angyz}} () const \&
+\item 
+void \mbox{\hyperlink{classModele_a4dbe6144bbd1997d4c81a264c1de3dde}{set\+Angyz}} (float angyz)
+\item 
+void \mbox{\hyperlink{classModele_a9f59966162524bea3a92bd13b3b9a3e8}{set\+Ang}} (float angxy, float angxz, float angyz)
+\item 
+unsigned int \mbox{\hyperlink{classModele_ae4d92e3fda4139a38c99d48f66ff0951}{get\+Nb\+Points}} () const \&
+\item 
+unsigned int \mbox{\hyperlink{classModele_a6e5408b6c6b85cec82e8b5737cabe185}{get\+Nb\+Points\+Surf}} (unsigned int s) const \&
+\item 
+unsigned int \mbox{\hyperlink{classModele_a86741b44739b1919920978a014fc9660}{get\+Nb\+Surfaces}} () const \&
+\item 
+unsigned int \mbox{\hyperlink{classModele_a9e1a2f369b324bb61f419dd07142dc57}{get\+Nb\+Images}} () const \&
+\item 
+\mbox{\hyperlink{classImage}{Image}} $\ast$ \mbox{\hyperlink{classModele_aefe2c029ab53720aecce15a263329cbb}{get\+Image}} (unsigned int i) const \&
+\item 
+float \mbox{\hyperlink{classModele_ae41895b3c0b79fd263e0436f5be3f6b8}{get\+Dist\+Max}} () const \&
+\item 
+float \mbox{\hyperlink{classModele_a9072afdb7ce932839c815673ceedcf66}{get\+Taille}} () const \&
+\item 
+void \mbox{\hyperlink{classModele_ab3c4e93e0931d3264cb53d8131607637}{set\+Taille}} (float t)
+\item 
+float \mbox{\hyperlink{classModele_acd9d1c4f56c95a11e5b036ba343d005b}{get\+Opacite}} () const \&
+\item 
+void \mbox{\hyperlink{classModele_ab26d79cab83798f93b6b71694d9aac83}{set\+Opacite}} (float opac)
+\item 
+float \mbox{\hyperlink{classModele_a9bb59b7b7b252d7088608d75bd85a52f}{get\+Opacite\+Surf}} (unsigned int s) const \&
+\item 
+void \mbox{\hyperlink{classModele_a19ce53658498cac66dcb3736d6a19ac0}{set\+Opacite\+Surf}} (unsigned int s, float opac)
+\item 
+float \mbox{\hyperlink{classModele_ac8e543f0fc867c2f7d7773a20c2e8ee4}{get\+Dist\+Affichage}} () const \&
+\item 
+void \mbox{\hyperlink{classModele_a9ec78114b10431d35f197fee5cf4ab6a}{set\+Dist\+Affichage}} (float dist)
+\item 
+const \mbox{\hyperlink{classMatrice}{Matrice}} \& \mbox{\hyperlink{classModele_aaf6b0e81a4f4b851afd2dfd682113ae1}{get\+Base}} () const \&
+\item 
+std\+::string \mbox{\hyperlink{classModele_a582ec73113880bb00ffe5907eb1d9a35}{get\+Modele}} () const \&
+\item 
+void \mbox{\hyperlink{classModele_afbbfb0247795052733312ef5222cd753}{set\+Modele}} (const std\+::string \&mod)
+\item 
+std\+::string \mbox{\hyperlink{classModele_ad627ed39b47a7e421faecf49b2d7bdfe}{get\+Texture}} () const \&
+\item 
+void \mbox{\hyperlink{classModele_a2946f119477ad3b55fee67af8450ff6d}{set\+Texture}} (const std\+::string \&tex)
+\item 
+bool \mbox{\hyperlink{classModele_a9fda368009ce08954cefe37c2cd75500}{charger\+Son}} (const std\+::string \&nom)
+\item 
+bool \mbox{\hyperlink{classModele_a761338be75c89fa79e9dd720c225634a}{jouer\+Son}} (int repet=0)
+\item 
+\mbox{\Hypertarget{classModele_a63c7adcd47122c30b65216e25ff9e223}\label{classModele_a63c7adcd47122c30b65216e25ff9e223}} 
+void {\bfseries pause\+Son} ()
+\item 
+int \mbox{\hyperlink{classModele_af35567537fbbf80eaebc92f622cac762}{is\+Pause\+Son}} ()
+\item 
+\mbox{\Hypertarget{classModele_a58b802209814a007c9d7928e35f012f6}\label{classModele_a58b802209814a007c9d7928e35f012f6}} 
+void {\bfseries reprendre\+Son} ()
+\item 
+\mbox{\Hypertarget{classModele_a89771b1b795fe970844d71497616e216}\label{classModele_a89771b1b795fe970844d71497616e216}} 
+void {\bfseries arreter\+Son} ()
+\item 
+float \mbox{\hyperlink{classModele_a740d20e4d2630baae67c8b3aafbad34b}{get\+Intensite}} () const
+\item 
+void \mbox{\hyperlink{classModele_a71718d43b57de73a12c34c2dc71025c0}{set\+Intensite}} (float intens)
+\item 
+void \mbox{\hyperlink{classModele_a6862e4418861c9de02aeb4035ae44d2a}{maj\+Son}} (const \mbox{\hyperlink{classMatrice}{Matrice}} \&position)
+\item 
+\mbox{\hyperlink{classMatrice}{Matrice}} \& \mbox{\hyperlink{classModele_afa631be4dd2cb40681f5b2dbeeefaa36}{get\+Centre\+Surf}} (unsigned int s) const \&
+\item 
+\mbox{\hyperlink{classMatrice}{Matrice}} $\ast$ \mbox{\hyperlink{classModele_aa2e0a43143b049fd0fb846e38e693b05}{crois\+Seg\+Plan}} (const \mbox{\hyperlink{classMatrice}{Matrice}} \&s1, const \mbox{\hyperlink{classMatrice}{Matrice}} \&s2, const \mbox{\hyperlink{classMatrice}{Matrice}} \&t1, const \mbox{\hyperlink{classMatrice}{Matrice}} \&t2, const \mbox{\hyperlink{classMatrice}{Matrice}} \&t3) const \&
+\item 
+int \mbox{\hyperlink{classModele_a2ec6c94fa3b3ad9cad1357389f8bdcea}{test\+Collision\+Cube}} (const \mbox{\hyperlink{classMatrice}{Matrice}} \&cube1, const \mbox{\hyperlink{classMatrice}{Matrice}} \&cube2) const \&
+\item 
+\mbox{\Hypertarget{classModele_a966ee3cd093a2ab3576ed6891fed4f69}\label{classModele_a966ee3cd093a2ab3576ed6891fed4f69}} 
+void {\bfseries afficher} () const \&
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classModele_a7a9e79056d5611071e7a10a5b488599a}\label{classModele_a7a9e79056d5611071e7a10a5b488599a}} 
+\mbox{\hyperlink{classCosin}{Cosin}} {\bfseries cs}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classModele_a3db82edfac522f56d2d24d08502f2ade}\label{classModele_a3db82edfac522f56d2d24d08502f2ade}} 
+void {\bfseries calcul\+Base} () \&
+\item 
+\mbox{\Hypertarget{classModele_a629d7440b8c178f343a311793106e9d7}\label{classModele_a629d7440b8c178f343a311793106e9d7}} 
+void {\bfseries calcul\+Dist\+Max} () \&
+\item 
+void \mbox{\hyperlink{classModele_a78ca049284e1eea1af0d3515ece3fc0d}{maj\+Point}} (unsigned int p) \&
+\item 
+\mbox{\Hypertarget{classModele_ac14d21a09053a198895846cef486fbf5}\label{classModele_ac14d21a09053a198895846cef486fbf5}} 
+void {\bfseries maj\+Points} () \&
+\item 
+void \mbox{\hyperlink{classModele_ac94ac01d61f76a05a74ac5bbd63beaca}{calcul\+Centre}} (unsigned int s) \&
+\item 
+\mbox{\Hypertarget{classModele_a37f84ca800f4078f218989051ea08109}\label{classModele_a37f84ca800f4078f218989051ea08109}} 
+void {\bfseries calcul\+Centres} () \&
+\item 
+void \mbox{\hyperlink{classModele_a116a5c5285e95c0e8bc186402f658853}{maj\+Centre}} (unsigned int s) \&
+\item 
+\mbox{\Hypertarget{classModele_abf3ea17cd359a790f7dc235999c37db3}\label{classModele_abf3ea17cd359a790f7dc235999c37db3}} 
+void {\bfseries maj\+Centres} () \&
+\item 
+\mbox{\Hypertarget{classModele_a876abfd079494a83c2943f6118156408}\label{classModele_a876abfd079494a83c2943f6118156408}} 
+void {\bfseries maj\+Normales} () \&
+\item 
+void \mbox{\hyperlink{classModele_a9c3a006d23e1f49702213277ffa119c7}{maj\+Normale}} (unsigned int s) \&
+\item 
+bool \mbox{\hyperlink{classModele_aff5a87e1aa12b6c9df6d1c6412cefe0c}{calcul\+Normale}} (unsigned int s) \&
+\item 
+bool \mbox{\hyperlink{classModele_ac032bff0e9a766b247b5254f495b815f}{triangulation}} (unsigned int s) \&
+\item 
+bool \mbox{\hyperlink{classModele_a40e26f3b04365138943d04b050a226af}{triangulations}} () \&
+\item 
+\mbox{\hyperlink{classImage}{Image}} $\ast$ \mbox{\hyperlink{classModele_ace2687700fec28cf44256add5ebb213d}{add\+Image}} (std\+::string nom) \&
+\end{DoxyCompactItemize}
+\doxysubsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classModele_a605c769f005cba89c11d24fda147f68d}\label{classModele_a605c769f005cba89c11d24fda147f68d}} 
+unsigned int {\bfseries nb\+Surfaces}
+\item 
+\mbox{\Hypertarget{classModele_acd66277a2cabd59041c74ba1f5da3d57}\label{classModele_acd66277a2cabd59041c74ba1f5da3d57}} 
+\mbox{\hyperlink{classSurface}{Surface}} $\ast$$\ast$ {\bfseries surfaces}
+\item 
+\mbox{\Hypertarget{classModele_a794270699d79f8c8ec95b5955a8809b4}\label{classModele_a794270699d79f8c8ec95b5955a8809b4}} 
+unsigned int {\bfseries nb\+Points}
+\item 
+\mbox{\Hypertarget{classModele_a41684e932ee39df5b6ff43eccc77d6bb}\label{classModele_a41684e932ee39df5b6ff43eccc77d6bb}} 
+\mbox{\hyperlink{structPoint}{Point}} $\ast$$\ast$ {\bfseries points}
+\item 
+\mbox{\Hypertarget{classModele_a2beb400612aefba05ecc50fb9bb5a271}\label{classModele_a2beb400612aefba05ecc50fb9bb5a271}} 
+unsigned int {\bfseries nb\+Images}
+\item 
+\mbox{\Hypertarget{classModele_a1b596842060d56ffc2f9b3ca8ef750c1}\label{classModele_a1b596842060d56ffc2f9b3ca8ef750c1}} 
+\mbox{\hyperlink{structImageText}{Image\+Text}} $\ast$ {\bfseries images}
+\item 
+\mbox{\Hypertarget{classModele_a581552a175dc52d0b5eacb9f0f7f65ed}\label{classModele_a581552a175dc52d0b5eacb9f0f7f65ed}} 
+\mbox{\hyperlink{classMatrice}{Matrice}} {\bfseries pos} \{3,1\}
+\item 
+\mbox{\Hypertarget{classModele_a24d7a7272190bb9a0d727e2339ac278f}\label{classModele_a24d7a7272190bb9a0d727e2339ac278f}} 
+float {\bfseries angle\+\_\+xy} =0
+\item 
+\mbox{\Hypertarget{classModele_aa069193c5e63d9888adab2cc33687c43}\label{classModele_aa069193c5e63d9888adab2cc33687c43}} 
+float {\bfseries angle\+\_\+xz} =0
+\item 
+\mbox{\Hypertarget{classModele_a1b321d7382229fe37fa114bb7f2d9fce}\label{classModele_a1b321d7382229fe37fa114bb7f2d9fce}} 
+float {\bfseries angle\+\_\+yz} =0
+\item 
+\mbox{\Hypertarget{classModele_a32fc3af9ad692452da6bdc69e9e3d955}\label{classModele_a32fc3af9ad692452da6bdc69e9e3d955}} 
+\mbox{\hyperlink{classMatrice}{Matrice}} {\bfseries base} \{3,3\}
+\item 
+\mbox{\Hypertarget{classModele_a55183fbc06e0a9285446a3300126d636}\label{classModele_a55183fbc06e0a9285446a3300126d636}} 
+float {\bfseries taille}
+\item 
+\mbox{\Hypertarget{classModele_a656695b6bc65eee159de9ba9d102cb08}\label{classModele_a656695b6bc65eee159de9ba9d102cb08}} 
+float {\bfseries opacite}
+\item 
+\mbox{\Hypertarget{classModele_a7556d77aca729ddd7b2570867d9f6980}\label{classModele_a7556d77aca729ddd7b2570867d9f6980}} 
+float {\bfseries dist\+Max}
+\item 
+\mbox{\Hypertarget{classModele_a12c8089e951a5b96ffd51a5a857c4ac5}\label{classModele_a12c8089e951a5b96ffd51a5a857c4ac5}} 
+float {\bfseries dist\+Affichage}
+\item 
+\mbox{\Hypertarget{classModele_a766d9e20330fbf2ad92f15e0175f36c1}\label{classModele_a766d9e20330fbf2ad92f15e0175f36c1}} 
+std\+::string {\bfseries modele}
+\item 
+\mbox{\Hypertarget{classModele_addeaa21ecf4ad9ade8ead61690ebde60}\label{classModele_addeaa21ecf4ad9ade8ead61690ebde60}} 
+std\+::string {\bfseries texture}
+\item 
+\mbox{\Hypertarget{classModele_a9f64383c3c921d77554facdfdb1c21a4}\label{classModele_a9f64383c3c921d77554facdfdb1c21a4}} 
+Mix\+\_\+\+Chunk $\ast$ {\bfseries son}
+\item 
+\mbox{\Hypertarget{classModele_ae8ae35886ccfb580da9484b4be4e4466}\label{classModele_ae8ae35886ccfb580da9484b4be4e4466}} 
+float {\bfseries intensite}
+\item 
+\mbox{\Hypertarget{classModele_a060527e42d160f1e8f23f8394eba0bd6}\label{classModele_a060527e42d160f1e8f23f8394eba0bd6}} 
+int {\bfseries canal}
+\end{DoxyCompactItemize}
+\doxysubsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classModele_a47e01836d41515e6705c0ce573588711}{collision\+Cube}} (const \mbox{\hyperlink{classModele}{Modele}} $\ast$mod1, const \mbox{\hyperlink{classModele}{Modele}} $\ast$mod2)
+\item 
+\mbox{\hyperlink{classMatrice}{Matrice}} $\ast$ \mbox{\hyperlink{classModele_ae7e4eb0ca94f75d60b2cffc99dda0185}{creation\+Cube\+Modele}} (const \mbox{\hyperlink{classModele}{Modele}} $\ast$mod)
+\item 
+\mbox{\hyperlink{classMatrice}{Matrice}} $\ast$ \mbox{\hyperlink{classModele_a342805c0f54fef724cf483ce4246941d}{creation\+Cube\+Surf}} (const \mbox{\hyperlink{classModele}{Modele}} $\ast$mod, unsigned int s)
+\item 
+bool \mbox{\hyperlink{classModele_ab1f1cddf9911d303b9f04c3312ddc2ed}{collision}} (\mbox{\hyperlink{classModele}{Modele}} $\ast$mod1, \mbox{\hyperlink{classModele}{Modele}} $\ast$mod2)
+\item 
+bool \mbox{\hyperlink{classModele_a0e2e191c6fd8cf269350bedcdf589294}{collision\+Surf}} (\mbox{\hyperlink{classModele}{Modele}} $\ast$mod1, unsigned int s1, \mbox{\hyperlink{classModele}{Modele}} $\ast$mod2, unsigned int s2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+classe \mbox{\hyperlink{classModele}{Modele}} 
+
+\doxysubsection{Documentation des constructeurs et destructeur}
+\mbox{\Hypertarget{classModele_af6873f3f7f3f91e8d7d191f8f36f694d}\label{classModele_af6873f3f7f3f91e8d7d191f8f36f694d}} 
+\index{Modele@{Modele}!Modele@{Modele}}
+\index{Modele@{Modele}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{Modele()}{Modele()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Modele\+::\+Modele (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{model,  }\item[{const std\+::string \&}]{text }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classModele}{Modele}} \+: constructeur de la classe \mbox{\hyperlink{classModele}{Modele}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & model nom du fichier texte qui contient le modèle 3D \\
+\hline
+{\em string} & text nom du fichier qui contient les couleurs du modèle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_acfd46d48bfc3c45bee82b8f4743f7b45}\label{classModele_acfd46d48bfc3c45bee82b8f4743f7b45}} 
+\index{Modele@{Modele}!Modele@{Modele}}
+\index{Modele@{Modele}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{Modele()}{Modele()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Modele\+::\+Modele (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{model,  }\item[{const std\+::string \&}]{text,  }\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classModele}{Modele}} \+: constructeur de la classe \mbox{\hyperlink{classModele}{Modele}}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & model nom du fichier texte qui contient le modèle 3D \\
+\hline
+{\em string} & text nom du fichier qui contient les couleurs du modèle \\
+\hline
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & p la position du modèle \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{classModele_ace2687700fec28cf44256add5ebb213d}\label{classModele_ace2687700fec28cf44256add5ebb213d}} 
+\index{Modele@{Modele}!addImage@{addImage}}
+\index{addImage@{addImage}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{addImage()}{addImage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImage}{Image}} $\ast$ Modele\+::add\+Image (\begin{DoxyParamCaption}\item[{std\+::string}]{nom }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+add\+Image \+: renvoie le pointeur vers l\textquotesingle{}image et la créé si besoin 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & nom le nom de l\textquotesingle{}image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Image$\ast$ l\textquotesingle{}addresse de l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_ac235fd3088c8f747af3df9a0f4a18475}\label{classModele_ac235fd3088c8f747af3df9a0f4a18475}} 
+\index{Modele@{Modele}!addPoint@{addPoint}}
+\index{addPoint@{addPoint}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{addPoint()}{addPoint()}}
+{\footnotesize\ttfamily int Modele\+::add\+Point (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{mat\+Re }\end{DoxyParamCaption}) \&}
+
+
+
+add\+Point \+: ajoute le point au modèle 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & mat\+Re la position relative au modèle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int l\textquotesingle{}indice du point si il est déja dans le modèle, -\/1 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a509cd141dd0e142dfc1cf6df31468954}\label{classModele_a509cd141dd0e142dfc1cf6df31468954}} 
+\index{Modele@{Modele}!addPointSurf@{addPointSurf}}
+\index{addPointSurf@{addPointSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{addPointSurf()}{addPointSurf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Modele\+::add\+Point\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{unsigned int}]{p,  }\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{mat\+Re }\end{DoxyParamCaption}) \&}
+
+
+
+add\+Point\+Surf \+: ajoute un point à une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em unsigned} & int p l\textquotesingle{}indice auquel ajouter le point dans la surface \\
+\hline
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & mat\+Re la position relative au modèle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si l\textquotesingle{}ajout a bien été effectué 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a3dd67029e3d30b5f55f37fa459a8dc06}\label{classModele_a3dd67029e3d30b5f55f37fa459a8dc06}} 
+\index{Modele@{Modele}!addPointSurf@{addPointSurf}}
+\index{addPointSurf@{addPointSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{addPointSurf()}{addPointSurf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Modele\+::add\+Point\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{unsigned int}]{p,  }\item[{unsigned int}]{pi }\end{DoxyParamCaption}) \&}
+
+
+
+add\+Point\+Surf \+: ajoute un point à une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em unsigned} & int p l\textquotesingle{}indice auquel ajouter le point dans la surface \\
+\hline
+{\em unsigned} & int pi l\textquotesingle{}indice du point du modèle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si l\textquotesingle{}ajout a bien été effectué 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a8169fa0d73bb8746d6d493fe30a1b5e1}\label{classModele_a8169fa0d73bb8746d6d493fe30a1b5e1}} 
+\index{Modele@{Modele}!addSurf@{addSurf}}
+\index{addSurf@{addSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{addSurf()}{addSurf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Modele\+::add\+Surf (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{tab,  }\item[{unsigned int}]{nb }\end{DoxyParamCaption}) \&}
+
+
+
+add\+Surf \+: ajoute une surface au modèle 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int $\ast$ tab le tableau d\textquotesingle{}indices de points (à ne pas effacer) \\
+\hline
+{\em unsigned} & int nb la taille du tableau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si l\textquotesingle{}ajout a bien été effectué 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a6a5060424338857850cfe05fcc9a7892}\label{classModele_a6a5060424338857850cfe05fcc9a7892}} 
+\index{Modele@{Modele}!addSurf@{addSurf}}
+\index{addSurf@{addSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{addSurf()}{addSurf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Modele\+::add\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{p1,  }\item[{unsigned int}]{p2,  }\item[{unsigned int}]{p3 }\end{DoxyParamCaption}) \&}
+
+
+
+add\+Surf \+: ajoute une surface au modèle 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int p1 l\textquotesingle{}indice du point du modèle \\
+\hline
+{\em unsigned} & int p2 l\textquotesingle{}indice du point du modèle \\
+\hline
+{\em unsigned} & int p3 l\textquotesingle{}indice du point du modèle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si l\textquotesingle{}ajout a bien été effectué 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_ac94ac01d61f76a05a74ac5bbd63beaca}\label{classModele_ac94ac01d61f76a05a74ac5bbd63beaca}} 
+\index{Modele@{Modele}!calculCentre@{calculCentre}}
+\index{calculCentre@{calculCentre}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{calculCentre()}{calculCentre()}}
+{\footnotesize\ttfamily void Modele\+::calcul\+Centre (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+calcul\+Centre \+: calcule le centre de la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_aff5a87e1aa12b6c9df6d1c6412cefe0c}\label{classModele_aff5a87e1aa12b6c9df6d1c6412cefe0c}} 
+\index{Modele@{Modele}!calculNormale@{calculNormale}}
+\index{calculNormale@{calculNormale}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{calculNormale()}{calculNormale()}}
+{\footnotesize\ttfamily bool Modele\+::calcul\+Normale (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+calcul\+Normale \+: calcule la normale d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si le calcul de la normale et la surface sont valides 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_afc8188198f47b51f9e12a574a95219af}\label{classModele_afc8188198f47b51f9e12a574a95219af}} 
+\index{Modele@{Modele}!charger@{charger}}
+\index{charger@{charger}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{charger()}{charger()}}
+{\footnotesize\ttfamily bool Modele\+::charger (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&}
+
+
+
+charger \+: charge les points et les surfaces du modele et les textures du modèle 
+
+\begin{DoxyReturn}{Renvoie}
+bool si le chargement a bien fonctionné 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a5b22e5f2dc9bc463b787db5804a5f087}\label{classModele_a5b22e5f2dc9bc463b787db5804a5f087}} 
+\index{Modele@{Modele}!chargerModele@{chargerModele}}
+\index{chargerModele@{chargerModele}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{chargerModele()}{chargerModele()}}
+{\footnotesize\ttfamily bool Modele\+::charger\+Modele (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{model }\end{DoxyParamCaption}) \&}
+
+
+
+charger\+Modele \+: charge les points et les surfaces du modele 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & model le nom du fichier qui contient le modele 3D \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si le chargement a bien fonctionné 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a9fda368009ce08954cefe37c2cd75500}\label{classModele_a9fda368009ce08954cefe37c2cd75500}} 
+\index{Modele@{Modele}!chargerSon@{chargerSon}}
+\index{chargerSon@{chargerSon}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{chargerSon()}{chargerSon()}}
+{\footnotesize\ttfamily bool Modele\+::charger\+Son (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{nom }\end{DoxyParamCaption})}
+
+
+
+charger\+Son \+: charge un son dans le modèle (wav par défaut) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & nom le nom du fichier à charger \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si le chargement a bien fonctionné 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_aded54e6478dffd2c9ec9bd0512c7622c}\label{classModele_aded54e6478dffd2c9ec9bd0512c7622c}} 
+\index{Modele@{Modele}!chargerTexture@{chargerTexture}}
+\index{chargerTexture@{chargerTexture}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{chargerTexture()}{chargerTexture()}}
+{\footnotesize\ttfamily bool Modele\+::charger\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption}) \&}
+
+
+
+charger\+Texture \+: charge les textures des surfaces 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & text le nom du fichier qui contient la texture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si le chargement a bien fonctionné 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_aa2e0a43143b049fd0fb846e38e693b05}\label{classModele_aa2e0a43143b049fd0fb846e38e693b05}} 
+\index{Modele@{Modele}!croisSegPlan@{croisSegPlan}}
+\index{croisSegPlan@{croisSegPlan}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{croisSegPlan()}{croisSegPlan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrice}{Matrice}} $\ast$ Modele\+::crois\+Seg\+Plan (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{s1,  }\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{s2,  }\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{t1,  }\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{t2,  }\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{t3 }\end{DoxyParamCaption}) const \&}
+
+
+
+crois\+Seg\+Plan \+: renvoie le point d\textquotesingle{}intersection entre un segment et un plan 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & s1 le premier point du segment \\
+\hline
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & s2 le premier point du segment \\
+\hline
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & t1 le premier point du plan \\
+\hline
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & t2 le deuxième point du plan \\
+\hline
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & t3 le troisième point du plan /les points doivent former une base d\textquotesingle{}un plan \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Matrice$\ast$ le point de croisement entre le plan et le segment, NULL sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_af14ec356cda594ad1613287ab1e70e21}\label{classModele_af14ec356cda594ad1613287ab1e70e21}} 
+\index{Modele@{Modele}!delPoint@{delPoint}}
+\index{delPoint@{delPoint}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{delPoint()}{delPoint()}}
+{\footnotesize\ttfamily bool Modele\+::del\+Point (\begin{DoxyParamCaption}\item[{unsigned int}]{p }\end{DoxyParamCaption}) \&}
+
+
+
+del\+Point \+: supprime un point du modèle 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int p l\textquotesingle{}indice du point du modèle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si la suppression a bien été effectué 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_af729b413274f630ccadc93d0ebdb6f89}\label{classModele_af729b413274f630ccadc93d0ebdb6f89}} 
+\index{Modele@{Modele}!delPointSurf@{delPointSurf}}
+\index{delPointSurf@{delPointSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{delPointSurf()}{delPointSurf()}}
+{\footnotesize\ttfamily bool Modele\+::del\+Point\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{unsigned int}]{p }\end{DoxyParamCaption}) \&}
+
+
+
+del\+Point\+Surf \+: supprime un point à une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em unsigned} & int p l\textquotesingle{}indice du point du modèle à supprimer de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si la suppression a bien été effectué 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_afda094ef5f340047bede12cf415599cb}\label{classModele_afda094ef5f340047bede12cf415599cb}} 
+\index{Modele@{Modele}!delSurf@{delSurf}}
+\index{delSurf@{delSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{delSurf()}{delSurf()}}
+{\footnotesize\ttfamily void Modele\+::del\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) \&}
+
+
+
+del\+Surf \+: supprime une surface du modèle 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a4ecc02915a3851b08a40e5635cc867b5}\label{classModele_a4ecc02915a3851b08a40e5635cc867b5}} 
+\index{Modele@{Modele}!depSurf@{depSurf}}
+\index{depSurf@{depSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{depSurf()}{depSurf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Modele\+::dep\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{dep }\end{DoxyParamCaption}) \&}
+
+
+
+dep\+Surf \+: déplace une surface du modèle 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & dep le deplacement de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si le deplacement de la surface a fonctionné 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a2ca592afae15edf9ba9a0c7033e53732}\label{classModele_a2ca592afae15edf9ba9a0c7033e53732}} 
+\index{Modele@{Modele}!depSurf@{depSurf}}
+\index{depSurf@{depSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{depSurf()}{depSurf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Modele\+::dep\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption}) \&}
+
+
+
+dep\+Surf \+: déplace une surface du modèle 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em float} & x la coordonnée x à ajouter à la surface \\
+\hline
+{\em float} & y la coordonnée y à ajouter à la surface \\
+\hline
+{\em float} & z la coordonnée z à ajouter à la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si le deplacement de la surface a fonctionné 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_ad3d34b02849eb53e0ab2be064efbd774}\label{classModele_ad3d34b02849eb53e0ab2be064efbd774}} 
+\index{Modele@{Modele}!enregistrerModele@{enregistrerModele}}
+\index{enregistrerModele@{enregistrerModele}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{enregistrerModele()}{enregistrerModele()}}
+{\footnotesize\ttfamily bool Modele\+::enregistrer\+Modele (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{model }\end{DoxyParamCaption}) const \&}
+
+
+
+enregistrer\+Modele \+: enregistre les points et les surfaces du modele 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & model le nom du fichier qui va contenir le modele 3D \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si l\textquotesingle{}enregistrement a bien fonctionné 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a2c340ab10995ccc909241a2dfab6a086}\label{classModele_a2c340ab10995ccc909241a2dfab6a086}} 
+\index{Modele@{Modele}!enregistrerTexture@{enregistrerTexture}}
+\index{enregistrerTexture@{enregistrerTexture}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{enregistrerTexture()}{enregistrerTexture()}}
+{\footnotesize\ttfamily bool Modele\+::enregistrer\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text }\end{DoxyParamCaption}) const \&}
+
+
+
+enregistrer\+Texture \+: enregistre les couleurs des surfaces du modele 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & text le nom du fichier qui va contenir les couleurs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si l\textquotesingle{}enregistrement a bien fonctionné 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a3d22c69b3cb165cbda74c0fbab34f565}\label{classModele_a3d22c69b3cb165cbda74c0fbab34f565}} 
+\index{Modele@{Modele}!getAngleSurf@{getAngleSurf}}
+\index{getAngleSurf@{getAngleSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getAngleSurf()}{getAngleSurf()}}
+{\footnotesize\ttfamily float Modele\+::get\+Angle\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Angle\+Surf \+: accesseur de angle d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+float l\textquotesingle{}angle de l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a9c7922b9fd479d97b1f11f212193b98c}\label{classModele_a9c7922b9fd479d97b1f11f212193b98c}} 
+\index{Modele@{Modele}!getAngxy@{getAngxy}}
+\index{getAngxy@{getAngxy}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getAngxy()}{getAngxy()}}
+{\footnotesize\ttfamily float Modele\+::get\+Angxy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Angxy \+: accesseur de angle\+\_\+xy 
+
+\begin{DoxyReturn}{Renvoie}
+float l\textquotesingle{}angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_aa9d6d36763c3645a10daa5e6c4a83097}\label{classModele_aa9d6d36763c3645a10daa5e6c4a83097}} 
+\index{Modele@{Modele}!getAngxz@{getAngxz}}
+\index{getAngxz@{getAngxz}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getAngxz()}{getAngxz()}}
+{\footnotesize\ttfamily float Modele\+::get\+Angxz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Angxz \+: accesseur de angle\+\_\+xz 
+
+\begin{DoxyReturn}{Renvoie}
+float l\textquotesingle{}angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a466a793e6c869675887a0fbeaa057ccc}\label{classModele_a466a793e6c869675887a0fbeaa057ccc}} 
+\index{Modele@{Modele}!getAngyz@{getAngyz}}
+\index{getAngyz@{getAngyz}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getAngyz()}{getAngyz()}}
+{\footnotesize\ttfamily float Modele\+::get\+Angyz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Angyz \+: accesseur de angle\+\_\+yz 
+
+\begin{DoxyReturn}{Renvoie}
+float l\textquotesingle{}angle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_aaf6b0e81a4f4b851afd2dfd682113ae1}\label{classModele_aaf6b0e81a4f4b851afd2dfd682113ae1}} 
+\index{Modele@{Modele}!getBase@{getBase}}
+\index{getBase@{getBase}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getBase()}{getBase()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classMatrice}{Matrice}} \& Modele\+::get\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Base \+: accesseur de base 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{classMatrice}{Matrice}}\& base la matrice de rotation du modèle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_afa631be4dd2cb40681f5b2dbeeefaa36}\label{classModele_afa631be4dd2cb40681f5b2dbeeefaa36}} 
+\index{Modele@{Modele}!getCentreSurf@{getCentreSurf}}
+\index{getCentreSurf@{getCentreSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getCentreSurf()}{getCentreSurf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrice}{Matrice}} \& Modele\+::get\+Centre\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Centre\+Surf \+: renvoie le centre d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s le numéro de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{classMatrice}{Matrice}}\& le centre de la surface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_ac8e543f0fc867c2f7d7773a20c2e8ee4}\label{classModele_ac8e543f0fc867c2f7d7773a20c2e8ee4}} 
+\index{Modele@{Modele}!getDistAffichage@{getDistAffichage}}
+\index{getDistAffichage@{getDistAffichage}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getDistAffichage()}{getDistAffichage()}}
+{\footnotesize\ttfamily float Modele\+::get\+Dist\+Affichage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Dist\+Affichage \+: accesseur de dist\+Affichage 
+
+\begin{DoxyReturn}{Renvoie}
+float dist\+Affichage la distance d\textquotesingle{}affichage 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_ae41895b3c0b79fd263e0436f5be3f6b8}\label{classModele_ae41895b3c0b79fd263e0436f5be3f6b8}} 
+\index{Modele@{Modele}!getDistMax@{getDistMax}}
+\index{getDistMax@{getDistMax}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getDistMax()}{getDistMax()}}
+{\footnotesize\ttfamily float Modele\+::get\+Dist\+Max (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Distmax \+: accesseur de dist\+Max 
+
+\begin{DoxyReturn}{Renvoie}
+float dist\+Max la distance maximale entre les points du modèle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_aefe2c029ab53720aecce15a263329cbb}\label{classModele_aefe2c029ab53720aecce15a263329cbb}} 
+\index{Modele@{Modele}!getImage@{getImage}}
+\index{getImage@{getImage}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getImage()}{getImage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImage}{Image}} $\ast$ Modele\+::get\+Image (\begin{DoxyParamCaption}\item[{unsigned int}]{i }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Image \+: accesseur d\textquotesingle{}une image 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int i l\textquotesingle{}indice de l\textquotesingle{}image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Image$\ast$ le pointeur vers l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a9d9a36356ce4a82726ba644e50728dc4}\label{classModele_a9d9a36356ce4a82726ba644e50728dc4}} 
+\index{Modele@{Modele}!getImageSurf@{getImageSurf}}
+\index{getImageSurf@{getImageSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getImageSurf()}{getImageSurf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classImage}{Image}} $\ast$ Modele\+::get\+Image\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Image\+Surf \+: accesseur de l\textquotesingle{}image d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Image$\ast$ l\textquotesingle{}image de la surface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_af600493ec13c565cb0054aae7c90b2b2}\label{classModele_af600493ec13c565cb0054aae7c90b2b2}} 
+\index{Modele@{Modele}!getIndicePointSurf@{getIndicePointSurf}}
+\index{getIndicePointSurf@{getIndicePointSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getIndicePointSurf()}{getIndicePointSurf()}}
+{\footnotesize\ttfamily unsigned int Modele\+::get\+Indice\+Point\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{unsigned int}]{p }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Indice\+Point \+: renvoie l\textquotesingle{}indice du point du modèle present dans la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em unsigned} & int p l\textquotesingle{}indice du point de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+unsigned int l\textquotesingle{}indice du point du modèle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a740d20e4d2630baae67c8b3aafbad34b}\label{classModele_a740d20e4d2630baae67c8b3aafbad34b}} 
+\index{Modele@{Modele}!getIntensite@{getIntensite}}
+\index{getIntensite@{getIntensite}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getIntensite()}{getIntensite()}}
+{\footnotesize\ttfamily float Modele\+::get\+Intensite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get\+Intensite \+: accesseur de intensite 
+
+\begin{DoxyReturn}{Renvoie}
+float intensite la valeur de l\textquotesingle{}intensité sonore du modèle (0 à 100) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a582ec73113880bb00ffe5907eb1d9a35}\label{classModele_a582ec73113880bb00ffe5907eb1d9a35}} 
+\index{Modele@{Modele}!getModele@{getModele}}
+\index{getModele@{getModele}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getModele()}{getModele()}}
+{\footnotesize\ttfamily std\+::string Modele\+::get\+Modele (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Modele \+: accesseur de modele 
+
+\begin{DoxyReturn}{Renvoie}
+string modele le nom du fichier texte du modèle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a9e1a2f369b324bb61f419dd07142dc57}\label{classModele_a9e1a2f369b324bb61f419dd07142dc57}} 
+\index{Modele@{Modele}!getNbImages@{getNbImages}}
+\index{getNbImages@{getNbImages}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getNbImages()}{getNbImages()}}
+{\footnotesize\ttfamily unsigned int Modele\+::get\+Nb\+Images (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Nb\+Images \+: accesseur de nb\+Images 
+
+\begin{DoxyReturn}{Renvoie}
+unsigned int nb\+Images le nombre d\textquotesingle{}images 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_ae4d92e3fda4139a38c99d48f66ff0951}\label{classModele_ae4d92e3fda4139a38c99d48f66ff0951}} 
+\index{Modele@{Modele}!getNbPoints@{getNbPoints}}
+\index{getNbPoints@{getNbPoints}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getNbPoints()}{getNbPoints()}}
+{\footnotesize\ttfamily unsigned int Modele\+::get\+Nb\+Points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Nb\+Points \+: accesseur de nb\+Points 
+
+\begin{DoxyReturn}{Renvoie}
+unsigned int nb\+Points le nombre de points 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a6e5408b6c6b85cec82e8b5737cabe185}\label{classModele_a6e5408b6c6b85cec82e8b5737cabe185}} 
+\index{Modele@{Modele}!getNbPointsSurf@{getNbPointsSurf}}
+\index{getNbPointsSurf@{getNbPointsSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getNbPointsSurf()}{getNbPointsSurf()}}
+{\footnotesize\ttfamily unsigned int Modele\+::get\+Nb\+Points\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Nb\+Point\+Surf \+: accesseur de nb\+Points de la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s le numéro de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+unsigned int le nombre de points de la surfaces 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a86741b44739b1919920978a014fc9660}\label{classModele_a86741b44739b1919920978a014fc9660}} 
+\index{Modele@{Modele}!getNbSurfaces@{getNbSurfaces}}
+\index{getNbSurfaces@{getNbSurfaces}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getNbSurfaces()}{getNbSurfaces()}}
+{\footnotesize\ttfamily unsigned int Modele\+::get\+Nb\+Surfaces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Nb\+Surfaces \+: accesseur de nb\+Surfaces 
+
+\begin{DoxyReturn}{Renvoie}
+unsigned int nb\+Surfaces le nombre de surfaces 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a6ed3423d282eb312c200f21a919cc7ad}\label{classModele_a6ed3423d282eb312c200f21a919cc7ad}} 
+\index{Modele@{Modele}!getNbTrianglesSurf@{getNbTrianglesSurf}}
+\index{getNbTrianglesSurf@{getNbTrianglesSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getNbTrianglesSurf()}{getNbTrianglesSurf()}}
+{\footnotesize\ttfamily unsigned int Modele\+::get\+Nb\+Triangles\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Nb\+Triangles\+Surf \+: renvoie le nombre de triangles de la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+unsigned int le nombre de triangles de la surface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a09a1e1ef08e09117965e4f087dda805b}\label{classModele_a09a1e1ef08e09117965e4f087dda805b}} 
+\index{Modele@{Modele}!getNomImageSurf@{getNomImageSurf}}
+\index{getNomImageSurf@{getNomImageSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getNomImageSurf()}{getNomImageSurf()}}
+{\footnotesize\ttfamily std\+::string Modele\+::get\+Nom\+Image\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Nom\+Image\+Surf \+: accesseur du nom de l\textquotesingle{}image d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+string nom le nom de l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a79bfc87916114b6cbad6936659bd9946}\label{classModele_a79bfc87916114b6cbad6936659bd9946}} 
+\index{Modele@{Modele}!getNormaleSurf@{getNormaleSurf}}
+\index{getNormaleSurf@{getNormaleSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getNormaleSurf()}{getNormaleSurf()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classMatrice}{Matrice}} \& Modele\+::get\+Normale\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Normale\+Surf \+: accesseur de la normale d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{classMatrice}{Matrice}}\& la normale de la surface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_acd9d1c4f56c95a11e5b036ba343d005b}\label{classModele_acd9d1c4f56c95a11e5b036ba343d005b}} 
+\index{Modele@{Modele}!getOpacite@{getOpacite}}
+\index{getOpacite@{getOpacite}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getOpacite()}{getOpacite()}}
+{\footnotesize\ttfamily float Modele\+::get\+Opacite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Opacite \+: accesseur de opacite 
+
+\begin{DoxyReturn}{Renvoie}
+float opacité du modèle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a9bb59b7b7b252d7088608d75bd85a52f}\label{classModele_a9bb59b7b7b252d7088608d75bd85a52f}} 
+\index{Modele@{Modele}!getOpaciteSurf@{getOpaciteSurf}}
+\index{getOpaciteSurf@{getOpaciteSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getOpaciteSurf()}{getOpaciteSurf()}}
+{\footnotesize\ttfamily float Modele\+::get\+Opacite\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Opacite\+Surf \+: accesseur de opacite d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+float opacité de la surface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a25b4cbe95a5dc9baeabe35ada514b648}\label{classModele_a25b4cbe95a5dc9baeabe35ada514b648}} 
+\index{Modele@{Modele}!getPoint@{getPoint}}
+\index{getPoint@{getPoint}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getPoint()}{getPoint()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structPoint}{Point}} \& Modele\+::get\+Point (\begin{DoxyParamCaption}\item[{unsigned int}]{p }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Point \+: accesseur des points du modèle 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int p l\textquotesingle{}indice du point du modèle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structPoint}{Point}}\& le point 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_af554319a7017caf77e8d1117c6c429c3}\label{classModele_af554319a7017caf77e8d1117c6c429c3}} 
+\index{Modele@{Modele}!getPointSurf@{getPointSurf}}
+\index{getPointSurf@{getPointSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getPointSurf()}{getPointSurf()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structPoint}{Point}} \& Modele\+::get\+Point\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{unsigned int}]{p }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Point\+Surf \+: renvoie le point du modèle present dans la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em unsigned} & int p l\textquotesingle{}indice du point de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{structPoint}{Point}}\& le point du modèle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_ad55562c2b3bc77b5c8dd9327ddd7b349}\label{classModele_ad55562c2b3bc77b5c8dd9327ddd7b349}} 
+\index{Modele@{Modele}!getPos@{getPos}}
+\index{getPos@{getPos}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getPos()}{getPos()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classMatrice}{Matrice}} \& Modele\+::get\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Pos \+: accesseur de pos 
+
+\begin{DoxyReturn}{Renvoie}
+\mbox{\hyperlink{classMatrice}{Matrice}}\& pos la position du modèle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a2b84db5dffd4443310cc09438d7accb3}\label{classModele_a2b84db5dffd4443310cc09438d7accb3}} 
+\index{Modele@{Modele}!getPosxSurf@{getPosxSurf}}
+\index{getPosxSurf@{getPosxSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getPosxSurf()}{getPosxSurf()}}
+{\footnotesize\ttfamily float Modele\+::get\+Posx\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Posx\+Surf \+: accesseur de posx d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+float la position horizontale 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a6e91af62cee1a93409e7c31a077c0424}\label{classModele_a6e91af62cee1a93409e7c31a077c0424}} 
+\index{Modele@{Modele}!getPosySurf@{getPosySurf}}
+\index{getPosySurf@{getPosySurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getPosySurf()}{getPosySurf()}}
+{\footnotesize\ttfamily float Modele\+::get\+Posy\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Posy\+Surf \+: accesseur de posy d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+float la position verticale 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a9072afdb7ce932839c815673ceedcf66}\label{classModele_a9072afdb7ce932839c815673ceedcf66}} 
+\index{Modele@{Modele}!getTaille@{getTaille}}
+\index{getTaille@{getTaille}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getTaille()}{getTaille()}}
+{\footnotesize\ttfamily float Modele\+::get\+Taille (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Taille \+: accesseur de taille 
+
+\begin{DoxyReturn}{Renvoie}
+float taille la taille du modèle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a43497316cb880f30979baa38210ee895}\label{classModele_a43497316cb880f30979baa38210ee895}} 
+\index{Modele@{Modele}!getTaillexSurf@{getTaillexSurf}}
+\index{getTaillexSurf@{getTaillexSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getTaillexSurf()}{getTaillexSurf()}}
+{\footnotesize\ttfamily float Modele\+::get\+Taillex\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Taillex\+Surf \+: accesseur de taillex d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+float l\textquotesingle{}étirement horizontale de l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a203a232fb14d9495f92866da1217b4fc}\label{classModele_a203a232fb14d9495f92866da1217b4fc}} 
+\index{Modele@{Modele}!getTailleySurf@{getTailleySurf}}
+\index{getTailleySurf@{getTailleySurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getTailleySurf()}{getTailleySurf()}}
+{\footnotesize\ttfamily float Modele\+::get\+Tailley\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Tailley\+Surf \+: accesseur de tailley d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+float l\textquotesingle{}étirement verticale de l\textquotesingle{}image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_ad627ed39b47a7e421faecf49b2d7bdfe}\label{classModele_ad627ed39b47a7e421faecf49b2d7bdfe}} 
+\index{Modele@{Modele}!getTexture@{getTexture}}
+\index{getTexture@{getTexture}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getTexture()}{getTexture()}}
+{\footnotesize\ttfamily std\+::string Modele\+::get\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+get\+Texture \+: accesseur de texture 
+
+\begin{DoxyReturn}{Renvoie}
+string texture le nom du fichier texte de la texture 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a703036dfa510efbbba88aeb6e6e0a611}\label{classModele_a703036dfa510efbbba88aeb6e6e0a611}} 
+\index{Modele@{Modele}!getTriangleSurf@{getTriangleSurf}}
+\index{getTriangleSurf@{getTriangleSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getTriangleSurf()}{getTriangleSurf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structTriangle}{Triangle}} $\ast$ Modele\+::get\+Triangle\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{unsigned int}]{t }\end{DoxyParamCaption}) \&}
+
+
+
+get\+Triangle\+Surf \+: renvoie un triangle de la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em unsigned} & int t l\textquotesingle{}indice du triangle de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Triangle$\ast$ un triangle de la surface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_ac3a49cf913022024ca54ee476e476841}\label{classModele_ac3a49cf913022024ca54ee476e476841}} 
+\index{Modele@{Modele}!getX@{getX}}
+\index{getX@{getX}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily float Modele\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+getX \+: renvoie la position x 
+
+\begin{DoxyReturn}{Renvoie}
+float la position x 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a278613687ef70e8d4ecbf77745163ac0}\label{classModele_a278613687ef70e8d4ecbf77745163ac0}} 
+\index{Modele@{Modele}!getY@{getY}}
+\index{getY@{getY}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily float Modele\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+getY \+: renvoie la position y 
+
+\begin{DoxyReturn}{Renvoie}
+float la position y 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a14fb5e951eabe849153af724547f36c7}\label{classModele_a14fb5e951eabe849153af724547f36c7}} 
+\index{Modele@{Modele}!getZ@{getZ}}
+\index{getZ@{getZ}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{getZ()}{getZ()}}
+{\footnotesize\ttfamily float Modele\+::getZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const \&}
+
+
+
+getZ \+: renvoie la position z 
+
+\begin{DoxyReturn}{Renvoie}
+float la position z 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_af35567537fbbf80eaebc92f622cac762}\label{classModele_af35567537fbbf80eaebc92f622cac762}} 
+\index{Modele@{Modele}!isPauseSon@{isPauseSon}}
+\index{isPauseSon@{isPauseSon}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{isPauseSon()}{isPauseSon()}}
+{\footnotesize\ttfamily int Modele\+::is\+Pause\+Son (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+is\+Pause\+Son \+: renvoie si le son est en pause 
+
+\begin{DoxyReturn}{Renvoie}
+int renvoie 2 si aucun son n\textquotesingle{}est joué, 1 si le son est en pause, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a761338be75c89fa79e9dd720c225634a}\label{classModele_a761338be75c89fa79e9dd720c225634a}} 
+\index{Modele@{Modele}!jouerSon@{jouerSon}}
+\index{jouerSon@{jouerSon}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{jouerSon()}{jouerSon()}}
+{\footnotesize\ttfamily bool Modele\+::jouer\+Son (\begin{DoxyParamCaption}\item[{int}]{repet = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+jouer\+Son \+: joue le son chargé dans le modèle 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em int} & repet le nombre de répétitions du son supplémentaires (-\/1 pour une boucle infini) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si le son a bien été joué 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a116a5c5285e95c0e8bc186402f658853}\label{classModele_a116a5c5285e95c0e8bc186402f658853}} 
+\index{Modele@{Modele}!majCentre@{majCentre}}
+\index{majCentre@{majCentre}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{majCentre()}{majCentre()}}
+{\footnotesize\ttfamily void Modele\+::maj\+Centre (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+maj\+Centre \+: met à jour le centre de la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a9c3a006d23e1f49702213277ffa119c7}\label{classModele_a9c3a006d23e1f49702213277ffa119c7}} 
+\index{Modele@{Modele}!majNormale@{majNormale}}
+\index{majNormale@{majNormale}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{majNormale()}{majNormale()}}
+{\footnotesize\ttfamily void Modele\+::maj\+Normale (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+maj\+Normale \+: met à jour la normale d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a78ca049284e1eea1af0d3515ece3fc0d}\label{classModele_a78ca049284e1eea1af0d3515ece3fc0d}} 
+\index{Modele@{Modele}!majPoint@{majPoint}}
+\index{majPoint@{majPoint}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{majPoint()}{majPoint()}}
+{\footnotesize\ttfamily void Modele\+::maj\+Point (\begin{DoxyParamCaption}\item[{unsigned int}]{p }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+maj\+Point \+: met à jour la position du point 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int p l\textquotesingle{}indice du point à mettre à jour \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a6862e4418861c9de02aeb4035ae44d2a}\label{classModele_a6862e4418861c9de02aeb4035ae44d2a}} 
+\index{Modele@{Modele}!majSon@{majSon}}
+\index{majSon@{majSon}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{majSon()}{majSon()}}
+{\footnotesize\ttfamily void Modele\+::maj\+Son (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{position }\end{DoxyParamCaption})}
+
+
+
+maj\+Son \+: met à jour le volume et le panning du modèle en fonction de la positon relative à la caméra 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & position la position du modèle relativement à la caméra \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_ab24519bf01572e154c53a53db942d2ed}\label{classModele_ab24519bf01572e154c53a53db942d2ed}} 
+\index{Modele@{Modele}!pointInSurf@{pointInSurf}}
+\index{pointInSurf@{pointInSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{pointInSurf()}{pointInSurf()}}
+{\footnotesize\ttfamily bool Modele\+::point\+In\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{p }\end{DoxyParamCaption}) \&}
+
+
+
+point\+In\+Surf \+: renvoie si le point appartient à la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & p le point à tester qui appartient au meme plan que le triangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si le point appartient à la surface 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_ab4a352ece9f88703a677b7f34ace8a62}\label{classModele_ab4a352ece9f88703a677b7f34ace8a62}} 
+\index{Modele@{Modele}!pointInTriangle@{pointInTriangle}}
+\index{pointInTriangle@{pointInTriangle}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{pointInTriangle()}{pointInTriangle()}}
+{\footnotesize\ttfamily bool Modele\+::point\+In\+Triangle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{p,  }\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{t1,  }\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{t2,  }\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{t3 }\end{DoxyParamCaption}) const \&}
+
+
+
+point\+In\+Triangle \+: renvoie si le point appartient au triangle 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & p le point à tester qui appartient au meme plan que le triangle \\
+\hline
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & t1 le premier point du triangle \\
+\hline
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & t2 le deuxième point du triangle \\
+\hline
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & t3 le troisième point du triangle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si le point appartient au triangle 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a9f59966162524bea3a92bd13b3b9a3e8}\label{classModele_a9f59966162524bea3a92bd13b3b9a3e8}} 
+\index{Modele@{Modele}!setAng@{setAng}}
+\index{setAng@{setAng}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setAng()}{setAng()}}
+{\footnotesize\ttfamily void Modele\+::set\+Ang (\begin{DoxyParamCaption}\item[{float}]{angxy,  }\item[{float}]{angxz,  }\item[{float}]{angyz }\end{DoxyParamCaption})}
+
+
+
+set\+Ang \+: modifie les angles 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & angxy l\textquotesingle{}angle xy \\
+\hline
+{\em float} & angxz l\textquotesingle{}angle xz \\
+\hline
+{\em float} & angyz l\textquotesingle{}angle yz \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_ad2b99b0ce221b1197e7ee6ec0330750f}\label{classModele_ad2b99b0ce221b1197e7ee6ec0330750f}} 
+\index{Modele@{Modele}!setAngleSurf@{setAngleSurf}}
+\index{setAngleSurf@{setAngleSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setAngleSurf()}{setAngleSurf()}}
+{\footnotesize\ttfamily void Modele\+::set\+Angle\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{float}]{ang }\end{DoxyParamCaption}) \&}
+
+
+
+set\+Angle\+Surf \+: mutateur de angle d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em float} & ang l\textquotesingle{}angle de l\textquotesingle{}image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a87a41f7852173e56779196d118d82055}\label{classModele_a87a41f7852173e56779196d118d82055}} 
+\index{Modele@{Modele}!setAngxy@{setAngxy}}
+\index{setAngxy@{setAngxy}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setAngxy()}{setAngxy()}}
+{\footnotesize\ttfamily void Modele\+::set\+Angxy (\begin{DoxyParamCaption}\item[{float}]{angxy }\end{DoxyParamCaption})}
+
+
+
+set\+Angxy \+: mutateur de angle\+\_\+xy 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & angxy l\textquotesingle{}angle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_af9fa4e0c2f3e1518e251d1c9383675c4}\label{classModele_af9fa4e0c2f3e1518e251d1c9383675c4}} 
+\index{Modele@{Modele}!setAngxz@{setAngxz}}
+\index{setAngxz@{setAngxz}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setAngxz()}{setAngxz()}}
+{\footnotesize\ttfamily void Modele\+::set\+Angxz (\begin{DoxyParamCaption}\item[{float}]{angxz }\end{DoxyParamCaption})}
+
+
+
+set\+Angxz \+: mutateur de angle\+\_\+xz 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & angxz l\textquotesingle{}angle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a4dbe6144bbd1997d4c81a264c1de3dde}\label{classModele_a4dbe6144bbd1997d4c81a264c1de3dde}} 
+\index{Modele@{Modele}!setAngyz@{setAngyz}}
+\index{setAngyz@{setAngyz}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setAngyz()}{setAngyz()}}
+{\footnotesize\ttfamily void Modele\+::set\+Angyz (\begin{DoxyParamCaption}\item[{float}]{angyz }\end{DoxyParamCaption})}
+
+
+
+set\+Angyz \+: mutateur de angle\+\_\+yz 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & angyz l\textquotesingle{}angle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a9ec78114b10431d35f197fee5cf4ab6a}\label{classModele_a9ec78114b10431d35f197fee5cf4ab6a}} 
+\index{Modele@{Modele}!setDistAffichage@{setDistAffichage}}
+\index{setDistAffichage@{setDistAffichage}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setDistAffichage()}{setDistAffichage()}}
+{\footnotesize\ttfamily void Modele\+::set\+Dist\+Affichage (\begin{DoxyParamCaption}\item[{float}]{dist }\end{DoxyParamCaption})}
+
+
+
+set\+Visible \+: mutateur de visible 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & dist la distance d\textquotesingle{}affichage \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a96b984f16f006079d7c2fe490729ca2f}\label{classModele_a96b984f16f006079d7c2fe490729ca2f}} 
+\index{Modele@{Modele}!setImageSurf@{setImageSurf}}
+\index{setImageSurf@{setImageSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setImageSurf()}{setImageSurf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Modele\+::set\+Image\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{\mbox{\hyperlink{classImage}{Image}} $\ast$}]{img }\end{DoxyParamCaption}) \&}
+
+
+
+set\+Image\+Surf \+: mutateur de l\textquotesingle{}image d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em Image$\ast$} & img pointeur vers une image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_ad31f25e9c910dba023178f763fcd135e}\label{classModele_ad31f25e9c910dba023178f763fcd135e}} 
+\index{Modele@{Modele}!setImageSurf@{setImageSurf}}
+\index{setImageSurf@{setImageSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setImageSurf()}{setImageSurf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Modele\+::set\+Image\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{std\+::string}]{nom }\end{DoxyParamCaption}) \&}
+
+
+
+set\+Image\+Surf \+: mutateur de l\textquotesingle{}image d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em string} & nom le nom de l\textquotesingle{}image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a71718d43b57de73a12c34c2dc71025c0}\label{classModele_a71718d43b57de73a12c34c2dc71025c0}} 
+\index{Modele@{Modele}!setIntensite@{setIntensite}}
+\index{setIntensite@{setIntensite}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setIntensite()}{setIntensite()}}
+{\footnotesize\ttfamily void Modele\+::set\+Intensite (\begin{DoxyParamCaption}\item[{float}]{intens }\end{DoxyParamCaption})}
+
+
+
+set\+Intensite \+: mutateur de intensite 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & intens la valeur de l\textquotesingle{}intensité sonore du modèle (0 à 100) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_afbbfb0247795052733312ef5222cd753}\label{classModele_afbbfb0247795052733312ef5222cd753}} 
+\index{Modele@{Modele}!setModele@{setModele}}
+\index{setModele@{setModele}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setModele()}{setModele()}}
+{\footnotesize\ttfamily void Modele\+::set\+Modele (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{mod }\end{DoxyParamCaption})}
+
+
+
+set\+Modele \+: mutateur de modele 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & mod le nom du fichier texte du modèle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_ab26d79cab83798f93b6b71694d9aac83}\label{classModele_ab26d79cab83798f93b6b71694d9aac83}} 
+\index{Modele@{Modele}!setOpacite@{setOpacite}}
+\index{setOpacite@{setOpacite}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setOpacite()}{setOpacite()}}
+{\footnotesize\ttfamily void Modele\+::set\+Opacite (\begin{DoxyParamCaption}\item[{float}]{opac }\end{DoxyParamCaption})}
+
+
+
+set\+Opacite \+: mutateur de opacite 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & opac l\textquotesingle{}opacité du modèle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a19ce53658498cac66dcb3736d6a19ac0}\label{classModele_a19ce53658498cac66dcb3736d6a19ac0}} 
+\index{Modele@{Modele}!setOpaciteSurf@{setOpaciteSurf}}
+\index{setOpaciteSurf@{setOpaciteSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setOpaciteSurf()}{setOpaciteSurf()}}
+{\footnotesize\ttfamily void Modele\+::set\+Opacite\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{float}]{opac }\end{DoxyParamCaption})}
+
+
+
+set\+Opacite\+Surf \+: mutateur de opacite d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em float} & opac l\textquotesingle{}opacité de la surface \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a30e5bc8b2ceb496d20751835d082aa4c}\label{classModele_a30e5bc8b2ceb496d20751835d082aa4c}} 
+\index{Modele@{Modele}!setPoint@{setPoint}}
+\index{setPoint@{setPoint}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setPoint()}{setPoint()}}
+{\footnotesize\ttfamily bool Modele\+::set\+Point (\begin{DoxyParamCaption}\item[{unsigned int}]{p,  }\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{mat\+Re }\end{DoxyParamCaption}) \&}
+
+
+
+set\+Point \+: mutateur des points du modèle 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int p l\textquotesingle{}indice du point du modèle \\
+\hline
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & mat\+Re la position relative au modèle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si la modification a bien été effectué 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_aed9411a33e5e57660d8b6f12b5374c97}\label{classModele_aed9411a33e5e57660d8b6f12b5374c97}} 
+\index{Modele@{Modele}!setPointSurf@{setPointSurf}}
+\index{setPointSurf@{setPointSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setPointSurf()}{setPointSurf()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Modele\+::set\+Point\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{unsigned int}]{p,  }\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{mat\+Re }\end{DoxyParamCaption}) \&}
+
+
+
+set\+Point\+Surf \+: modifie le point du modèle present dans la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em unsigned} & int p l\textquotesingle{}indice auquel modifier le point dans la surface \\
+\hline
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & mat\+Re la position relative au modèle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si la modification a bien été effectué 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a76ba4e25a93f3dbfd04d0ff874a80aa7}\label{classModele_a76ba4e25a93f3dbfd04d0ff874a80aa7}} 
+\index{Modele@{Modele}!setPointSurf@{setPointSurf}}
+\index{setPointSurf@{setPointSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setPointSurf()}{setPointSurf()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Modele\+::set\+Point\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{unsigned int}]{p,  }\item[{unsigned int}]{pi }\end{DoxyParamCaption}) \&}
+
+
+
+set\+Point\+Surf \+: modifie l\textquotesingle{}indice du point du modèle de la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em unsigned} & int p l\textquotesingle{}indice auquel modifier le point dans la surface \\
+\hline
+{\em unsigned} & int pi l\textquotesingle{}indice du point du modèle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si la modification a bien été effectué 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a96ac17e8c614d6223c5ca690401f6ffb}\label{classModele_a96ac17e8c614d6223c5ca690401f6ffb}} 
+\index{Modele@{Modele}!setPos@{setPos}}
+\index{setPos@{setPos}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setPos()}{setPos()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Modele\+::set\+Pos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{pos }\end{DoxyParamCaption})}
+
+
+
+set\+Pos \+: mutateur de pos 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & pos la position du modèle \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_aeb6c23a98bcfec8ca3f2236fed945d41}\label{classModele_aeb6c23a98bcfec8ca3f2236fed945d41}} 
+\index{Modele@{Modele}!setPos@{setPos}}
+\index{setPos@{setPos}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setPos()}{setPos()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Modele\+::set\+Pos (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+set\+Pos \+: mutateur de pos 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & x la position x \\
+\hline
+{\em float} & y la position y \\
+\hline
+{\em float} & z la position z \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a32453099f889b4af26fdc4f24195e2f2}\label{classModele_a32453099f889b4af26fdc4f24195e2f2}} 
+\index{Modele@{Modele}!setPositionSurf@{setPositionSurf}}
+\index{setPositionSurf@{setPositionSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setPositionSurf()}{setPositionSurf()}}
+{\footnotesize\ttfamily void Modele\+::set\+Position\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption}) \&}
+
+
+
+set\+Position\+Surf \+: mutateur de posx et posy d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em float} & x la position horizontale \\
+\hline
+{\em float} & y la position verticale \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a46ece48c804c095b67918d800f978e45}\label{classModele_a46ece48c804c095b67918d800f978e45}} 
+\index{Modele@{Modele}!setPosRe@{setPosRe}}
+\index{setPosRe@{setPosRe}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setPosRe()}{setPosRe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Modele\+::set\+Pos\+Re (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCamera}{Camera}} \&}]{cam,  }\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{pos }\end{DoxyParamCaption})}
+
+
+
+set\+Pos\+Re \+: mutateur de pos relativement a une caméra 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classCamera}{Camera}}} & cam la caméra par rapport à laquelle on modifie la position \\
+\hline
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & pos la position du modèle relativement à la caméra \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_ac46191c35c284278821d177558c80a57}\label{classModele_ac46191c35c284278821d177558c80a57}} 
+\index{Modele@{Modele}!setPosRe@{setPosRe}}
+\index{setPosRe@{setPosRe}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setPosRe()}{setPosRe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Modele\+::set\+Pos\+Re (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classCamera}{Camera}} \&}]{cam,  }\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+set\+Pos\+Re \+: mutateur de pos relativement a une caméra 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classCamera}{Camera}}} & cam la caméra par rapport à laquelle on modifie la position \\
+\hline
+{\em float} & x la position x du modèle relativement à la caméra \\
+\hline
+{\em float} & y la position y du modèle relativement à la caméra \\
+\hline
+{\em float} & z la position z du modèle relativement à la caméra \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_ab3c4e93e0931d3264cb53d8131607637}\label{classModele_ab3c4e93e0931d3264cb53d8131607637}} 
+\index{Modele@{Modele}!setTaille@{setTaille}}
+\index{setTaille@{setTaille}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setTaille()}{setTaille()}}
+{\footnotesize\ttfamily void Modele\+::set\+Taille (\begin{DoxyParamCaption}\item[{float}]{t }\end{DoxyParamCaption})}
+
+
+
+set\+Taille \+: mutateur de taille 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & t la taille \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a0df624741ed966e59c6dc8c87e6a0166}\label{classModele_a0df624741ed966e59c6dc8c87e6a0166}} 
+\index{Modele@{Modele}!setTailleSurf@{setTailleSurf}}
+\index{setTailleSurf@{setTailleSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setTailleSurf()}{setTailleSurf()}}
+{\footnotesize\ttfamily void Modele\+::set\+Taille\+Surf (\begin{DoxyParamCaption}\item[{unsigned int}]{s,  }\item[{float}]{tx,  }\item[{float}]{ty }\end{DoxyParamCaption}) \&}
+
+
+
+set\+Taille\+Surf \+: mutateur de taillex et tailley d\textquotesingle{}une surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+{\em float} & tx l\textquotesingle{}étirement horizontale de l\textquotesingle{}image \\
+\hline
+{\em float} & ty l\textquotesingle{}étirement verticale de l\textquotesingle{}image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a2946f119477ad3b55fee67af8450ff6d}\label{classModele_a2946f119477ad3b55fee67af8450ff6d}} 
+\index{Modele@{Modele}!setTexture@{setTexture}}
+\index{setTexture@{setTexture}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setTexture()}{setTexture()}}
+{\footnotesize\ttfamily void Modele\+::set\+Texture (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tex }\end{DoxyParamCaption})}
+
+
+
+set\+Texture \+: mutateur de texture 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em string} & tex le nom du fichier texte de la texture \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a2a9960622a58e8474dc8b025f6c603c5}\label{classModele_a2a9960622a58e8474dc8b025f6c603c5}} 
+\index{Modele@{Modele}!setX@{setX}}
+\index{setX@{setX}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setX()}{setX()}}
+{\footnotesize\ttfamily void Modele\+::setX (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})}
+
+
+
+setX \+: modifie la position x 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & x la position x \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_abe8e85310182271ea615b021a659ee61}\label{classModele_abe8e85310182271ea615b021a659ee61}} 
+\index{Modele@{Modele}!setY@{setY}}
+\index{setY@{setY}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setY()}{setY()}}
+{\footnotesize\ttfamily void Modele\+::setY (\begin{DoxyParamCaption}\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+setY \+: modifie la position y 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & y la position y \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a1185b7ccbe7fde46fdcec1330b3bd633}\label{classModele_a1185b7ccbe7fde46fdcec1330b3bd633}} 
+\index{Modele@{Modele}!setZ@{setZ}}
+\index{setZ@{setZ}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{setZ()}{setZ()}}
+{\footnotesize\ttfamily void Modele\+::setZ (\begin{DoxyParamCaption}\item[{float}]{z }\end{DoxyParamCaption})}
+
+
+
+setZ \+: modifie la position z 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em float} & z la position z \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classModele_a2ec6c94fa3b3ad9cad1357389f8bdcea}\label{classModele_a2ec6c94fa3b3ad9cad1357389f8bdcea}} 
+\index{Modele@{Modele}!testCollisionCube@{testCollisionCube}}
+\index{testCollisionCube@{testCollisionCube}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{testCollisionCube()}{testCollisionCube()}}
+{\footnotesize\ttfamily int Modele\+::test\+Collision\+Cube (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{cube1,  }\item[{const \mbox{\hyperlink{classMatrice}{Matrice}} \&}]{cube2 }\end{DoxyParamCaption}) const \&}
+
+
+
+test\+Collision\+Cube \+: renvoie si les cubes se croisent 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & cube1 une matrice de taille 6x1 avec xmin,xmax,ymin,ymax,zmin,zmax du premier cube \\
+\hline
+{\em \mbox{\hyperlink{classMatrice}{Matrice}}} & cube2 une matrice de taille 6x1 avec xmin,xmax,ymin,ymax,zmin,zmax du deuxième cube \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int retourne 1 si les cubes se croisent, 2 si le cube 1 est dans le 2, 3 si le cube 2 est dans le 1, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_ac032bff0e9a766b247b5254f495b815f}\label{classModele_ac032bff0e9a766b247b5254f495b815f}} 
+\index{Modele@{Modele}!triangulation@{triangulation}}
+\index{triangulation@{triangulation}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{triangulation()}{triangulation()}}
+{\footnotesize\ttfamily bool Modele\+::triangulation (\begin{DoxyParamCaption}\item[{unsigned int}]{s }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+triangulation \+: triangule la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unsigned} & int s l\textquotesingle{}indice de la surface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool si la triangulation de la surface est valide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a40e26f3b04365138943d04b050a226af}\label{classModele_a40e26f3b04365138943d04b050a226af}} 
+\index{Modele@{Modele}!triangulations@{triangulations}}
+\index{triangulations@{triangulations}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{triangulations()}{triangulations()}}
+{\footnotesize\ttfamily bool Modele\+::triangulations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+triangulations \+: triangule les surfaces 
+
+\begin{DoxyReturn}{Renvoie}
+bool si les triangulations des surfaces sont valide 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a77b762f80274679b3a311d1bdd0150bb}\label{classModele_a77b762f80274679b3a311d1bdd0150bb}} 
+\index{Modele@{Modele}!verif@{verif}}
+\index{verif@{verif}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{verif()}{verif()}}
+{\footnotesize\ttfamily bool Modele\+::verif (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) \&}
+
+
+
+verif \+: renvoie si le modèle est valide 
+
+\begin{DoxyReturn}{Renvoie}
+si le modèle est valide 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentation des fonctions amies et associées}
+\mbox{\Hypertarget{classModele_ab1f1cddf9911d303b9f04c3312ddc2ed}\label{classModele_ab1f1cddf9911d303b9f04c3312ddc2ed}} 
+\index{Modele@{Modele}!collision@{collision}}
+\index{collision@{collision}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{collision}{collision}}
+{\footnotesize\ttfamily bool collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classModele}{Modele}} $\ast$}]{mod1,  }\item[{\mbox{\hyperlink{classModele}{Modele}} $\ast$}]{mod2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+collision \+: test les collisions des modeles 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classModele}{Modele}}} & $\ast$ mod1 le premier modèle \\
+\hline
+{\em \mbox{\hyperlink{classModele}{Modele}}} & $\ast$ mod2 le deuxième modèle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool retourne 1 si les modeles se croisent, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a47e01836d41515e6705c0ce573588711}\label{classModele_a47e01836d41515e6705c0ce573588711}} 
+\index{Modele@{Modele}!collisionCube@{collisionCube}}
+\index{collisionCube@{collisionCube}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{collisionCube}{collisionCube}}
+{\footnotesize\ttfamily int collision\+Cube (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModele}{Modele}} $\ast$}]{mod1,  }\item[{const \mbox{\hyperlink{classModele}{Modele}} $\ast$}]{mod2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+collision\+Cube \+: test les collisions cubiques des modeles 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classModele}{Modele}}} & $\ast$ mod1 le premier modèle \\
+\hline
+{\em \mbox{\hyperlink{classModele}{Modele}}} & $\ast$ mod2 le deuxième modèle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+int retourne 1 si les cubes se croisent, 2 si le cube 1 est dans le 2, 3 si le cube 2 est dans le 1, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a0e2e191c6fd8cf269350bedcdf589294}\label{classModele_a0e2e191c6fd8cf269350bedcdf589294}} 
+\index{Modele@{Modele}!collisionSurf@{collisionSurf}}
+\index{collisionSurf@{collisionSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{collisionSurf}{collisionSurf}}
+{\footnotesize\ttfamily bool collision\+Surf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classModele}{Modele}} $\ast$}]{mod1,  }\item[{unsigned int}]{s1,  }\item[{\mbox{\hyperlink{classModele}{Modele}} $\ast$}]{mod2,  }\item[{unsigned int}]{s2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+collision\+Surf \+: test les collisions des surfaces 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em \mbox{\hyperlink{classModele}{Modele}}} & $\ast$ mod1 le premier modèle \\
+\hline
+{\em unsigned} & int s1 le numéro de la surface du premier modèle \\
+\hline
+{\em \mbox{\hyperlink{classModele}{Modele}}} & $\ast$ mod2 le deuxième modèle \\
+\hline
+{\em unsigned} & int s2 le numéro de la surface du deuxième modèle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+bool retourne 1 si les surfaces se croisent, 0 sinon 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_ae7e4eb0ca94f75d60b2cffc99dda0185}\label{classModele_ae7e4eb0ca94f75d60b2cffc99dda0185}} 
+\index{Modele@{Modele}!creationCubeModele@{creationCubeModele}}
+\index{creationCubeModele@{creationCubeModele}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{creationCubeModele}{creationCubeModele}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrice}{Matrice}} $\ast$ creation\+Cube\+Modele (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModele}{Modele}} $\ast$}]{mod }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+creation\+Cube\+Modele \+: renvoie les coordonnées du cube englobant du modèle 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Modele$\ast$} & mod le modèle dont on veut récupérer le cube englobant \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Matrice$\ast$ retourne une matrice de taille 6x1 avec xmin,xmax,ymin,ymax,zmin,zmax 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classModele_a342805c0f54fef724cf483ce4246941d}\label{classModele_a342805c0f54fef724cf483ce4246941d}} 
+\index{Modele@{Modele}!creationCubeSurf@{creationCubeSurf}}
+\index{creationCubeSurf@{creationCubeSurf}!Modele@{Modele}}
+\doxysubsubsection{\texorpdfstring{creationCubeSurf}{creationCubeSurf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classMatrice}{Matrice}} $\ast$ creation\+Cube\+Surf (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classModele}{Modele}} $\ast$}]{mod,  }\item[{unsigned int}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+creation\+Cube\+Surf \+: renvoie les coordonnées du cube englobant de la surface 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em Modele$\ast$} & mod le modèle \\
+\hline
+{\em unsigned} & int s le numéro de la surface dont on veut les coordonnées du cube englobant \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Matrice$\ast$ retourne une matrice de taille 6x1 avec xmin,xmax,ymin,ymax,zmin,zmax 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+include/Modele.\+h\item 
+src/Modele.\+cpp\end{DoxyCompactItemize}

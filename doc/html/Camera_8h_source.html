@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
-<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Moteur3D:  Fichier source de include/Camera.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -29,10 +29,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.9.4 -->
+<!-- Généré par Doxygen 1.9.6 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-var searchBox = new SearchBox("searchBox", "search",'Recherche','.html');
+var searchBox = new SearchBox("searchBox", "search/",'.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -55,9 +55,16 @@ $(function() {
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
-<iframe src="javascript:void(0)" frameborder="0" 
-        name="MSearchResults" id="MSearchResults">
-</iframe>
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
 </div>
 
 <div id="nav-path" class="navpath">
@@ -89,7 +96,7 @@ $(function() {
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <a class="code hl_class" href="classCosin.html">Cosin</a> cs; <span class="comment">//permet d&#39;utiliser des formules de trigonométrie précalculées</span></div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_function" href="classCamera.html#ae65a732820423b7ecc324dff55cc92c5">Camera</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ty, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tx);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <a class="code hl_class" href="classCamera.html">Camera</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ty, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> tx);</div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">const</span> <a class="code hl_class" href="classMatrice.html">Matrice</a>&amp; <a class="code hl_function" href="classCamera.html#af0e44f133e4e93c34516ad50450582dc">getPos</a>()<span class="keyword">const</span> &amp;;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    </div>
@@ -157,7 +164,6 @@ $(function() {
 <div class="ttc" id="aclassCamera_html_ab43910ed5acda19b6f37899019028bf7"><div class="ttname"><a href="classCamera.html#ab43910ed5acda19b6f37899019028bf7">Camera::setAngxy</a></div><div class="ttdeci">void setAngxy(float angxy)</div><div class="ttdoc">setAngxy : mutateur de angle_xy</div><div class="ttdef"><b>Definition:</b> Camera.cpp:68</div></div>
 <div class="ttc" id="aclassCamera_html_ab7b9c685ae06e15194ec81e706034e22"><div class="ttname"><a href="classCamera.html#ab7b9c685ae06e15194ec81e706034e22">Camera::getNormale</a></div><div class="ttdeci">Matrice getNormale() const &amp;</div><div class="ttdoc">getNormale : renvoie la normale de l'ecran de la camera</div><div class="ttdef"><b>Definition:</b> Camera.cpp:145</div></div>
 <div class="ttc" id="aclassCamera_html_ac0e9793b5ca68b936dfd08c486d2b667"><div class="ttname"><a href="classCamera.html#ac0e9793b5ca68b936dfd08c486d2b667">Camera::getAngyz</a></div><div class="ttdeci">float getAngyz() const &amp;</div><div class="ttdoc">getAngyz : accesseur de angle_yz</div><div class="ttdef"><b>Definition:</b> Camera.cpp:92</div></div>
-<div class="ttc" id="aclassCamera_html_ae65a732820423b7ecc324dff55cc92c5"><div class="ttname"><a href="classCamera.html#ae65a732820423b7ecc324dff55cc92c5">Camera::Camera</a></div><div class="ttdeci">Camera(unsigned int ty, unsigned int tx)</div><div class="ttdoc">Camera : constructeur de la classe Camera.</div><div class="ttdef"><b>Definition:</b> Camera.cpp:4</div></div>
 <div class="ttc" id="aclassCamera_html_af0e44f133e4e93c34516ad50450582dc"><div class="ttname"><a href="classCamera.html#af0e44f133e4e93c34516ad50450582dc">Camera::getPos</a></div><div class="ttdeci">const Matrice &amp; getPos() const &amp;</div><div class="ttdoc">getPos : accesseur de pos</div><div class="ttdef"><b>Definition:</b> Camera.cpp:21</div></div>
 <div class="ttc" id="aclassCamera_html_af72b882ba6b8d652743d87bc93591f0a"><div class="ttname"><a href="classCamera.html#af72b882ba6b8d652743d87bc93591f0a">Camera::getAngxz</a></div><div class="ttdeci">float getAngxz() const &amp;</div><div class="ttdoc">getAngxz : accesseur de angle_xz</div><div class="ttdef"><b>Definition:</b> Camera.cpp:74</div></div>
 <div class="ttc" id="aclassCosin_html"><div class="ttname"><a href="classCosin.html">Cosin</a></div><div class="ttdoc">classe Cosin</div><div class="ttdef"><b>Definition:</b> Cosin.h:9</div></div>
@@ -165,7 +171,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
 </small></address>
 </body>
 </html>

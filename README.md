@@ -11,7 +11,7 @@ Le moteur 3D permet aussi de gérer la musique et les sons émis par les modèle
 Ce projet comporte un main, un éditeur 3D, des modèles, des textures, des images, des sons et des musiques par défaut afin de faciliter l'utillisation.
 
 ## Fichiers et Dossiers
-READMe.md : contient les informations sur l'organisation du projet
+README.md : contient les informations sur l'organisation du projet
 
 makefile : contient les liens entre les fichiers néccessaires à la compilation
 

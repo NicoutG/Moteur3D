@@ -1,4 +1,3 @@
-#include "../include/Camera.h"
 #include "../include/Moteur3D.h"
 #include "../include/Affichage_SDL.h"
 #include <iostream>

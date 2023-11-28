@@ -20,7 +20,7 @@ $(NOM): $(DIRO)$(MAIN).o $(OBJ)
 $(NOM2): $(DIRO)$(MAIN2).o $(OBJ)
 	$(CC) $(FLAG) $(DIRO)$(MAIN2).o $(OBJ) -o $(NOM2) $(LIBS)
 	
-$(DIRO)$(MAIN).o: $(DIRCPP)$(MAIN).cpp $(DIRH)Camera.h $(DIRH)Moteur3D.h $(DIRH)Affichage_SDL.h
+$(DIRO)$(MAIN).o: $(DIRCPP)$(MAIN).cpp $(DIRH)Moteur3D.h $(DIRH)Affichage_SDL.h
 	$(CC) $(FLAGS) $(DIRCPP)$(MAIN).cpp -o $(DIRO)$(MAIN).o
 	
 $(DIRO)$(MAIN2).o: $(DIRCPP)$(MAIN2).cpp $(DIRH)Editeur3D.h

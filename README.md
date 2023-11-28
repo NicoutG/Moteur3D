@@ -45,21 +45,33 @@ src : contient tout les fichiers .cpp
 La bibliothèque SDL2 est indispensable pour pouvoir charger des images et gérer les sons et musiques.
 
 ### Mise en place
-        Dans ce projet, vous pouvez trouver le fichier main.cpp qui donne un exemple de comment utiliser le moteur 3D.
+Dans ce projet, vous pouvez trouver le fichier main.cpp qui donne un exemple de 
+comment utiliser le moteur 3D.
 
-        De plus, le fichier main_editeur3D.cpp permet d'utiliser un éditeur de modèles 3D sans avoir à modifier à la main les fichiers textes des modèles.
-        Les fichiers utiles uniquement pour cet éditeur sont :
-        - main_editeur3D.cpp
-        - Editeur3D.cpp
-        - Editeur3D.h
+De plus, le fichier main_editeur3D.cpp permet d'utiliser un éditeur de modèles 3D 
+sans avoir à modifier à la main les fichiers textes des modèles.
+Les fichiers utiles uniquement pour cet éditeur sont :
+- main_editeur3D.cpp
+- Editeur3D.cpp
+- Editeur3D.h
 
-        Un affichage graphique SDL est disponible par défaut.
-        La classe Moteur3D permet de générer une image sans l'afficher.
-        Si vous souhaitez utiliser un autre affichage graphique que SDL, vous pouvez effacer les fichiers :
-        - Affichage_SDL.cpp
-        - Affichage_SDl.h
+Un affichage graphique SDL est disponible par défaut.
+La classe Moteur3D permet de générer une image sans l'afficher.
+Si vous souhaitez utiliser un autre affichage graphique que SDL, vous 
+pouvez effacer les fichiers :
+- Affichage_SDL.cpp
+- Affichage_SDl.h
         
+## Compiler et executer
+### Compilation
+Allez dans le même dossier que le fichier makefile et tapez "make" dans le terminal.
 
+### Execution
+Après avoir compilé, dans le même dossier, tapez :
+
+        - bin/moteur3D : pour lancer le main et avoir un exemple d'utilisation du moteur 3D
+
+        - bin/editeur3D : pour lancer l'éditeur de modèles 3D
 
 
 ## Usage

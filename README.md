@@ -23,6 +23,24 @@ doc : contient toute la documentation du projet
 
         /html/index.html : permet d'accéder à la documentation
 
+data : contient les dossiers et fichiers qui permettent de faire générer l'espace 3D
+
+        /images : contient les fichiers images
+
+        /modèles : contient les fichiers textes qui définnissent les modèles 3D
+
+        /moteur3D : contient les fichiers textes qui définnissent l'espace 3D
+
+        /musiques : contient les fichiers audios des musiques
+
+        /sons : contient les fichiers audios des sons
+
+        /textures : contient les fichiers textes qui définnissent les textures des modèles
+
+include : contient tout les fichiers .h
+
+src : contient tout les fichiers .cpp
+
 ## Visuals
 Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
 

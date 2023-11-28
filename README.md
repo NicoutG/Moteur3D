@@ -84,6 +84,18 @@ Pour pouvoir utiliser le moteur3D dans un code, il faut inclure les classes suiv
 ### Fichiers importants
 Tout les fichiers générant l'espace 3D se trouvent dans le dossier data.
 
-/modèles :
-        Voici à quoi resssemble un fichier qui génere un modèle 3D :
-        ![Modèle de cube](https://github.com/NiCout/Moteur3D/blob/main/doc/ReadMe/modèle.png?raw=true)
+#### Fichiers modèles
+Voici à quoi resssemble un fichier qui génere un modèle 3D :
+
+_![Modèle de cube](https://github.com/NiCoutG/Moteur3D/blob/main/doc/ReadMe/modèle.png?raw=true)
+
+Ce fichier représente le modèle 3D d'un cube.
+
+Voici comment ce fichier se décompose :
+
+- Ligne 1 : Nombre de points qui composent le modèle. 8 dans le cas d'un cube.
+- Ligne 2-9 : Coordonnées de chaque points sous le format x y z. Le premier point du cube a pour coordonnées -10x -10y 10z.
+-Ligne 11 : Nombre de surfaces qui composent le modèle. 6 dans le cas d'un cube.
+-Ligne 12-17 : Definis les surfaces du modèle.
+        - Le premier numéro correspond au nombre de points qui composent la surface.
+

@@ -100,7 +100,7 @@ Voici comment ce fichier se décompose :
   
           - Le premier numéro correspond au nombre de points qui composent la surface. 4 pour chaque face d'un cube
   
-          - Les numéro qui suivent correspondent aux indices des points qui composent la surface. La première surface est donc composée des 4 premiers                  points définis.
+          - Les numéro qui suivent correspondent aux indices des points qui composent la surface. La première surface est donc composée des 4 premiers points définis.
 
   Attention !!!
 
@@ -133,15 +133,22 @@ Voici comment ce fichier se décompose :
   En inversant les indices, elles seront visibles depuis l'arrière de l'écran :
 
   5  4 3 2 1 0 <=> 5  3 2 1 0 4 <=> ...
+  
   5  4 2 3 1 0
+  
   5  4 3 1 2 0
+  
   5  2 4 3 1 0
 
   Si certains segments se croisent, l'affichage sera généralement bugué :
 
   5  0 3 1 2 4
+  
   5  0 2 4 1 3
+  
   4  0 1 2 3
+  
   5  3 4 1 2 0
+
 
 #### Fichiers textures

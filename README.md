@@ -97,7 +97,9 @@ Voici comment ce fichier se décompose :
 - Ligne 2-9 : Coordonnées de chaque points sous le format x y z. Le premier point du cube a pour coordonnées -10x -10y 10z.
 - Ligne 11 : Nombre de surfaces qui composent le modèle. 6 dans le cas d'un cube.
 - Ligne 12-17 : Definis les surfaces du modèle.
-          - Le premier numéro correspond au nombre de points qui composent la surface. 4 pour chaque face d'un cube \n
+  
+          - Le premier numéro correspond au nombre de points qui composent la surface. 4 pour chaque face d'un cube
+  
           - Les numéro qui suivent correspondent aux indices des points qui composent la surface. La première surface est donc composée des 4 premiers points           définis.
 
   Attention !!!

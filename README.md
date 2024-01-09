@@ -152,3 +152,13 @@ Voici comment ce fichier se décompose :
 
 
 #### Fichiers textures
+
+Voici à quoi resssemble un fichier qui génere la texture d'un modèle 3D :
+
+_![Texture pour cube](https://github.com/NiCoutG/Moteur3D/blob/main/doc/ReadMe/texture_cube.png?raw=true)
+
+Ce fichier représente la texture d'un rubik's cube applicable sur un modèle à 6 faces.
+
+Voici comment ce fichier se décompose :
+
+

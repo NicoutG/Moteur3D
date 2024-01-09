@@ -164,7 +164,7 @@ Voici comment ce fichier se décompose :
 - Ligne 1 : Nombre de surfaces que contient le modèle 3D sur lequel la texture est appliquée.
 - Ligne 2-7 : Définition de l'image appliquée sur chaque surface du modèle.
 
-          La chaine de caractère défini le nom de l'image à appliquer (png si aucune extension n'est précisée).
+          La chaine de caractères définit le nom de l'image à appliquer (png si aucune extension n'est précisée).
 
           Les 2 numéros suivant correspondent à la position x et y de l'image sur la surface.
 
@@ -174,4 +174,9 @@ Voici comment ce fichier se décompose :
 
           Le dernier numéro correspond à l'opacité de l'image (De 0 à 1).
 
-  La i ème image définie dans la texture s'applique sur la i eme surface définie dans le modèle 3D.
+  La i ème image définit dans la texture s'applique sur la i eme surface définit dans le modèle 3D.
+
+#### Fichiers moteur3D
+
+Les fichiers moteur3D permettent de charger directement un ensemble de modèles 3D associés à une texture ou non ainsi que leurs positions, leur orientation dans l'espace 3D, leur taille et un coefficient pour modifier leur distance d'affichage.
+Il définit aussi la couleur de fond de l'espace 3D.

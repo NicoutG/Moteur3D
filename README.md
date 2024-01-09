@@ -100,7 +100,7 @@ Voici comment ce fichier se décompose :
   
           - Le premier numéro correspond au nombre de points qui composent la surface. 4 pour chaque face d'un cube
   
-          - Les numéro qui suivent correspondent aux indices des points qui composent la surface. La première surface est donc composée des 4 premiers points           définis.
+          - Les numéro qui suivent correspondent aux indices des points qui composent la surface. La première surface est donc composée des 4 premiers                  points définis.
 
   Attention !!!
 

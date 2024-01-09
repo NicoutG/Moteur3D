@@ -27,15 +27,15 @@ data : contient les dossiers et fichiers qui permettent de faire générer l'esp
 
         /images : contient les fichiers images
 
-        /modèles : contient les fichiers textes qui définnissent les modèles 3D
+        /modèles : contient les fichiers textes qui définissent les modèles 3D
 
-        /moteur3D : contient les fichiers textes qui définnissent l'espace 3D
+        /moteur3D : contient les fichiers textes qui définissent l'espace 3D
 
         /musiques : contient les fichiers audios des musiques
 
         /sons : contient les fichiers audios des sons
 
-        /textures : contient les fichiers textes qui définnissent les textures des modèles
+        /textures : contient les fichiers textes qui définissent les textures des modèles
 
 include : contient tout les fichiers .h
 
@@ -49,7 +49,7 @@ Dans ce projet, vous pouvez trouver le fichier main.cpp qui donne un exemple de
 comment utiliser le moteur 3D.
 
 De plus, le fichier main_editeur3D.cpp permet d'utiliser un éditeur de modèles 3D 
-sans avoir à modifier à la main les fichiers textes des modèles.
+sans avoir à modifier à la main les fichiers textes des modèles et des textures.
 Les fichiers utiles uniquement pour cet éditeur sont :
 - main_editeur3D.cpp
 - Editeur3D.cpp
@@ -60,14 +60,14 @@ La classe Moteur3D permet de générer une image sans l'afficher.
 Si vous souhaitez utiliser un autre affichage graphique que SDL, vous 
 pouvez effacer les fichiers :
 - Affichage_SDL.cpp
-- Affichage_SDl.h
+- Affichage_SDL.h
         
 ## Compiler et executer
 ### Compilation
 Allez dans le même dossier que le fichier makefile et tapez "make" dans le terminal.
 
 ### Execution
-Après avoir compilé, dans le même dossier, tapez :
+Après avoir compilé, dans le même dossier, tapez dans le terminal :
 
         - bin/moteur3D : pour lancer le main et avoir un exemple d'utilisation du moteur 3D
 

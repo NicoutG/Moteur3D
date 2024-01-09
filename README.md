@@ -95,7 +95,48 @@ Voici comment ce fichier se décompose :
 
 - Ligne 1 : Nombre de points qui composent le modèle. 8 dans le cas d'un cube.
 - Ligne 2-9 : Coordonnées de chaque points sous le format x y z. Le premier point du cube a pour coordonnées -10x -10y 10z.
--Ligne 11 : Nombre de surfaces qui composent le modèle. 6 dans le cas d'un cube.
--Ligne 12-17 : Definis les surfaces du modèle.
-        - Le premier numéro correspond au nombre de points qui composent la surface.
+- Ligne 11 : Nombre de surfaces qui composent le modèle. 6 dans le cas d'un cube.
+- Ligne 12-17 : Definis les surfaces du modèle.
+        - Le premier numéro correspond au nombre de points qui composent la surface. 4 pour chaque face d'un cube
+        - Les numéro qui suivent correspondent aux indices des points qui composent la surface. La première surface est donc composée des 4 premiers points           définis.
 
+  Attention !!!
+
+  Un point ne peut pas apparaitre 2 fois dans la même surface;
+  L'ordre d'écriture des indices des points dans la surface est important.
+  Chaque face n'est visible que dans un sens.
+  La face est visible si en tracant un vecteur entre 2 points, l'interieur de la surface se trouve à droite du vecteur.
+  Si la surface n'a pas d'angle concave, cela revient à définir les points dans le sens horaire.
+
+  Voici un exemple :
+
+  Supposons 5 points définis comme ceci :
+
+          0                  1
+
+                  2
+             4             3
+
+  Supposons une surface contenant ses points.
+  Voici différentes manières de la définir pour quelle soit visible depuis l'avant de l'écran (votre position actuelle) :
+
+  5  0 1 2 3 4 <=> 5  1 2 3 4 0 <=> 5  2 3 4 0 1 <=> 5  3 4 0 1 2 <=> 5  4 0 1 2 3
+  5  0 1 3 2 4
+  5  0 2 1 3 4
+  5  0 1 3 4 2
+
+  En inversant les indices, elles seront visibles depuis l'arrière de l'écran :
+
+  5  4 3 2 1 0 <=> 5  3 2 1 0 4 <=> ...
+  5  4 2 3 1 0
+  5  4 3 1 2 0
+  5  2 4 3 1 0
+
+  Si certains segments se croisent, l'affichage sera généralement bugué :
+
+  5  0 3 1 2 4
+  5  0 2 4 1 3
+  4  0 1 2 3
+  5  3 4 1 2 0
+
+#### Fichiers textures

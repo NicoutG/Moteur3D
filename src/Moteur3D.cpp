@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <cassert>
+#include <cstring>
 
 Moteur3D::Moteur3D()
 {

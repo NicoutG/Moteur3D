@@ -2,6 +2,7 @@
 #include<cassert>
 #include<iostream>
 #include <chrono>
+#include <cmath>
 using namespace std;
 
 void Editeur3D::Lancement()

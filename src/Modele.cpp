@@ -2,6 +2,8 @@
 #include <cassert>
 #include <fstream>
 #include <iostream>
+#include <cmath>
+#include <cstring>
 
 /**
 @brief structure Triangulation

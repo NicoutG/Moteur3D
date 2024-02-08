@@ -5,7 +5,7 @@
 #include "Camera.h"
 #include "Cosin.h"
 #include <string>
-#include <SDL2/SDL_mixer.h>
+#include "../lib/SDL2/include/SDL_mixer.h"
 
 /**
 @brief structure ImageText

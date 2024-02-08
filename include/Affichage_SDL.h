@@ -1,7 +1,7 @@
 #ifndef _AFFICHAGE_SDL
 #define _AFFICHAGE_SDL
 
-#include <SDL2/SDL.h>
+#include "../lib/SDL2/include/SDL.h"
 #include "Image.h"
 
 /**

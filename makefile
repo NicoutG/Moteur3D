@@ -10,7 +10,8 @@ NOM2=./bin/editeur3D
 
 MAIN=main
 MAIN2=main_editeur3D
-LIBS=
+SDLPATH=./lib/SDL2/lib/
+LIBS=-L $(SDLPATH) -lSDL2main -lSDL2 -lSDL2_mixer -lSDL2_image
 
 all: $(NOM) $(NOM2)
 
@@ -20,7 +21,7 @@ $(NOM): $(DIRO)$(MAIN).o $(OBJ)
 $(NOM2): $(DIRO)$(MAIN2).o $(OBJ)
 	$(CC) $(FLAG) $(DIRO)$(MAIN2).o $(OBJ) -o $(NOM2) $(LIBS)
 	
-$(DIRO)$(MAIN).o: $(DIRCPP)$(MAIN).cpp $(DIRH)Moteur3D.h $(DIRH)Affichage_SDL.h
+$(DIRO)$(MAIN).o: $(DIRCPP)$(MAIN).cpp $(DIRH)Moteur3D.h $(DIRH)Affichage_SDL.h 
 	$(CC) $(FLAGS) $(DIRCPP)$(MAIN).cpp -o $(DIRO)$(MAIN).o
 	
 $(DIRO)$(MAIN2).o: $(DIRCPP)$(MAIN2).cpp $(DIRH)Editeur3D.h
@@ -50,7 +51,7 @@ $(DIRO)Modele.o: $(DIRCPP)Modele.cpp $(DIRH)Modele.h $(DIRH)Surface.h $(DIRH)Mat
 $(DIRO)Moteur3D.o: $(DIRCPP)Moteur3D.cpp $(DIRH)Moteur3D.h $(DIRH)Modele.h $(DIRH)Camera.h $(DIRH)Image.h
 	$(CC) $(FLAGS) $(DIRCPP)Moteur3D.cpp -o $(DIRO)Moteur3D.o
 	
-$(DIRO)Affichage_SDL.o: $(DIRCPP)Affichage_SDL.cpp $(DIRH)Affichage_SDL.h $(DIRH)Image.h 
+$(DIRO)Affichage_SDL.o: $(DIRCPP)Affichage_SDL.cpp $(DIRH)Affichage_SDL.h $(DIRH)Image.h
 	$(CC) $(FLAGS) $(DIRCPP)Affichage_SDL.cpp -o $(DIRO)Affichage_SDL.o
 	
 $(DIRO)Editeur3D.o: $(DIRCPP)Editeur3D.cpp $(DIRH)Editeur3D.h $(DIRH)Camera.h $(DIRH)Moteur3D.h $(DIRH)Affichage_SDL.h

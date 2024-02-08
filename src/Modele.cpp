@@ -437,7 +437,7 @@ bool Modele::calculNormale(unsigned int s)&
 			angles=angles+norm;
 	}
 	delete [] arretes;
-	if (abs(angles)<6.283) {
+	if (abs(angles)<6) {
 		std::cout<<"Les points de la surface "<<s<<" ne forment pas un polygone correct"<<std::endl;
 		return 0;
 	}

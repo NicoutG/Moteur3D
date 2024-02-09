@@ -1,7 +1,7 @@
 #include "../include/Image.h"
 #include <cassert>
-#include "../lib/SDL2/include/SDL.h"
-#include "../lib/SDL2/include/SDL_image.h"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #include <cstring>
 
 Image::Image()

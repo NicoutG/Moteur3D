@@ -10,7 +10,7 @@ NOM2=./bin/editeur3D
 
 MAIN=main
 MAIN2=main_editeur3D
-LIBS=-lSDL2main -lSDL2 -lSDL2_mixer -lSDL2_image
+LIBS=-lSDL2 -lSDL2_mixer -lSDL2_image
 
 all: $(NOM) $(NOM2)
 

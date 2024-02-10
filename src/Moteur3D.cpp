@@ -8,9 +8,7 @@ Moteur3D::Moteur3D()
 {
 	nbModeles=0;
 	modeles=NULL;
-	nbAff=0;
-	capaciteAff=0;
-	aff=NULL;
+	aff.clear();
 	points=NULL;
 	couleurFond.set(255,255,255);
 	distances=NULL;
@@ -23,9 +21,7 @@ Moteur3D::Moteur3D()
 Moteur3D::Moteur3D(const std::string & moteur)
 {
 	distAffichage=1;
-	nbAff=0;
-	capaciteAff=0;
-	aff=NULL;
+	aff.clear();
 	distances=NULL;
 	transparences=NULL;
 	musique=NULL;
@@ -40,11 +36,7 @@ Moteur3D::~Moteur3D()
 			delete modeles[i];
 		delete [] modeles;
 	}
-	if (aff!=NULL) {
-		for (unsigned int i=0;i<nbAff;i++)
-			delete aff[i];
-		delete  [] aff;
-	}
+	aff.clear();
 	if (distances!=NULL) {
 		for (unsigned int j=0;j<image.getTailley();j++)
 			delete [] distances[j];
@@ -58,10 +50,8 @@ Moteur3D::~Moteur3D()
 	if (transparences!=NULL) {
 		for (unsigned int j=0;j<image.getTailley();j++) {
 			for (unsigned int i=0;i<image.getTaillex();i++)
-				if (transparences[j][i].capacite>0) {
-					for (unsigned int k=0;k<transparences[j][i].nb;k++)
-						delete transparences[j][i].couches[k];
-					delete [] transparences[j][i].couches;
+				if (transparences[j][i].size()>0) {
+					transparences[j][i].clear();
 				}
 			delete [] transparences[j];
 		}
@@ -276,7 +266,7 @@ Camera* Moteur3D::getCam()const
 
 unsigned int Moteur3D::getNbAff()const
 {
-	return nbAff;
+	return aff.size();
 }
 
 void Moteur3D::pauseSons()
@@ -377,10 +367,8 @@ void Moteur3D::creationTableau(unsigned int y, unsigned int x)&
 		if (transparences!=NULL) {
 			for (unsigned int j=0;j<image.getTailley();j++) {
 				for (unsigned int i=0;i<image.getTaillex();i++)
-					if (transparences[j][i].capacite>0) {
-						for (unsigned int k=0;k<transparences[j][i].nb;k++)
-							delete transparences[j][i].couches[k];
-						delete [] transparences[j][i].couches;
+					if (transparences[j][i].size()>0) {
+						transparences[j][i].clear();
 					}
 				delete [] transparences[j];
 			}
@@ -390,9 +378,9 @@ void Moteur3D::creationTableau(unsigned int y, unsigned int x)&
 		distances=new float * [y];
 		for (unsigned int j=0;j<y;j++)
 			distances[j]=new float [x];
-		transparences=new CouchesTransparentes * [y];
+		transparences=new std::vector<Couche> * [y];
 		for (unsigned int j=0;j<y;j++)
-			transparences[j]=new CouchesTransparentes [x];
+			transparences[j]=new std::vector<Couche> [x];
 	}
 	initialiserTableau();
 }
@@ -402,13 +390,8 @@ void Moteur3D::initialiserTableau()&
 	for (unsigned int j=0;j<image.getTailley();j++)
 		for (unsigned int i=0;i<image.getTaillex();i++) {
 			distances[j][i]=-1;
-			if (transparences[j][i].capacite>0) {
-				for (unsigned int k=0;k<transparences[j][i].nb;k++)
-					delete transparences[j][i].couches[k];
-				delete [] transparences[j][i].couches;
-				transparences[j][i].couches=NULL;
-				transparences[j][i].nb=0;
-				transparences[j][i].capacite=0;
+			if (transparences[j][i].size()>0) {
+				transparences[j][i].clear();
 			}
 		}
 	image.effacer(couleurFond);
@@ -416,14 +399,7 @@ void Moteur3D::initialiserTableau()&
 
 void Moteur3D::gestionModeles()&
 {
-	if (aff!=NULL) {
-		for (unsigned int i=0;i<nbAff;i++)
-			delete aff[i];
-		delete [] aff;
-		aff=NULL;
-	}
-	nbAff=0;
-	capaciteAff=0;
+	aff.clear();
 	for (unsigned int i=0;i<nbModeles;i++) {
 		if (modeles[i]->getNbPoints()==0) {
 			if (norme(cam->getPos()-modeles[i]->getPos())<200*modeles[i]->getDistMax()*modeles[i]->getTaille()*distAffichage*modeles[i]->getDistAffichage()) {
@@ -449,33 +425,21 @@ void Moteur3D::gestionModeles()&
 void Moteur3D::addAff(Modele * mod, unsigned int s)&
 {
 	assert(s<mod->getNbSurfaces());
-	if (nbAff==capaciteAff) {
-		SurfaceAff ** nouv=new SurfaceAff * [capaciteAff+20];
-		for (unsigned int i=0;i<nbAff;i++)
-			nouv[i]=aff[i];
-		if (aff!=NULL)
-			delete [] aff;
-		aff=nouv;
-		capaciteAff=capaciteAff+20; 
-	}
 	SurfaceAff * nouvSurf=new SurfaceAff;
 	nouvSurf->modele=mod;
 	nouvSurf->surface=s;
 	nouvSurf->distance=norme(cam->getPos()-mod->getCentreSurf(s));
 	unsigned int j=0;
-	while (j<nbAff && nouvSurf->distance>aff[j]->distance)
+	while (j<aff.size() && nouvSurf->distance>aff.at(j)->distance)
 		j++;
-	for (unsigned int k=nbAff;k>j;k--)
-		aff[k]=aff[k-1];
-	aff[j]=nouvSurf;
-	nbAff++;
+	aff.insert(aff.begin()+j,nouvSurf);
 }
 
 void Moteur3D::afficherSurfaces()&
 {
-	for (unsigned int i=0;i<nbAff;i++) {
-		majPoints(aff[i]->modele,aff[i]->surface);
-		afficherSurface(aff[i]->modele,aff[i]->surface);
+	for (unsigned int i=0;i<aff.size();i++) {
+		majPoints(aff.at(i)->modele,aff.at(i)->surface);
+		afficherSurface(aff.at(i)->modele,aff.at(i)->surface);
 	}
 	if (points!=NULL) {
 		delete [] points;
@@ -786,31 +750,16 @@ void Moteur3D::addTransparent(unsigned int x, unsigned int y, const Couleur & co
 {
 	assert(x<image.getTaillex());
 	assert(y<image.getTailley());
-	if (transparences[y][x].capacite==transparences[y][x].nb) {
-		Couche ** nouv=new Couche * [transparences[y][x].capacite+3];
-		for (unsigned int i=0;i<transparences[y][x].nb;i++)
-			nouv[i]=transparences[y][x].couches[i];
-		if (transparences[y][x].couches!=NULL)
-			delete []  transparences[y][x].couches;
-		transparences[y][x].couches=nouv;
-		transparences[y][x].capacite=transparences[y][x].capacite+5;
-	}
-	if (transparences[y][x].nb==0 || dist>=transparences[y][x].couches[transparences[y][x].nb-1]->distance) {
-		transparences[y][x].couches[transparences[y][x].nb]=new Couche;
-		transparences[y][x].couches[transparences[y][x].nb]->couleur=coul;
-		transparences[y][x].couches[transparences[y][x].nb]->distance=dist;
-	}
-	else {
-		int k=transparences[y][x].nb;
-		while (k>0 && dist<transparences[y][x].couches[k-1]->distance) {
-			transparences[y][x].couches[k]=transparences[y][x].couches[k-1];
-			k--;
+	if (distances[y][x]==-1 || dist<distances[y][x]) {
+		unsigned int k=0;
+		while (k<transparences[y][x].size() && dist<transparences[y][x].at(k).distance) {
+			k++;
 		}
-		transparences[y][x].couches[k]=new Couche;
-		transparences[y][x].couches[k]->couleur=coul;
-		transparences[y][x].couches[k]->distance=dist;
+		Couche couche;
+		couche.couleur=coul;
+		couche.distance=dist;
+		transparences[y][x].insert(transparences[y][x].begin()+k,couche);
 	}
-	transparences[y][x].nb++;
 }
 
 void Moteur3D::appliquerTransparence()&
@@ -820,10 +769,10 @@ void Moteur3D::appliquerTransparence()&
 	Couleur couleur,couleurIm,couleurTrans;
 	for (unsigned int j=0;j<ty;j++)
 		for (unsigned int i=0;i<tx;i++)
-			for (unsigned int k=0;k<transparences[j][i].nb;k++)
-				if (distances[j][i]==-1 || transparences[j][i].couches[transparences[j][i].nb-k-1]->distance<distances[j][i]) {
+			for (unsigned int k=0;k<transparences[j][i].size();k++)
+				if (distances[j][i]==-1 || transparences[j][i].at(transparences[j][i].size()-k-1).distance<distances[j][i]) {
 					couleurIm=image.getCouleur(j,i);
-					couleurTrans=transparences[j][i].couches[transparences[j][i].nb-k-1]->couleur;
+					couleurTrans=transparences[j][i].at(transparences[j][i].size()-k-1).couleur;
 					couleur.setR((couleurTrans.getA()*couleurTrans.getR()+(255-couleurTrans.getA())*couleurIm.getR())/255);
 					couleur.setG((couleurTrans.getA()*couleurTrans.getG()+(255-couleurTrans.getA())*couleurIm.getG())/255);
 					couleur.setB((couleurTrans.getA()*couleurTrans.getB()+(255-couleurTrans.getA())*couleurIm.getB())/255);

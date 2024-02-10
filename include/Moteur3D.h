@@ -4,6 +4,7 @@
 #include "Modele.h"
 #include "Camera.h"
 #include "Image.h"
+#include <vector>
 
 /**
 @brief structure Point2D
@@ -39,17 +40,6 @@ struct Couche
 };
 
 /**
-@brief structure CouchesTransparentes
-**/
-
-struct CouchesTransparentes
-{
-	Couche ** couches=NULL;
-	unsigned int nb=0;
-	unsigned int capacite=0;
-};
-
-/**
 @brief classe Moteur3D
 **/
 
@@ -58,14 +48,12 @@ class Moteur3D
 private:
 	unsigned int nbModeles; //correspond au nombre de modèles présent dans le moteur 3D
 	Modele ** modeles; //correspond au modèles présent dans le moteur 3D
-	unsigned int nbAff; //correspond au nombre de surfaces à afficher
-	unsigned int capaciteAff; //correspond à la capacité de aff
-	SurfaceAff ** aff; //les surfaces à afficher
+	std::vector <SurfaceAff*> aff; //les surfaces à afficher
 	Point2D * points; //correspond aux points du modèle à afficher
 	Couleur couleurFond; //correspond à la couleur du fond du moteur 3D
 	Image image; //correspond à l'image du moteur
 	float ** distances; //correspond à la distance au carré des points de l'image
-	CouchesTransparentes ** transparences; //correspond aux différentes couches de transparence
+	std::vector <Couche> ** transparences; //correspond aux différentes couches de transparence
 	float distAffichage; //correspond au coefficient de la distance d'affichage proportionnelle à la taille des modèles, leur distMax et leur distance d'affichage
 	Camera * cam; //correspond à la camera
 	Mix_Music * musique; //correspond à la musique du moteur

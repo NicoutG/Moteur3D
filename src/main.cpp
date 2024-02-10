@@ -95,8 +95,8 @@ int main ()
 		moteur.getModele(2)->setAng(moteur.getModele(2)->getAngxy(),moteur.getModele(2)->getAngxz()-6,moteur.getModele(2)->getAngyz()+11);
 		moteur.getModele(3)->setAng(moteur.getModele(3)->getAngxy()+11,moteur.getModele(3)->getAngxz()+3,0);
 		temp=std::chrono::steady_clock::now()-start;
-		if (temp.count()<(t+1)/fps)
-			SDL_Delay(1000/fps-int(1000*temp.count())%(1000/fps));
+		/*if (temp.count()<(t+1)/fps)
+			SDL_Delay(1000/fps-int(1000*temp.count())%(1000/fps));*/
 		if (t%300==0) {
 			cout<<difftime(time(0),temps)<<endl;
 			temps=time(0);

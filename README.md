@@ -43,6 +43,8 @@ src : contient tout les fichiers .cpp
 
 ## Installation
 La bibliothèque SDL2 est indispensable pour pouvoir charger des images et gérer les sons et musiques.
+- Installation Windows : https://www.libsdl.org/download-2.0.php
+- Installation Linux : `sudo apt install libsdl2-dev libsdl2-mixer-dev libsdl2-image-dev`
 
 ### Mise en place
 Dans ce projet, vous pouvez trouver le fichier main.cpp qui donne un exemple de 

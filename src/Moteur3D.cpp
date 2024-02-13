@@ -15,7 +15,7 @@ Moteur3D::Moteur3D()
 	transparences=NULL;
 	distAffichage=1;
 	musique=NULL;
-	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 1024);
+	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 2048);
 }
 
 Moteur3D::Moteur3D(const std::string & moteur)
@@ -25,7 +25,7 @@ Moteur3D::Moteur3D(const std::string & moteur)
 	distances=NULL;
 	transparences=NULL;
 	musique=NULL;
-	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 1024);
+	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 2048);
 	charger(moteur);
 }
 

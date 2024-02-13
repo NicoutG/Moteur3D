@@ -38,7 +38,7 @@ Modele::Modele()
 	son=NULL;
 	intensite=50;
 	canal=-1;
-	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024);
+	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
 	if (Mix_AllocateChannels(-1)!=30)
 		Mix_AllocateChannels(30);
 	calculBase();
@@ -64,7 +64,7 @@ Modele::Modele(const std::string & model, const std::string & text)
 	son=NULL;
 	intensite=50;
 	canal=-1;
-	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024);
+	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
 	if (Mix_AllocateChannels(-1)!=30)
 		Mix_AllocateChannels(30);
 	calculBase();
@@ -92,7 +92,7 @@ Modele::Modele(const std::string & model, const std::string & text,const Matrice
 	son=NULL;
 	intensite=50;
 	canal=-1;
-	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024);
+	Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
 	if (Mix_AllocateChannels(-1)!=30)
 		Mix_AllocateChannels(30);
 	calculBase();

@@ -115,9 +115,8 @@ private:
 @param Point2D * p2 pointeur vers le point 2
 @param Point2D * p3 pointeur vers le point 3
 @param float ang l'angle de la surface par rapport à la caméra
-@param float distMin la distance entre la caméra et le plan de la surface
 **/
-	void traitementTriangle(const Modele * modele, unsigned int s, Point2D * p1, Point2D * p2, Point2D * p3, float ang, float distMin)&;
+	void traitementTriangle(const Modele * modele, unsigned int s, Point2D * p1, Point2D * p2, Point2D * p3, float ang)&;
 
 /**
 @brief afficherTriangle : Fait apparaitre les triangles sur l'image

@@ -186,20 +186,20 @@ void Editeur3D::placementPointsModele(Point2D * points, unsigned int nbPoints)
 		if (points[i].devant) {
 			pos=points[i].pos2D;
 			if (0<=pos.get(0,0) && pos.get(0,0)<image->getTaillex() && 0<=pos.get(1,0) && pos.get(1,0)<image->getTailley()) {
-				dist=norme(points[i].posCam);
+				dist=points[i].posCam.get(0,0);
 				if (distances[int(pos.get(1,0))][int(pos.get(0,0))]==-1) {
 					for (int y=std::max(0,int(pos.get(1,0)-tailley));y<std::min(int(image->getTailley()),int(pos.get(1,0)+tailley));y++)
 						for (int x=std::max(0,int(pos.get(0,0)-taillex));x<std::min(int(image->getTaillex()),int(pos.get(0,0)+taillex));x++) {
 							image->setCouleurRGB(y,x,rouge);
-							distances[y][x]=dist*dist;
+							distances[y][x]=dist;
 						}
 				}
 				else {
-					if (dist<sqrt(distances[int(pos.get(1,0))][int(pos.get(0,0))])+1) {
+					if (dist<distances[int(pos.get(1,0))][int(pos.get(0,0))]+1) {
 						for (int y=std::max(0,int(pos.get(1,0)-tailley));y<std::min(int(image->getTailley()),int(pos.get(1,0)+tailley));y++)
 							for (int x=std::max(0,int(pos.get(0,0)-taillex));x<std::min(int(image->getTaillex()),int(pos.get(0,0)+taillex));x++) {
 								image->setCouleurRGB(y,x,rouge);
-								distances[y][x]=dist*dist;
+								distances[y][x]=dist;
 							}
 					}
 					else
@@ -695,7 +695,7 @@ int Editeur3D::getPoint(int x,int y)
 		for (int i=std::max(0,int(x-taillex));i<std::min(int(image->getTaillex()),int(x+taillex));i++) {
 			for (unsigned int k=0;k<modele->getNbPoints();k++) {
 				if (i==points[k].pos2D.get(0,0) && j==points[k].pos2D.get(1,0)) {
-					distance=prodScal(points[k].posCam, points[k].posCam);
+					distance=points[k].posCam.get(0,0);
 					if (distanceMin==-1 ||distanceMin>distance) {
 						distanceMin=distance;
 						p=k;
@@ -732,7 +732,7 @@ int Editeur3D::getSurface(int x,int y)
 			l1=((a0d*m2.get(2,0)-a2d*m0.get(2,0))*it+(a2d*m0.get(1,0)-a0d*m2.get(1,0))*jt+m2.get(1,0)*m0.get(2,0)-m0.get(1,0)*m2.get(2,0))/d;
 			l2=((a1d*m0.get(2,0)-a0d*m1.get(2,0))*it+(a0d*m1.get(1,0)-a1d*m0.get(1,0))*jt+m0.get(1,0)*m1.get(2,0)-m1.get(1,0)*m0.get(2,0))/d;
 			pos=l1*m1+l2*m2+m0;
-			dist=prodScal(pos,pos);
+			dist=pos.get(0,0);
 			if ((distMin==-1) ||(dist<distMin)) {
 				distMin=dist;
 				s=i;

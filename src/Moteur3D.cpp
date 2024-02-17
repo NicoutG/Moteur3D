@@ -466,20 +466,17 @@ void Moteur3D::afficherSurface(Modele * modele, unsigned int s)&
 {
 	float ang=(3-prodScal(modele->getNormaleSurf(s),cam->getNormale()))/4.0;
 	unsigned int i1,i2,i3;
-	Triangle * tri=modele->getTriangleSurf(s,0);
-	float distMin=prodScal(modele->getNormaleSurf(s),modele->getPoint(tri->point1).pos-cam->getPos());
-	distMin=distMin*distMin;
 	for (unsigned int i=0;i<modele->getNbTrianglesSurf(s);i++) {
 		i1=modele->getTriangleSurf(s,i)->point1;
 		i2=modele->getTriangleSurf(s,i)->point2;
 		i3=modele->getTriangleSurf(s,i)->point3;
-		traitementTriangle(modele,s,&points[i1],&points[i2],&points[i3],ang,distMin);
+		traitementTriangle(modele,s,&points[i1],&points[i2],&points[i3],ang);
 	}
 }
 
-void Moteur3D::traitementTriangle(const Modele * modele, unsigned int s, Point2D * p1, Point2D * p2, Point2D * p3, float ang, float distMin)&
+void Moteur3D::traitementTriangle(const Modele * modele, unsigned int s, Point2D * p1, Point2D * p2, Point2D * p3, float ang)&
 {
-	if (p1->devant ||p2->devant ||p3->devant) {
+	if (p1->devant || p2->devant || p3->devant) {
 		Point2D * point1;
 		Point2D * point2;
 		Point2D * point3;
@@ -511,36 +508,42 @@ void Moteur3D::traitementTriangle(const Modele * modele, unsigned int s, Point2D
 							point2=p3;
 							point3=p1;
 						}
-		if (point3->devant)
+		float distMin;
+		if (point3->devant) {
+			distMin=std::min(point1->posCam.get(0,0),std::min(point2->posCam.get(0,0),point3->posCam.get(0,0)));
 			afficherTriangle(modele,s,point1,point2,point3,ang,distMin);
+		}
 		else {
 			float prod;
+			float dist=1;
 			Point2D p4,p5;
 			if (point2->devant) {
 				p4.devant=1;
-				p4.posCam=point3->posCam+(point3->posCam.get(0,0)-0.5)*(point1->posCam-point3->posCam)/(point3->posCam.get(0,0)-point1->posCam.get(0,0));
+				p4.posCam=point3->posCam+(point3->posCam.get(0,0)-dist)*(point1->posCam-point3->posCam)/(point3->posCam.get(0,0)-point1->posCam.get(0,0));
 				prod=cam->getDistFoc()*cam->getTaillex()/p4.posCam.get(0,0);
 				p4.pos2D.set(0,0,int(0.5+image.getTaillex()*(cam->getTaillex()/2.0+p4.posCam.get(1,0)*prod)/cam->getTaillex()));
 				p4.pos2D.set(1,0,int(0.5+image.getTailley()*(cam->getTailley()/2.0-p4.posCam.get(2,0)*prod)/cam->getTailley()));
 				p5.devant=1;
-				p5.posCam=point3->posCam+(point3->posCam.get(0,0)-0.5)*(point2->posCam-point3->posCam)/(point3->posCam.get(0,0)-point2->posCam.get(0,0));
+				p5.posCam=point3->posCam+(point3->posCam.get(0,0)-dist)*(point2->posCam-point3->posCam)/(point3->posCam.get(0,0)-point2->posCam.get(0,0));
 				prod=cam->getDistFoc()*cam->getTaillex()/p5.posCam.get(0,0);
 				p5.pos2D.set(0,0,int(0.5+image.getTaillex()*(cam->getTaillex()/2.0+p5.posCam.get(1,0)*prod)/cam->getTaillex()));
 				p5.pos2D.set(1,0,int(0.5+image.getTailley()*(cam->getTailley()/2.0-p5.posCam.get(2,0)*prod)/cam->getTailley()));
+				distMin=std::min(point1->posCam.get(0,0),std::min(point2->posCam.get(0,0),p5.posCam.get(0,0)));
 				afficherTriangle(modele,s,point1,point2,&p5,ang,distMin);
 			}
 			else {
 				p4.devant=1;
-				p4.posCam=point2->posCam+(point2->posCam.get(0,0)-0.5)*(point1->posCam-point2->posCam)/(point2->posCam.get(0,0)-point1->posCam.get(0,0));
+				p4.posCam=point2->posCam+(point2->posCam.get(0,0)-dist)*(point1->posCam-point2->posCam)/(point2->posCam.get(0,0)-point1->posCam.get(0,0));
 				prod=cam->getDistFoc()*cam->getTaillex()/p4.posCam.get(0,0);
 				p4.pos2D.set(0,0,int(0.5+image.getTaillex()*(cam->getTaillex()/2.0+p4.posCam.get(1,0)*prod)/cam->getTaillex()));
 				p4.pos2D.set(1,0,int(0.5+image.getTailley()*(cam->getTailley()/2.0-p4.posCam.get(2,0)*prod)/cam->getTailley()));
 				p5.devant=1;
-				p5.posCam=point3->posCam+(point3->posCam.get(0,0)-0.5)*(point1->posCam-point3->posCam)/(point3->posCam.get(0,0)-point1->posCam.get(0,0));
+				p5.posCam=point3->posCam+(point3->posCam.get(0,0)-dist)*(point1->posCam-point3->posCam)/(point3->posCam.get(0,0)-point1->posCam.get(0,0));
 				prod=cam->getDistFoc()*cam->getTaillex()/p5.posCam.get(0,0);
 				p5.pos2D.set(0,0,int(0.5+image.getTaillex()*(cam->getTaillex()/2.0+p5.posCam.get(1,0)*prod)/cam->getTaillex()));
 				p5.pos2D.set(1,0,int(0.5+image.getTailley()*(cam->getTailley()/2.0-p5.posCam.get(2,0)*prod)/cam->getTailley()));
 			}
+			distMin=std::min(point1->posCam.get(0,0),std::min(p4.posCam.get(0,0),p5.posCam.get(0,0)));
 			afficherTriangle(modele,s,point1,&p4,&p5,ang,distMin);
 		}
 	}
@@ -638,7 +641,7 @@ void Moteur3D::afficherTriangle(const Modele * modele, unsigned int s, Point2D *
 	id=id*camTaillex/imageTaillex;
 	jd=-jd*camTailley/imageTailley;
 	float intn1,intn2,intd,denom,l1,l2;
-	float dist,penti2,penti3;
+	float penti2,penti3;
 	int x,y;
 	penti2=(p2->pos2D.get(0,0)-p1->pos2D.get(0,0))/(j2-j1);
 	penti3=(p3->pos2D.get(0,0)-p1->pos2D.get(0,0))/(j3-j1);
@@ -664,8 +667,7 @@ void Moteur3D::afficherTriangle(const Modele * modele, unsigned int s, Point2D *
 				posx=l1*m1x+l2*m2x+m0x;
 				posy=l1*m1y+l2*m2y+m0y;
 				posz=l1*m1z+l2*m2z+m0z;
-				dist=posx*posx+posy*posy+posz*posz;
-				if (distances[j][i]==-1 || distances[j][i]>dist) {
+				if (distances[j][i]==-1 || distances[j][i]>posx) {
 					if (img!=NULL) {
 						if (imgTaillex>1 || imgTailley>1) {
 							x=x1*posx+x2*posy+x3*posz+x0;
@@ -683,12 +685,12 @@ void Moteur3D::afficherTriangle(const Modele * modele, unsigned int s, Point2D *
 					}
 					alpha=couleur.getA();
 					if (alpha==255) {
-						distances[j][i]=dist;
+						distances[j][i]=posx;
 						image.setCouleurRGB(j,i,couleur);
 					}
 					else
 						if (alpha>0)
-							addTransparent(i,j,couleur,dist);
+							addTransparent(i,j,couleur,posx);
 				}
 			}
 		}
@@ -715,8 +717,7 @@ void Moteur3D::afficherTriangle(const Modele * modele, unsigned int s, Point2D *
 				posx=l1*m1x+l2*m2x+m0x;
 				posy=l1*m1y+l2*m2y+m0y;
 				posz=l1*m1z+l2*m2z+m0z;
-				dist=posx*posx+posy*posy+posz*posz;
-				if (distances[j][i]==-1 || distances[j][i]>dist) {
+				if (distances[j][i]==-1 || distances[j][i]>posx) {
 					if (img!=NULL) {
 						if (imgTaillex>1 || imgTailley>1) {
 							x=x1*posx+x2*posy+x3*posz+x0;
@@ -734,12 +735,12 @@ void Moteur3D::afficherTriangle(const Modele * modele, unsigned int s, Point2D *
 					}
 					alpha=couleur.getA();
 					if (alpha==255) {
-						distances[j][i]=dist;
+						distances[j][i]=posx;
 						image.setCouleurRGB(j,i,couleur);
 					}
 					else
 						if (alpha>0)
-							addTransparent(i,j,couleur,dist);
+							addTransparent(i,j,couleur,posx);
 				}
 			}
 		}

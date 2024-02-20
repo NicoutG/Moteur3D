@@ -549,6 +549,36 @@ void Moteur3D::traitementTriangle(const Modele * modele, unsigned int s, Point2D
 	}
 }
 
+void Moteur3D::interpolationLigne(Point2D * p1, Point2D * p2, unsigned int dep, unsigned int fin, std::vector <int> tab [])&
+{
+	int p1y=p1->pos2D.get(1,0);
+	int p2y=p2->pos2D.get(1,0);
+	int p1x=p1->pos2D.get(0,0);
+	int p2x=p2->pos2D.get(0,0);
+	int dif=p2y-p1y;
+	int indice, x;
+	if (dif>0) {
+		int debut=std::max((int)dep,p1y);
+		int final=std::min((int)fin,p2y);
+		float pentX=(p2x-p1x)/(1.0*dif);
+		float constanteX=p1x-pentX*p1y;
+		for (int i=debut;i<=final;i++) {
+			indice=i-dep;
+			if (tab[indice].size()<2) {
+				x=pentX*i+constanteX;
+				tab[indice].push_back(x);
+			}
+		}
+	}
+}
+
+void Moteur3D::interpolationTriangle(Point2D * p1, Point2D * p2, Point2D * p3, unsigned int dep, unsigned int fin, std::vector <int> tab [])&
+{
+	interpolationLigne(p1,p2,dep,fin,tab);
+	interpolationLigne(p1,p3,dep,fin,tab);
+	interpolationLigne(p2,p3,dep,fin,tab);
+}
+
 void Moteur3D::afficherTriangle(const Modele * modele, unsigned int s, Point2D * p1, Point2D * p2, Point2D * p3, float ang, float distMin)&
 {
 	Point2D *p;
@@ -567,180 +597,132 @@ void Moteur3D::afficherTriangle(const Modele * modele, unsigned int s, Point2D *
 			p1=p;
 		}
 	}
-	int imageTaillex=image.getTaillex(), imageTailley=image.getTailley();
-	Matrice v0(3,1),v1(3,1),v2(3,1);
-	const Image * img=modele->getImageSurf(s);
-	float cosAng,sinAng,constx,consty;
-	float x0,x1,x2,x3,y0,y1,y2,y3;
-	Couleur couleur;
-	float opacite=modele->getOpacite()*modele->getOpaciteSurf(s);
-	unsigned char alpha;
-	int imgTaillex, imgTailley;
-	if (img!=NULL) {
-		imgTaillex=img->getTaillex();
-		imgTailley=img->getTailley();
-		if (imgTaillex>1 || imgTailley>1) {
-			v0=points[modele->getIndicePointSurf(s,0)].posCam;
-			v1=(points[modele->getIndicePointSurf(s,1)].posCam-v0);
-			v2=(points[modele->getIndicePointSurf(s,2)].posCam-v0);
-			orthonormalisation(v1,v2);
-			v1=v1/(modele->getTailleySurf(s)*modele->getTaille());
-			v2=v2/(modele->getTaillexSurf(s)*modele->getTaille());
-			cosAng=modele->cs.Cos(modele->getAngleSurf(s));
-			sinAng=modele->cs.Sin(modele->getAngleSurf(s));
-			constx=-v2.get(0,0)*v0.get(0,0)-v2.get(1,0)*v0.get(1,0)-v2.get(2,0)*v0.get(2,0)-modele->getPosxSurf(s)/(modele->getTaillexSurf(s)*modele->getTaille());
-			consty=-v1.get(0,0)*v0.get(0,0)-v1.get(1,0)*v0.get(1,0)-v1.get(2,0)*v0.get(2,0)-modele->getPosySurf(s)/(modele->getTailleySurf(s)*modele->getTaille());
-			x0=cosAng*constx+sinAng*consty;
-			y0=imgTailley+sinAng*constx-cosAng*consty;
-			x1=cosAng*v2.get(0,0)+sinAng*v1.get(0,0);
-			y1=sinAng*v2.get(0,0)-cosAng*v1.get(0,0);
-			x2=cosAng*v2.get(1,0)+sinAng*v1.get(1,0);
-			y2=sinAng*v2.get(1,0)-cosAng*v1.get(1,0);
-			x3=cosAng*v2.get(2,0)+sinAng*v1.get(2,0);
-			y3=sinAng*v2.get(2,0)-cosAng*v1.get(2,0);
+	int dep=std::max(0,(int)p1->pos2D.get(1,0));
+	int fin=std::min((int)image.getTailley(),(int)p3->pos2D.get(1,0));
+	int longueur=fin-dep+1;
+	if (dep<=fin) {
+		std::vector <int> tab [longueur];
+		interpolationTriangle(p1,p2,p3,dep,fin,tab);
+		int imageTaillex=image.getTaillex(), imageTailley=image.getTailley();
+		Matrice v0(3,1),v1(3,1),v2(3,1);
+		const Image * img=modele->getImageSurf(s);
+		float cosAng,sinAng,constx,consty;
+		float x0,x1,x2,x3,y0,y1,y2,y3;
+		Couleur couleur,couleurImg;
+		float opacite=modele->getOpacite()*modele->getOpaciteSurf(s);
+		unsigned char alpha;
+		int imgTaillex, imgTailley;
+		if (img!=NULL) {
+			imgTaillex=img->getTaillex();
+			imgTailley=img->getTailley();
+			if (imgTaillex>1 || imgTailley>1) {
+				v0=points[modele->getIndicePointSurf(s,0)].posCam;
+				v1=(points[modele->getIndicePointSurf(s,1)].posCam-v0);
+				v2=(points[modele->getIndicePointSurf(s,2)].posCam-v0);
+				orthonormalisation(v1,v2);
+				v1=v1/(modele->getTailleySurf(s)*modele->getTaille());
+				v2=v2/(modele->getTaillexSurf(s)*modele->getTaille());
+				cosAng=modele->cs.Cos(modele->getAngleSurf(s));
+				sinAng=modele->cs.Sin(modele->getAngleSurf(s));
+				constx=-v2.get(0,0)*v0.get(0,0)-v2.get(1,0)*v0.get(1,0)-v2.get(2,0)*v0.get(2,0)-modele->getPosxSurf(s)/(modele->getTaillexSurf(s)*modele->getTaille());
+				consty=-v1.get(0,0)*v0.get(0,0)-v1.get(1,0)*v0.get(1,0)-v1.get(2,0)*v0.get(2,0)-modele->getPosySurf(s)/(modele->getTailleySurf(s)*modele->getTaille());
+				x0=cosAng*constx+sinAng*consty;
+				y0=imgTailley+sinAng*constx-cosAng*consty;
+				x1=cosAng*v2.get(0,0)+sinAng*v1.get(0,0);
+				y1=sinAng*v2.get(0,0)-cosAng*v1.get(0,0);
+				x2=cosAng*v2.get(1,0)+sinAng*v1.get(1,0);
+				y2=sinAng*v2.get(1,0)-cosAng*v1.get(1,0);
+				x3=cosAng*v2.get(2,0)+sinAng*v1.get(2,0);
+				y3=sinAng*v2.get(2,0)-cosAng*v1.get(2,0);
+			}
+			else
+				if (imgTaillex==1 && imgTailley==1)
+					couleur.set(ang*img->getCouleur(0,0).getR(),ang*img->getCouleur(0,0).getG(),ang*img->getCouleur(0,0).getB(),opacite*img->getCouleur(0,0).getA());
 		}
 		else
-			if (imgTaillex==1 && imgTailley==1)
-				couleur.set(ang*img->getCouleur(0,0).getR(),ang*img->getCouleur(0,0).getG(),ang*img->getCouleur(0,0).getB(),opacite*img->getCouleur(0,0).getA());
-	}
-	else
-		couleur.set(100*ang,100*ang,100*ang,255*opacite);
-	int j1=p1->pos2D.get(1,0), j2=p2->pos2D.get(1,0), j3=p3->pos2D.get(1,0);
-	int i1,i2,i3;
-	float m0x,m0y,m0z,m1x,m1y,m1z,m2x,m2y,m2z;
-	m0x=p1->posCam.get(0,0);
-	m0y=p1->posCam.get(1,0);
-	m0z=p1->posCam.get(2,0);
-	m1x=p2->posCam.get(0,0)-m0x;
-	m1y=p2->posCam.get(1,0)-m0y;
-	m1z=p2->posCam.get(2,0)-m0z;
-	m2x=p3->posCam.get(0,0)-m0x;
-	m2y=p3->posCam.get(1,0)-m0y;
-	m2z=p3->posCam.get(2,0)-m0z;
-	float posx,posy,posz;
-	float a0d,a1d,a2d,in1,jn1,n1,in2,jn2,n2,id,jd,d;
-	float camTaillex=cam->getTaillex();
-	float camTailley=cam->getTailley();
-	float camDistFoc=cam->getDistFoc();
-	a0d=1.0*m0x/(camDistFoc*camTaillex);
-	a1d=1.0*m1x/(camDistFoc*camTaillex);
-	a2d=1.0*m2x/(camDistFoc*camTaillex);
-	in1=a0d*m2z-a2d*m0z;
-	jn1=a2d*m0y-a0d*m2y;
-	n1=m2y*m0z-m0y*m2z-in1/2.0*camTaillex+jn1/2.0*camTailley;
-	in1=in1*camTaillex/imageTaillex;
-	jn1=-jn1*camTailley/imageTailley;
-	in2=a1d*m0z-a0d*m1z;
-	jn2=a0d*m1y-a1d*m0y;
-	n2=m0y*m1z-m1y*m0z-in2/2.0*camTaillex+jn2/2.0*camTailley;
-	in2=in2*camTaillex/imageTaillex;
-	jn2=-jn2*camTailley/imageTailley;
-	id=a2d*m1z-a1d*m2z;
-	jd=a1d*m2y-a2d*m1y;
-	d=m1y*m2z-m2y*m1z-id/2.0*camTaillex+jd/2.0*camTailley;
-	id=id*camTaillex/imageTaillex;
-	jd=-jd*camTailley/imageTailley;
-	float intn1,intn2,intd,denom,l1,l2;
-	float penti2,penti3;
-	int x,y;
-	penti2=(p2->pos2D.get(0,0)-p1->pos2D.get(0,0))/(j2-j1);
-	penti3=(p3->pos2D.get(0,0)-p1->pos2D.get(0,0))/(j3-j1);
-	int yf=std::min(imageTailley,j2);
-	int xf;
-	for (unsigned int j=std::max(0,j1);int(j)<yf;j++) {
-		intn1=jn1*j+n1;
-		intn2=jn2*j+n2;
-		intd=jd*j+d;
-		i2=p1->pos2D.get(0,0)+(j-j1)*penti2;
-		i3=p1->pos2D.get(0,0)+(j-j1)*penti3;
-		if (i2>=i3) {
-			i1=i3;
-			i3=i2;
-			i2=i1;
-		}
-		xf=std::min(imageTaillex,i3);
-		for (unsigned int i=std::max(0,i2);int(i)<xf;i++) {
-			if (distances[j][i]==-1 || distances[j][i]>distMin) {
-				denom=id*i+intd;
-				l1=(in1*i+intn1)/denom;
-				l2=(in2*i+intn2)/denom;
-				posx=l1*m1x+l2*m2x+m0x;
-				if (distances[j][i]==-1 || distances[j][i]>posx) {
-					if (img!=NULL) {
-						if (imgTaillex>1 || imgTailley>1) {
-							posy=l1*m1y+l2*m2y+m0y;
-							posz=l1*m1z+l2*m2z+m0z;
-							x=x1*posx+x2*posy+x3*posz+x0;
-							if (x>=0)
-								x=x%imgTaillex;
+			couleur.set(100*ang,100*ang,100*ang,255*opacite);
+		int i2,i3;
+		float m0x,m0y,m0z,m1x,m1y,m1z,m2x,m2y,m2z;
+		m0x=p1->posCam.get(0,0);
+		m0y=p1->posCam.get(1,0);
+		m0z=p1->posCam.get(2,0);
+		m1x=p2->posCam.get(0,0)-m0x;
+		m1y=p2->posCam.get(1,0)-m0y;
+		m1z=p2->posCam.get(2,0)-m0z;
+		m2x=p3->posCam.get(0,0)-m0x;
+		m2y=p3->posCam.get(1,0)-m0y;
+		m2z=p3->posCam.get(2,0)-m0z;
+		float posx,posy,posz;
+		float a0d,a1d,a2d,in1,jn1,n1,in2,jn2,n2,id,jd,d;
+		float camTaillex=cam->getTaillex();
+		float camTailley=cam->getTailley();
+		float camDistFoc=cam->getDistFoc();
+		a0d=1.0*m0x/(camDistFoc*camTaillex);
+		a1d=1.0*m1x/(camDistFoc*camTaillex);
+		a2d=1.0*m2x/(camDistFoc*camTaillex);
+		in1=a0d*m2z-a2d*m0z;
+		jn1=a2d*m0y-a0d*m2y;
+		n1=m2y*m0z-m0y*m2z-in1/2.0*camTaillex+jn1/2.0*camTailley;
+		in1=in1*camTaillex/imageTaillex;
+		jn1=-jn1*camTailley/imageTailley;
+		in2=a1d*m0z-a0d*m1z;
+		jn2=a0d*m1y-a1d*m0y;
+		n2=m0y*m1z-m1y*m0z-in2/2.0*camTaillex+jn2/2.0*camTailley;
+		in2=in2*camTaillex/imageTaillex;
+		jn2=-jn2*camTailley/imageTailley;
+		id=a2d*m1z-a1d*m2z;
+		jd=a1d*m2y-a2d*m1y;
+		d=m1y*m2z-m2y*m1z-id/2.0*camTaillex+jd/2.0*camTailley;
+		id=id*camTaillex/imageTaillex;
+		jd=-jd*camTailley/imageTailley;
+		float intn1,intn2,intd,denom,l1,l2;
+		int x,y,indice,xtab1,xtab2;
+
+		for (int j=dep;j<fin;j++) {
+			indice=j-dep;
+			if (tab[indice].size()==2) {
+				intn1=jn1*j+n1;
+				intn2=jn2*j+n2;
+				intd=jd*j+d;
+				xtab1=tab[indice].at(0);
+				xtab2=tab[indice].at(1);
+				i2=std::max(0,std::min(xtab1,xtab2));
+				i3=std::min(imageTaillex,std::max(xtab1,xtab2));
+				for (int i=i2;i<i3;i++) {
+					if (distances[j][i]==-1 || distances[j][i]>distMin) {
+						denom=id*i+intd;
+						l1=(in1*i+intn1)/denom;
+						l2=(in2*i+intn2)/denom;
+						posx=l1*m1x+l2*m2x+m0x;
+						if (distances[j][i]==-1 || distances[j][i]>posx) {
+							if (img!=NULL) {
+								if (imgTaillex>1 || imgTailley>1) {
+									posy=l1*m1y+l2*m2y+m0y;
+									posz=l1*m1z+l2*m2z+m0z;
+									x=x1*posx+x2*posy+x3*posz+x0;
+									if (x>=0)
+										x=x%imgTaillex;
+									else
+										x=imgTaillex-(-x)%imgTaillex-1;
+									y=y1*posx+y2*posy+y3*posz+y0;
+									if (y>=0)
+										y=y%imgTailley;
+									else
+										y=imgTailley-(-y)%imgTailley-1;
+									couleurImg=img->getCouleur(y,x);
+									couleur.set(ang*couleurImg.getR(),ang*couleurImg.getG(),ang*couleurImg.getB(),opacite*couleurImg.getA());
+								}
+							}
+							alpha=couleur.getA();
+							if (alpha==255) {
+								distances[j][i]=posx;
+								image.setCouleurRGB(j,i,couleur);
+							}
 							else
-								x=imgTaillex-(-x)%imgTaillex-1;
-							y=y1*posx+y2*posy+y3*posz+y0;
-							if (y>=0)
-								y=y%imgTailley;
-							else
-								y=imgTailley-(-y)%imgTailley-1;
-							couleur.set(ang*img->getCouleur(y,x).getR(),ang*img->getCouleur(y,x).getG(),ang*img->getCouleur(y,x).getB(),opacite*img->getCouleur(y,x).getA());
+								if (alpha>0)
+									addTransparent(i,j,couleur,posx);
 						}
 					}
-					alpha=couleur.getA();
-					if (alpha==255) {
-						distances[j][i]=posx;
-						image.setCouleurRGB(j,i,couleur);
-					}
-					else
-						if (alpha>0)
-							addTransparent(i,j,couleur,posx);
-				}
-			}
-		}
-	}
-	penti2=(p3->pos2D.get(0,0)-p2->pos2D.get(0,0))/(j3-j2);
-	yf=std::min(imageTailley,j3);
-	for (unsigned int j=std::max(0,j2);int(j)<yf;j++) {
-		intn1=jn1*j+n1;
-		intn2=jn2*j+n2;
-		intd=jd*j+d;
-		i2=p2->pos2D.get(0,0)+(j-j2)*penti2;
-		i3=p1->pos2D.get(0,0)+(j-j1)*penti3;
-		if (i2>=i3) {
-			i1=i3;
-			i3=i2;
-			i2=i1;
-		}
-		xf=std::min(imageTaillex,i3);
-		for (unsigned int i=std::max(0,i2);int(i)<xf;i++) {
-			if (distances[j][i]==-1 || distances[j][i]>distMin) {
-				denom=id*i+intd;
-				l1=(in1*i+intn1)/denom;
-				l2=(in2*i+intn2)/denom;
-				posx=l1*m1x+l2*m2x+m0x;
-				if (distances[j][i]==-1 || distances[j][i]>posx) {
-					if (img!=NULL) {
-						if (imgTaillex>1 || imgTailley>1) {
-							posy=l1*m1y+l2*m2y+m0y;
-							posz=l1*m1z+l2*m2z+m0z;
-							x=x1*posx+x2*posy+x3*posz+x0;
-							if (x>=0)
-								x=x%imgTaillex;
-							else
-								x=imgTaillex-(-x)%imgTaillex-1;
-							y=y1*posx+y2*posy+y3*posz+y0;
-							if (y>=0)
-								y=y%imgTailley;
-							else
-								y=imgTailley-(-y)%imgTailley-1;
-							couleur.set(ang*img->getCouleur(y,x).getR(),ang*img->getCouleur(y,x).getG(),ang*img->getCouleur(y,x).getB(),opacite*img->getCouleur(y,x).getA());
-						}
-					}
-					alpha=couleur.getA();
-					if (alpha==255) {
-						distances[j][i]=posx;
-						image.setCouleurRGB(j,i,couleur);
-					}
-					else
-						if (alpha>0)
-							addTransparent(i,j,couleur,posx);
 				}
 			}
 		}

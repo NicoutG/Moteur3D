@@ -118,6 +118,10 @@ private:
 **/
 	void traitementTriangle(const Modele * modele, unsigned int s, Point2D * p1, Point2D * p2, Point2D * p3, float ang)&;
 
+	void interpolationTriangle(Point2D * p1, Point2D * p2, Point2D * p3, unsigned int dep, unsigned int fin, std::vector <int> tab [])&;
+
+	void interpolationLigne(Point2D * p1, Point2D * p2, unsigned int dep, unsigned int fin, std::vector <int> tab [])&;
+
 /**
 @brief afficherTriangle : Fait apparaitre les triangles sur l'image
 @param Modele* modele le pointeur vers le modèle à faire apparaitre sur l'image

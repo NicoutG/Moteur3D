@@ -665,11 +665,11 @@ void Moteur3D::afficherTriangle(const Modele * modele, unsigned int s, Point2D *
 				l1=(in1*i+intn1)/denom;
 				l2=(in2*i+intn2)/denom;
 				posx=l1*m1x+l2*m2x+m0x;
-				posy=l1*m1y+l2*m2y+m0y;
-				posz=l1*m1z+l2*m2z+m0z;
 				if (distances[j][i]==-1 || distances[j][i]>posx) {
 					if (img!=NULL) {
 						if (imgTaillex>1 || imgTailley>1) {
+							posy=l1*m1y+l2*m2y+m0y;
+							posz=l1*m1z+l2*m2z+m0z;
 							x=x1*posx+x2*posy+x3*posz+x0;
 							if (x>=0)
 								x=x%imgTaillex;
@@ -715,11 +715,11 @@ void Moteur3D::afficherTriangle(const Modele * modele, unsigned int s, Point2D *
 				l1=(in1*i+intn1)/denom;
 				l2=(in2*i+intn2)/denom;
 				posx=l1*m1x+l2*m2x+m0x;
-				posy=l1*m1y+l2*m2y+m0y;
-				posz=l1*m1z+l2*m2z+m0z;
 				if (distances[j][i]==-1 || distances[j][i]>posx) {
 					if (img!=NULL) {
 						if (imgTaillex>1 || imgTailley>1) {
+							posy=l1*m1y+l2*m2y+m0y;
+							posz=l1*m1z+l2*m2z+m0z;
 							x=x1*posx+x2*posy+x3*posz+x0;
 							if (x>=0)
 								x=x%imgTaillex;
@@ -751,22 +751,21 @@ void Moteur3D::addTransparent(unsigned int x, unsigned int y, const Couleur & co
 {
 	assert(x<image.getTaillex());
 	assert(y<image.getTailley());
-	if (distances[y][x]==-1 || dist<distances[y][x]) {
-		unsigned int k=0;
-		while (k<transparences[y][x].size() && dist<transparences[y][x].at(k).distance) {
-			k++;
-		}
-		Couche couche;
-		couche.couleur=coul;
-		couche.distance=dist;
-		transparences[y][x].insert(transparences[y][x].begin()+k,couche);
+	unsigned int k=0;
+	while (k<transparences[y][x].size() && dist<transparences[y][x].at(k).distance) {
+		k++;
 	}
+	Couche couche;
+	couche.couleur=coul;
+	couche.distance=dist;
+	transparences[y][x].insert(transparences[y][x].begin()+k,couche);
 }
 
 void Moteur3D::appliquerTransparence()&
 {
 	unsigned int tx=image.getTaillex();
 	unsigned int ty=image.getTailley();
+	float alpha,beta;
 	Couleur couleur,couleurIm,couleurTrans;
 	for (unsigned int j=0;j<ty;j++)
 		for (unsigned int i=0;i<tx;i++)
@@ -774,9 +773,11 @@ void Moteur3D::appliquerTransparence()&
 				if (distances[j][i]==-1 || transparences[j][i].at(transparences[j][i].size()-k-1).distance<distances[j][i]) {
 					couleurIm=image.getCouleur(j,i);
 					couleurTrans=transparences[j][i].at(transparences[j][i].size()-k-1).couleur;
-					couleur.setR((couleurTrans.getA()*couleurTrans.getR()+(255-couleurTrans.getA())*couleurIm.getR())/255);
-					couleur.setG((couleurTrans.getA()*couleurTrans.getG()+(255-couleurTrans.getA())*couleurIm.getG())/255);
-					couleur.setB((couleurTrans.getA()*couleurTrans.getB()+(255-couleurTrans.getA())*couleurIm.getB())/255);
+					alpha=couleurTrans.getA()/255.0;
+					beta=1-alpha;
+					couleur.setR(alpha*couleurTrans.getR()+beta*couleurIm.getR());
+					couleur.setG(alpha*couleurTrans.getG()+beta*couleurIm.getG());
+					couleur.setB(alpha*couleurTrans.getB()+beta*couleurIm.getB());
 					image.setCouleurRGB(j,i,couleur);
 				}
 }

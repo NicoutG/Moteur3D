@@ -752,7 +752,7 @@ void Moteur3D::addTransparent(unsigned int x, unsigned int y, const Couleur & co
 	assert(x<image.getTaillex());
 	assert(y<image.getTailley());
 	unsigned int k=0;
-	while (k<transparences[y][x].size() && dist<transparences[y][x].at(k).distance) {
+	while (k<transparences[y][x].size() && dist>transparences[y][x].at(k).distance) {
 		k++;
 	}
 	Couche couche;

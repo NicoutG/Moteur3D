@@ -59,3 +59,16 @@ void Affichage_SDL::ajouter(const Image * img, unsigned int posy, unsigned int p
 	SDL_RenderCopy(renderer,texture,NULL,&position);
 	SDL_DestroyTexture(texture);
 }
+
+SDL_Window* Affichage_SDL::getWindow()
+{
+	return window;
+}
+
+unsigned int Affichage_SDL::getTaillex() {
+	return taillex;
+}
+
+unsigned int Affichage_SDL::getTailley() {
+	return tailley;
+}

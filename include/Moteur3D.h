@@ -57,6 +57,7 @@ private:
 	float distAffichage; //correspond au coefficient de la distance d'affichage proportionnelle à la taille des modèles, leur distMax et leur distance d'affichage
 	Camera * cam; //correspond à la camera
 	Mix_Music * musique; //correspond à la musique du moteur
+	Matrice posLumiere{3,1}; //correspond à la position de la lumière
 
 /**
 @brief creationTableau : redimensionne distances et image si neccessaire 
@@ -118,8 +119,25 @@ private:
 **/
 	void traitementTriangle(const Modele * modele, unsigned int s, Point2D * p1, Point2D * p2, Point2D * p3, float ang)&;
 
+/**
+@brief interpolationTriangle : Insère les coordonnées x des points entre p1, p2 et p3 pour chaque coordonnées y
+@param Point2D * p1 pointeur vers le point 1
+@param Point2D * p2 pointeur vers le point 2
+@param Point2D * p2 pointeur vers le point 3
+@param unsigned int dep la première coordonnée y du tableau
+@param unsigned int fin la dernière coordonnée y du tableau
+@param vector <int> tab [] le tableau de coordonnées x à remplir
+**/
 	void interpolationTriangle(Point2D * p1, Point2D * p2, Point2D * p3, unsigned int dep, unsigned int fin, std::vector <int> tab [])&;
 
+/**
+@brief interpolationLigne : Insère les coordonnées x des points entre p1 et p2 pour chaque coordonnées y
+@param Point2D * p1 pointeur vers le point 1
+@param Point2D * p2 pointeur vers le point 2
+@param unsigned int dep la première coordonnée y du tableau
+@param unsigned int fin la dernière coordonnée y du tableau
+@param vector <int> tab [] le tableau de coordonnées x à remplir
+**/
 	void interpolationLigne(Point2D * p1, Point2D * p2, unsigned int dep, unsigned int fin, std::vector <int> tab [])&;
 
 /**
@@ -367,6 +385,26 @@ public:
 @return float la valeur du volume de la musique du moteur de jeu (0 à 100)
 **/
 	float getVolume()const;
+
+/**
+@brief setPosLumiere : mutateur de posLumiere
+@param const Matrice& pos la position de la lumière
+**/
+	void setPosLumiere(const Matrice & pos);
+
+/**
+@brief setPosLumiere : mutateur de posLumiere
+@param float x la position x de la lumière
+@param float y la position y de la lumière
+@param float z la position z de la lumière
+**/
+	void setPosLumiere(float x, float y, float z);
+
+/**
+@brief getPosLumiere : accesseur de posLumiere
+@return const Matrice& la position de la lumière
+**/
+	const Matrice& getPosLumiere()const &;
 
 };
 

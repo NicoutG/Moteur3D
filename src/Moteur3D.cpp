@@ -355,6 +355,25 @@ float Moteur3D::getVolume()const
 	return 100.0*Mix_VolumeMusic(-1)/MIX_MAX_VOLUME;
 }
 
+void Moteur3D::setPosLumiere(const Matrice & pos)
+{
+	assert(pos.getDimy()==3 && pos.getDimx()==1);
+	posLumiere=pos;
+}
+
+void Moteur3D::setPosLumiere(float x, float y, float z)
+{
+	posLumiere.set(0,0,x);
+	posLumiere.set(1,0,y);
+	posLumiere.set(2,0,z);
+}
+
+const Matrice& Moteur3D::getPosLumiere()const &
+{
+	const Matrice & res=posLumiere;
+	return res;
+}
+
 void Moteur3D::creationTableau(unsigned int y, unsigned int x)&
 {
 	assert(y!=0 && x!=0);
@@ -464,7 +483,17 @@ void Moteur3D::majPoints(const Modele * modele,unsigned int s)&
 
 void Moteur3D::afficherSurface(Modele * modele, unsigned int s)&
 {
-	float ang=(3-prodScal(modele->getNormaleSurf(s),cam->getNormale()))/4.0;
+	float ang=0.1;
+	Matrice surf (3,1);
+	surf=modele->getNormaleSurf(s);
+	Matrice lumiere (3,1);
+	lumiere=modele->getCentreSurf(s)-posLumiere;
+	float norm=norme(lumiere);
+	if (norm>0) {
+		lumiere=lumiere/norm;
+		ang=0.4+0.6*(1-prodScal(lumiere,surf))/2.0;
+
+	}
 	unsigned int i1,i2,i3;
 	for (unsigned int i=0;i<modele->getNbTrianglesSurf(s);i++) {
 		i1=modele->getTriangleSurf(s,i)->point1;

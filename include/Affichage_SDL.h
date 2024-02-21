@@ -48,6 +48,24 @@ public:
 @param unsigned int largeur la largeur de l'image sur le renderer
 **/
 	void ajouter(Image const * img, unsigned int posy, unsigned int posx, unsigned int hauteur, unsigned int largeur);
+
+/**
+@brief getWindow : accesseur de window
+@return SDL_Window* window
+**/
+	SDL_Window* getWindow();
+
+/**
+@brief getTaillex : accesseur de taillex
+@return unsigned int taillex
+**/
+	unsigned int getTaillex();
+
+/**
+@brief getTailley : accesseur de tailley
+@return unsigned int tailley
+**/
+	unsigned int getTailley();
 	
 };
 

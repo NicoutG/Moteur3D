@@ -77,11 +77,12 @@ private:
 	void gestionModeles()&;
 
 /**
-@brief addAff : ajoute un modèle à l'affichage
-@param Modele* mod le pointeur vers le modèle
-@param unsigned int s l'indice de la surface
+@brief affTri : tri les faces à afficher de la plus proche à la plus éloignée
+@param unsigned int deb le debut du tableau à trier
+@param unsigned int fin la fin du tableau à trier
+@return std::vector <SurfaceAff*> le tableau trié
 **/
-	void addAff(Modele * mod, unsigned int s)&;
+	std::vector <SurfaceAff*> affTri(unsigned int deb, unsigned int fin)&;
 
 /**
 @brief afficherSurfaces : Fait apparaitre les surfaces sur l'image

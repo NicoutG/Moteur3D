@@ -418,6 +418,9 @@ void Moteur3D::initialiserTableau()&
 
 void Moteur3D::gestionModeles()&
 {
+	for (unsigned int i=0;i<aff.size();i++) {
+		delete aff.at(i);
+	}
 	aff.clear();
 	for (unsigned int i=0;i<nbModeles;i++) {
 		if (modeles[i]->getNbPoints()==0) {
@@ -433,25 +436,59 @@ void Moteur3D::gestionModeles()&
 				majPoints(modeles[i]);
 				for (unsigned int j=0;j<modeles[i]->getNbSurfaces();j++)
 					if (modeles[i]->getOpaciteSurf(j)>0)
-						if (0>prodScal(cam->getBase()*modeles[i]->getNormaleSurf(j),points[modeles[i]->getIndicePointSurf(j,0)].posCam))
-							addAff(modeles[i],j);
+						if (0>prodScal(cam->getBase()*modeles[i]->getNormaleSurf(j),points[modeles[i]->getIndicePointSurf(j,0)].posCam)) {
+							SurfaceAff * nouvSurf=new SurfaceAff;
+							nouvSurf->modele=modeles[i];
+							nouvSurf->surface=j;
+							nouvSurf->distance=norme(cam->getPos()-modeles[i]->getCentreSurf(j));
+							aff.push_back(nouvSurf);
+						}
 			}
 			modeles[i]->majSon(getPosCam(modeles[i]->getPos()));
 		}
 	}
+	if (aff.size()!=0)
+		aff=affTri(0,aff.size()-1);
 }
 
-void Moteur3D::addAff(Modele * mod, unsigned int s)&
+std::vector <SurfaceAff*> Moteur3D::affTri(unsigned int deb, unsigned int fin)&
 {
-	assert(s<mod->getNbSurfaces());
-	SurfaceAff * nouvSurf=new SurfaceAff;
-	nouvSurf->modele=mod;
-	nouvSurf->surface=s;
-	nouvSurf->distance=norme(cam->getPos()-mod->getCentreSurf(s));
-	unsigned int j=0;
-	while (j<aff.size() && nouvSurf->distance>aff.at(j)->distance)
-		j++;
-	aff.insert(aff.begin()+j,nouvSurf);
+	assert(deb<=fin && fin<aff.size());
+	std::vector <SurfaceAff*> res;
+	if (deb==fin) {
+		res.push_back(aff.at(deb));
+		return res;
+	} 
+	unsigned int milieu=(fin+deb)/2;
+	std::vector <SurfaceAff*> tab1=affTri(deb,milieu);
+	std::vector <SurfaceAff*> tab2=affTri(milieu+1,fin);
+	unsigned int indice1=0;
+	unsigned int indice2=0;
+	unsigned int taille1=tab1.size();
+	unsigned int taille2=tab2.size();
+	while (indice1<taille1 || indice2<taille2) {
+		if (indice1==taille1) {
+			res.push_back(tab2.at(indice2));
+			indice2++;
+		}
+		else {
+			if (indice2==taille2) {
+				res.push_back(tab1.at(indice1));
+				indice1++;
+			}
+			else {
+				if (tab1.at(indice1)->distance<tab2.at(indice2)->distance) {
+					res.push_back(tab1.at(indice1));
+					indice1++;
+				}
+				else {
+					res.push_back(tab2.at(indice2));
+					indice2++;
+				}
+			}
+		}
+	}
+	return res;
 }
 
 void Moteur3D::afficherSurfaces()&

@@ -78,11 +78,12 @@ private:
 
 /**
 @brief affTri : tri les faces à afficher de la plus proche à la plus éloignée
+@param std::vector <SurfaceAff*> tab le tableau à trier
 @param unsigned int deb le debut du tableau à trier
 @param unsigned int fin la fin du tableau à trier
 @return std::vector <SurfaceAff*> le tableau trié
 **/
-	std::vector <SurfaceAff*> affTri(unsigned int deb, unsigned int fin)&;
+	std::vector <SurfaceAff*> affTri(std::vector <SurfaceAff*> tab, unsigned int deb, unsigned int fin)&;
 
 /**
 @brief afficherSurfaces : Fait apparaitre les surfaces sur l'image

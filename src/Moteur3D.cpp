@@ -422,6 +422,7 @@ void Moteur3D::gestionModeles()&
 		delete aff.at(i);
 	}
 	aff.clear();
+	std::vector <SurfaceAff*> affTransp;
 	for (unsigned int i=0;i<nbModeles;i++) {
 		if (modeles[i]->getNbPoints()==0) {
 			if (norme(cam->getPos()-modeles[i]->getPos())<200*modeles[i]->getDistMax()*modeles[i]->getTaille()*distAffichage*modeles[i]->getDistAffichage()) {
@@ -441,27 +442,35 @@ void Moteur3D::gestionModeles()&
 							nouvSurf->modele=modeles[i];
 							nouvSurf->surface=j;
 							nouvSurf->distance=norme(cam->getPos()-modeles[i]->getCentreSurf(j));
-							aff.push_back(nouvSurf);
+							if (modeles[i]->getOpacite()<1 || modeles[i]->getOpaciteSurf(j)<1)
+								affTransp.push_back(nouvSurf);
+							else
+								aff.push_back(nouvSurf);
 						}
 			}
 			modeles[i]->majSon(getPosCam(modeles[i]->getPos()));
 		}
 	}
 	if (aff.size()!=0)
-		aff=affTri(0,aff.size()-1);
+		aff=affTri(aff,0,aff.size()-1);
+	if (affTransp.size()!=0)
+		affTransp=affTri(affTransp,0,affTransp.size()-1);
+	for (unsigned int i=0;i<affTransp.size();i++) {
+		aff.push_back(affTransp.at(i));
+	}
 }
 
-std::vector <SurfaceAff*> Moteur3D::affTri(unsigned int deb, unsigned int fin)&
+std::vector <SurfaceAff*> Moteur3D::affTri(std::vector <SurfaceAff*> tab, unsigned int deb, unsigned int fin)&
 {
-	assert(deb<=fin && fin<aff.size());
+	assert(deb<=fin && fin<tab.size());
 	std::vector <SurfaceAff*> res;
 	if (deb==fin) {
-		res.push_back(aff.at(deb));
+		res.push_back(tab.at(deb));
 		return res;
 	} 
 	unsigned int milieu=(fin+deb)/2;
-	std::vector <SurfaceAff*> tab1=affTri(deb,milieu);
-	std::vector <SurfaceAff*> tab2=affTri(milieu+1,fin);
+	std::vector <SurfaceAff*> tab1=affTri(tab,deb,milieu);
+	std::vector <SurfaceAff*> tab2=affTri(tab,milieu+1,fin);
 	unsigned int indice1=0;
 	unsigned int indice2=0;
 	unsigned int taille1=tab1.size();
@@ -583,31 +592,36 @@ void Moteur3D::traitementTriangle(const Modele * modele, unsigned int s, Point2D
 			float prod;
 			float dist=1;
 			Point2D p4,p5;
+			unsigned int imgTaillex=image.getTaillex();
+			unsigned int imgTailley=image.getTailley();
+			unsigned int camTaillex=cam->getTaillex();
+			unsigned int camTailley=cam->getTailley();
+			float distFoc=cam->getDistFoc();
 			if (point2->devant) {
 				p4.devant=1;
 				p4.posCam=point3->posCam+(point3->posCam.get(0,0)-dist)*(point1->posCam-point3->posCam)/(point3->posCam.get(0,0)-point1->posCam.get(0,0));
-				prod=cam->getDistFoc()*cam->getTaillex()/p4.posCam.get(0,0);
-				p4.pos2D.set(0,0,int(0.5+image.getTaillex()*(cam->getTaillex()/2.0+p4.posCam.get(1,0)*prod)/cam->getTaillex()));
-				p4.pos2D.set(1,0,int(0.5+image.getTailley()*(cam->getTailley()/2.0-p4.posCam.get(2,0)*prod)/cam->getTailley()));
+				prod=distFoc*cam->getTaillex()/p4.posCam.get(0,0);
+				p4.pos2D.set(0,0,int(0.5+imgTaillex*(camTaillex/2.0+p4.posCam.get(1,0)*prod)/camTaillex));
+				p4.pos2D.set(1,0,int(0.5+imgTailley*(camTailley/2.0-p4.posCam.get(2,0)*prod)/camTailley));
 				p5.devant=1;
 				p5.posCam=point3->posCam+(point3->posCam.get(0,0)-dist)*(point2->posCam-point3->posCam)/(point3->posCam.get(0,0)-point2->posCam.get(0,0));
-				prod=cam->getDistFoc()*cam->getTaillex()/p5.posCam.get(0,0);
-				p5.pos2D.set(0,0,int(0.5+image.getTaillex()*(cam->getTaillex()/2.0+p5.posCam.get(1,0)*prod)/cam->getTaillex()));
-				p5.pos2D.set(1,0,int(0.5+image.getTailley()*(cam->getTailley()/2.0-p5.posCam.get(2,0)*prod)/cam->getTailley()));
+				prod=distFoc*cam->getTaillex()/p5.posCam.get(0,0);
+				p5.pos2D.set(0,0,int(0.5+imgTaillex*(camTaillex/2.0+p5.posCam.get(1,0)*prod)/camTaillex));
+				p5.pos2D.set(1,0,int(0.5+imgTailley*(camTailley/2.0-p5.posCam.get(2,0)*prod)/camTailley));
 				distMin=std::min(point1->posCam.get(0,0),std::min(point2->posCam.get(0,0),p5.posCam.get(0,0)));
 				afficherTriangle(modele,s,point1,point2,&p5,ang,distMin);
 			}
 			else {
 				p4.devant=1;
 				p4.posCam=point2->posCam+(point2->posCam.get(0,0)-dist)*(point1->posCam-point2->posCam)/(point2->posCam.get(0,0)-point1->posCam.get(0,0));
-				prod=cam->getDistFoc()*cam->getTaillex()/p4.posCam.get(0,0);
-				p4.pos2D.set(0,0,int(0.5+image.getTaillex()*(cam->getTaillex()/2.0+p4.posCam.get(1,0)*prod)/cam->getTaillex()));
-				p4.pos2D.set(1,0,int(0.5+image.getTailley()*(cam->getTailley()/2.0-p4.posCam.get(2,0)*prod)/cam->getTailley()));
+				prod=distFoc*camTaillex/p4.posCam.get(0,0);
+				p4.pos2D.set(0,0,int(0.5+imgTaillex*(camTaillex/2.0+p4.posCam.get(1,0)*prod)/camTaillex));
+				p4.pos2D.set(1,0,int(0.5+imgTailley*(camTailley/2.0-p4.posCam.get(2,0)*prod)/camTailley));
 				p5.devant=1;
 				p5.posCam=point3->posCam+(point3->posCam.get(0,0)-dist)*(point1->posCam-point3->posCam)/(point3->posCam.get(0,0)-point1->posCam.get(0,0));
-				prod=cam->getDistFoc()*cam->getTaillex()/p5.posCam.get(0,0);
-				p5.pos2D.set(0,0,int(0.5+image.getTaillex()*(cam->getTaillex()/2.0+p5.posCam.get(1,0)*prod)/cam->getTaillex()));
-				p5.pos2D.set(1,0,int(0.5+image.getTailley()*(cam->getTailley()/2.0-p5.posCam.get(2,0)*prod)/cam->getTailley()));
+				prod=distFoc*camTaillex/p5.posCam.get(0,0);
+				p5.pos2D.set(0,0,int(0.5+imgTaillex*(camTaillex/2.0+p5.posCam.get(1,0)*prod)/camTaillex));
+				p5.pos2D.set(1,0,int(0.5+imgTailley*(camTailley/2.0-p5.posCam.get(2,0)*prod)/camTailley));
 			}
 			distMin=std::min(point1->posCam.get(0,0),std::min(p4.posCam.get(0,0),p5.posCam.get(0,0)));
 			afficherTriangle(modele,s,point1,&p4,&p5,ang,distMin);
@@ -799,9 +813,9 @@ void Moteur3D::addTransparent(unsigned int x, unsigned int y, const Couleur & co
 {
 	assert(x<image.getTaillex());
 	assert(y<image.getTailley());
-	unsigned int k=0;
-	while (k<transparences[y][x].size() && dist>transparences[y][x].at(k).distance) {
-		k++;
+	unsigned int k=transparences[y][x].size();
+	while (k>0 && dist<=transparences[y][x].at(k-1).distance) {
+		k--;
 	}
 	Couche couche;
 	couche.couleur=coul;
